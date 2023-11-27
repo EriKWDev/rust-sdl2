@@ -1,11 +1,12 @@
 use crate::get_error;
 use std::ffi::c_void;
-use libc::{c_char, c_int, size_t};
 use std::ffi::CString;
+use std::ffi::{c_char, c_int};
 use std::io;
 use std::marker::PhantomData;
 use std::mem::transmute;
 use std::path::Path;
+use sys::size_t;
 
 use crate::sys;
 
