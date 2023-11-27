@@ -37,11 +37,10 @@ use crate::rect::Rect;
 use crate::surface;
 use crate::surface::{Surface, SurfaceContext, SurfaceRef};
 use crate::video::{Window, WindowContext};
-use std::ffi::c_void;
-use libc::{c_double, c_int};
 use std::convert::TryFrom;
 use std::error::Error;
 use std::ffi::CStr;
+use std::ffi::{c_double, c_int, c_void};
 use std::fmt;
 #[cfg(not(feature = "unsafe_textures"))]
 use std::marker::PhantomData;
