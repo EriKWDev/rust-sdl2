@@ -50,7 +50,7 @@ pub const __STDC_IEC_60559_COMPLEX__: u32 = 201404;
 pub const __STDC_ISO_10646__: u32 = 201706;
 pub const __GNU_LIBRARY__: u32 = 6;
 pub const __GLIBC__: u32 = 2;
-pub const __GLIBC_MINOR__: u32 = 35;
+pub const __GLIBC_MINOR__: u32 = 36;
 pub const _SYS_CDEFS_H: u32 = 1;
 pub const __glibc_c99_flexarr_available: u32 = 1;
 pub const __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI: u32 = 0;
@@ -111,6 +111,7 @@ pub const SIG_ATOMIC_MAX: u32 = 2147483647;
 pub const SIZE_MAX: i32 = -1;
 pub const WINT_MIN: u32 = 0;
 pub const WINT_MAX: u32 = 4294967295;
+pub const SDL_SIZE_MAX: i32 = -1;
 pub const SDL_PRIs64: &'static [u8; 3usize] = b"ld\0";
 pub const SDL_PRIu64: &'static [u8; 3usize] = b"lu\0";
 pub const SDL_PRIx64: &'static [u8; 3usize] = b"lx\0";
@@ -139,6 +140,7 @@ pub const BYTE_ORDER: u32 = 1234;
 pub const _BITS_BYTESWAP_H: u32 = 1;
 pub const _BITS_UINTN_IDENTITY_H: u32 = 1;
 pub const SDL_BYTEORDER: u32 = 1234;
+pub const SDL_FLOATWORDORDER: u32 = 1234;
 pub const SDL_MUTEX_TIMEDOUT: u32 = 1;
 pub const SDL_RWOPS_UNKNOWN: u32 = 0;
 pub const SDL_RWOPS_WINFILE: u32 = 1;
@@ -286,6 +288,7 @@ pub const SDL_BUTTON_RIGHT: u32 = 3;
 pub const SDL_BUTTON_X1: u32 = 4;
 pub const SDL_BUTTON_X2: u32 = 5;
 pub const SDL_IPHONE_MAX_GFORCE: f64 = 5.0;
+pub const SDL_VIRTUAL_JOYSTICK_DESC_VERSION: u32 = 1;
 pub const SDL_JOYSTICK_AXIS_MAX: u32 = 32767;
 pub const SDL_JOYSTICK_AXIS_MIN: i32 = -32768;
 pub const SDL_HAT_CENTERED: u32 = 0;
@@ -363,6 +366,7 @@ pub const SDL_HINT_EMSCRIPTEN_KEYBOARD_ELEMENT: &'static [u8; 32usize] =
 pub const SDL_HINT_ENABLE_STEAM_CONTROLLERS: &'static [u8; 29usize] =
     b"SDL_ENABLE_STEAM_CONTROLLERS\0";
 pub const SDL_HINT_EVENT_LOGGING: &'static [u8; 18usize] = b"SDL_EVENT_LOGGING\0";
+pub const SDL_HINT_FORCE_RAISEWINDOW: &'static [u8; 27usize] = b"SDL_HINT_FORCE_RAISEWINDOW\0";
 pub const SDL_HINT_FRAMEBUFFER_ACCELERATION: &'static [u8; 29usize] =
     b"SDL_FRAMEBUFFER_ACCELERATION\0";
 pub const SDL_HINT_GAMECONTROLLERCONFIG: &'static [u8; 25usize] = b"SDL_GAMECONTROLLERCONFIG\0";
@@ -376,9 +380,12 @@ pub const SDL_HINT_GAMECONTROLLER_IGNORE_DEVICES_EXCEPT: &'static [u8; 41usize] 
 pub const SDL_HINT_GAMECONTROLLER_USE_BUTTON_LABELS: &'static [u8; 37usize] =
     b"SDL_GAMECONTROLLER_USE_BUTTON_LABELS\0";
 pub const SDL_HINT_GRAB_KEYBOARD: &'static [u8; 18usize] = b"SDL_GRAB_KEYBOARD\0";
+pub const SDL_HINT_HIDAPI_IGNORE_DEVICES: &'static [u8; 26usize] = b"SDL_HIDAPI_IGNORE_DEVICES\0";
 pub const SDL_HINT_IDLE_TIMER_DISABLED: &'static [u8; 28usize] = b"SDL_IOS_IDLE_TIMER_DISABLED\0";
 pub const SDL_HINT_IME_INTERNAL_EDITING: &'static [u8; 25usize] = b"SDL_IME_INTERNAL_EDITING\0";
 pub const SDL_HINT_IME_SHOW_UI: &'static [u8; 16usize] = b"SDL_IME_SHOW_UI\0";
+pub const SDL_HINT_IME_SUPPORT_EXTENDED_TEXT: &'static [u8; 30usize] =
+    b"SDL_IME_SUPPORT_EXTENDED_TEXT\0";
 pub const SDL_HINT_IOS_HIDE_HOME_INDICATOR: &'static [u8; 28usize] =
     b"SDL_IOS_HIDE_HOME_INDICATOR\0";
 pub const SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS: &'static [u8; 37usize] =
@@ -386,9 +393,19 @@ pub const SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS: &'static [u8; 37usize] =
 pub const SDL_HINT_JOYSTICK_HIDAPI: &'static [u8; 20usize] = b"SDL_JOYSTICK_HIDAPI\0";
 pub const SDL_HINT_JOYSTICK_HIDAPI_GAMECUBE: &'static [u8; 29usize] =
     b"SDL_JOYSTICK_HIDAPI_GAMECUBE\0";
+pub const SDL_HINT_JOYSTICK_GAMECUBE_RUMBLE_BRAKE: &'static [u8; 35usize] =
+    b"SDL_JOYSTICK_GAMECUBE_RUMBLE_BRAKE\0";
 pub const SDL_HINT_JOYSTICK_HIDAPI_JOY_CONS: &'static [u8; 29usize] =
     b"SDL_JOYSTICK_HIDAPI_JOY_CONS\0";
+pub const SDL_HINT_JOYSTICK_HIDAPI_COMBINE_JOY_CONS: &'static [u8; 37usize] =
+    b"SDL_JOYSTICK_HIDAPI_COMBINE_JOY_CONS\0";
+pub const SDL_HINT_JOYSTICK_HIDAPI_VERTICAL_JOY_CONS: &'static [u8; 38usize] =
+    b"SDL_JOYSTICK_HIDAPI_VERTICAL_JOY_CONS\0";
 pub const SDL_HINT_JOYSTICK_HIDAPI_LUNA: &'static [u8; 25usize] = b"SDL_JOYSTICK_HIDAPI_LUNA\0";
+pub const SDL_HINT_JOYSTICK_HIDAPI_NINTENDO_CLASSIC: &'static [u8; 37usize] =
+    b"SDL_JOYSTICK_HIDAPI_NINTENDO_CLASSIC\0";
+pub const SDL_HINT_JOYSTICK_HIDAPI_SHIELD: &'static [u8; 27usize] = b"SDL_JOYSTICK_HIDAPI_SHIELD\0";
+pub const SDL_HINT_JOYSTICK_HIDAPI_PS3: &'static [u8; 24usize] = b"SDL_JOYSTICK_HIDAPI_PS3\0";
 pub const SDL_HINT_JOYSTICK_HIDAPI_PS4: &'static [u8; 24usize] = b"SDL_JOYSTICK_HIDAPI_PS4\0";
 pub const SDL_HINT_JOYSTICK_HIDAPI_PS4_RUMBLE: &'static [u8; 31usize] =
     b"SDL_JOYSTICK_HIDAPI_PS4_RUMBLE\0";
@@ -402,20 +419,42 @@ pub const SDL_HINT_JOYSTICK_HIDAPI_STEAM: &'static [u8; 26usize] = b"SDL_JOYSTIC
 pub const SDL_HINT_JOYSTICK_HIDAPI_SWITCH: &'static [u8; 27usize] = b"SDL_JOYSTICK_HIDAPI_SWITCH\0";
 pub const SDL_HINT_JOYSTICK_HIDAPI_SWITCH_HOME_LED: &'static [u8; 36usize] =
     b"SDL_JOYSTICK_HIDAPI_SWITCH_HOME_LED\0";
+pub const SDL_HINT_JOYSTICK_HIDAPI_JOYCON_HOME_LED: &'static [u8; 36usize] =
+    b"SDL_JOYSTICK_HIDAPI_JOYCON_HOME_LED\0";
+pub const SDL_HINT_JOYSTICK_HIDAPI_SWITCH_PLAYER_LED: &'static [u8; 38usize] =
+    b"SDL_JOYSTICK_HIDAPI_SWITCH_PLAYER_LED\0";
+pub const SDL_HINT_JOYSTICK_HIDAPI_WII: &'static [u8; 24usize] = b"SDL_JOYSTICK_HIDAPI_WII\0";
+pub const SDL_HINT_JOYSTICK_HIDAPI_WII_PLAYER_LED: &'static [u8; 35usize] =
+    b"SDL_JOYSTICK_HIDAPI_WII_PLAYER_LED\0";
 pub const SDL_HINT_JOYSTICK_HIDAPI_XBOX: &'static [u8; 25usize] = b"SDL_JOYSTICK_HIDAPI_XBOX\0";
+pub const SDL_HINT_JOYSTICK_HIDAPI_XBOX_360: &'static [u8; 29usize] =
+    b"SDL_JOYSTICK_HIDAPI_XBOX_360\0";
+pub const SDL_HINT_JOYSTICK_HIDAPI_XBOX_360_PLAYER_LED: &'static [u8; 40usize] =
+    b"SDL_JOYSTICK_HIDAPI_XBOX_360_PLAYER_LED\0";
+pub const SDL_HINT_JOYSTICK_HIDAPI_XBOX_360_WIRELESS: &'static [u8; 38usize] =
+    b"SDL_JOYSTICK_HIDAPI_XBOX_360_WIRELESS\0";
+pub const SDL_HINT_JOYSTICK_HIDAPI_XBOX_ONE: &'static [u8; 29usize] =
+    b"SDL_JOYSTICK_HIDAPI_XBOX_ONE\0";
+pub const SDL_HINT_JOYSTICK_HIDAPI_XBOX_ONE_HOME_LED: &'static [u8; 38usize] =
+    b"SDL_JOYSTICK_HIDAPI_XBOX_ONE_HOME_LED\0";
 pub const SDL_HINT_JOYSTICK_RAWINPUT: &'static [u8; 22usize] = b"SDL_JOYSTICK_RAWINPUT\0";
 pub const SDL_HINT_JOYSTICK_RAWINPUT_CORRELATE_XINPUT: &'static [u8; 39usize] =
     b"SDL_JOYSTICK_RAWINPUT_CORRELATE_XINPUT\0";
+pub const SDL_HINT_JOYSTICK_ROG_CHAKRAM: &'static [u8; 25usize] = b"SDL_JOYSTICK_ROG_CHAKRAM\0";
 pub const SDL_HINT_JOYSTICK_THREAD: &'static [u8; 20usize] = b"SDL_JOYSTICK_THREAD\0";
 pub const SDL_HINT_KMSDRM_REQUIRE_DRM_MASTER: &'static [u8; 30usize] =
     b"SDL_KMSDRM_REQUIRE_DRM_MASTER\0";
 pub const SDL_HINT_JOYSTICK_DEVICE: &'static [u8; 20usize] = b"SDL_JOYSTICK_DEVICE\0";
+pub const SDL_HINT_LINUX_DIGITAL_HATS: &'static [u8; 23usize] = b"SDL_LINUX_DIGITAL_HATS\0";
+pub const SDL_HINT_LINUX_HAT_DEADZONES: &'static [u8; 24usize] = b"SDL_LINUX_HAT_DEADZONES\0";
 pub const SDL_HINT_LINUX_JOYSTICK_CLASSIC: &'static [u8; 27usize] = b"SDL_LINUX_JOYSTICK_CLASSIC\0";
 pub const SDL_HINT_LINUX_JOYSTICK_DEADZONES: &'static [u8; 29usize] =
     b"SDL_LINUX_JOYSTICK_DEADZONES\0";
 pub const SDL_HINT_MAC_BACKGROUND_APP: &'static [u8; 23usize] = b"SDL_MAC_BACKGROUND_APP\0";
 pub const SDL_HINT_MAC_CTRL_CLICK_EMULATE_RIGHT_CLICK: &'static [u8; 39usize] =
     b"SDL_MAC_CTRL_CLICK_EMULATE_RIGHT_CLICK\0";
+pub const SDL_HINT_MAC_OPENGL_ASYNC_DISPATCH: &'static [u8; 30usize] =
+    b"SDL_MAC_OPENGL_ASYNC_DISPATCH\0";
 pub const SDL_HINT_MOUSE_DOUBLE_CLICK_RADIUS: &'static [u8; 30usize] =
     b"SDL_MOUSE_DOUBLE_CLICK_RADIUS\0";
 pub const SDL_HINT_MOUSE_DOUBLE_CLICK_TIME: &'static [u8; 28usize] =
@@ -424,12 +463,19 @@ pub const SDL_HINT_MOUSE_FOCUS_CLICKTHROUGH: &'static [u8; 29usize] =
     b"SDL_MOUSE_FOCUS_CLICKTHROUGH\0";
 pub const SDL_HINT_MOUSE_NORMAL_SPEED_SCALE: &'static [u8; 29usize] =
     b"SDL_MOUSE_NORMAL_SPEED_SCALE\0";
+pub const SDL_HINT_MOUSE_RELATIVE_MODE_CENTER: &'static [u8; 31usize] =
+    b"SDL_MOUSE_RELATIVE_MODE_CENTER\0";
 pub const SDL_HINT_MOUSE_RELATIVE_MODE_WARP: &'static [u8; 29usize] =
     b"SDL_MOUSE_RELATIVE_MODE_WARP\0";
 pub const SDL_HINT_MOUSE_RELATIVE_SCALING: &'static [u8; 27usize] = b"SDL_MOUSE_RELATIVE_SCALING\0";
 pub const SDL_HINT_MOUSE_RELATIVE_SPEED_SCALE: &'static [u8; 31usize] =
     b"SDL_MOUSE_RELATIVE_SPEED_SCALE\0";
+pub const SDL_HINT_MOUSE_RELATIVE_SYSTEM_SCALE: &'static [u8; 32usize] =
+    b"SDL_MOUSE_RELATIVE_SYSTEM_SCALE\0";
+pub const SDL_HINT_MOUSE_RELATIVE_WARP_MOTION: &'static [u8; 31usize] =
+    b"SDL_MOUSE_RELATIVE_WARP_MOTION\0";
 pub const SDL_HINT_MOUSE_TOUCH_EVENTS: &'static [u8; 23usize] = b"SDL_MOUSE_TOUCH_EVENTS\0";
+pub const SDL_HINT_MOUSE_AUTO_CAPTURE: &'static [u8; 23usize] = b"SDL_MOUSE_AUTO_CAPTURE\0";
 pub const SDL_HINT_NO_SIGNAL_HANDLERS: &'static [u8; 23usize] = b"SDL_NO_SIGNAL_HANDLERS\0";
 pub const SDL_HINT_OPENGL_ES_DRIVER: &'static [u8; 21usize] = b"SDL_OPENGL_ES_DRIVER\0";
 pub const SDL_HINT_ORIENTATIONS: &'static [u8; 21usize] = b"SDL_IOS_ORIENTATIONS\0";
@@ -450,6 +496,7 @@ pub const SDL_HINT_RENDER_LOGICAL_SIZE_MODE: &'static [u8; 29usize] =
 pub const SDL_HINT_RENDER_OPENGL_SHADERS: &'static [u8; 26usize] = b"SDL_RENDER_OPENGL_SHADERS\0";
 pub const SDL_HINT_RENDER_SCALE_QUALITY: &'static [u8; 25usize] = b"SDL_RENDER_SCALE_QUALITY\0";
 pub const SDL_HINT_RENDER_VSYNC: &'static [u8; 17usize] = b"SDL_RENDER_VSYNC\0";
+pub const SDL_HINT_PS2_DYNAMIC_VSYNC: &'static [u8; 22usize] = b"SDL_PS2_DYNAMIC_VSYNC\0";
 pub const SDL_HINT_RETURN_KEY_HIDES_IME: &'static [u8; 25usize] = b"SDL_RETURN_KEY_HIDES_IME\0";
 pub const SDL_HINT_RPI_VIDEO_LAYER: &'static [u8; 20usize] = b"SDL_RPI_VIDEO_LAYER\0";
 pub const SDL_HINT_SCREENSAVER_INHIBIT_ACTIVITY_NAME: &'static [u8; 38usize] =
@@ -460,6 +507,8 @@ pub const SDL_HINT_THREAD_PRIORITY_POLICY: &'static [u8; 27usize] = b"SDL_THREAD
 pub const SDL_HINT_THREAD_STACK_SIZE: &'static [u8; 22usize] = b"SDL_THREAD_STACK_SIZE\0";
 pub const SDL_HINT_TIMER_RESOLUTION: &'static [u8; 21usize] = b"SDL_TIMER_RESOLUTION\0";
 pub const SDL_HINT_TOUCH_MOUSE_EVENTS: &'static [u8; 23usize] = b"SDL_TOUCH_MOUSE_EVENTS\0";
+pub const SDL_HINT_VITA_TOUCH_MOUSE_DEVICE: &'static [u8; 33usize] =
+    b"SDL_HINT_VITA_TOUCH_MOUSE_DEVICE\0";
 pub const SDL_HINT_TV_REMOTE_AS_JOYSTICK: &'static [u8; 26usize] = b"SDL_TV_REMOTE_AS_JOYSTICK\0";
 pub const SDL_HINT_VIDEO_ALLOW_SCREENSAVER: &'static [u8; 28usize] =
     b"SDL_VIDEO_ALLOW_SCREENSAVER\0";
@@ -474,8 +523,18 @@ pub const SDL_HINT_VIDEO_MINIMIZE_ON_FOCUS_LOSS: &'static [u8; 33usize] =
     b"SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS\0";
 pub const SDL_HINT_VIDEO_WAYLAND_ALLOW_LIBDECOR: &'static [u8; 33usize] =
     b"SDL_VIDEO_WAYLAND_ALLOW_LIBDECOR\0";
+pub const SDL_HINT_VIDEO_WAYLAND_PREFER_LIBDECOR: &'static [u8; 34usize] =
+    b"SDL_VIDEO_WAYLAND_PREFER_LIBDECOR\0";
+pub const SDL_HINT_VIDEO_WAYLAND_MODE_EMULATION: &'static [u8; 33usize] =
+    b"SDL_VIDEO_WAYLAND_MODE_EMULATION\0";
+pub const SDL_HINT_VIDEO_WAYLAND_EMULATE_MOUSE_WARP: &'static [u8; 37usize] =
+    b"SDL_VIDEO_WAYLAND_EMULATE_MOUSE_WARP\0";
 pub const SDL_HINT_VIDEO_WINDOW_SHARE_PIXEL_FORMAT: &'static [u8; 36usize] =
     b"SDL_VIDEO_WINDOW_SHARE_PIXEL_FORMAT\0";
+pub const SDL_HINT_VIDEO_FOREIGN_WINDOW_OPENGL: &'static [u8; 32usize] =
+    b"SDL_VIDEO_FOREIGN_WINDOW_OPENGL\0";
+pub const SDL_HINT_VIDEO_FOREIGN_WINDOW_VULKAN: &'static [u8; 32usize] =
+    b"SDL_VIDEO_FOREIGN_WINDOW_VULKAN\0";
 pub const SDL_HINT_VIDEO_WIN_D3DCOMPILER: &'static [u8; 26usize] = b"SDL_VIDEO_WIN_D3DCOMPILER\0";
 pub const SDL_HINT_VIDEO_X11_FORCE_EGL: &'static [u8; 24usize] = b"SDL_VIDEO_X11_FORCE_EGL\0";
 pub const SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR: &'static [u8; 39usize] =
@@ -504,6 +563,8 @@ pub const SDL_HINT_WINDOWS_INTRESOURCE_ICON_SMALL: &'static [u8; 35usize] =
 pub const SDL_HINT_WINDOWS_NO_CLOSE_ON_ALT_F4: &'static [u8; 31usize] =
     b"SDL_WINDOWS_NO_CLOSE_ON_ALT_F4\0";
 pub const SDL_HINT_WINDOWS_USE_D3D9EX: &'static [u8; 23usize] = b"SDL_WINDOWS_USE_D3D9EX\0";
+pub const SDL_HINT_WINDOWS_DPI_AWARENESS: &'static [u8; 26usize] = b"SDL_WINDOWS_DPI_AWARENESS\0";
+pub const SDL_HINT_WINDOWS_DPI_SCALING: &'static [u8; 24usize] = b"SDL_WINDOWS_DPI_SCALING\0";
 pub const SDL_HINT_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN: &'static [u8; 44usize] =
     b"SDL_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN\0";
 pub const SDL_HINT_WINDOW_NO_ACTIVATION_WHEN_SHOWN: &'static [u8; 36usize] =
@@ -517,16 +578,24 @@ pub const SDL_HINT_WINRT_PRIVACY_POLICY_URL: &'static [u8; 29usize] =
 pub const SDL_HINT_X11_FORCE_OVERRIDE_REDIRECT: &'static [u8; 32usize] =
     b"SDL_X11_FORCE_OVERRIDE_REDIRECT\0";
 pub const SDL_HINT_XINPUT_ENABLED: &'static [u8; 19usize] = b"SDL_XINPUT_ENABLED\0";
+pub const SDL_HINT_DIRECTINPUT_ENABLED: &'static [u8; 24usize] = b"SDL_DIRECTINPUT_ENABLED\0";
 pub const SDL_HINT_XINPUT_USE_OLD_JOYSTICK_MAPPING: &'static [u8; 36usize] =
     b"SDL_XINPUT_USE_OLD_JOYSTICK_MAPPING\0";
 pub const SDL_HINT_AUDIO_INCLUDE_MONITORS: &'static [u8; 27usize] = b"SDL_AUDIO_INCLUDE_MONITORS\0";
+pub const SDL_HINT_X11_WINDOW_TYPE: &'static [u8; 20usize] = b"SDL_X11_WINDOW_TYPE\0";
+pub const SDL_HINT_QUIT_ON_LAST_WINDOW_CLOSE: &'static [u8; 30usize] =
+    b"SDL_QUIT_ON_LAST_WINDOW_CLOSE\0";
+pub const SDL_HINT_VIDEODRIVER: &'static [u8; 16usize] = b"SDL_VIDEODRIVER\0";
+pub const SDL_HINT_AUDIODRIVER: &'static [u8; 16usize] = b"SDL_AUDIODRIVER\0";
+pub const SDL_HINT_KMSDRM_DEVICE_INDEX: &'static [u8; 24usize] = b"SDL_KMSDRM_DEVICE_INDEX\0";
+pub const SDL_HINT_TRACKPAD_IS_TOUCH_ONLY: &'static [u8; 27usize] = b"SDL_TRACKPAD_IS_TOUCH_ONLY\0";
 pub const SDL_MAX_LOG_MESSAGE: u32 = 4096;
 pub const SDL_NONSHAPEABLE_WINDOW: i32 = -1;
 pub const SDL_INVALID_SHAPE_ARGUMENT: i32 = -2;
 pub const SDL_WINDOW_LACKS_SHAPE: i32 = -3;
 pub const SDL_MAJOR_VERSION: u32 = 2;
-pub const SDL_MINOR_VERSION: u32 = 0;
-pub const SDL_PATCHLEVEL: u32 = 20;
+pub const SDL_MINOR_VERSION: u32 = 26;
+pub const SDL_PATCHLEVEL: u32 = 4;
 pub const SDL_INIT_TIMER: u32 = 1;
 pub const SDL_INIT_AUDIO: u32 = 16;
 pub const SDL_INIT_VIDEO: u32 = 32;
@@ -1178,20 +1247,11 @@ pub type Sint32 = i32;
 pub type Uint32 = u32;
 pub type Sint64 = i64;
 pub type Uint64 = u64;
-pub type SDL_compile_time_assert_uint8 = [core::ffi::c_int; 1usize];
-pub type SDL_compile_time_assert_sint8 = [core::ffi::c_int; 1usize];
-pub type SDL_compile_time_assert_uint16 = [core::ffi::c_int; 1usize];
-pub type SDL_compile_time_assert_sint16 = [core::ffi::c_int; 1usize];
-pub type SDL_compile_time_assert_uint32 = [core::ffi::c_int; 1usize];
-pub type SDL_compile_time_assert_sint32 = [core::ffi::c_int; 1usize];
-pub type SDL_compile_time_assert_uint64 = [core::ffi::c_int; 1usize];
-pub type SDL_compile_time_assert_sint64 = [core::ffi::c_int; 1usize];
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum SDL_DUMMY_ENUM {
     DUMMY_ENUM_VALUE = 0,
 }
-pub type SDL_compile_time_assert_enum = [core::ffi::c_int; 1usize];
 extern "C" {
     pub fn SDL_malloc(size: size_t) -> *mut core::ffi::c_void;
 }
@@ -1206,12 +1266,24 @@ extern "C" {
 }
 pub type SDL_malloc_func =
     ::core::option::Option<unsafe extern "C" fn(size: size_t) -> *mut core::ffi::c_void>;
-pub type SDL_calloc_func =
-    ::core::option::Option<unsafe extern "C" fn(nmemb: size_t, size: size_t) -> *mut core::ffi::c_void>;
+pub type SDL_calloc_func = ::core::option::Option<
+    unsafe extern "C" fn(nmemb: size_t, size: size_t) -> *mut core::ffi::c_void,
+>;
 pub type SDL_realloc_func = ::core::option::Option<
     unsafe extern "C" fn(mem: *mut core::ffi::c_void, size: size_t) -> *mut core::ffi::c_void,
 >;
 pub type SDL_free_func = ::core::option::Option<unsafe extern "C" fn(mem: *mut core::ffi::c_void)>;
+extern "C" {
+    #[doc = " Get the original set of SDL memory functions"]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    pub fn SDL_GetOriginalMemoryFunctions(
+        malloc_func: *mut SDL_malloc_func,
+        calloc_func: *mut SDL_calloc_func,
+        realloc_func: *mut SDL_realloc_func,
+        free_func: *mut SDL_free_func,
+    );
+}
 extern "C" {
     #[doc = " Get the current set of SDL memory functions"]
     #[doc = ""]
@@ -1264,6 +1336,20 @@ extern "C" {
     );
 }
 extern "C" {
+    pub fn SDL_bsearch(
+        key: *const core::ffi::c_void,
+        base: *const core::ffi::c_void,
+        nmemb: size_t,
+        size: size_t,
+        compare: ::core::option::Option<
+            unsafe extern "C" fn(
+                arg1: *const core::ffi::c_void,
+                arg2: *const core::ffi::c_void,
+            ) -> core::ffi::c_int,
+        >,
+    ) -> *mut core::ffi::c_void;
+}
+extern "C" {
     pub fn SDL_abs(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
@@ -1309,10 +1395,17 @@ extern "C" {
     pub fn SDL_tolower(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
+    pub fn SDL_crc16(crc: Uint16, data: *const core::ffi::c_void, len: size_t) -> Uint16;
+}
+extern "C" {
     pub fn SDL_crc32(crc: Uint32, data: *const core::ffi::c_void, len: size_t) -> Uint32;
 }
 extern "C" {
-    pub fn SDL_memset(dst: *mut core::ffi::c_void, c: core::ffi::c_int, len: size_t) -> *mut core::ffi::c_void;
+    pub fn SDL_memset(
+        dst: *mut core::ffi::c_void,
+        c: core::ffi::c_int,
+        len: size_t,
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
     pub fn SDL_memcpy(
@@ -1329,8 +1422,11 @@ extern "C" {
     ) -> *mut core::ffi::c_void;
 }
 extern "C" {
-    pub fn SDL_memcmp(s1: *const core::ffi::c_void, s2: *const core::ffi::c_void, len: size_t)
-        -> core::ffi::c_int;
+    pub fn SDL_memcmp(
+        s1: *const core::ffi::c_void,
+        s2: *const core::ffi::c_void,
+        len: size_t,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_wcslen(wstr: *const wchar_t) -> size_t;
@@ -1351,19 +1447,31 @@ extern "C" {
     pub fn SDL_wcscmp(str1: *const wchar_t, str2: *const wchar_t) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_wcsncmp(str1: *const wchar_t, str2: *const wchar_t, maxlen: size_t) -> core::ffi::c_int;
+    pub fn SDL_wcsncmp(
+        str1: *const wchar_t,
+        str2: *const wchar_t,
+        maxlen: size_t,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_wcscasecmp(str1: *const wchar_t, str2: *const wchar_t) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_wcsncasecmp(str1: *const wchar_t, str2: *const wchar_t, len: size_t) -> core::ffi::c_int;
+    pub fn SDL_wcsncasecmp(
+        str1: *const wchar_t,
+        str2: *const wchar_t,
+        len: size_t,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_strlen(str: *const core::ffi::c_char) -> size_t;
 }
 extern "C" {
-    pub fn SDL_strlcpy(dst: *mut core::ffi::c_char, src: *const core::ffi::c_char, maxlen: size_t) -> size_t;
+    pub fn SDL_strlcpy(
+        dst: *mut core::ffi::c_char,
+        src: *const core::ffi::c_char,
+        maxlen: size_t,
+    ) -> size_t;
 }
 extern "C" {
     pub fn SDL_utf8strlcpy(
@@ -1373,7 +1481,11 @@ extern "C" {
     ) -> size_t;
 }
 extern "C" {
-    pub fn SDL_strlcat(dst: *mut core::ffi::c_char, src: *const core::ffi::c_char, maxlen: size_t) -> size_t;
+    pub fn SDL_strlcat(
+        dst: *mut core::ffi::c_char,
+        src: *const core::ffi::c_char,
+        maxlen: size_t,
+    ) -> size_t;
 }
 extern "C" {
     pub fn SDL_strdup(str: *const core::ffi::c_char) -> *mut core::ffi::c_char;
@@ -1388,13 +1500,23 @@ extern "C" {
     pub fn SDL_strlwr(str: *mut core::ffi::c_char) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn SDL_strchr(str: *const core::ffi::c_char, c: core::ffi::c_int) -> *mut core::ffi::c_char;
+    pub fn SDL_strchr(str: *const core::ffi::c_char, c: core::ffi::c_int)
+        -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn SDL_strrchr(str: *const core::ffi::c_char, c: core::ffi::c_int) -> *mut core::ffi::c_char;
+    pub fn SDL_strrchr(
+        str: *const core::ffi::c_char,
+        c: core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn SDL_strstr(
+        haystack: *const core::ffi::c_char,
+        needle: *const core::ffi::c_char,
+    ) -> *mut core::ffi::c_char;
+}
+extern "C" {
+    pub fn SDL_strcasestr(
         haystack: *const core::ffi::c_char,
         needle: *const core::ffi::c_char,
     ) -> *mut core::ffi::c_char;
@@ -1408,6 +1530,9 @@ extern "C" {
 }
 extern "C" {
     pub fn SDL_utf8strlen(str: *const core::ffi::c_char) -> size_t;
+}
+extern "C" {
+    pub fn SDL_utf8strnlen(str: *const core::ffi::c_char, bytes: size_t) -> size_t;
 }
 extern "C" {
     pub fn SDL_itoa(
@@ -1489,7 +1614,10 @@ extern "C" {
     pub fn SDL_strtod(str: *const core::ffi::c_char, endp: *mut *mut core::ffi::c_char) -> f64;
 }
 extern "C" {
-    pub fn SDL_strcmp(str1: *const core::ffi::c_char, str2: *const core::ffi::c_char) -> core::ffi::c_int;
+    pub fn SDL_strcmp(
+        str1: *const core::ffi::c_char,
+        str2: *const core::ffi::c_char,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_strncmp(
@@ -1499,7 +1627,10 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_strcasecmp(str1: *const core::ffi::c_char, str2: *const core::ffi::c_char) -> core::ffi::c_int;
+    pub fn SDL_strcasecmp(
+        str1: *const core::ffi::c_char,
+        str2: *const core::ffi::c_char,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_strncasecmp(
@@ -1509,7 +1640,11 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_sscanf(text: *const core::ffi::c_char, fmt: *const core::ffi::c_char, ...) -> core::ffi::c_int;
+    pub fn SDL_sscanf(
+        text: *const core::ffi::c_char,
+        fmt: *const core::ffi::c_char,
+        ...
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_vsscanf(
@@ -1535,8 +1670,11 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_asprintf(strp: *mut *mut core::ffi::c_char, fmt: *const core::ffi::c_char, ...)
-        -> core::ffi::c_int;
+    pub fn SDL_asprintf(
+        strp: *mut *mut core::ffi::c_char,
+        fmt: *const core::ffi::c_char,
+        ...
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_vasprintf(
@@ -1721,7 +1859,10 @@ extern "C" {
 }
 #[doc = "  The prototype for the application's main() function"]
 pub type SDL_main_func = ::core::option::Option<
-    unsafe extern "C" fn(argc: core::ffi::c_int, argv: *mut *mut core::ffi::c_char) -> core::ffi::c_int,
+    unsafe extern "C" fn(
+        argc: core::ffi::c_int,
+        argv: *mut *mut core::ffi::c_char,
+    ) -> core::ffi::c_int,
 >;
 extern "C" {
     pub fn SDL_main(argc: core::ffi::c_int, argv: *mut *mut core::ffi::c_char) -> core::ffi::c_int;
@@ -2177,7 +2318,10 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_AtomicCASPtr"]
     #[doc = " \\sa SDL_AtomicGetPtr"]
-    pub fn SDL_AtomicSetPtr(a: *mut *mut core::ffi::c_void, v: *mut core::ffi::c_void) -> *mut core::ffi::c_void;
+    pub fn SDL_AtomicSetPtr(
+        a: *mut *mut core::ffi::c_void,
+        v: *mut core::ffi::c_void,
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Get the value of a pointer atomically."]
@@ -2269,7 +2413,10 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.14."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetError"]
-    pub fn SDL_GetErrorMsg(errstr: *mut core::ffi::c_char, maxlen: core::ffi::c_int) -> *mut core::ffi::c_char;
+    pub fn SDL_GetErrorMsg(
+        errstr: *mut core::ffi::c_char,
+        maxlen: core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Clear any previous error message for this thread."]
@@ -3007,7 +3154,8 @@ pub struct SDL_RWops {
     #[doc = "  Close and free an allocated SDL_RWops structure."]
     #[doc = ""]
     #[doc = "  \\return 0 if successful or -1 on write error when flushing data."]
-    pub close: ::core::option::Option<unsafe extern "C" fn(context: *mut SDL_RWops) -> core::ffi::c_int>,
+    pub close:
+        ::core::option::Option<unsafe extern "C" fn(context: *mut SDL_RWops) -> core::ffi::c_int>,
     pub type_: Uint32,
     pub hidden: SDL_RWops__bindgen_ty_1,
 }
@@ -3312,7 +3460,10 @@ extern "C" {
     #[doc = " \\sa SDL_RWseek"]
     #[doc = " \\sa SDL_RWtell"]
     #[doc = " \\sa SDL_RWwrite"]
-    pub fn SDL_RWFromFile(file: *const core::ffi::c_char, mode: *const core::ffi::c_char) -> *mut SDL_RWops;
+    pub fn SDL_RWFromFile(
+        file: *const core::ffi::c_char,
+        mode: *const core::ffi::c_char,
+    ) -> *mut SDL_RWops;
 }
 extern "C" {
     #[doc = " Use this function to create an SDL_RWops structure from a standard I/O file"]
@@ -3408,7 +3559,10 @@ extern "C" {
     #[doc = " \\sa SDL_RWread"]
     #[doc = " \\sa SDL_RWseek"]
     #[doc = " \\sa SDL_RWtell"]
-    pub fn SDL_RWFromConstMem(mem: *const core::ffi::c_void, size: core::ffi::c_int) -> *mut SDL_RWops;
+    pub fn SDL_RWFromConstMem(
+        mem: *const core::ffi::c_void,
+        size: core::ffi::c_int,
+    ) -> *mut SDL_RWops;
 }
 extern "C" {
     #[doc = " Use this function to allocate an empty, unpopulated SDL_RWops structure."]
@@ -3670,7 +3824,10 @@ extern "C" {
     #[doc = " \\returns the data, or NULL if there was an error."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.10."]
-    pub fn SDL_LoadFile(file: *const core::ffi::c_char, datasize: *mut size_t) -> *mut core::ffi::c_void;
+    pub fn SDL_LoadFile(
+        file: *const core::ffi::c_char,
+        datasize: *mut size_t,
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Use this function to read a byte from an SDL_RWops."]
@@ -3918,7 +4075,11 @@ pub type SDL_AudioFormat = Uint16;
 #[doc = "  You can choose to avoid callbacks and use SDL_QueueAudio() instead, if"]
 #[doc = "  you like. Just open your audio device with a NULL callback."]
 pub type SDL_AudioCallback = ::core::option::Option<
-    unsafe extern "C" fn(userdata: *mut core::ffi::c_void, stream: *mut Uint8, len: core::ffi::c_int),
+    unsafe extern "C" fn(
+        userdata: *mut core::ffi::c_void,
+        stream: *mut Uint8,
+        len: core::ffi::c_int,
+    ),
 >;
 #[doc = "  The calculated values in this structure are calculated by SDL_OpenAudio()."]
 #[doc = ""]
@@ -3926,7 +4087,7 @@ pub type SDL_AudioCallback = ::core::option::Option<
 #[doc = "  2:  FL FR                       (stereo)"]
 #[doc = "  3:  FL FR LFE                   (2.1 surround)"]
 #[doc = "  4:  FL FR BL BR                 (quad)"]
-#[doc = "  5:  FL FR FC BL BR              (quad + center)"]
+#[doc = "  5:  FL FR LFE BL BR             (4.1 surround)"]
 #[doc = "  6:  FL FR FC LFE SL SR          (5.1 surround - last two can also be BL BR)"]
 #[doc = "  7:  FL FR FC LFE BC SL SR       (6.1 surround)"]
 #[doc = "  8:  FL FR FC LFE BL BR SL SR    (7.1 surround)"]
@@ -4339,7 +4500,10 @@ extern "C" {
     #[doc = " \\sa SDL_LockAudio"]
     #[doc = " \\sa SDL_PauseAudio"]
     #[doc = " \\sa SDL_UnlockAudio"]
-    pub fn SDL_OpenAudio(desired: *mut SDL_AudioSpec, obtained: *mut SDL_AudioSpec) -> core::ffi::c_int;
+    pub fn SDL_OpenAudio(
+        desired: *mut SDL_AudioSpec,
+        obtained: *mut SDL_AudioSpec,
+    ) -> core::ffi::c_int;
 }
 #[doc = "  SDL Audio Device IDs."]
 #[doc = ""]
@@ -4417,6 +4581,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetNumAudioDevices"]
+    #[doc = " \\sa SDL_GetDefaultAudioInfo"]
     pub fn SDL_GetAudioDeviceName(
         index: core::ffi::c_int,
         iscapture: core::ffi::c_int,
@@ -4431,9 +4596,7 @@ extern "C" {
     #[doc = " hardware."]
     #[doc = ""]
     #[doc = " `spec` will be filled with the sample rate, sample format, and channel"]
-    #[doc = " count. All other values in the structure are filled with 0. When the"]
-    #[doc = " supported struct members are 0, SDL was unable to get the property from the"]
-    #[doc = " backend."]
+    #[doc = " count."]
     #[doc = ""]
     #[doc = " \\param index the index of the audio device; valid values range from 0 to"]
     #[doc = "              SDL_GetNumAudioDevices() - 1"]
@@ -4445,10 +4608,46 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.16."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetNumAudioDevices"]
+    #[doc = " \\sa SDL_GetDefaultAudioInfo"]
     pub fn SDL_GetAudioDeviceSpec(
         index: core::ffi::c_int,
         iscapture: core::ffi::c_int,
         spec: *mut SDL_AudioSpec,
+    ) -> core::ffi::c_int;
+}
+extern "C" {
+    #[doc = " Get the name and preferred format of the default audio device."]
+    #[doc = ""]
+    #[doc = " Some (but not all!) platforms have an isolated mechanism to get information"]
+    #[doc = " about the \"default\" device. This can actually be a completely different"]
+    #[doc = " device that's not in the list you get from SDL_GetAudioDeviceSpec(). It can"]
+    #[doc = " even be a network address! (This is discussed in SDL_OpenAudioDevice().)"]
+    #[doc = ""]
+    #[doc = " As a result, this call is not guaranteed to be performant, as it can query"]
+    #[doc = " the sound server directly every time, unlike the other query functions. You"]
+    #[doc = " should call this function sparingly!"]
+    #[doc = ""]
+    #[doc = " `spec` will be filled with the sample rate, sample format, and channel"]
+    #[doc = " count, if a default device exists on the system. If `name` is provided,"]
+    #[doc = " will be filled with either a dynamically-allocated UTF-8 string or NULL."]
+    #[doc = ""]
+    #[doc = " \\param name A pointer to be filled with the name of the default device (can"]
+    #[doc = "             be NULL). Please call SDL_free() when you are done with this"]
+    #[doc = "             pointer!"]
+    #[doc = " \\param spec The SDL_AudioSpec to be initialized by this function."]
+    #[doc = " \\param iscapture non-zero to query the default recording device, zero to"]
+    #[doc = "                  query the default output device."]
+    #[doc = " \\returns 0 on success, nonzero on error"]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_GetAudioDeviceName"]
+    #[doc = " \\sa SDL_GetAudioDeviceSpec"]
+    #[doc = " \\sa SDL_OpenAudioDevice"]
+    pub fn SDL_GetDefaultAudioInfo(
+        name: *mut *mut core::ffi::c_char,
+        spec: *mut SDL_AudioSpec,
+        iscapture: core::ffi::c_int,
     ) -> core::ffi::c_int;
 }
 extern "C" {
@@ -4517,6 +4716,7 @@ extern "C" {
     #[doc = " - `SDL_AUDIO_ALLOW_FREQUENCY_CHANGE`"]
     #[doc = " - `SDL_AUDIO_ALLOW_FORMAT_CHANGE`"]
     #[doc = " - `SDL_AUDIO_ALLOW_CHANNELS_CHANGE`"]
+    #[doc = " - `SDL_AUDIO_ALLOW_SAMPLES_CHANGE`"]
     #[doc = " - `SDL_AUDIO_ALLOW_ANY_CHANGE`"]
     #[doc = ""]
     #[doc = " These flags specify how SDL should behave when a device cannot offer a"]
@@ -5134,8 +5334,11 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_ClearQueuedAudio"]
     #[doc = " \\sa SDL_GetQueuedAudioSize"]
-    pub fn SDL_DequeueAudio(dev: SDL_AudioDeviceID, data: *mut core::ffi::c_void, len: Uint32)
-        -> Uint32;
+    pub fn SDL_DequeueAudio(
+        dev: SDL_AudioDeviceID,
+        data: *mut core::ffi::c_void,
+        len: Uint32,
+    ) -> Uint32;
 }
 extern "C" {
     #[doc = " Get the number of bytes of still-queued audio."]
@@ -5371,6 +5574,50 @@ extern "C" {
     #[doc = " \\sa SDL_SetClipboardText"]
     pub fn SDL_HasClipboardText() -> SDL_bool;
 }
+extern "C" {
+    #[doc = " Put UTF-8 text into the primary selection."]
+    #[doc = ""]
+    #[doc = " \\param text the text to store in the primary selection"]
+    #[doc = " \\returns 0 on success or a negative error code on failure; call"]
+    #[doc = "          SDL_GetError() for more information."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.26.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_GetPrimarySelectionText"]
+    #[doc = " \\sa SDL_HasPrimarySelectionText"]
+    pub fn SDL_SetPrimarySelectionText(text: *const core::ffi::c_char) -> core::ffi::c_int;
+}
+extern "C" {
+    #[doc = " Get UTF-8 text from the primary selection, which must be freed with"]
+    #[doc = " SDL_free()."]
+    #[doc = ""]
+    #[doc = " This functions returns empty string if there was not enough memory left for"]
+    #[doc = " a copy of the primary selection's content."]
+    #[doc = ""]
+    #[doc = " \\returns the primary selection text on success or an empty string on"]
+    #[doc = "          failure; call SDL_GetError() for more information. Caller must"]
+    #[doc = "          call SDL_free() on the returned pointer when done with it (even if"]
+    #[doc = "          there was an error)."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.26.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_HasPrimarySelectionText"]
+    #[doc = " \\sa SDL_SetPrimarySelectionText"]
+    pub fn SDL_GetPrimarySelectionText() -> *mut core::ffi::c_char;
+}
+extern "C" {
+    #[doc = " Query whether the primary selection exists and contains a non-empty text"]
+    #[doc = " string."]
+    #[doc = ""]
+    #[doc = " \\returns SDL_TRUE if the primary selection has text, or SDL_FALSE if it"]
+    #[doc = "          does not."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.26.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_GetPrimarySelectionText"]
+    #[doc = " \\sa SDL_SetPrimarySelectionText"]
+    pub fn SDL_HasPrimarySelectionText() -> SDL_bool;
+}
 pub type __m64 = [core::ffi::c_longlong; 1usize];
 pub type __v1di = [core::ffi::c_longlong; 1usize];
 pub type __v2si = [core::ffi::c_int; 2usize];
@@ -5524,7 +5771,8 @@ extern "C" {
     pub fn strtof(__nptr: *const core::ffi::c_char, __endptr: *mut *mut core::ffi::c_char) -> f32;
 }
 extern "C" {
-    pub fn strtold(__nptr: *const core::ffi::c_char, __endptr: *mut *mut core::ffi::c_char) -> u128;
+    pub fn strtold(__nptr: *const core::ffi::c_char, __endptr: *mut *mut core::ffi::c_char)
+        -> u128;
 }
 extern "C" {
     pub fn strtol(
@@ -6851,7 +7099,10 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn setstate_r(__statebuf: *mut core::ffi::c_char, __buf: *mut random_data) -> core::ffi::c_int;
+    pub fn setstate_r(
+        __statebuf: *mut core::ffi::c_char,
+        __buf: *mut random_data,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn rand() -> core::ffi::c_int;
@@ -6972,7 +7223,10 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn lrand48_r(__buffer: *mut drand48_data, __result: *mut core::ffi::c_long) -> core::ffi::c_int;
+    pub fn lrand48_r(
+        __buffer: *mut drand48_data,
+        __result: *mut core::ffi::c_long,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn nrand48_r(
@@ -6982,7 +7236,10 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn mrand48_r(__buffer: *mut drand48_data, __result: *mut core::ffi::c_long) -> core::ffi::c_int;
+    pub fn mrand48_r(
+        __buffer: *mut drand48_data,
+        __result: *mut core::ffi::c_long,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn jrand48_r(
@@ -6992,22 +7249,44 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn srand48_r(__seedval: core::ffi::c_long, __buffer: *mut drand48_data) -> core::ffi::c_int;
+    pub fn srand48_r(__seedval: core::ffi::c_long, __buffer: *mut drand48_data)
+        -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn seed48_r(__seed16v: *mut core::ffi::c_ushort, __buffer: *mut drand48_data) -> core::ffi::c_int;
+    pub fn seed48_r(
+        __seed16v: *mut core::ffi::c_ushort,
+        __buffer: *mut drand48_data,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn lcong48_r(__param: *mut core::ffi::c_ushort, __buffer: *mut drand48_data) -> core::ffi::c_int;
+    pub fn lcong48_r(
+        __param: *mut core::ffi::c_ushort,
+        __buffer: *mut drand48_data,
+    ) -> core::ffi::c_int;
+}
+extern "C" {
+    pub fn arc4random() -> __uint32_t;
+}
+extern "C" {
+    pub fn arc4random_buf(__buf: *mut core::ffi::c_void, __size: size_t);
+}
+extern "C" {
+    pub fn arc4random_uniform(__upper_bound: __uint32_t) -> __uint32_t;
 }
 extern "C" {
     pub fn malloc(__size: core::ffi::c_ulong) -> *mut core::ffi::c_void;
 }
 extern "C" {
-    pub fn calloc(__nmemb: core::ffi::c_ulong, __size: core::ffi::c_ulong) -> *mut core::ffi::c_void;
+    pub fn calloc(
+        __nmemb: core::ffi::c_ulong,
+        __size: core::ffi::c_ulong,
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
-    pub fn realloc(__ptr: *mut core::ffi::c_void, __size: core::ffi::c_ulong) -> *mut core::ffi::c_void;
+    pub fn realloc(
+        __ptr: *mut core::ffi::c_void,
+        __size: core::ffi::c_ulong,
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
     pub fn free(__ptr: *mut core::ffi::c_void);
@@ -7033,7 +7312,10 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn aligned_alloc(__alignment: core::ffi::c_ulong, __size: core::ffi::c_ulong) -> *mut core::ffi::c_void;
+    pub fn aligned_alloc(
+        __alignment: core::ffi::c_ulong,
+        __size: core::ffi::c_ulong,
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
     pub fn abort();
@@ -7042,7 +7324,9 @@ extern "C" {
     pub fn atexit(__func: ::core::option::Option<unsafe extern "C" fn()>) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn at_quick_exit(__func: ::core::option::Option<unsafe extern "C" fn()>) -> core::ffi::c_int;
+    pub fn at_quick_exit(
+        __func: ::core::option::Option<unsafe extern "C" fn()>,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn on_exit(
@@ -7087,7 +7371,10 @@ extern "C" {
     pub fn mkstemp(__template: *mut core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn mkstemps(__template: *mut core::ffi::c_char, __suffixlen: core::ffi::c_int) -> core::ffi::c_int;
+    pub fn mkstemps(
+        __template: *mut core::ffi::c_char,
+        __suffixlen: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn mkdtemp(__template: *mut core::ffi::c_char) -> *mut core::ffi::c_char;
@@ -7102,7 +7389,10 @@ extern "C" {
     ) -> *mut core::ffi::c_char;
 }
 pub type __compar_fn_t = ::core::option::Option<
-    unsafe extern "C" fn(arg1: *const core::ffi::c_void, arg2: *const core::ffi::c_void) -> core::ffi::c_int,
+    unsafe extern "C" fn(
+        arg1: *const core::ffi::c_void,
+        arg2: *const core::ffi::c_void,
+    ) -> core::ffi::c_int,
 >;
 extern "C" {
     pub fn bsearch(
@@ -7156,8 +7446,11 @@ extern "C" {
     ) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn gcvt(__value: f64, __ndigit: core::ffi::c_int, __buf: *mut core::ffi::c_char)
-        -> *mut core::ffi::c_char;
+    pub fn gcvt(
+        __value: f64,
+        __ndigit: core::ffi::c_int,
+        __buf: *mut core::ffi::c_char,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn qecvt(
@@ -7226,7 +7519,11 @@ extern "C" {
     pub fn mblen(__s: *const core::ffi::c_char, __n: size_t) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn mbtowc(__pwc: *mut wchar_t, __s: *const core::ffi::c_char, __n: size_t) -> core::ffi::c_int;
+    pub fn mbtowc(
+        __pwc: *mut wchar_t,
+        __s: *const core::ffi::c_char,
+        __n: size_t,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn wctomb(__s: *mut core::ffi::c_char, __wchar: wchar_t) -> core::ffi::c_int;
@@ -7573,9 +7870,33 @@ extern "C" {
     pub fn SDL_HasNEON() -> SDL_bool;
 }
 extern "C" {
+    #[doc = " Determine whether the CPU has LSX (LOONGARCH SIMD) features."]
+    #[doc = ""]
+    #[doc = " This always returns false on CPUs that aren't using LOONGARCH instruction"]
+    #[doc = " sets."]
+    #[doc = ""]
+    #[doc = " \\returns SDL_TRUE if the CPU has LOONGARCH LSX features or SDL_FALSE if"]
+    #[doc = "          not."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    pub fn SDL_HasLSX() -> SDL_bool;
+}
+extern "C" {
+    #[doc = " Determine whether the CPU has LASX (LOONGARCH SIMD) features."]
+    #[doc = ""]
+    #[doc = " This always returns false on CPUs that aren't using LOONGARCH instruction"]
+    #[doc = " sets."]
+    #[doc = ""]
+    #[doc = " \\returns SDL_TRUE if the CPU has LOONGARCH LASX features or SDL_FALSE if"]
+    #[doc = "          not."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    pub fn SDL_HasLASX() -> SDL_bool;
+}
+extern "C" {
     #[doc = " Get the amount of RAM configured in the system."]
     #[doc = ""]
-    #[doc = " \\returns the amount of RAM configured in the system in MB."]
+    #[doc = " \\returns the amount of RAM configured in the system in MiB."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.1."]
     pub fn SDL_GetSystemRAM() -> core::ffi::c_int;
@@ -7631,7 +7952,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.10."]
     #[doc = ""]
-    #[doc = " \\sa SDL_SIMDAlignment"]
+    #[doc = " \\sa SDL_SIMDGetAlignment"]
     #[doc = " \\sa SDL_SIMDRealloc"]
     #[doc = " \\sa SDL_SIMDFree"]
     pub fn SDL_SIMDAlloc(len: size_t) -> *mut core::ffi::c_void;
@@ -7654,7 +7975,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.14."]
     #[doc = ""]
-    #[doc = " \\sa SDL_SIMDAlignment"]
+    #[doc = " \\sa SDL_SIMDGetAlignment"]
     #[doc = " \\sa SDL_SIMDAlloc"]
     #[doc = " \\sa SDL_SIMDFree"]
     pub fn SDL_SIMDRealloc(mem: *mut core::ffi::c_void, len: size_t) -> *mut core::ffi::c_void;
@@ -8525,8 +8846,8 @@ fn bindgen_test_layout_SDL_Point() {
 }
 #[doc = " The structure that defines a point (floating point)"]
 #[doc = ""]
-#[doc = " \\sa SDL_EnclosePoints"]
-#[doc = " \\sa SDL_PointInRect"]
+#[doc = " \\sa SDL_EncloseFPoints"]
+#[doc = " \\sa SDL_PointInFRect"]
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct SDL_FPoint {
@@ -8572,6 +8893,7 @@ fn bindgen_test_layout_SDL_FPoint() {
 #[doc = " \\sa SDL_RectEquals"]
 #[doc = " \\sa SDL_HasIntersection"]
 #[doc = " \\sa SDL_IntersectRect"]
+#[doc = " \\sa SDL_IntersectRectAndLine"]
 #[doc = " \\sa SDL_UnionRect"]
 #[doc = " \\sa SDL_EnclosePoints"]
 #[repr(C)]
@@ -8636,6 +8958,16 @@ fn bindgen_test_layout_SDL_Rect() {
     );
 }
 #[doc = " A rectangle, with the origin at the upper left (floating point)."]
+#[doc = ""]
+#[doc = " \\sa SDL_FRectEmpty"]
+#[doc = " \\sa SDL_FRectEquals"]
+#[doc = " \\sa SDL_FRectEqualsEpsilon"]
+#[doc = " \\sa SDL_HasIntersectionF"]
+#[doc = " \\sa SDL_IntersectFRect"]
+#[doc = " \\sa SDL_IntersectFRectAndLine"]
+#[doc = " \\sa SDL_UnionFRect"]
+#[doc = " \\sa SDL_EncloseFPoints"]
+#[doc = " \\sa SDL_PointInFRect"]
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct SDL_FRect {
@@ -8790,6 +9122,101 @@ extern "C" {
         Y2: *mut core::ffi::c_int,
     ) -> SDL_bool;
 }
+extern "C" {
+    #[doc = " Determine whether two rectangles intersect with float precision."]
+    #[doc = ""]
+    #[doc = " If either pointer is NULL the function will return SDL_FALSE."]
+    #[doc = ""]
+    #[doc = " \\param A an SDL_FRect structure representing the first rectangle"]
+    #[doc = " \\param B an SDL_FRect structure representing the second rectangle"]
+    #[doc = " \\returns SDL_TRUE if there is an intersection, SDL_FALSE otherwise."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.0.22."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_IntersectRect"]
+    pub fn SDL_HasIntersectionF(A: *const SDL_FRect, B: *const SDL_FRect) -> SDL_bool;
+}
+extern "C" {
+    #[doc = " Calculate the intersection of two rectangles with float precision."]
+    #[doc = ""]
+    #[doc = " If `result` is NULL then this function will return SDL_FALSE."]
+    #[doc = ""]
+    #[doc = " \\param A an SDL_FRect structure representing the first rectangle"]
+    #[doc = " \\param B an SDL_FRect structure representing the second rectangle"]
+    #[doc = " \\param result an SDL_FRect structure filled in with the intersection of"]
+    #[doc = "               rectangles `A` and `B`"]
+    #[doc = " \\returns SDL_TRUE if there is an intersection, SDL_FALSE otherwise."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.0.22."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_HasIntersectionF"]
+    pub fn SDL_IntersectFRect(
+        A: *const SDL_FRect,
+        B: *const SDL_FRect,
+        result: *mut SDL_FRect,
+    ) -> SDL_bool;
+}
+extern "C" {
+    #[doc = " Calculate the union of two rectangles with float precision."]
+    #[doc = ""]
+    #[doc = " \\param A an SDL_FRect structure representing the first rectangle"]
+    #[doc = " \\param B an SDL_FRect structure representing the second rectangle"]
+    #[doc = " \\param result an SDL_FRect structure filled in with the union of rectangles"]
+    #[doc = "               `A` and `B`"]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.0.22."]
+    pub fn SDL_UnionFRect(A: *const SDL_FRect, B: *const SDL_FRect, result: *mut SDL_FRect);
+}
+extern "C" {
+    #[doc = " Calculate a minimal rectangle enclosing a set of points with float"]
+    #[doc = " precision."]
+    #[doc = ""]
+    #[doc = " If `clip` is not NULL then only points inside of the clipping rectangle are"]
+    #[doc = " considered."]
+    #[doc = ""]
+    #[doc = " \\param points an array of SDL_FPoint structures representing points to be"]
+    #[doc = "               enclosed"]
+    #[doc = " \\param count the number of structures in the `points` array"]
+    #[doc = " \\param clip an SDL_FRect used for clipping or NULL to enclose all points"]
+    #[doc = " \\param result an SDL_FRect structure filled in with the minimal enclosing"]
+    #[doc = "               rectangle"]
+    #[doc = " \\returns SDL_TRUE if any points were enclosed or SDL_FALSE if all the"]
+    #[doc = "          points were outside of the clipping rectangle."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.0.22."]
+    pub fn SDL_EncloseFPoints(
+        points: *const SDL_FPoint,
+        count: core::ffi::c_int,
+        clip: *const SDL_FRect,
+        result: *mut SDL_FRect,
+    ) -> SDL_bool;
+}
+extern "C" {
+    #[doc = " Calculate the intersection of a rectangle and line segment with float"]
+    #[doc = " precision."]
+    #[doc = ""]
+    #[doc = " This function is used to clip a line segment to a rectangle. A line segment"]
+    #[doc = " contained entirely within the rectangle or that does not intersect will"]
+    #[doc = " remain unchanged. A line segment that crosses the rectangle at either or"]
+    #[doc = " both ends will be clipped to the boundary of the rectangle and the new"]
+    #[doc = " coordinates saved in `X1`, `Y1`, `X2`, and/or `Y2` as necessary."]
+    #[doc = ""]
+    #[doc = " \\param rect an SDL_FRect structure representing the rectangle to intersect"]
+    #[doc = " \\param X1 a pointer to the starting X-coordinate of the line"]
+    #[doc = " \\param Y1 a pointer to the starting Y-coordinate of the line"]
+    #[doc = " \\param X2 a pointer to the ending X-coordinate of the line"]
+    #[doc = " \\param Y2 a pointer to the ending Y-coordinate of the line"]
+    #[doc = " \\returns SDL_TRUE if there is an intersection, SDL_FALSE otherwise."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.0.22."]
+    pub fn SDL_IntersectFRectAndLine(
+        rect: *const SDL_FRect,
+        X1: *mut f32,
+        Y1: *mut f32,
+        X2: *mut f32,
+        Y2: *mut f32,
+    ) -> SDL_bool;
+}
 #[repr(u32)]
 #[doc = "  \\brief The blend mode used in SDL_RenderCopy() and drawing operations."]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -8825,9 +9252,9 @@ pub enum SDL_BlendOperation {
     SDL_BLENDOPERATION_SUBTRACT = 2,
     #[doc = "< src - dst : supported by D3D9, D3D11, OpenGL, OpenGLES"]
     SDL_BLENDOPERATION_REV_SUBTRACT = 3,
-    #[doc = "< min(dst, src) : supported by D3D11"]
+    #[doc = "< min(dst, src) : supported by D3D9, D3D11"]
     SDL_BLENDOPERATION_MINIMUM = 4,
-    #[doc = "< max(dst, src) : supported by D3D11"]
+    #[doc = "< max(dst, src) : supported by D3D9, D3D11"]
     SDL_BLENDOPERATION_MAXIMUM = 5,
 }
 #[repr(u32)]
@@ -8900,10 +9327,10 @@ extern "C" {
     #[doc = " SDL 2.0.6. All renderers support the four blend modes listed in the"]
     #[doc = " SDL_BlendMode enumeration."]
     #[doc = ""]
-    #[doc = " - **direct3d**: Supports `SDL_BLENDOPERATION_ADD` with all factors."]
-    #[doc = " - **direct3d11**: Supports all operations with all factors. However, some"]
+    #[doc = " - **direct3d**: Supports all operations with all factors. However, some"]
     #[doc = "   factors produce unexpected results with `SDL_BLENDOPERATION_MINIMUM` and"]
     #[doc = "   `SDL_BLENDOPERATION_MAXIMUM`."]
+    #[doc = " - **direct3d11**: Same as Direct3D 9."]
     #[doc = " - **opengl**: Supports the `SDL_BLENDOPERATION_ADD` operation with all"]
     #[doc = "   factors. OpenGL versions 1.1, 1.2, and 1.3 do not work correctly with SDL"]
     #[doc = "   2.0.6."]
@@ -8954,6 +9381,11 @@ extern "C" {
         dstAlphaFactor: SDL_BlendFactor,
         alphaOperation: SDL_BlendOperation,
     ) -> SDL_BlendMode;
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct SDL_BlitMap {
+    _unused: [u8; 0],
 }
 #[doc = " \\brief A collection of pixels used in software blitting."]
 #[doc = ""]
@@ -9424,7 +9856,8 @@ extern "C" {
     #[doc = " \\sa SDL_BlitSurface"]
     #[doc = " \\sa SDL_LockSurface"]
     #[doc = " \\sa SDL_UnlockSurface"]
-    pub fn SDL_SetSurfaceRLE(surface: *mut SDL_Surface, flag: core::ffi::c_int) -> core::ffi::c_int;
+    pub fn SDL_SetSurfaceRLE(surface: *mut SDL_Surface, flag: core::ffi::c_int)
+        -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Returns whether the surface is RLE enabled"]
@@ -9580,7 +10013,8 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetSurfaceColorMod"]
     #[doc = " \\sa SDL_SetSurfaceAlphaMod"]
-    pub fn SDL_GetSurfaceAlphaMod(surface: *mut SDL_Surface, alpha: *mut Uint8) -> core::ffi::c_int;
+    pub fn SDL_GetSurfaceAlphaMod(surface: *mut SDL_Surface, alpha: *mut Uint8)
+        -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the blend mode used for blit operations."]
@@ -9791,8 +10225,11 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_FillRects"]
-    pub fn SDL_FillRect(dst: *mut SDL_Surface, rect: *const SDL_Rect, color: Uint32)
-        -> core::ffi::c_int;
+    pub fn SDL_FillRect(
+        dst: *mut SDL_Surface,
+        rect: *const SDL_Rect,
+        color: Uint32,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Perform a fast fill of a set of rectangles with a specific color."]
@@ -10222,6 +10659,7 @@ pub enum SDL_GLattr {
     SDL_GL_CONTEXT_RELEASE_BEHAVIOR = 24,
     SDL_GL_CONTEXT_RESET_NOTIFICATION = 25,
     SDL_GL_CONTEXT_NO_ERROR = 26,
+    SDL_GL_FLOATBUFFERS = 27,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -10365,7 +10803,10 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetNumVideoDisplays"]
-    pub fn SDL_GetDisplayBounds(displayIndex: core::ffi::c_int, rect: *mut SDL_Rect) -> core::ffi::c_int;
+    pub fn SDL_GetDisplayBounds(
+        displayIndex: core::ffi::c_int,
+        rect: *mut SDL_Rect,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the usable desktop area represented by a display."]
@@ -10408,6 +10849,15 @@ extern "C" {
     #[doc = ""]
     #[doc = " A failure of this function usually means that either no DPI information is"]
     #[doc = " available or the `displayIndex` is out of range."]
+    #[doc = ""]
+    #[doc = " **WARNING**: This reports the DPI that the hardware reports, and it is not"]
+    #[doc = " always reliable! It is almost always better to use SDL_GetWindowSize() to"]
+    #[doc = " find the window size, which might be in logical points instead of pixels,"]
+    #[doc = " and then SDL_GL_GetDrawableSize(), SDL_Vulkan_GetDrawableSize(),"]
+    #[doc = " SDL_Metal_GetDrawableSize(), or SDL_GetRendererOutputSize(), and compare"]
+    #[doc = " the two values to get an actual scaling value between the two. We will be"]
+    #[doc = " rethinking how high-dpi details should be managed in SDL3 to make things"]
+    #[doc = " more consistent, reliable, and clear."]
     #[doc = ""]
     #[doc = " \\param displayIndex the index of the display from which DPI information"]
     #[doc = "                     should be queried"]
@@ -10563,6 +11013,33 @@ extern "C" {
     ) -> *mut SDL_DisplayMode;
 }
 extern "C" {
+    #[doc = " Get the index of the display containing a point"]
+    #[doc = ""]
+    #[doc = " \\param point the point to query"]
+    #[doc = " \\returns the index of the display containing the point or a negative error"]
+    #[doc = "          code on failure; call SDL_GetError() for more information."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_GetDisplayBounds"]
+    #[doc = " \\sa SDL_GetNumVideoDisplays"]
+    pub fn SDL_GetPointDisplayIndex(point: *const SDL_Point) -> core::ffi::c_int;
+}
+extern "C" {
+    #[doc = " Get the index of the display primarily containing a rect"]
+    #[doc = ""]
+    #[doc = " \\param rect the rect to query"]
+    #[doc = " \\returns the index of the display entirely containing the rect or closest"]
+    #[doc = "          to the center of the rect on success or a negative error code on"]
+    #[doc = "          failure; call SDL_GetError() for more information."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_GetDisplayBounds"]
+    #[doc = " \\sa SDL_GetNumVideoDisplays"]
+    pub fn SDL_GetRectDisplayIndex(rect: *const SDL_Rect) -> core::ffi::c_int;
+}
+extern "C" {
     #[doc = " Get the index of the display associated with a window."]
     #[doc = ""]
     #[doc = " \\param window the window to query"]
@@ -10628,8 +11105,10 @@ extern "C" {
     #[doc = "          SDL_GetError() for more information."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.18."]
-    pub fn SDL_GetWindowICCProfile(window: *mut SDL_Window, size: *mut size_t)
-        -> *mut core::ffi::c_void;
+    pub fn SDL_GetWindowICCProfile(
+        window: *mut SDL_Window,
+        size: *mut size_t,
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Get the pixel format associated with the window."]
@@ -10672,7 +11151,10 @@ extern "C" {
     #[doc = " in pixels may differ from its size in screen coordinates on platforms with"]
     #[doc = " high-DPI support (e.g. iOS and macOS). Use SDL_GetWindowSize() to query the"]
     #[doc = " client area's size in screen coordinates, and SDL_GL_GetDrawableSize() or"]
-    #[doc = " SDL_GetRendererOutputSize() to query the drawable size in pixels."]
+    #[doc = " SDL_GetRendererOutputSize() to query the drawable size in pixels. Note that"]
+    #[doc = " when this flag is set, the drawable size can vary after the window is"]
+    #[doc = " created and should be queried after major window events such as when the"]
+    #[doc = " window is resized or moved between displays."]
     #[doc = ""]
     #[doc = " If the window is set fullscreen, the width and height parameters `w` and"]
     #[doc = " `h` will not be used. However, invalid size parameters (e.g. too large) may"]
@@ -10882,7 +11364,11 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_SetWindowPosition"]
-    pub fn SDL_GetWindowPosition(window: *mut SDL_Window, x: *mut core::ffi::c_int, y: *mut core::ffi::c_int);
+    pub fn SDL_GetWindowPosition(
+        window: *mut SDL_Window,
+        x: *mut core::ffi::c_int,
+        y: *mut core::ffi::c_int,
+    );
 }
 extern "C" {
     #[doc = " Set the size of a window's client area."]
@@ -10930,7 +11416,11 @@ extern "C" {
     #[doc = " \\sa SDL_GL_GetDrawableSize"]
     #[doc = " \\sa SDL_Vulkan_GetDrawableSize"]
     #[doc = " \\sa SDL_SetWindowSize"]
-    pub fn SDL_GetWindowSize(window: *mut SDL_Window, w: *mut core::ffi::c_int, h: *mut core::ffi::c_int);
+    pub fn SDL_GetWindowSize(
+        window: *mut SDL_Window,
+        w: *mut core::ffi::c_int,
+        h: *mut core::ffi::c_int,
+    );
 }
 extern "C" {
     #[doc = " Get the size of a window's borders (decorations) around the client area."]
@@ -10970,6 +11460,29 @@ extern "C" {
         bottom: *mut core::ffi::c_int,
         right: *mut core::ffi::c_int,
     ) -> core::ffi::c_int;
+}
+extern "C" {
+    #[doc = " Get the size of a window in pixels."]
+    #[doc = ""]
+    #[doc = " This may differ from SDL_GetWindowSize() if we're rendering to a high-DPI"]
+    #[doc = " drawable, i.e. the window was created with `SDL_WINDOW_ALLOW_HIGHDPI` on a"]
+    #[doc = " platform with high-DPI support (Apple calls this \"Retina\"), and not"]
+    #[doc = " disabled by the `SDL_HINT_VIDEO_HIGHDPI_DISABLED` hint."]
+    #[doc = ""]
+    #[doc = " \\param window the window from which the drawable size should be queried"]
+    #[doc = " \\param w a pointer to variable for storing the width in pixels, may be NULL"]
+    #[doc = " \\param h a pointer to variable for storing the height in pixels, may be"]
+    #[doc = "          NULL"]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.26.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_CreateWindow"]
+    #[doc = " \\sa SDL_GetWindowSize"]
+    pub fn SDL_GetWindowSizeInPixels(
+        window: *mut SDL_Window,
+        w: *mut core::ffi::c_int,
+        h: *mut core::ffi::c_int,
+    );
 }
 extern "C" {
     #[doc = " Set the minimum size of a window's client area."]
@@ -11293,6 +11806,7 @@ extern "C" {
     #[doc = " Mouse grab confines the mouse cursor to the window."]
     #[doc = ""]
     #[doc = " \\param window The window for which the mouse grab mode should be set."]
+    #[doc = " \\param grabbed This is SDL_TRUE to grab mouse, and SDL_FALSE to release."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.16."]
     #[doc = ""]
@@ -11363,7 +11877,10 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetWindowMouseRect"]
     #[doc = " \\sa SDL_SetWindowMouseGrab"]
-    pub fn SDL_SetWindowMouseRect(window: *mut SDL_Window, rect: *const SDL_Rect) -> core::ffi::c_int;
+    pub fn SDL_SetWindowMouseRect(
+        window: *mut SDL_Window,
+        rect: *const SDL_Rect,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the mouse confinement rectangle of a window."]
@@ -11458,7 +11975,8 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.5."]
     #[doc = ""]
     #[doc = " \\sa SDL_SetWindowOpacity"]
-    pub fn SDL_GetWindowOpacity(window: *mut SDL_Window, out_opacity: *mut f32) -> core::ffi::c_int;
+    pub fn SDL_GetWindowOpacity(window: *mut SDL_Window, out_opacity: *mut f32)
+        -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the window as a modal for another window."]
@@ -11643,7 +12161,10 @@ extern "C" {
     #[doc = "          SDL_GetError() for more information."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.16."]
-    pub fn SDL_FlashWindow(window: *mut SDL_Window, operation: SDL_FlashOperation) -> core::ffi::c_int;
+    pub fn SDL_FlashWindow(
+        window: *mut SDL_Window,
+        operation: SDL_FlashOperation,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Destroy a window."]
@@ -11690,6 +12211,9 @@ extern "C" {
     #[doc = ""]
     #[doc = " If you disable the screensaver, it is automatically re-enabled when SDL"]
     #[doc = " quits."]
+    #[doc = ""]
+    #[doc = " The screensaver is disabled by default since SDL 2.0.2. Before SDL 2.0.2"]
+    #[doc = " the screensaver was enabled by default."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
@@ -11933,13 +12457,8 @@ extern "C" {
     #[doc = " retry the call with 1 for the interval."]
     #[doc = ""]
     #[doc = " Adaptive vsync is implemented for some glX drivers with"]
-    #[doc = " GLX_EXT_swap_control_tear:"]
-    #[doc = ""]
-    #[doc = " https://www.opengl.org/registry/specs/EXT/glx_swap_control_tear.txt"]
-    #[doc = ""]
-    #[doc = " and for some Windows drivers with WGL_EXT_swap_control_tear:"]
-    #[doc = ""]
-    #[doc = " https://www.opengl.org/registry/specs/EXT/wgl_swap_control_tear.txt"]
+    #[doc = " GLX_EXT_swap_control_tear, and for some Windows drivers with"]
+    #[doc = " WGL_EXT_swap_control_tear."]
     #[doc = ""]
     #[doc = " Read more on the Khronos wiki:"]
     #[doc = " https://www.khronos.org/opengl/wiki/Swap_Interval#Adaptive_Vsync"]
@@ -12177,16 +12696,24 @@ pub enum SDL_Scancode {
     SDL_SCANCODE_F23 = 114,
     SDL_SCANCODE_F24 = 115,
     SDL_SCANCODE_EXECUTE = 116,
+    #[doc = "< AL Integrated Help Center"]
     SDL_SCANCODE_HELP = 117,
+    #[doc = "< Menu (show menu)"]
     SDL_SCANCODE_MENU = 118,
     SDL_SCANCODE_SELECT = 119,
+    #[doc = "< AC Stop"]
     SDL_SCANCODE_STOP = 120,
-    #[doc = "< redo"]
+    #[doc = "< AC Redo/Repeat"]
     SDL_SCANCODE_AGAIN = 121,
+    #[doc = "< AC Undo"]
     SDL_SCANCODE_UNDO = 122,
+    #[doc = "< AC Cut"]
     SDL_SCANCODE_CUT = 123,
+    #[doc = "< AC Copy"]
     SDL_SCANCODE_COPY = 124,
+    #[doc = "< AC Paste"]
     SDL_SCANCODE_PASTE = 125,
+    #[doc = "< AC Find"]
     SDL_SCANCODE_FIND = 126,
     SDL_SCANCODE_MUTE = 127,
     SDL_SCANCODE_VOLUMEUP = 128,
@@ -12226,6 +12753,7 @@ pub enum SDL_Scancode {
     #[doc = "< Erase-Eaze"]
     SDL_SCANCODE_ALTERASE = 153,
     SDL_SCANCODE_SYSREQ = 154,
+    #[doc = "< AC Cancel"]
     SDL_SCANCODE_CANCEL = 155,
     SDL_SCANCODE_CLEAR = 156,
     SDL_SCANCODE_PRIOR = 157,
@@ -12304,16 +12832,25 @@ pub enum SDL_Scancode {
     SDL_SCANCODE_AUDIOPLAY = 261,
     SDL_SCANCODE_AUDIOMUTE = 262,
     SDL_SCANCODE_MEDIASELECT = 263,
+    #[doc = "< AL Internet Browser"]
     SDL_SCANCODE_WWW = 264,
     SDL_SCANCODE_MAIL = 265,
+    #[doc = "< AL Calculator"]
     SDL_SCANCODE_CALCULATOR = 266,
     SDL_SCANCODE_COMPUTER = 267,
+    #[doc = "< AC Search"]
     SDL_SCANCODE_AC_SEARCH = 268,
+    #[doc = "< AC Home"]
     SDL_SCANCODE_AC_HOME = 269,
+    #[doc = "< AC Back"]
     SDL_SCANCODE_AC_BACK = 270,
+    #[doc = "< AC Forward"]
     SDL_SCANCODE_AC_FORWARD = 271,
+    #[doc = "< AC Stop"]
     SDL_SCANCODE_AC_STOP = 272,
+    #[doc = "< AC Refresh"]
     SDL_SCANCODE_AC_REFRESH = 273,
+    #[doc = "< AC Bookmarks"]
     SDL_SCANCODE_AC_BOOKMARKS = 274,
     SDL_SCANCODE_BRIGHTNESSDOWN = 275,
     SDL_SCANCODE_BRIGHTNESSUP = 276,
@@ -12324,11 +12861,26 @@ pub enum SDL_Scancode {
     SDL_SCANCODE_KBDILLUMDOWN = 279,
     SDL_SCANCODE_KBDILLUMUP = 280,
     SDL_SCANCODE_EJECT = 281,
+    #[doc = "< SC System Sleep"]
     SDL_SCANCODE_SLEEP = 282,
     SDL_SCANCODE_APP1 = 283,
     SDL_SCANCODE_APP2 = 284,
     SDL_SCANCODE_AUDIOREWIND = 285,
     SDL_SCANCODE_AUDIOFASTFORWARD = 286,
+    #[doc = "< Usually situated below the display on phones and"]
+    #[doc = "used as a multi-function feature key for selecting"]
+    #[doc = "a software defined function shown on the bottom left"]
+    #[doc = "of the display."]
+    SDL_SCANCODE_SOFTLEFT = 287,
+    #[doc = "< Usually situated below the display on phones and"]
+    #[doc = "used as a multi-function feature key for selecting"]
+    #[doc = "a software defined function shown on the bottom right"]
+    #[doc = "of the display."]
+    SDL_SCANCODE_SOFTRIGHT = 288,
+    #[doc = "< Used for accepting phone calls."]
+    SDL_SCANCODE_CALL = 289,
+    #[doc = "< Used for rejecting phone calls."]
+    SDL_SCANCODE_ENDCALL = 290,
     #[doc = "< not a key, just marks the number of scancodes"]
     #[doc = "for array bounds"]
     SDL_NUM_SCANCODES = 512,
@@ -12586,6 +13138,10 @@ pub enum SDL_KeyCode {
     SDLK_APP2 = 1073742108,
     SDLK_AUDIOREWIND = 1073742109,
     SDLK_AUDIOFASTFORWARD = 1073742110,
+    SDLK_SOFTLEFT = 1073742111,
+    SDLK_SOFTRIGHT = 1073742112,
+    SDLK_CALL = 1073742113,
+    SDLK_ENDCALL = 1073742114,
 }
 impl SDL_Keymod {
     pub const KMOD_RESERVED: SDL_Keymod = SDL_Keymod::KMOD_SCROLL;
@@ -12714,7 +13270,18 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_PumpEvents"]
+    #[doc = " \\sa SDL_ResetKeyboard"]
     pub fn SDL_GetKeyboardState(numkeys: *mut core::ffi::c_int) -> *const Uint8;
+}
+extern "C" {
+    #[doc = " Clear the state of the keyboard"]
+    #[doc = ""]
+    #[doc = " This function will generate key up events for all pressed keys."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_GetKeyboardState"]
+    pub fn SDL_ResetKeyboard();
 }
 extern "C" {
     #[doc = " Get the current key modifier state for the keyboard."]
@@ -12881,7 +13448,30 @@ extern "C" {
     pub fn SDL_StopTextInput();
 }
 extern "C" {
+    #[doc = " Dismiss the composition window/IME without disabling the subsystem."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.0.22."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_StartTextInput"]
+    #[doc = " \\sa SDL_StopTextInput"]
+    pub fn SDL_ClearComposition();
+}
+extern "C" {
+    #[doc = " Returns if an IME Composite or Candidate window is currently shown."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.0.22."]
+    pub fn SDL_IsTextInputShown() -> SDL_bool;
+}
+extern "C" {
     #[doc = " Set the rectangle used to type Unicode text inputs."]
+    #[doc = ""]
+    #[doc = " To start text input in a given location, this function is intended to be"]
+    #[doc = " called before SDL_StartTextInput, although some platforms support moving"]
+    #[doc = " the rectangle even while text input (and a composition) is active."]
+    #[doc = ""]
+    #[doc = " Note: If you want to use the system native IME window, try setting hint"]
+    #[doc = " **SDL_HINT_IME_SHOW_UI** to **1**, otherwise this function won't give you"]
+    #[doc = " any feedback."]
     #[doc = ""]
     #[doc = " \\param rect the SDL_Rect structure representing the rectangle to receive"]
     #[doc = "             text (ignored if NULL)"]
@@ -12889,7 +13479,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_StartTextInput"]
-    pub fn SDL_SetTextInputRect(rect: *mut SDL_Rect);
+    pub fn SDL_SetTextInputRect(rect: *const SDL_Rect);
 }
 extern "C" {
     #[doc = " Check whether the platform has screen keyboard support."]
@@ -13037,7 +13627,9 @@ extern "C" {
 extern "C" {
     #[doc = " Move the mouse cursor to the given position within the window."]
     #[doc = ""]
-    #[doc = " This function generates a mouse motion event."]
+    #[doc = " This function generates a mouse motion event if relative mode is not"]
+    #[doc = " enabled. If relative mode is enabled, you can force mouse events for the"]
+    #[doc = " warp by setting the SDL_HINT_MOUSE_RELATIVE_WARP_MOTION hint."]
     #[doc = ""]
     #[doc = " Note that this function will appear to succeed, but not actually move the"]
     #[doc = " mouse when used over Microsoft Remote Desktop."]
@@ -13123,6 +13715,15 @@ extern "C" {
     #[doc = ""]
     #[doc = " While capturing is enabled, the current window will have the"]
     #[doc = " `SDL_WINDOW_MOUSE_CAPTURE` flag set."]
+    #[doc = ""]
+    #[doc = " Please note that as of SDL 2.0.22, SDL will attempt to \"auto capture\" the"]
+    #[doc = " mouse while the user is pressing a button; this is to try and make mouse"]
+    #[doc = " behavior more consistent between platforms, and deal with the common case"]
+    #[doc = " of a user dragging the mouse outside of the window. This means that if you"]
+    #[doc = " are calling SDL_CaptureMouse() only to deal with this situation, you no"]
+    #[doc = " longer have to (although it is safe to do so). If this causes problems for"]
+    #[doc = " your app, you can disable auto capture by setting the"]
+    #[doc = " `SDL_HINT_MOUSE_AUTO_CAPTURE` hint to zero."]
     #[doc = ""]
     #[doc = " \\param enabled SDL_TRUE to enable capturing, SDL_FALSE to disable."]
     #[doc = " \\returns 0 on success or -1 if not supported; call SDL_GetError() for more"]
@@ -13299,6 +13900,80 @@ extern "C" {
     #[doc = " \\sa SDL_SetCursor"]
     pub fn SDL_ShowCursor(toggle: core::ffi::c_int) -> core::ffi::c_int;
 }
+#[doc = " An SDL_GUID is a 128-bit identifier for an input device that"]
+#[doc = "   identifies that device across runs of SDL programs on the same"]
+#[doc = "   platform.  If the device is detached and then re-attached to a"]
+#[doc = "   different port, or if the base system is rebooted, the device"]
+#[doc = "   should still report the same GUID."]
+#[doc = ""]
+#[doc = " GUIDs are as precise as possible but are not guaranteed to"]
+#[doc = "   distinguish physically distinct but equivalent devices.  For"]
+#[doc = "   example, two game controllers from the same vendor with the same"]
+#[doc = "   product ID and revision may have the same GUID."]
+#[doc = ""]
+#[doc = " GUIDs may be platform-dependent (i.e., the same device may report"]
+#[doc = "   different GUIDs on different operating systems)."]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct SDL_GUID {
+    pub data: [Uint8; 16usize],
+}
+#[test]
+fn bindgen_test_layout_SDL_GUID() {
+    assert_eq!(
+        ::core::mem::size_of::<SDL_GUID>(),
+        16usize,
+        concat!("Size of: ", stringify!(SDL_GUID))
+    );
+    assert_eq!(
+        ::core::mem::align_of::<SDL_GUID>(),
+        1usize,
+        concat!("Alignment of ", stringify!(SDL_GUID))
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_GUID>())).data as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_GUID),
+            "::",
+            stringify!(data)
+        )
+    );
+}
+extern "C" {
+    #[doc = " Get an ASCII string representation for a given ::SDL_GUID."]
+    #[doc = ""]
+    #[doc = " You should supply at least 33 bytes for pszGUID."]
+    #[doc = ""]
+    #[doc = " \\param guid the ::SDL_GUID you wish to convert to string"]
+    #[doc = " \\param pszGUID buffer in which to write the ASCII string"]
+    #[doc = " \\param cbGUID the size of pszGUID"]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_GUIDFromString"]
+    pub fn SDL_GUIDToString(
+        guid: SDL_GUID,
+        pszGUID: *mut core::ffi::c_char,
+        cbGUID: core::ffi::c_int,
+    );
+}
+extern "C" {
+    #[doc = " Convert a GUID string into a ::SDL_GUID structure."]
+    #[doc = ""]
+    #[doc = " Performs no error checking. If this function is given a string containing"]
+    #[doc = " an invalid GUID, the function will silently succeed, but the GUID generated"]
+    #[doc = " will not be useful."]
+    #[doc = ""]
+    #[doc = " \\param pchGUID string containing an ASCII representation of a GUID"]
+    #[doc = " \\returns a ::SDL_GUID structure."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_GUIDToString"]
+    pub fn SDL_GUIDFromString(pchGUID: *const core::ffi::c_char) -> SDL_GUID;
+}
 #[doc = " The joystick structure used to identify an SDL joystick"]
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -13306,34 +13981,7 @@ pub struct _SDL_Joystick {
     _unused: [u8; 0],
 }
 pub type SDL_Joystick = _SDL_Joystick;
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct SDL_JoystickGUID {
-    pub data: [Uint8; 16usize],
-}
-#[test]
-fn bindgen_test_layout_SDL_JoystickGUID() {
-    assert_eq!(
-        ::core::mem::size_of::<SDL_JoystickGUID>(),
-        16usize,
-        concat!("Size of: ", stringify!(SDL_JoystickGUID))
-    );
-    assert_eq!(
-        ::core::mem::align_of::<SDL_JoystickGUID>(),
-        1usize,
-        concat!("Alignment of ", stringify!(SDL_JoystickGUID))
-    );
-    assert_eq!(
-        unsafe { &(*(::core::ptr::null::<SDL_JoystickGUID>())).data as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(SDL_JoystickGUID),
-            "::",
-            stringify!(data)
-        )
-    );
-}
+pub type SDL_JoystickGUID = SDL_GUID;
 #[doc = " This is a unique ID for a joystick for the time it is connected to the system,"]
 #[doc = " and is never reused for the lifetime of the application. If the joystick is"]
 #[doc = " disconnected and reconnected, it will get a new ID."]
@@ -13375,6 +14023,11 @@ extern "C" {
     #[doc = " the API functions that take a joystick index will be valid, and joystick"]
     #[doc = " and game controller events will not be delivered."]
     #[doc = ""]
+    #[doc = " As of SDL 2.26.0, you can take the joystick lock around reinitializing the"]
+    #[doc = " joystick subsystem, to prevent other threads from seeing joysticks in an"]
+    #[doc = " uninitialized state. However, all open joysticks will be closed and SDL"]
+    #[doc = " functions called with them will fail."]
+    #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.7."]
     pub fn SDL_LockJoysticks();
 }
@@ -13400,6 +14053,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickName"]
+    #[doc = " \\sa SDL_JoystickPath"]
     #[doc = " \\sa SDL_JoystickOpen"]
     pub fn SDL_NumJoysticks() -> core::ffi::c_int;
 }
@@ -13418,6 +14072,22 @@ extern "C" {
     #[doc = " \\sa SDL_JoystickName"]
     #[doc = " \\sa SDL_JoystickOpen"]
     pub fn SDL_JoystickNameForIndex(device_index: core::ffi::c_int) -> *const core::ffi::c_char;
+}
+extern "C" {
+    #[doc = " Get the implementation dependent path of a joystick."]
+    #[doc = ""]
+    #[doc = " This can be called before any joysticks are opened."]
+    #[doc = ""]
+    #[doc = " \\param device_index the index of the joystick to query (the N'th joystick"]
+    #[doc = "                     on the system)"]
+    #[doc = " \\returns the path of the selected joystick. If no path can be found, this"]
+    #[doc = "          function returns NULL; call SDL_GetError() for more information."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_JoystickPath"]
+    #[doc = " \\sa SDL_JoystickOpen"]
+    pub fn SDL_JoystickPathForIndex(device_index: core::ffi::c_int) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the player index of a joystick, or -1 if it's not available This can be"]
@@ -13566,6 +14236,304 @@ extern "C" {
         nhats: core::ffi::c_int,
     ) -> core::ffi::c_int;
 }
+#[doc = " The structure that defines an extended virtual joystick description"]
+#[doc = ""]
+#[doc = " The caller must zero the structure and then initialize the version with `SDL_VIRTUAL_JOYSTICK_DESC_VERSION` before passing it to SDL_JoystickAttachVirtualEx()"]
+#[doc = "  All other elements of this structure are optional and can be left 0."]
+#[doc = ""]
+#[doc = " \\sa SDL_JoystickAttachVirtualEx"]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct SDL_VirtualJoystickDesc {
+    #[doc = "< `SDL_VIRTUAL_JOYSTICK_DESC_VERSION`"]
+    pub version: Uint16,
+    #[doc = "< `SDL_JoystickType`"]
+    pub type_: Uint16,
+    #[doc = "< the number of axes on this joystick"]
+    pub naxes: Uint16,
+    #[doc = "< the number of buttons on this joystick"]
+    pub nbuttons: Uint16,
+    #[doc = "< the number of hats on this joystick"]
+    pub nhats: Uint16,
+    #[doc = "< the USB vendor ID of this joystick"]
+    pub vendor_id: Uint16,
+    #[doc = "< the USB product ID of this joystick"]
+    pub product_id: Uint16,
+    #[doc = "< unused"]
+    pub padding: Uint16,
+    #[doc = "< A mask of which buttons are valid for this controller"]
+    #[doc = "e.g. (1 << SDL_CONTROLLER_BUTTON_A)"]
+    pub button_mask: Uint32,
+    #[doc = "< A mask of which axes are valid for this controller"]
+    #[doc = "e.g. (1 << SDL_CONTROLLER_AXIS_LEFTX)"]
+    pub axis_mask: Uint32,
+    #[doc = "< the name of the joystick"]
+    pub name: *const core::ffi::c_char,
+    #[doc = "< User data pointer passed to callbacks"]
+    pub userdata: *mut core::ffi::c_void,
+    #[doc = "< Called when the joystick state should be updated"]
+    pub Update: ::core::option::Option<unsafe extern "C" fn(userdata: *mut core::ffi::c_void)>,
+    #[doc = "< Called when the player index is set"]
+    pub SetPlayerIndex: ::core::option::Option<
+        unsafe extern "C" fn(userdata: *mut core::ffi::c_void, player_index: core::ffi::c_int),
+    >,
+    #[doc = "< Implements SDL_JoystickRumble()"]
+    pub Rumble: ::core::option::Option<
+        unsafe extern "C" fn(
+            userdata: *mut core::ffi::c_void,
+            low_frequency_rumble: Uint16,
+            high_frequency_rumble: Uint16,
+        ) -> core::ffi::c_int,
+    >,
+    #[doc = "< Implements SDL_JoystickRumbleTriggers()"]
+    pub RumbleTriggers: ::core::option::Option<
+        unsafe extern "C" fn(
+            userdata: *mut core::ffi::c_void,
+            left_rumble: Uint16,
+            right_rumble: Uint16,
+        ) -> core::ffi::c_int,
+    >,
+    #[doc = "< Implements SDL_JoystickSetLED()"]
+    pub SetLED: ::core::option::Option<
+        unsafe extern "C" fn(
+            userdata: *mut core::ffi::c_void,
+            red: Uint8,
+            green: Uint8,
+            blue: Uint8,
+        ) -> core::ffi::c_int,
+    >,
+    #[doc = "< Implements SDL_JoystickSendEffect()"]
+    pub SendEffect: ::core::option::Option<
+        unsafe extern "C" fn(
+            userdata: *mut core::ffi::c_void,
+            data: *const core::ffi::c_void,
+            size: core::ffi::c_int,
+        ) -> core::ffi::c_int,
+    >,
+}
+#[test]
+fn bindgen_test_layout_SDL_VirtualJoystickDesc() {
+    assert_eq!(
+        ::core::mem::size_of::<SDL_VirtualJoystickDesc>(),
+        88usize,
+        concat!("Size of: ", stringify!(SDL_VirtualJoystickDesc))
+    );
+    assert_eq!(
+        ::core::mem::align_of::<SDL_VirtualJoystickDesc>(),
+        8usize,
+        concat!("Alignment of ", stringify!(SDL_VirtualJoystickDesc))
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).version as *const _ as usize
+        },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(version)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).type_ as *const _ as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(type_)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).naxes as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(naxes)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).nbuttons as *const _ as usize
+        },
+        6usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(nbuttons)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).nhats as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(nhats)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).vendor_id as *const _ as usize
+        },
+        10usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(vendor_id)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).product_id as *const _ as usize
+        },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(product_id)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).padding as *const _ as usize
+        },
+        14usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(padding)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).button_mask as *const _ as usize
+        },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(button_mask)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).axis_mask as *const _ as usize
+        },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(axis_mask)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).name as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(name)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).userdata as *const _ as usize
+        },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(userdata)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).Update as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(Update)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).SetPlayerIndex as *const _ as usize
+        },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(SetPlayerIndex)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).Rumble as *const _ as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(Rumble)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).RumbleTriggers as *const _ as usize
+        },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(RumbleTriggers)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).SetLED as *const _ as usize },
+        72usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(SetLED)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_VirtualJoystickDesc>())).SendEffect as *const _ as usize
+        },
+        80usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_VirtualJoystickDesc),
+            "::",
+            stringify!(SendEffect)
+        )
+    );
+}
+extern "C" {
+    #[doc = " Attach a new virtual joystick with extended properties."]
+    #[doc = ""]
+    #[doc = " \\returns the joystick's device index, or -1 if an error occurred."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    pub fn SDL_JoystickAttachVirtualEx(desc: *const SDL_VirtualJoystickDesc) -> core::ffi::c_int;
+}
 extern "C" {
     #[doc = " Detach a virtual joystick."]
     #[doc = ""]
@@ -13593,6 +14561,10 @@ extern "C" {
     #[doc = " indirectly through various other SDL APIs, including, but not limited to"]
     #[doc = " the following: SDL_PollEvent, SDL_PumpEvents, SDL_WaitEventTimeout,"]
     #[doc = " SDL_WaitEvent."]
+    #[doc = ""]
+    #[doc = " Note that when sending trigger axes, you should scale the value to the full"]
+    #[doc = " range of Sint16. For example, a trigger at rest would have the value of"]
+    #[doc = " `SDL_JOYSTICK_AXIS_MIN`."]
     #[doc = ""]
     #[doc = " \\param joystick the virtual joystick on which to set state."]
     #[doc = " \\param axis the specific axis on the virtual joystick to set."]
@@ -13662,6 +14634,18 @@ extern "C" {
     pub fn SDL_JoystickName(joystick: *mut SDL_Joystick) -> *const core::ffi::c_char;
 }
 extern "C" {
+    #[doc = " Get the implementation dependent path of a joystick."]
+    #[doc = ""]
+    #[doc = " \\param joystick the SDL_Joystick obtained from SDL_JoystickOpen()"]
+    #[doc = " \\returns the path of the selected joystick. If no path can be found, this"]
+    #[doc = "          function returns NULL; call SDL_GetError() for more information."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_JoystickPathForIndex"]
+    pub fn SDL_JoystickPath(joystick: *mut SDL_Joystick) -> *const core::ffi::c_char;
+}
+extern "C" {
     #[doc = " Get the player index of an opened joystick."]
     #[doc = ""]
     #[doc = " For XInput controllers this returns the XInput user index. Many joysticks"]
@@ -13677,7 +14661,8 @@ extern "C" {
     #[doc = " Set the player index of an opened joystick."]
     #[doc = ""]
     #[doc = " \\param joystick the SDL_Joystick obtained from SDL_JoystickOpen()"]
-    #[doc = " \\param player_index the player index to set."]
+    #[doc = " \\param player_index Player index to assign to this joystick, or -1 to clear"]
+    #[doc = "                     the player index and turn off player LEDs."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.12."]
     pub fn SDL_JoystickSetPlayerIndex(joystick: *mut SDL_Joystick, player_index: core::ffi::c_int);
@@ -13730,6 +14715,18 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.6."]
     pub fn SDL_JoystickGetProductVersion(joystick: *mut SDL_Joystick) -> Uint16;
+}
+extern "C" {
+    #[doc = " Get the firmware version of an opened joystick, if available."]
+    #[doc = ""]
+    #[doc = " If the firmware version isn't available this function returns 0."]
+    #[doc = ""]
+    #[doc = " \\param joystick the SDL_Joystick obtained from SDL_JoystickOpen()"]
+    #[doc = " \\returns the firmware version of the selected joystick, or 0 if"]
+    #[doc = "          unavailable."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    pub fn SDL_JoystickGetFirmwareVersion(joystick: *mut SDL_Joystick) -> Uint16;
 }
 extern "C" {
     #[doc = " Get the serial number of an opened joystick, if available."]
@@ -13786,6 +14783,30 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickGetGUIDString"]
     pub fn SDL_JoystickGetGUIDFromString(pchGUID: *const core::ffi::c_char) -> SDL_JoystickGUID;
+}
+extern "C" {
+    #[doc = " Get the device information encoded in a SDL_JoystickGUID structure"]
+    #[doc = ""]
+    #[doc = " \\param guid the SDL_JoystickGUID you wish to get info about"]
+    #[doc = " \\param vendor A pointer filled in with the device VID, or 0 if not"]
+    #[doc = "               available"]
+    #[doc = " \\param product A pointer filled in with the device PID, or 0 if not"]
+    #[doc = "                available"]
+    #[doc = " \\param version A pointer filled in with the device version, or 0 if not"]
+    #[doc = "                available"]
+    #[doc = " \\param crc16 A pointer filled in with a CRC used to distinguish different"]
+    #[doc = "              products with the same VID/PID, or 0 if not available"]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.26.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_JoystickGetDeviceGUID"]
+    pub fn SDL_GetJoystickGUIDInfo(
+        guid: SDL_JoystickGUID,
+        vendor: *mut Uint16,
+        product: *mut Uint16,
+        version: *mut Uint16,
+        crc16: *mut Uint16,
+    );
 }
 extern "C" {
     #[doc = " Get the status of a specified joystick."]
@@ -14042,9 +15063,9 @@ extern "C" {
     #[doc = " Each call to this function cancels any previous trigger rumble effect, and"]
     #[doc = " calling it with 0 intensity stops any rumbling."]
     #[doc = ""]
-    #[doc = " Note that this function is for _trigger_ rumble; the first joystick to"]
-    #[doc = " support this was the PlayStation 5's DualShock 5 controller. If you want"]
-    #[doc = " the (more common) whole-controller rumble, use SDL_JoystickRumble()"]
+    #[doc = " Note that this is rumbling of the _triggers_ and not the game controller as"]
+    #[doc = " a whole. This is currently only supported on Xbox One controllers. If you"]
+    #[doc = " want the (more common) whole-controller rumble, use SDL_JoystickRumble()"]
     #[doc = " instead."]
     #[doc = ""]
     #[doc = " \\param joystick The joystick to vibrate"]
@@ -14181,6 +15202,14 @@ pub enum SDL_SensorType {
     SDL_SENSOR_ACCEL = 1,
     #[doc = "< Gyroscope"]
     SDL_SENSOR_GYRO = 2,
+    #[doc = "< Accelerometer for left Joy-Con controller and Wii nunchuk"]
+    SDL_SENSOR_ACCEL_L = 3,
+    #[doc = "< Gyroscope for left Joy-Con controller"]
+    SDL_SENSOR_GYRO_L = 4,
+    #[doc = "< Accelerometer for right Joy-Con controller"]
+    SDL_SENSOR_ACCEL_R = 5,
+    #[doc = "< Gyroscope for right Joy-Con controller"]
+    SDL_SENSOR_GYRO_R = 6,
 }
 extern "C" {
     #[doc = " Locking for multi-threaded access to the sensor API"]
@@ -14317,6 +15346,27 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
+    #[doc = " Get the current state of an opened sensor with the timestamp of the last"]
+    #[doc = " update."]
+    #[doc = ""]
+    #[doc = " The number of values and interpretation of the data is sensor dependent."]
+    #[doc = ""]
+    #[doc = " \\param sensor The SDL_Sensor object to query"]
+    #[doc = " \\param timestamp A pointer filled with the timestamp in microseconds of the"]
+    #[doc = "                  current sensor reading if available, or 0 if not"]
+    #[doc = " \\param data A pointer filled with the current sensor state"]
+    #[doc = " \\param num_values The number of values to write to data"]
+    #[doc = " \\returns 0 or -1 if an error occurred."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.26.0."]
+    pub fn SDL_SensorGetDataWithTimestamp(
+        sensor: *mut SDL_Sensor,
+        timestamp: *mut Uint64,
+        data: *mut f32,
+        num_values: core::ffi::c_int,
+    ) -> core::ffi::c_int;
+}
+extern "C" {
     #[doc = " Close a sensor previously opened with SDL_SensorOpen()."]
     #[doc = ""]
     #[doc = " \\param sensor The SDL_Sensor object to close"]
@@ -14356,6 +15406,10 @@ pub enum SDL_GameControllerType {
     SDL_CONTROLLER_TYPE_PS5 = 7,
     SDL_CONTROLLER_TYPE_AMAZON_LUNA = 8,
     SDL_CONTROLLER_TYPE_GOOGLE_STADIA = 9,
+    SDL_CONTROLLER_TYPE_NVIDIA_SHIELD = 10,
+    SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_LEFT = 11,
+    SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_RIGHT = 12,
+    SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR = 13,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -14584,7 +15638,9 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GameControllerMapping"]
     #[doc = " \\sa SDL_GameControllerMappingForGUID"]
-    pub fn SDL_GameControllerAddMapping(mappingString: *const core::ffi::c_char) -> core::ffi::c_int;
+    pub fn SDL_GameControllerAddMapping(
+        mappingString: *const core::ffi::c_char,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the number of mappings installed."]
@@ -14601,7 +15657,9 @@ extern "C" {
     #[doc = "          the index is out of range."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.6."]
-    pub fn SDL_GameControllerMappingForIndex(mapping_index: core::ffi::c_int) -> *mut core::ffi::c_char;
+    pub fn SDL_GameControllerMappingForIndex(
+        mapping_index: core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the game controller mapping string for a given GUID."]
@@ -14634,7 +15692,9 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GameControllerAddMapping"]
     #[doc = " \\sa SDL_GameControllerMappingForGUID"]
-    pub fn SDL_GameControllerMapping(gamecontroller: *mut SDL_GameController) -> *mut core::ffi::c_char;
+    pub fn SDL_GameControllerMapping(
+        gamecontroller: *mut SDL_GameController,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Check if the given joystick is supported by the game controller interface."]
@@ -14671,7 +15731,29 @@ extern "C" {
     #[doc = " \\sa SDL_GameControllerName"]
     #[doc = " \\sa SDL_GameControllerOpen"]
     #[doc = " \\sa SDL_IsGameController"]
-    pub fn SDL_GameControllerNameForIndex(joystick_index: core::ffi::c_int) -> *const core::ffi::c_char;
+    pub fn SDL_GameControllerNameForIndex(
+        joystick_index: core::ffi::c_int,
+    ) -> *const core::ffi::c_char;
+}
+extern "C" {
+    #[doc = " Get the implementation dependent path for the game controller."]
+    #[doc = ""]
+    #[doc = " This function can be called before any controllers are opened."]
+    #[doc = ""]
+    #[doc = " `joystick_index` is the same as the `device_index` passed to"]
+    #[doc = " SDL_JoystickOpen()."]
+    #[doc = ""]
+    #[doc = " \\param joystick_index the device_index of a device, from zero to"]
+    #[doc = "                       SDL_NumJoysticks()-1"]
+    #[doc = " \\returns the implementation-dependent path for the game controller, or NULL"]
+    #[doc = "          if there is no path or the index is invalid."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_GameControllerPath"]
+    pub fn SDL_GameControllerPathForIndex(
+        joystick_index: core::ffi::c_int,
+    ) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the type of a game controller."]
@@ -14683,7 +15765,9 @@ extern "C" {
     #[doc = " \\returns the controller type."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.12."]
-    pub fn SDL_GameControllerTypeForIndex(joystick_index: core::ffi::c_int) -> SDL_GameControllerType;
+    pub fn SDL_GameControllerTypeForIndex(
+        joystick_index: core::ffi::c_int,
+    ) -> SDL_GameControllerType;
 }
 extern "C" {
     #[doc = " Get the mapping of a game controller."]
@@ -14747,7 +15831,9 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GameControllerGetPlayerIndex"]
     #[doc = " \\sa SDL_GameControllerSetPlayerIndex"]
-    pub fn SDL_GameControllerFromPlayerIndex(player_index: core::ffi::c_int) -> *mut SDL_GameController;
+    pub fn SDL_GameControllerFromPlayerIndex(
+        player_index: core::ffi::c_int,
+    ) -> *mut SDL_GameController;
 }
 extern "C" {
     #[doc = " Get the implementation-dependent name for an opened game controller."]
@@ -14764,7 +15850,27 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GameControllerNameForIndex"]
     #[doc = " \\sa SDL_GameControllerOpen"]
-    pub fn SDL_GameControllerName(gamecontroller: *mut SDL_GameController) -> *const core::ffi::c_char;
+    pub fn SDL_GameControllerName(
+        gamecontroller: *mut SDL_GameController,
+    ) -> *const core::ffi::c_char;
+}
+extern "C" {
+    #[doc = " Get the implementation-dependent path for an opened game controller."]
+    #[doc = ""]
+    #[doc = " This is the same path as returned by SDL_GameControllerNameForIndex(), but"]
+    #[doc = " it takes a controller identifier instead of the (unstable) device index."]
+    #[doc = ""]
+    #[doc = " \\param gamecontroller a game controller identifier previously returned by"]
+    #[doc = "                       SDL_GameControllerOpen()"]
+    #[doc = " \\returns the implementation dependent path for the game controller, or NULL"]
+    #[doc = "          if there is no path or the identifier passed is invalid."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_GameControllerPathForIndex"]
+    pub fn SDL_GameControllerPath(
+        gamecontroller: *mut SDL_GameController,
+    ) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the type of this currently opened controller"]
@@ -14789,14 +15895,16 @@ extern "C" {
     #[doc = " \\returns the player index for controller, or -1 if it's not available."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
-    pub fn SDL_GameControllerGetPlayerIndex(gamecontroller: *mut SDL_GameController)
-        -> core::ffi::c_int;
+    pub fn SDL_GameControllerGetPlayerIndex(
+        gamecontroller: *mut SDL_GameController,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the player index of an opened game controller."]
     #[doc = ""]
     #[doc = " \\param gamecontroller the game controller object to adjust."]
-    #[doc = " \\param player_index Player index to assign to this controller."]
+    #[doc = " \\param player_index Player index to assign to this controller, or -1 to"]
+    #[doc = "                     clear the player index and turn off player LEDs."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.12."]
     pub fn SDL_GameControllerSetPlayerIndex(
@@ -14836,6 +15944,17 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.6."]
     pub fn SDL_GameControllerGetProductVersion(gamecontroller: *mut SDL_GameController) -> Uint16;
+}
+extern "C" {
+    #[doc = " Get the firmware version of an opened controller, if available."]
+    #[doc = ""]
+    #[doc = " If the firmware version isn't available this function returns 0."]
+    #[doc = ""]
+    #[doc = " \\param gamecontroller the game controller object to query."]
+    #[doc = " \\return the controller firmware version, or zero if unavailable."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    pub fn SDL_GameControllerGetFirmwareVersion(gamecontroller: *mut SDL_GameController) -> Uint16;
 }
 extern "C" {
     #[doc = " Get the serial number of an opened controller, if available."]
@@ -14954,7 +16073,9 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GameControllerGetStringForAxis"]
-    pub fn SDL_GameControllerGetAxisFromString(str: *const core::ffi::c_char) -> SDL_GameControllerAxis;
+    pub fn SDL_GameControllerGetAxisFromString(
+        str: *const core::ffi::c_char,
+    ) -> SDL_GameControllerAxis;
 }
 extern "C" {
     #[doc = " Convert from an SDL_GameControllerAxis enum to a string."]
@@ -14969,7 +16090,9 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GameControllerGetAxisFromString"]
-    pub fn SDL_GameControllerGetStringForAxis(axis: SDL_GameControllerAxis) -> *const core::ffi::c_char;
+    pub fn SDL_GameControllerGetStringForAxis(
+        axis: SDL_GameControllerAxis,
+    ) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the SDL joystick layer binding for a controller axis mapping."]
@@ -15076,7 +16199,7 @@ extern "C" {
     #[doc = " The caller should not SDL_free() the returned string."]
     #[doc = ""]
     #[doc = " \\param button an enum value for a given SDL_GameControllerButton"]
-    #[doc = " \\returns a string for the given button, or NULL if an invalid axis is"]
+    #[doc = " \\returns a string for the given button, or NULL if an invalid button is"]
     #[doc = "          specified. The string returned is of the format used by"]
     #[doc = "          SDL_GameController mapping strings."]
     #[doc = ""]
@@ -15244,6 +16367,30 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
+    #[doc = " Get the current state of a game controller sensor with the timestamp of the"]
+    #[doc = " last update."]
+    #[doc = ""]
+    #[doc = " The number of values and interpretation of the data is sensor dependent."]
+    #[doc = " See SDL_sensor.h for the details for each type of sensor."]
+    #[doc = ""]
+    #[doc = " \\param gamecontroller The controller to query"]
+    #[doc = " \\param type The type of sensor to query"]
+    #[doc = " \\param timestamp A pointer filled with the timestamp in microseconds of the"]
+    #[doc = "                  current sensor reading if available, or 0 if not"]
+    #[doc = " \\param data A pointer filled with the current sensor state"]
+    #[doc = " \\param num_values The number of values to write to data"]
+    #[doc = " \\return 0 or -1 if an error occurred."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.26.0."]
+    pub fn SDL_GameControllerGetSensorDataWithTimestamp(
+        gamecontroller: *mut SDL_GameController,
+        type_: SDL_SensorType,
+        timestamp: *mut Uint64,
+        data: *mut f32,
+        num_values: core::ffi::c_int,
+    ) -> core::ffi::c_int;
+}
+extern "C" {
     #[doc = " Start a rumble effect on a game controller."]
     #[doc = ""]
     #[doc = " Each call to this function cancels any previous rumble effect, and calling"]
@@ -15274,8 +16421,9 @@ extern "C" {
     #[doc = " calling it with 0 intensity stops any rumbling."]
     #[doc = ""]
     #[doc = " Note that this is rumbling of the _triggers_ and not the game controller as"]
-    #[doc = " a whole. The first controller to offer this feature was the PlayStation 5's"]
-    #[doc = " DualShock 5."]
+    #[doc = " a whole. This is currently only supported on Xbox One controllers. If you"]
+    #[doc = " want the (more common) whole-controller rumble, use"]
+    #[doc = " SDL_GameControllerRumble() instead."]
     #[doc = ""]
     #[doc = " \\param gamecontroller The controller to vibrate"]
     #[doc = " \\param left_rumble The intensity of the left trigger rumble motor, from 0"]
@@ -15507,6 +16655,13 @@ extern "C" {
     pub fn SDL_GetTouchDevice(index: core::ffi::c_int) -> SDL_TouchID;
 }
 extern "C" {
+    #[doc = " Get the touch device name as reported from the driver or NULL if the index"]
+    #[doc = " is invalid."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.0.22."]
+    pub fn SDL_GetTouchName(index: core::ffi::c_int) -> *const core::ffi::c_char;
+}
+extern "C" {
     #[doc = " Get the type of the given touch device."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.10."]
@@ -15579,7 +16734,10 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_LoadDollarTemplates"]
     #[doc = " \\sa SDL_SaveAllDollarTemplates"]
-    pub fn SDL_SaveDollarTemplate(gestureId: SDL_GestureID, dst: *mut SDL_RWops) -> core::ffi::c_int;
+    pub fn SDL_SaveDollarTemplate(
+        gestureId: SDL_GestureID,
+        dst: *mut SDL_RWops,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Load Dollar Gesture templates from a file."]
@@ -15646,6 +16804,8 @@ pub enum SDL_EventType {
     #[doc = "< Keymap changed due to a system event such as an"]
     #[doc = "input language or keyboard layout change."]
     SDL_KEYMAPCHANGED = 772,
+    #[doc = "< Extended keyboard text editing (composition)"]
+    SDL_TEXTEDITING_EXT = 773,
     #[doc = "< Mouse moved"]
     SDL_MOUSEMOTION = 1024,
     #[doc = "< Mouse button pressed"]
@@ -15668,6 +16828,8 @@ pub enum SDL_EventType {
     SDL_JOYDEVICEADDED = 1541,
     #[doc = "< An opened joystick has been removed"]
     SDL_JOYDEVICEREMOVED = 1542,
+    #[doc = "< Joystick battery level change"]
+    SDL_JOYBATTERYUPDATED = 1543,
     #[doc = "< Game controller axis motion"]
     SDL_CONTROLLERAXISMOTION = 1616,
     #[doc = "< Game controller button pressed"]
@@ -15694,7 +16856,7 @@ pub enum SDL_EventType {
     SDL_DOLLARGESTURE = 2048,
     SDL_DOLLARRECORD = 2049,
     SDL_MULTIGESTURE = 2050,
-    #[doc = "< The clipboard changed"]
+    #[doc = "< The clipboard or primary selection changed"]
     SDL_CLIPBOARDUPDATE = 2304,
     #[doc = "< The system requests a file open"]
     SDL_DROPFILE = 4096,
@@ -16199,6 +17361,101 @@ fn bindgen_test_layout_SDL_TextEditingEvent() {
         )
     );
 }
+#[doc = "  \\brief Extended keyboard text editing event structure (event.editExt.*) when text would be"]
+#[doc = "  truncated if stored in the text buffer SDL_TextEditingEvent"]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct SDL_TextEditingExtEvent {
+    #[doc = "< ::SDL_TEXTEDITING_EXT"]
+    pub type_: Uint32,
+    #[doc = "< In milliseconds, populated using SDL_GetTicks()"]
+    pub timestamp: Uint32,
+    #[doc = "< The window with keyboard focus, if any"]
+    pub windowID: Uint32,
+    #[doc = "< The editing text, which should be freed with SDL_free(), and will not be NULL"]
+    pub text: *mut core::ffi::c_char,
+    #[doc = "< The start cursor of selected editing text"]
+    pub start: Sint32,
+    #[doc = "< The length of selected editing text"]
+    pub length: Sint32,
+}
+#[test]
+fn bindgen_test_layout_SDL_TextEditingExtEvent() {
+    assert_eq!(
+        ::core::mem::size_of::<SDL_TextEditingExtEvent>(),
+        32usize,
+        concat!("Size of: ", stringify!(SDL_TextEditingExtEvent))
+    );
+    assert_eq!(
+        ::core::mem::align_of::<SDL_TextEditingExtEvent>(),
+        8usize,
+        concat!("Alignment of ", stringify!(SDL_TextEditingExtEvent))
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_TextEditingExtEvent>())).type_ as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_TextEditingExtEvent),
+            "::",
+            stringify!(type_)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_TextEditingExtEvent>())).timestamp as *const _ as usize
+        },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_TextEditingExtEvent),
+            "::",
+            stringify!(timestamp)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_TextEditingExtEvent>())).windowID as *const _ as usize
+        },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_TextEditingExtEvent),
+            "::",
+            stringify!(windowID)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_TextEditingExtEvent>())).text as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_TextEditingExtEvent),
+            "::",
+            stringify!(text)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_TextEditingExtEvent>())).start as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_TextEditingExtEvent),
+            "::",
+            stringify!(start)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_TextEditingExtEvent>())).length as *const _ as usize },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_TextEditingExtEvent),
+            "::",
+            stringify!(length)
+        )
+    );
+}
 #[doc = "  \\brief Keyboard text input event structure (event.text.*)"]
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -16550,12 +17807,16 @@ pub struct SDL_MouseWheelEvent {
     pub preciseX: f32,
     #[doc = "< The amount scrolled vertically, positive away from the user and negative toward the user, with float precision (added in 2.0.18)"]
     pub preciseY: f32,
+    #[doc = "< X coordinate, relative to window (added in 2.26.0)"]
+    pub mouseX: Sint32,
+    #[doc = "< Y coordinate, relative to window (added in 2.26.0)"]
+    pub mouseY: Sint32,
 }
 #[test]
 fn bindgen_test_layout_SDL_MouseWheelEvent() {
     assert_eq!(
         ::core::mem::size_of::<SDL_MouseWheelEvent>(),
-        36usize,
+        44usize,
         concat!("Size of: ", stringify!(SDL_MouseWheelEvent))
     );
     assert_eq!(
@@ -16651,6 +17912,26 @@ fn bindgen_test_layout_SDL_MouseWheelEvent() {
             stringify!(SDL_MouseWheelEvent),
             "::",
             stringify!(preciseY)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_MouseWheelEvent>())).mouseX as *const _ as usize },
+        36usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_MouseWheelEvent),
+            "::",
+            stringify!(mouseX)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_MouseWheelEvent>())).mouseY as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_MouseWheelEvent),
+            "::",
+            stringify!(mouseY)
         )
     );
 }
@@ -17158,6 +18439,72 @@ fn bindgen_test_layout_SDL_JoyDeviceEvent() {
         )
     );
 }
+#[doc = "  \\brief Joysick battery level change event structure (event.jbattery.*)"]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct SDL_JoyBatteryEvent {
+    #[doc = "< ::SDL_JOYBATTERYUPDATED"]
+    pub type_: Uint32,
+    #[doc = "< In milliseconds, populated using SDL_GetTicks()"]
+    pub timestamp: Uint32,
+    #[doc = "< The joystick instance id"]
+    pub which: SDL_JoystickID,
+    #[doc = "< The joystick battery level"]
+    pub level: SDL_JoystickPowerLevel,
+}
+#[test]
+fn bindgen_test_layout_SDL_JoyBatteryEvent() {
+    assert_eq!(
+        ::core::mem::size_of::<SDL_JoyBatteryEvent>(),
+        16usize,
+        concat!("Size of: ", stringify!(SDL_JoyBatteryEvent))
+    );
+    assert_eq!(
+        ::core::mem::align_of::<SDL_JoyBatteryEvent>(),
+        4usize,
+        concat!("Alignment of ", stringify!(SDL_JoyBatteryEvent))
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_JoyBatteryEvent>())).type_ as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_JoyBatteryEvent),
+            "::",
+            stringify!(type_)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_JoyBatteryEvent>())).timestamp as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_JoyBatteryEvent),
+            "::",
+            stringify!(timestamp)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_JoyBatteryEvent>())).which as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_JoyBatteryEvent),
+            "::",
+            stringify!(which)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_JoyBatteryEvent>())).level as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_JoyBatteryEvent),
+            "::",
+            stringify!(level)
+        )
+    );
+}
 #[doc = "  \\brief Game controller axis motion event structure (event.caxis.*)"]
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -17604,17 +18951,19 @@ pub struct SDL_ControllerSensorEvent {
     pub sensor: Sint32,
     #[doc = "< Up to 3 values from the sensor, as defined in SDL_sensor.h"]
     pub data: [f32; 3usize],
+    #[doc = "< The timestamp of the sensor reading in microseconds, if the hardware provides this information."]
+    pub timestamp_us: Uint64,
 }
 #[test]
 fn bindgen_test_layout_SDL_ControllerSensorEvent() {
     assert_eq!(
         ::core::mem::size_of::<SDL_ControllerSensorEvent>(),
-        28usize,
+        40usize,
         concat!("Size of: ", stringify!(SDL_ControllerSensorEvent))
     );
     assert_eq!(
         ::core::mem::align_of::<SDL_ControllerSensorEvent>(),
-        4usize,
+        8usize,
         concat!("Alignment of ", stringify!(SDL_ControllerSensorEvent))
     );
     assert_eq!(
@@ -17673,6 +19022,18 @@ fn bindgen_test_layout_SDL_ControllerSensorEvent() {
             stringify!(SDL_ControllerSensorEvent),
             "::",
             stringify!(data)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_ControllerSensorEvent>())).timestamp_us as *const _ as usize
+        },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_ControllerSensorEvent),
+            "::",
+            stringify!(timestamp_us)
         )
     );
 }
@@ -18233,17 +19594,19 @@ pub struct SDL_SensorEvent {
     pub which: Sint32,
     #[doc = "< Up to 6 values from the sensor - additional values can be queried using SDL_SensorGetData()"]
     pub data: [f32; 6usize],
+    #[doc = "< The timestamp of the sensor reading in microseconds, if the hardware provides this information."]
+    pub timestamp_us: Uint64,
 }
 #[test]
 fn bindgen_test_layout_SDL_SensorEvent() {
     assert_eq!(
         ::core::mem::size_of::<SDL_SensorEvent>(),
-        36usize,
+        48usize,
         concat!("Size of: ", stringify!(SDL_SensorEvent))
     );
     assert_eq!(
         ::core::mem::align_of::<SDL_SensorEvent>(),
-        4usize,
+        8usize,
         concat!("Alignment of ", stringify!(SDL_SensorEvent))
     );
     assert_eq!(
@@ -18284,6 +19647,16 @@ fn bindgen_test_layout_SDL_SensorEvent() {
             stringify!(SDL_SensorEvent),
             "::",
             stringify!(data)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_SensorEvent>())).timestamp_us as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_SensorEvent),
+            "::",
+            stringify!(timestamp_us)
         )
     );
 }
@@ -18534,6 +19907,8 @@ pub union SDL_Event {
     pub key: SDL_KeyboardEvent,
     #[doc = "< Text editing event data"]
     pub edit: SDL_TextEditingEvent,
+    #[doc = "< Extended text editing event data"]
+    pub editExt: SDL_TextEditingExtEvent,
     #[doc = "< Text input event data"]
     pub text: SDL_TextInputEvent,
     #[doc = "< Mouse motion event data"]
@@ -18552,6 +19927,8 @@ pub union SDL_Event {
     pub jbutton: SDL_JoyButtonEvent,
     #[doc = "< Joystick device change event data"]
     pub jdevice: SDL_JoyDeviceEvent,
+    #[doc = "< Joystick battery event data"]
+    pub jbattery: SDL_JoyBatteryEvent,
     #[doc = "< Game Controller axis event data"]
     pub caxis: SDL_ControllerAxisEvent,
     #[doc = "< Game Controller button event data"]
@@ -18656,6 +20033,16 @@ fn bindgen_test_layout_SDL_Event() {
         )
     );
     assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_Event>())).editExt as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_Event),
+            "::",
+            stringify!(editExt)
+        )
+    );
+    assert_eq!(
         unsafe { &(*(::core::ptr::null::<SDL_Event>())).text as *const _ as usize },
         0usize,
         concat!(
@@ -18743,6 +20130,16 @@ fn bindgen_test_layout_SDL_Event() {
             stringify!(SDL_Event),
             "::",
             stringify!(jdevice)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<SDL_Event>())).jbattery as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_Event),
+            "::",
+            stringify!(jbattery)
         )
     );
     assert_eq!(
@@ -18896,7 +20293,6 @@ fn bindgen_test_layout_SDL_Event() {
         )
     );
 }
-pub type SDL_compile_time_assert_SDL_Event = [core::ffi::c_int; 1usize];
 extern "C" {
     #[doc = " Pump the event loop, gathering events from the input devices."]
     #[doc = ""]
@@ -19139,7 +20535,10 @@ extern "C" {
     #[doc = " \\sa SDL_PollEvent"]
     #[doc = " \\sa SDL_PumpEvents"]
     #[doc = " \\sa SDL_WaitEvent"]
-    pub fn SDL_WaitEventTimeout(event: *mut SDL_Event, timeout: core::ffi::c_int) -> core::ffi::c_int;
+    pub fn SDL_WaitEventTimeout(
+        event: *mut SDL_Event,
+        timeout: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Add an event to the event queue."]
@@ -19185,7 +20584,10 @@ extern "C" {
 #[doc = " \\sa SDL_SetEventFilter"]
 #[doc = " \\sa SDL_AddEventWatch"]
 pub type SDL_EventFilter = ::core::option::Option<
-    unsafe extern "C" fn(userdata: *mut core::ffi::c_void, event: *mut SDL_Event) -> core::ffi::c_int,
+    unsafe extern "C" fn(
+        userdata: *mut core::ffi::c_void,
+        event: *mut SDL_Event,
+    ) -> core::ffi::c_int,
 >;
 extern "C" {
     #[doc = " Set up a filter to process all events before they change internal state and"]
@@ -19369,6 +20771,10 @@ extern "C" {
     #[doc = " - `parent`: the containing directory of the bundle. For example:"]
     #[doc = "   `/Applications/SDLApp/`"]
     #[doc = ""]
+    #[doc = " **Nintendo 3DS Specific Functionality**: This function returns \"romfs\""]
+    #[doc = " directory of the application as it is uncommon to store resources outside"]
+    #[doc = " the executable. As such it is not a writable directory."]
+    #[doc = ""]
     #[doc = " The returned path is guaranteed to end with a path separator ('\\' on"]
     #[doc = " Windows, '/' on most other platforms)."]
     #[doc = ""]
@@ -19400,7 +20806,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " `C:\\\\Users\\\\bob\\\\AppData\\\\Roaming\\\\My Company\\\\My Program Name\\\\`"]
     #[doc = ""]
-    #[doc = " On Linux, the string might look like\""]
+    #[doc = " On Linux, the string might look like:"]
     #[doc = ""]
     #[doc = " `/home/bob/.local/share/My Program Name/`"]
     #[doc = ""]
@@ -19439,8 +20845,10 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.1."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetBasePath"]
-    pub fn SDL_GetPrefPath(org: *const core::ffi::c_char, app: *const core::ffi::c_char)
-        -> *mut core::ffi::c_char;
+    pub fn SDL_GetPrefPath(
+        org: *const core::ffi::c_char,
+        app: *const core::ffi::c_char,
+    ) -> *mut core::ffi::c_char;
 }
 #[doc = "  \\typedef SDL_Haptic"]
 #[doc = ""]
@@ -21102,7 +22510,10 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_HapticDestroyEffect"]
     #[doc = " \\sa SDL_HapticRunEffect"]
-    pub fn SDL_HapticStopEffect(haptic: *mut SDL_Haptic, effect: core::ffi::c_int) -> core::ffi::c_int;
+    pub fn SDL_HapticStopEffect(
+        haptic: *mut SDL_Haptic,
+        effect: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Destroy a haptic effect on the device."]
@@ -21132,7 +22543,10 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_HapticRunEffect"]
     #[doc = " \\sa SDL_HapticStopEffect"]
-    pub fn SDL_HapticGetEffectStatus(haptic: *mut SDL_Haptic, effect: core::ffi::c_int) -> core::ffi::c_int;
+    pub fn SDL_HapticGetEffectStatus(
+        haptic: *mut SDL_Haptic,
+        effect: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the global gain of the specified haptic device."]
@@ -21170,8 +22584,10 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_HapticQuery"]
-    pub fn SDL_HapticSetAutocenter(haptic: *mut SDL_Haptic, autocenter: core::ffi::c_int)
-        -> core::ffi::c_int;
+    pub fn SDL_HapticSetAutocenter(
+        haptic: *mut SDL_Haptic,
+        autocenter: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Pause a haptic device."]
@@ -21712,7 +23128,10 @@ extern "C" {
     #[doc = " \\returns 0 on success and -1 on error."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.18."]
-    pub fn SDL_hid_set_nonblocking(dev: *mut SDL_hid_device, nonblock: core::ffi::c_int) -> core::ffi::c_int;
+    pub fn SDL_hid_set_nonblocking(
+        dev: *mut SDL_hid_device,
+        nonblock: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Send a Feature report to the device."]
@@ -21889,7 +23308,38 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetHint"]
     #[doc = " \\sa SDL_SetHintWithPriority"]
-    pub fn SDL_SetHint(name: *const core::ffi::c_char, value: *const core::ffi::c_char) -> SDL_bool;
+    pub fn SDL_SetHint(name: *const core::ffi::c_char, value: *const core::ffi::c_char)
+        -> SDL_bool;
+}
+extern "C" {
+    #[doc = " Reset a hint to the default value."]
+    #[doc = ""]
+    #[doc = " This will reset a hint to the value of the environment variable, or NULL if"]
+    #[doc = " the environment isn't set. Callbacks will be called normally with this"]
+    #[doc = " change."]
+    #[doc = ""]
+    #[doc = " \\param name the hint to set"]
+    #[doc = " \\returns SDL_TRUE if the hint was set, SDL_FALSE otherwise."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.24.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_GetHint"]
+    #[doc = " \\sa SDL_SetHint"]
+    pub fn SDL_ResetHint(name: *const core::ffi::c_char) -> SDL_bool;
+}
+extern "C" {
+    #[doc = " Reset all hints to the default values."]
+    #[doc = ""]
+    #[doc = " This will reset all hints to the value of the associated environment"]
+    #[doc = " variable, or NULL if the environment isn't set. Callbacks will be called"]
+    #[doc = " normally with this change."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.26.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_GetHint"]
+    #[doc = " \\sa SDL_SetHint"]
+    #[doc = " \\sa SDL_ResetHint"]
+    pub fn SDL_ResetHints();
 }
 extern "C" {
     #[doc = " Get the value of a hint."]
@@ -21968,9 +23418,16 @@ extern "C" {
 extern "C" {
     #[doc = " Clear all hints."]
     #[doc = ""]
-    #[doc = " This function is automatically called during SDL_Quit()."]
+    #[doc = " This function is automatically called during SDL_Quit(), and deletes all"]
+    #[doc = " callbacks without calling them and frees all memory associated with hints."]
+    #[doc = " If you're calling this from application code you probably want to call"]
+    #[doc = " SDL_ResetHints() instead."]
+    #[doc = ""]
+    #[doc = " This function will be removed from the API the next time we rev the ABI."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
+    #[doc = ""]
+    #[doc = " \\sa SDL_ResetHints"]
     pub fn SDL_ClearHints();
 }
 extern "C" {
@@ -22344,7 +23801,10 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_LogGetOutputFunction"]
-    pub fn SDL_LogSetOutputFunction(callback: SDL_LogOutputFunction, userdata: *mut core::ffi::c_void);
+    pub fn SDL_LogSetOutputFunction(
+        callback: SDL_LogOutputFunction,
+        userdata: *mut core::ffi::c_void,
+    );
 }
 #[repr(u32)]
 #[doc = " SDL_MessageBox flags. If supported will display warning icon, etc."]
@@ -22737,7 +24197,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.14."]
     #[doc = ""]
-    #[doc = " \\sa SDL_MetalCreateView"]
+    #[doc = " \\sa SDL_Metal_CreateView"]
     pub fn SDL_Metal_GetLayer(view: SDL_MetalView) -> *mut core::ffi::c_void;
 }
 extern "C" {
@@ -22746,6 +24206,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\param window SDL_Window from which the drawable size should be queried"]
     #[doc = " \\param w Pointer to variable for storing the width in pixels, may be NULL"]
+    #[doc = " \\param h Pointer to variable for storing the height in pixels, may be NULL"]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.14."]
     #[doc = ""]
@@ -22797,7 +24258,10 @@ extern "C" {
     #[doc = " \\returns an SDL_PowerState enum representing the current battery state."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
-    pub fn SDL_GetPowerInfo(secs: *mut core::ffi::c_int, pct: *mut core::ffi::c_int) -> SDL_PowerState;
+    pub fn SDL_GetPowerInfo(
+        secs: *mut core::ffi::c_int,
+        pct: *mut core::ffi::c_int,
+    ) -> SDL_PowerState;
 }
 #[repr(u32)]
 #[doc = " Flags used when creating a rendering context"]
@@ -23054,7 +24518,10 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_CreateRenderer"]
     #[doc = " \\sa SDL_GetNumRenderDrivers"]
-    pub fn SDL_GetRenderDriverInfo(index: core::ffi::c_int, info: *mut SDL_RendererInfo) -> core::ffi::c_int;
+    pub fn SDL_GetRenderDriverInfo(
+        index: core::ffi::c_int,
+        info: *mut SDL_RendererInfo,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Create a window and default renderer."]
@@ -23133,6 +24600,16 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_CreateRenderer"]
     pub fn SDL_GetRenderer(window: *mut SDL_Window) -> *mut SDL_Renderer;
+}
+extern "C" {
+    #[doc = " Get the window associated with a renderer."]
+    #[doc = ""]
+    #[doc = " \\param renderer the renderer to query"]
+    #[doc = " \\returns the window on success or NULL on failure; call SDL_GetError() for"]
+    #[doc = "          more information."]
+    #[doc = ""]
+    #[doc = " \\since This function is available since SDL 2.0.22."]
+    pub fn SDL_RenderGetWindow(renderer: *mut SDL_Renderer) -> *mut SDL_Window;
 }
 extern "C" {
     #[doc = " Get information about a rendering context."]
@@ -23236,11 +24713,15 @@ extern "C" {
     #[doc = " \\param texture the texture to query"]
     #[doc = " \\param format a pointer filled in with the raw format of the texture; the"]
     #[doc = "               actual format may differ, but pixel transfers will use this"]
-    #[doc = "               format (one of the SDL_PixelFormatEnum values)"]
+    #[doc = "               format (one of the SDL_PixelFormatEnum values). This argument"]
+    #[doc = "               can be NULL if you don't need this information."]
     #[doc = " \\param access a pointer filled in with the actual access to the texture"]
-    #[doc = "               (one of the SDL_TextureAccess values)"]
-    #[doc = " \\param w a pointer filled in with the width of the texture in pixels"]
-    #[doc = " \\param h a pointer filled in with the height of the texture in pixels"]
+    #[doc = "               (one of the SDL_TextureAccess values). This argument can be"]
+    #[doc = "               NULL if you don't need this information."]
+    #[doc = " \\param w a pointer filled in with the width of the texture in pixels. This"]
+    #[doc = "          argument can be NULL if you don't need this information."]
+    #[doc = " \\param h a pointer filled in with the height of the texture in pixels. This"]
+    #[doc = "          argument can be NULL if you don't need this information."]
     #[doc = " \\returns 0 on success or a negative error code on failure; call"]
     #[doc = "          SDL_GetError() for more information."]
     #[doc = ""]
@@ -23340,7 +24821,8 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetTextureColorMod"]
     #[doc = " \\sa SDL_SetTextureAlphaMod"]
-    pub fn SDL_GetTextureAlphaMod(texture: *mut SDL_Texture, alpha: *mut Uint8) -> core::ffi::c_int;
+    pub fn SDL_GetTextureAlphaMod(texture: *mut SDL_Texture, alpha: *mut Uint8)
+        -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the blend mode for a texture, used by SDL_RenderCopy()."]
@@ -23710,9 +25192,13 @@ extern "C" {
 extern "C" {
     #[doc = " Get device independent resolution for rendering."]
     #[doc = ""]
-    #[doc = " This may return 0 for `w` and `h` if the SDL_Renderer has never had its"]
-    #[doc = " logical size set by SDL_RenderSetLogicalSize() and never had a render"]
-    #[doc = " target set."]
+    #[doc = " When using the main rendering target (eg no target texture is set): this"]
+    #[doc = " may return 0 for `w` and `h` if the SDL_Renderer has never had its logical"]
+    #[doc = " size set by SDL_RenderSetLogicalSize(). Otherwise it returns the logical"]
+    #[doc = " width and height."]
+    #[doc = ""]
+    #[doc = " When using a target texture: Never return 0 for `w` and `h` at first. Then"]
+    #[doc = " it returns the logical width and height that are set."]
     #[doc = ""]
     #[doc = " \\param renderer a rendering context"]
     #[doc = " \\param w an int to be filled with the width"]
@@ -23743,7 +25229,10 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_RenderGetIntegerScale"]
     #[doc = " \\sa SDL_RenderSetLogicalSize"]
-    pub fn SDL_RenderSetIntegerScale(renderer: *mut SDL_Renderer, enable: SDL_bool) -> core::ffi::c_int;
+    pub fn SDL_RenderSetIntegerScale(
+        renderer: *mut SDL_Renderer,
+        enable: SDL_bool,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get whether integer scales are forced for resolution-independent rendering."]
@@ -23772,8 +25261,10 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_RenderGetViewport"]
-    pub fn SDL_RenderSetViewport(renderer: *mut SDL_Renderer, rect: *const SDL_Rect)
-        -> core::ffi::c_int;
+    pub fn SDL_RenderSetViewport(
+        renderer: *mut SDL_Renderer,
+        rect: *const SDL_Rect,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the drawing area for the current target."]
@@ -23800,8 +25291,10 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_RenderGetClipRect"]
     #[doc = " \\sa SDL_RenderIsClipEnabled"]
-    pub fn SDL_RenderSetClipRect(renderer: *mut SDL_Renderer, rect: *const SDL_Rect)
-        -> core::ffi::c_int;
+    pub fn SDL_RenderSetClipRect(
+        renderer: *mut SDL_Renderer,
+        rect: *const SDL_Rect,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the clip rectangle for the current target."]
@@ -23851,8 +25344,11 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_RenderGetScale"]
     #[doc = " \\sa SDL_RenderSetLogicalSize"]
-    pub fn SDL_RenderSetScale(renderer: *mut SDL_Renderer, scaleX: f32, scaleY: f32)
-        -> core::ffi::c_int;
+    pub fn SDL_RenderSetScale(
+        renderer: *mut SDL_Renderer,
+        scaleX: f32,
+        scaleY: f32,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the drawing scale for the current target."]
@@ -23874,7 +25370,7 @@ extern "C" {
     #[doc = " and logical renderer size set"]
     #[doc = ""]
     #[doc = " \\param renderer the renderer from which the logical coordinates should be"]
-    #[doc = "                 calcualted"]
+    #[doc = "                 calculated"]
     #[doc = " \\param windowX the real X coordinate in the window"]
     #[doc = " \\param windowY the real Y coordinate in the window"]
     #[doc = " \\param logicalX the pointer filled with the logical x coordinate"]
@@ -23895,15 +25391,18 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " Get real coordinates of point in window when given logical coordinates of point in renderer."]
-    #[doc = " Logical coordinates will differ from real coordinates when render is scaled and logical renderer size set"]
+    #[doc = " Get real coordinates of point in window when given logical coordinates of"]
+    #[doc = " point in renderer."]
     #[doc = ""]
-    #[doc = " \\param renderer the renderer from which the window coordinates should be calculated"]
+    #[doc = " Logical coordinates will differ from real coordinates when render is scaled"]
+    #[doc = " and logical renderer size set"]
+    #[doc = ""]
+    #[doc = " \\param renderer the renderer from which the window coordinates should be"]
+    #[doc = "                 calculated"]
     #[doc = " \\param logicalX the logical x coordinate"]
     #[doc = " \\param logicalY the logical y coordinate"]
     #[doc = " \\param windowX the pointer filled with the real X coordinate in the window"]
     #[doc = " \\param windowY the pointer filled with the real Y coordinate in the window"]
-    #[doc = ""]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.18."]
     #[doc = ""]
@@ -24179,7 +25678,10 @@ extern "C" {
     #[doc = " \\sa SDL_RenderPresent"]
     #[doc = " \\sa SDL_SetRenderDrawBlendMode"]
     #[doc = " \\sa SDL_SetRenderDrawColor"]
-    pub fn SDL_RenderDrawRect(renderer: *mut SDL_Renderer, rect: *const SDL_Rect) -> core::ffi::c_int;
+    pub fn SDL_RenderDrawRect(
+        renderer: *mut SDL_Renderer,
+        rect: *const SDL_Rect,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Draw some number of rectangles on the current rendering target."]
@@ -24234,7 +25736,10 @@ extern "C" {
     #[doc = " \\sa SDL_RenderPresent"]
     #[doc = " \\sa SDL_SetRenderDrawBlendMode"]
     #[doc = " \\sa SDL_SetRenderDrawColor"]
-    pub fn SDL_RenderFillRect(renderer: *mut SDL_Renderer, rect: *const SDL_Rect) -> core::ffi::c_int;
+    pub fn SDL_RenderFillRect(
+        renderer: *mut SDL_Renderer,
+        rect: *const SDL_Rect,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Fill some number of rectangles on the current rendering target with the"]
@@ -24415,7 +25920,10 @@ extern "C" {
     #[doc = " \\return 0 on success, or -1 on error"]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.10."]
-    pub fn SDL_RenderDrawRectF(renderer: *mut SDL_Renderer, rect: *const SDL_FRect) -> core::ffi::c_int;
+    pub fn SDL_RenderDrawRectF(
+        renderer: *mut SDL_Renderer,
+        rect: *const SDL_FRect,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Draw some number of rectangles on the current rendering target at subpixel"]
@@ -24443,7 +25951,10 @@ extern "C" {
     #[doc = " \\return 0 on success, or -1 on error"]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.10."]
-    pub fn SDL_RenderFillRectF(renderer: *mut SDL_Renderer, rect: *const SDL_FRect) -> core::ffi::c_int;
+    pub fn SDL_RenderFillRectF(
+        renderer: *mut SDL_Renderer,
+        rect: *const SDL_FRect,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Fill some number of rectangles on the current rendering target with the"]
@@ -24516,6 +26027,7 @@ extern "C" {
     #[doc = " vertex array Color and alpha modulation is done per vertex"]
     #[doc = " (SDL_SetTextureColorMod and SDL_SetTextureAlphaMod are ignored)."]
     #[doc = ""]
+    #[doc = " \\param renderer The rendering context."]
     #[doc = " \\param texture (optional) The SDL texture to use."]
     #[doc = " \\param vertices Vertices."]
     #[doc = " \\param num_vertices Number of vertices."]
@@ -24543,6 +26055,7 @@ extern "C" {
     #[doc = " vertex arrays Color and alpha modulation is done per vertex"]
     #[doc = " (SDL_SetTextureColorMod and SDL_SetTextureAlphaMod are ignored)."]
     #[doc = ""]
+    #[doc = " \\param renderer The rendering context."]
     #[doc = " \\param texture (optional) The SDL texture to use."]
     #[doc = " \\param xy Vertex positions"]
     #[doc = " \\param xy_stride Byte size to move from one element to the next element"]
@@ -24580,7 +26093,8 @@ extern "C" {
     #[doc = " Read pixels from the current rendering target to an array of pixels."]
     #[doc = ""]
     #[doc = " **WARNING**: This is a very slow operation, and should not be used"]
-    #[doc = " frequently."]
+    #[doc = " frequently. If you're using this on the main rendering target, it should be"]
+    #[doc = " called after rendering and before SDL_RenderPresent()."]
     #[doc = ""]
     #[doc = " `pitch` specifies the number of bytes between rows in the destination"]
     #[doc = " `pixels` data. This allows you to write to a subrectangle or have padded"]
@@ -24660,6 +26174,9 @@ extern "C" {
 }
 extern "C" {
     #[doc = " Destroy the rendering context for a window and free associated textures."]
+    #[doc = ""]
+    #[doc = " If `renderer` is NULL, this function will return immediately after setting"]
+    #[doc = " the SDL error message to \"Invalid renderer\". See SDL_GetError()."]
     #[doc = ""]
     #[doc = " \\param renderer the rendering context"]
     #[doc = ""]
@@ -24795,7 +26312,10 @@ extern "C" {
     #[doc = " \\returns a 0 int on success, or non-zero on failure"]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.18."]
-    pub fn SDL_RenderSetVSync(renderer: *mut SDL_Renderer, vsync: core::ffi::c_int) -> core::ffi::c_int;
+    pub fn SDL_RenderSetVSync(
+        renderer: *mut SDL_Renderer,
+        vsync: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Create a window that can be shaped with the specified position, dimensions,"]
@@ -24991,7 +26511,10 @@ extern "C" {
     #[doc = " \\returns 0 on success, or -1 on error."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
-    pub fn SDL_LinuxSetThreadPriority(threadID: Sint64, priority: core::ffi::c_int) -> core::ffi::c_int;
+    pub fn SDL_LinuxSetThreadPriority(
+        threadID: Sint64,
+        priority: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Sets the priority (not nice level) and scheduling policy for a thread."]
@@ -34882,12 +36405,18 @@ extern "C" {
     ) -> ::core::option::Option<
         unsafe extern "C" fn(
             arg1: *mut Display,
-            arg2: ::core::option::Option<unsafe extern "C" fn(arg1: *mut Display) -> core::ffi::c_int>,
+            arg2: ::core::option::Option<
+                unsafe extern "C" fn(arg1: *mut Display) -> core::ffi::c_int,
+            >,
         ) -> core::ffi::c_int,
     >;
 }
 extern "C" {
-    pub fn XInternAtom(arg1: *mut Display, arg2: *const core::ffi::c_char, arg3: core::ffi::c_int) -> Atom;
+    pub fn XInternAtom(
+        arg1: *mut Display,
+        arg2: *const core::ffi::c_char,
+        arg3: core::ffi::c_int,
+    ) -> Atom;
 }
 extern "C" {
     pub fn XInternAtoms(
@@ -35038,13 +36567,23 @@ extern "C" {
     ) -> *mut *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XGetFontPath(arg1: *mut Display, arg2: *mut core::ffi::c_int) -> *mut *mut core::ffi::c_char;
+    pub fn XGetFontPath(
+        arg1: *mut Display,
+        arg2: *mut core::ffi::c_int,
+    ) -> *mut *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XListExtensions(arg1: *mut Display, arg2: *mut core::ffi::c_int) -> *mut *mut core::ffi::c_char;
+    pub fn XListExtensions(
+        arg1: *mut Display,
+        arg2: *mut core::ffi::c_int,
+    ) -> *mut *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XListProperties(arg1: *mut Display, arg2: Window, arg3: *mut core::ffi::c_int) -> *mut Atom;
+    pub fn XListProperties(
+        arg1: *mut Display,
+        arg2: Window,
+        arg3: *mut core::ffi::c_int,
+    ) -> *mut Atom;
 }
 extern "C" {
     pub fn XListHosts(
@@ -35090,6 +36629,9 @@ extern "C" {
 }
 extern "C" {
     pub fn XInitThreads() -> core::ffi::c_int;
+}
+extern "C" {
+    pub fn XFreeThreads() -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XLockDisplay(arg1: *mut Display);
@@ -35237,10 +36779,18 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XIconifyWindow(arg1: *mut Display, arg2: Window, arg3: core::ffi::c_int) -> core::ffi::c_int;
+    pub fn XIconifyWindow(
+        arg1: *mut Display,
+        arg2: Window,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XWithdrawWindow(arg1: *mut Display, arg2: Window, arg3: core::ffi::c_int) -> core::ffi::c_int;
+    pub fn XWithdrawWindow(
+        arg1: *mut Display,
+        arg2: Window,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetCommand(
@@ -35270,7 +36820,8 @@ extern "C" {
     pub fn XFreeStringList(arg1: *mut *mut core::ffi::c_char);
 }
 extern "C" {
-    pub fn XSetTransientForHint(arg1: *mut Display, arg2: Window, arg3: Window) -> core::ffi::c_int;
+    pub fn XSetTransientForHint(arg1: *mut Display, arg2: Window, arg3: Window)
+        -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XActivateScreenSaver(arg1: *mut Display) -> core::ffi::c_int;
@@ -35279,8 +36830,11 @@ extern "C" {
     pub fn XAddHost(arg1: *mut Display, arg2: *mut XHostAddress) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XAddHosts(arg1: *mut Display, arg2: *mut XHostAddress, arg3: core::ffi::c_int)
-        -> core::ffi::c_int;
+    pub fn XAddHosts(
+        arg1: *mut Display,
+        arg2: *mut XHostAddress,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XAddToExtensionList(arg1: *mut *mut _XExtData, arg2: *mut XExtData) -> core::ffi::c_int;
@@ -35327,7 +36881,8 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XAllowEvents(arg1: *mut Display, arg2: core::ffi::c_int, arg3: Time) -> core::ffi::c_int;
+    pub fn XAllowEvents(arg1: *mut Display, arg2: core::ffi::c_int, arg3: Time)
+        -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XAutoRepeatOff(arg1: *mut Display) -> core::ffi::c_int;
@@ -35405,7 +36960,11 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XChangeSaveSet(arg1: *mut Display, arg2: Window, arg3: core::ffi::c_int) -> core::ffi::c_int;
+    pub fn XChangeSaveSet(
+        arg1: *mut Display,
+        arg2: Window,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XChangeWindowAttributes(
@@ -35460,8 +37019,11 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XCirculateSubwindows(arg1: *mut Display, arg2: Window, arg3: core::ffi::c_int)
-        -> core::ffi::c_int;
+    pub fn XCirculateSubwindows(
+        arg1: *mut Display,
+        arg2: Window,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XCirculateSubwindowsDown(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
@@ -35522,7 +37084,12 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XCopyGC(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_ulong, arg4: GC) -> core::ffi::c_int;
+    pub fn XCopyGC(
+        arg1: *mut Display,
+        arg2: GC,
+        arg3: core::ffi::c_ulong,
+        arg4: GC,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XCopyPlane(
@@ -35974,8 +37541,11 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XGetTransientForHint(arg1: *mut Display, arg2: Window, arg3: *mut Window)
-        -> core::ffi::c_int;
+    pub fn XGetTransientForHint(
+        arg1: *mut Display,
+        arg2: Window,
+        arg3: *mut Window,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetWindowProperty(
@@ -36105,7 +37675,11 @@ extern "C" {
     pub fn XMapWindow(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XMaskEvent(arg1: *mut Display, arg2: core::ffi::c_long, arg3: *mut XEvent) -> core::ffi::c_int;
+    pub fn XMaskEvent(
+        arg1: *mut Display,
+        arg2: core::ffi::c_long,
+        arg3: *mut XEvent,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XMaxCmapsOfScreen(arg1: *mut Screen) -> core::ffi::c_int;
@@ -36394,8 +37968,11 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XRestackWindows(arg1: *mut Display, arg2: *mut Window, arg3: core::ffi::c_int)
-        -> core::ffi::c_int;
+    pub fn XRestackWindows(
+        arg1: *mut Display,
+        arg2: *mut Window,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XRotateBuffers(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
@@ -36413,7 +37990,11 @@ extern "C" {
     pub fn XScreenCount(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSelectInput(arg1: *mut Display, arg2: Window, arg3: core::ffi::c_long) -> core::ffi::c_int;
+    pub fn XSelectInput(
+        arg1: *mut Display,
+        arg2: Window,
+        arg3: core::ffi::c_long,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSendEvent(
@@ -36431,7 +38012,11 @@ extern "C" {
     pub fn XSetArcMode(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetBackground(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_ulong) -> core::ffi::c_int;
+    pub fn XSetBackground(
+        arg1: *mut Display,
+        arg2: GC,
+        arg3: core::ffi::c_ulong,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetClipMask(arg1: *mut Display, arg2: GC, arg3: Pixmap) -> core::ffi::c_int;
@@ -36492,17 +38077,28 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetForeground(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_ulong) -> core::ffi::c_int;
+    pub fn XSetForeground(
+        arg1: *mut Display,
+        arg2: GC,
+        arg3: core::ffi::c_ulong,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetFunction(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetGraphicsExposures(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_int) -> core::ffi::c_int;
+    pub fn XSetGraphicsExposures(
+        arg1: *mut Display,
+        arg2: GC,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetIconName(arg1: *mut Display, arg2: Window, arg3: *const core::ffi::c_char)
-        -> core::ffi::c_int;
+    pub fn XSetIconName(
+        arg1: *mut Display,
+        arg2: Window,
+        arg3: *const core::ffi::c_char,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetInputFocus(
@@ -36526,7 +38122,11 @@ extern "C" {
     pub fn XSetModifierMapping(arg1: *mut Display, arg2: *mut XModifierKeymap) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetPlaneMask(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_ulong) -> core::ffi::c_int;
+    pub fn XSetPlaneMask(
+        arg1: *mut Display,
+        arg2: GC,
+        arg3: core::ffi::c_ulong,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetPointerMapping(
@@ -36566,7 +38166,11 @@ extern "C" {
     pub fn XSetStipple(arg1: *mut Display, arg2: GC, arg3: Pixmap) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetSubwindowMode(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_int) -> core::ffi::c_int;
+    pub fn XSetSubwindowMode(
+        arg1: *mut Display,
+        arg2: GC,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetTSOrigin(
@@ -36594,10 +38198,18 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetWindowBorder(arg1: *mut Display, arg2: Window, arg3: core::ffi::c_ulong) -> core::ffi::c_int;
+    pub fn XSetWindowBorder(
+        arg1: *mut Display,
+        arg2: Window,
+        arg3: core::ffi::c_ulong,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetWindowBorderPixmap(arg1: *mut Display, arg2: Window, arg3: Pixmap) -> core::ffi::c_int;
+    pub fn XSetWindowBorderPixmap(
+        arg1: *mut Display,
+        arg2: Window,
+        arg3: Pixmap,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetWindowBorderWidth(
@@ -36607,7 +38219,8 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetWindowColormap(arg1: *mut Display, arg2: Window, arg3: Colormap) -> core::ffi::c_int;
+    pub fn XSetWindowColormap(arg1: *mut Display, arg2: Window, arg3: Colormap)
+        -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XStoreBuffer(
@@ -36636,7 +38249,11 @@ extern "C" {
     ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XStoreName(arg1: *mut Display, arg2: Window, arg3: *const core::ffi::c_char) -> core::ffi::c_int;
+    pub fn XStoreName(
+        arg1: *mut Display,
+        arg2: Window,
+        arg3: *const core::ffi::c_char,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XStoreNamedColor(
@@ -37199,7 +38816,11 @@ extern "C" {
     );
 }
 extern "C" {
-    pub fn _Xmbtowc(arg1: *mut wchar_t, arg2: *mut core::ffi::c_char, arg3: core::ffi::c_int) -> core::ffi::c_int;
+    pub fn _Xmbtowc(
+        arg1: *mut wchar_t,
+        arg2: *mut core::ffi::c_char,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn _Xwctomb(arg1: *mut core::ffi::c_char, arg2: wchar_t) -> core::ffi::c_int;
@@ -37449,12 +39070,16 @@ pub struct SDL_SysWMinfo__bindgen_ty_1__bindgen_ty_2 {
     pub xdg_surface: *mut xdg_surface,
     #[doc = "< Wayland xdg toplevel role"]
     pub xdg_toplevel: *mut xdg_toplevel,
+    #[doc = "< Wayland xdg popup role"]
+    pub xdg_popup: *mut xdg_popup,
+    #[doc = "< Wayland xdg positioner, for popup"]
+    pub xdg_positioner: *mut xdg_positioner,
 }
 #[test]
 fn bindgen_test_layout_SDL_SysWMinfo__bindgen_ty_1__bindgen_ty_2() {
     assert_eq!(
         ::core::mem::size_of::<SDL_SysWMinfo__bindgen_ty_1__bindgen_ty_2>(),
-        48usize,
+        64usize,
         concat!(
             "Size of: ",
             stringify!(SDL_SysWMinfo__bindgen_ty_1__bindgen_ty_2)
@@ -37544,6 +39169,32 @@ fn bindgen_test_layout_SDL_SysWMinfo__bindgen_ty_1__bindgen_ty_2() {
             stringify!(SDL_SysWMinfo__bindgen_ty_1__bindgen_ty_2),
             "::",
             stringify!(xdg_toplevel)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_SysWMinfo__bindgen_ty_1__bindgen_ty_2>())).xdg_popup
+                as *const _ as usize
+        },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_SysWMinfo__bindgen_ty_1__bindgen_ty_2),
+            "::",
+            stringify!(xdg_popup)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::core::ptr::null::<SDL_SysWMinfo__bindgen_ty_1__bindgen_ty_2>())).xdg_positioner
+                as *const _ as usize
+        },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(SDL_SysWMinfo__bindgen_ty_1__bindgen_ty_2),
+            "::",
+            stringify!(xdg_positioner)
         )
     );
 }
@@ -37875,12 +39526,6 @@ fn bindgen_test_layout___va_list_tag() {
         )
     );
 }
-#[doc = "< Private"]
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct SDL_BlitMap {
-    pub _address: u8,
-}
 #[doc = "< Wayland display"]
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -37909,5 +39554,17 @@ pub struct xdg_surface {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct xdg_toplevel {
+    pub _address: u8,
+}
+#[doc = "< Wayland xdg popup role"]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct xdg_popup {
+    pub _address: u8,
+}
+#[doc = "< Wayland xdg positioner, for popup"]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct xdg_positioner {
     pub _address: u8,
 }
