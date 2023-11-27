@@ -21,7 +21,7 @@ use crate::sys;
 use crate::common::{validate_int, IntegerOrSdlError};
 use crate::get_error;
 use crate::SensorSubsystem;
-use libc::c_char;
+use std::ffi::c_char;
 use std::ffi::CStr;
 use sys::SDL_SensorGetData;
 use sys::SDL_SensorType;

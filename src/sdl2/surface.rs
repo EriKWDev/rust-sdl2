@@ -10,7 +10,7 @@ use crate::rect::Rect;
 use crate::render::{BlendMode, Canvas};
 use crate::render::{Texture, TextureCreator, TextureValueError};
 use crate::rwops::RWops;
-use libc::c_int;
+use std::ffi::c_int;
 use std::convert::TryFrom;
 use std::mem::transmute;
 use std::ptr;

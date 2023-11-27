@@ -45,7 +45,7 @@ impl Palette {
         let pal = Self::new(colors.len())?;
 
         // Already validated, so don't check again
-        let ncolors = colors.len() as ::libc::c_int;
+        let ncolors = colors.len() as ::std::ffi::c_int;
 
         let result = unsafe {
             let mut raw_colors: Vec<sys::SDL_Color> =

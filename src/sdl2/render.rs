@@ -37,7 +37,7 @@ use crate::rect::Rect;
 use crate::surface;
 use crate::surface::{Surface, SurfaceContext, SurfaceRef};
 use crate::video::{Window, WindowContext};
-use libc::c_void;
+use std::ffi::c_void;
 use libc::{c_double, c_int};
 use std::convert::TryFrom;
 use std::error::Error;

@@ -1,7 +1,7 @@
 //! Graphic Primitives
 
 use get_error;
-use libc::c_void;
+use std::ffi::c_void;
 use libc::{c_char, c_int};
 use pixels;
 use render::Canvas;

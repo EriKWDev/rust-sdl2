@@ -1,5 +1,5 @@
 use crate::rwops::RWops;
-use libc::c_char;
+use std::ffi::c_char;
 use std::error;
 use std::ffi::{CStr, CString, NulError};
 use std::fmt;
@@ -578,7 +578,7 @@ impl GameController {
         let result = unsafe {
             sys::SDL_GameControllerSendEffect(
                 self.raw,
-                data.as_ptr() as *const libc::c_void,
+                data.as_ptr() as *const std::ffi::c_void,
                 data.len() as i32,
             )
         };

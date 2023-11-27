@@ -9,7 +9,7 @@ pub enum IntegerOrSdlError {
     SdlError(String),
 }
 /// Validates and converts the given u32 to a positive C integer.
-pub fn validate_int(value: u32, name: &'static str) -> Result<::libc::c_int, IntegerOrSdlError> {
+pub fn validate_int(value: u32, name: &'static str) -> Result<::std::ffi::c_int, IntegerOrSdlError> {
     use self::IntegerOrSdlError::*;
     // Many SDL functions will accept `int` values, even if it doesn't make sense
     // for the values to be negative.
@@ -21,7 +21,7 @@ pub fn validate_int(value: u32, name: &'static str) -> Result<::libc::c_int, Int
     if value >= 1 << 31 {
         Err(IntegerOverflows(name, value))
     } else {
-        Ok(value as ::libc::c_int)
+        Ok(value as ::std::ffi::c_int)
     }
 }
 

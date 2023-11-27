@@ -1,4 +1,4 @@
-use libc::c_char;
+use std::ffi::c_char;
 use std::cell::Cell;
 use std::error;
 use std::ffi::{CStr, CString, NulError};

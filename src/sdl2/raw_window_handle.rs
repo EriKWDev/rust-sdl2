@@ -36,8 +36,8 @@ unsafe impl HasRawWindowHandle for Window {
                 use self::raw_window_handle::Win32WindowHandle;
 
                 let mut handle = Win32WindowHandle::empty();
-                handle.hwnd = unsafe { wm_info.info.win }.window as *mut libc::c_void;
-                handle.hinstance = unsafe { wm_info.info.win }.hinstance as *mut libc::c_void;
+                handle.hwnd = unsafe { wm_info.info.win }.window as *mut std::ffi::c_void;
+                handle.hinstance = unsafe { wm_info.info.win }.hinstance as *mut std::ffi::c_void;
 
                 RawWindowHandle::Win32(handle)
             }
@@ -61,7 +61,7 @@ unsafe impl HasRawWindowHandle for Window {
                 use self::raw_window_handle::WaylandWindowHandle;
 
                 let mut handle = WaylandWindowHandle::empty();
-                handle.surface = unsafe { wm_info.info.wl }.surface as *mut libc::c_void;
+                handle.surface = unsafe { wm_info.info.wl }.surface as *mut std::ffi::c_void;
 
                 RawWindowHandle::Wayland(handle)
             }
@@ -85,7 +85,7 @@ unsafe impl HasRawWindowHandle for Window {
                 use self::raw_window_handle::AppKitWindowHandle;
 
                 let mut handle = AppKitWindowHandle::empty();
-                handle.ns_window = unsafe { wm_info.info.cocoa }.window as *mut libc::c_void;
+                handle.ns_window = unsafe { wm_info.info.cocoa }.window as *mut std::ffi::c_void;
                 handle.ns_view = if self.context().metal_view.is_null() {
                     panic!("metal_view not initialized, please call WindowBuilder::metal_view() when building the window");
                 } else {
@@ -99,8 +99,8 @@ unsafe impl HasRawWindowHandle for Window {
                 use self::raw_window_handle::UiKitWindowHandle;
 
                 let mut handle = UiKitHandle::empty();
-                handle.ui_window = unsafe { wm_info.info.uikit }.window as *mut libc::c_void;
-                handle.ui_view = 0 as *mut libc::c_void; // consumer of RawWindowHandle should determine this
+                handle.ui_window = unsafe { wm_info.info.uikit }.window as *mut std::ffi::c_void;
+                handle.ui_view = 0 as *mut std::ffi::c_void; // consumer of RawWindowHandle should determine this
 
                 RawWindowHandle::UiKit(handle)
             }
@@ -110,7 +110,7 @@ unsafe impl HasRawWindowHandle for Window {
 
                 let mut handle = AndroidNdkWindowHandle::empty();
                 handle.a_native_window =
-                    unsafe { wm_info.info.android }.window as *mut libc::c_void;
+                    unsafe { wm_info.info.android }.window as *mut std::ffi::c_void;
 
                 RawWindowHandle::AndroidNdk(handle)
             }
@@ -171,7 +171,7 @@ unsafe impl HasRawDisplayHandle for Window {
                 use self::raw_window_handle::WaylandDisplayHandle;
 
                 let mut handle = WaylandDisplayHandle::empty();
-                handle.display = unsafe { wm_info.info.wl }.display as *mut libc::c_void;
+                handle.display = unsafe { wm_info.info.wl }.display as *mut std::ffi::c_void;
 
                 RawDisplayHandle::Wayland(handle)
             }
@@ -186,7 +186,7 @@ unsafe impl HasRawDisplayHandle for Window {
                 use self::raw_window_handle::XlibDisplayHandle;
 
                 let mut handle = XlibDisplayHandle::empty();
-                handle.display = unsafe { wm_info.info.x11 }.display as *mut libc::c_void;
+                handle.display = unsafe { wm_info.info.x11 }.display as *mut std::ffi::c_void;
 
                 RawDisplayHandle::Xlib(handle)
             }
@@ -210,7 +210,7 @@ unsafe impl HasRawDisplayHandle for Window {
 
                 let mut handle = AndroidDisplayHandle::empty();
                 handle.a_native_window =
-                    unsafe { wm_info.info.android }.window as *mut libc::c_void;
+                    unsafe { wm_info.info.android }.window as *mut std::ffi::c_void;
 
                 RawDisplayHandle::Android(handle)
             }
@@ -332,19 +332,19 @@ pub mod windows {
     #[repr(C)]
     #[derive(Debug, Default, Copy, Clone, PartialEq)]
     pub struct HWND {
-        pub unused: libc::c_int,
+        pub unused: std::ffi::c_int,
     }
 
     #[repr(C)]
     #[derive(Debug, Default, Copy, Clone, PartialEq)]
     pub struct HDC {
-        pub unused: libc::c_int,
+        pub unused: std::ffi::c_int,
     }
 
     #[repr(C)]
     #[derive(Debug, Default, Copy, Clone, PartialEq)]
     pub struct HINSTANCE {
-        pub unused: libc::c_int,
+        pub unused: std::ffi::c_int,
     }
 
     #[repr(C)]
@@ -436,7 +436,7 @@ pub mod linux {
         _unused: [u8; 0],
     }
 
-    pub type Window = libc::c_ulong;
+    pub type Window = std::ffi::c_ulong;
 }
 
 #[cfg(target_os = "macos")]

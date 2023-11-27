@@ -13,8 +13,8 @@ use std::mem::transmute;
 use std::ptr;
 use std::sync::Mutex;
 
-use libc::c_int;
-use libc::c_void;
+use std::ffi::c_int;
+use std::ffi::c_void;
 
 use crate::controller;
 use crate::controller::{Axis, Button};
@@ -143,8 +143,8 @@ impl crate::EventSubsystem {
     ///    window_id: 0,
     ///    type_: custom_event_type_id,
     ///    code: 456,
-    ///    data1: 0x1234 as *mut libc::c_void,
-    ///    data2: 0x5678 as *mut libc::c_void,
+    ///    data1: 0x1234 as *mut std::ffi::c_void,
+    ///    data2: 0x5678 as *mut std::ffi::c_void,
     /// };
     ///
     /// ev.push_event(event);
@@ -159,7 +159,7 @@ impl crate::EventSubsystem {
     ///
     /// Returns an error, if no more user events can be created.
     pub unsafe fn register_events(&self, nr: u32) -> Result<Vec<u32>, String> {
-        let result = sys::SDL_RegisterEvents(nr as ::libc::c_int);
+        let result = sys::SDL_RegisterEvents(nr as ::std::ffi::c_int);
         const ERR_NR: u32 = ::std::u32::MAX - 1;
 
         match result {

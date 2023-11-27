@@ -75,10 +75,10 @@ fn dummy(_priority: Priority, _category: Category, _message: &str) {}
 static mut custom_log_fn: fn(Priority, Category, &str) = dummy;
 
 unsafe extern "C" fn rust_sdl2_log_fn(
-    _userdata: *mut libc::c_void,
-    category: libc::c_int,
+    _userdata: *mut std::ffi::c_void,
+    category: std::ffi::c_int,
     priority: sys::SDL_LogPriority,
-    message: *const libc::c_char,
+    message: *const std::ffi::c_char,
 ) {
     let category = Category::from_ll(category as u32);
     let priority = Priority::from_ll(priority);

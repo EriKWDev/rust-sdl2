@@ -1,6 +1,6 @@
 use crate::get_error;
-use libc::c_char;
-use libc::c_void;
+use std::ffi::c_char;
+use std::ffi::c_void;
 use std::error;
 use std::ffi::{CStr, CString, NulError};
 use std::fmt;

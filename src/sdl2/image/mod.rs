@@ -155,7 +155,7 @@ impl<T> LoadTexture for TextureCreator<T> {
     fn load_texture_bytes(&self, buf: &[u8]) -> Result<Texture, String> {
         //! Loads an SDL Texture from a buffer that the format must be something supported by SDL2_image (png, jpeg, ect, but NOT RGBA8888 bytes for instance)
         unsafe {
-            let buf = sdl2_sys::SDL_RWFromMem(buf.as_ptr() as *mut libc::c_void, buf.len() as i32);
+            let buf = sdl2_sys::SDL_RWFromMem(buf.as_ptr() as *mut std::ffi::c_void, buf.len() as i32);
             let raw = image::IMG_LoadTexture_RW(self.raw(), buf, 1); // close(free) buff after load
             if (raw as *mut ()).is_null() {
                 Err(get_error())

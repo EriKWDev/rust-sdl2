@@ -1,5 +1,5 @@
 use crate::get_error;
-use libc::c_void;
+use std::ffi::c_void;
 use libc::{c_char, c_int, size_t};
 use std::ffi::CString;
 use std::io;

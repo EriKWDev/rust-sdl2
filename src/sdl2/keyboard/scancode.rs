@@ -1,6 +1,6 @@
 #![allow(unreachable_patterns)]
 
-use libc::c_char;
+use std::ffi::c_char;
 use std::ffi::{CStr, CString};
 use std::mem::transmute;
 
