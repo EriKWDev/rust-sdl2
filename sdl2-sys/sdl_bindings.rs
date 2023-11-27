@@ -1005,15 +1005,15 @@ extern "C" {
     #[doc = "          available, returns a string beginning with the text \"Unknown\"."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
-    pub fn SDL_GetPlatform() -> *const libc::c_char;
+    pub fn SDL_GetPlatform() -> *const core::ffi::c_char;
 }
-pub type size_t = libc::c_ulong;
-pub type wchar_t = libc::c_int;
+pub type size_t = core::ffi::c_ulong;
+pub type wchar_t = core::ffi::c_int;
 #[repr(C)]
 #[repr(align(16))]
 #[derive(Copy, Clone)]
 pub struct max_align_t {
-    pub __clang_max_align_nonce1: libc::c_longlong,
+    pub __clang_max_align_nonce1: core::ffi::c_longlong,
     pub __bindgen_padding_0: u64,
     pub __clang_max_align_nonce2: u128,
 }
@@ -1056,18 +1056,18 @@ fn bindgen_test_layout_max_align_t() {
 }
 pub type va_list = __builtin_va_list;
 pub type __gnuc_va_list = __builtin_va_list;
-pub type __u_char = libc::c_uchar;
-pub type __u_short = libc::c_ushort;
-pub type __u_int = libc::c_uint;
-pub type __u_long = libc::c_ulong;
-pub type __int8_t = libc::c_schar;
-pub type __uint8_t = libc::c_uchar;
-pub type __int16_t = libc::c_short;
-pub type __uint16_t = libc::c_ushort;
-pub type __int32_t = libc::c_int;
-pub type __uint32_t = libc::c_uint;
-pub type __int64_t = libc::c_long;
-pub type __uint64_t = libc::c_ulong;
+pub type __u_char = core::ffi::c_uchar;
+pub type __u_short = core::ffi::c_ushort;
+pub type __u_int = core::ffi::c_uint;
+pub type __u_long = core::ffi::c_ulong;
+pub type __int8_t = core::ffi::c_schar;
+pub type __uint8_t = core::ffi::c_uchar;
+pub type __int16_t = core::ffi::c_short;
+pub type __uint16_t = core::ffi::c_ushort;
+pub type __int32_t = core::ffi::c_int;
+pub type __uint32_t = core::ffi::c_uint;
+pub type __int64_t = core::ffi::c_long;
+pub type __uint64_t = core::ffi::c_ulong;
 pub type __int_least8_t = __int8_t;
 pub type __uint_least8_t = __uint8_t;
 pub type __int_least16_t = __int16_t;
@@ -1076,24 +1076,24 @@ pub type __int_least32_t = __int32_t;
 pub type __uint_least32_t = __uint32_t;
 pub type __int_least64_t = __int64_t;
 pub type __uint_least64_t = __uint64_t;
-pub type __quad_t = libc::c_long;
-pub type __u_quad_t = libc::c_ulong;
-pub type __intmax_t = libc::c_long;
-pub type __uintmax_t = libc::c_ulong;
-pub type __dev_t = libc::c_ulong;
-pub type __uid_t = libc::c_uint;
-pub type __gid_t = libc::c_uint;
-pub type __ino_t = libc::c_ulong;
-pub type __ino64_t = libc::c_ulong;
-pub type __mode_t = libc::c_uint;
-pub type __nlink_t = libc::c_ulong;
-pub type __off_t = libc::c_long;
-pub type __off64_t = libc::c_long;
-pub type __pid_t = libc::c_int;
+pub type __quad_t = core::ffi::c_long;
+pub type __u_quad_t = core::ffi::c_ulong;
+pub type __intmax_t = core::ffi::c_long;
+pub type __uintmax_t = core::ffi::c_ulong;
+pub type __dev_t = core::ffi::c_ulong;
+pub type __uid_t = core::ffi::c_uint;
+pub type __gid_t = core::ffi::c_uint;
+pub type __ino_t = core::ffi::c_ulong;
+pub type __ino64_t = core::ffi::c_ulong;
+pub type __mode_t = core::ffi::c_uint;
+pub type __nlink_t = core::ffi::c_ulong;
+pub type __off_t = core::ffi::c_long;
+pub type __off64_t = core::ffi::c_long;
+pub type __pid_t = core::ffi::c_int;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct __fsid_t {
-    pub __val: [libc::c_int; 2usize],
+    pub __val: [core::ffi::c_int; 2usize],
 }
 #[test]
 fn bindgen_test_layout___fsid_t() {
@@ -1118,34 +1118,34 @@ fn bindgen_test_layout___fsid_t() {
         )
     );
 }
-pub type __clock_t = libc::c_long;
-pub type __rlim_t = libc::c_ulong;
-pub type __rlim64_t = libc::c_ulong;
-pub type __id_t = libc::c_uint;
-pub type __time_t = libc::c_long;
-pub type __useconds_t = libc::c_uint;
-pub type __suseconds_t = libc::c_long;
-pub type __suseconds64_t = libc::c_long;
-pub type __daddr_t = libc::c_int;
-pub type __key_t = libc::c_int;
-pub type __clockid_t = libc::c_int;
-pub type __timer_t = *mut libc::c_void;
-pub type __blksize_t = libc::c_long;
-pub type __blkcnt_t = libc::c_long;
-pub type __blkcnt64_t = libc::c_long;
-pub type __fsblkcnt_t = libc::c_ulong;
-pub type __fsblkcnt64_t = libc::c_ulong;
-pub type __fsfilcnt_t = libc::c_ulong;
-pub type __fsfilcnt64_t = libc::c_ulong;
-pub type __fsword_t = libc::c_long;
-pub type __ssize_t = libc::c_long;
-pub type __syscall_slong_t = libc::c_long;
-pub type __syscall_ulong_t = libc::c_ulong;
+pub type __clock_t = core::ffi::c_long;
+pub type __rlim_t = core::ffi::c_ulong;
+pub type __rlim64_t = core::ffi::c_ulong;
+pub type __id_t = core::ffi::c_uint;
+pub type __time_t = core::ffi::c_long;
+pub type __useconds_t = core::ffi::c_uint;
+pub type __suseconds_t = core::ffi::c_long;
+pub type __suseconds64_t = core::ffi::c_long;
+pub type __daddr_t = core::ffi::c_int;
+pub type __key_t = core::ffi::c_int;
+pub type __clockid_t = core::ffi::c_int;
+pub type __timer_t = *mut core::ffi::c_void;
+pub type __blksize_t = core::ffi::c_long;
+pub type __blkcnt_t = core::ffi::c_long;
+pub type __blkcnt64_t = core::ffi::c_long;
+pub type __fsblkcnt_t = core::ffi::c_ulong;
+pub type __fsblkcnt64_t = core::ffi::c_ulong;
+pub type __fsfilcnt_t = core::ffi::c_ulong;
+pub type __fsfilcnt64_t = core::ffi::c_ulong;
+pub type __fsword_t = core::ffi::c_long;
+pub type __ssize_t = core::ffi::c_long;
+pub type __syscall_slong_t = core::ffi::c_long;
+pub type __syscall_ulong_t = core::ffi::c_ulong;
 pub type __loff_t = __off64_t;
-pub type __caddr_t = *mut libc::c_char;
-pub type __intptr_t = libc::c_long;
-pub type __socklen_t = libc::c_uint;
-pub type __sig_atomic_t = libc::c_int;
+pub type __caddr_t = *mut core::ffi::c_char;
+pub type __intptr_t = core::ffi::c_long;
+pub type __socklen_t = core::ffi::c_uint;
+pub type __sig_atomic_t = core::ffi::c_int;
 pub type int_least8_t = __int_least8_t;
 pub type int_least16_t = __int_least16_t;
 pub type int_least32_t = __int_least32_t;
@@ -1154,14 +1154,14 @@ pub type uint_least8_t = __uint_least8_t;
 pub type uint_least16_t = __uint_least16_t;
 pub type uint_least32_t = __uint_least32_t;
 pub type uint_least64_t = __uint_least64_t;
-pub type int_fast8_t = libc::c_schar;
-pub type int_fast16_t = libc::c_long;
-pub type int_fast32_t = libc::c_long;
-pub type int_fast64_t = libc::c_long;
-pub type uint_fast8_t = libc::c_uchar;
-pub type uint_fast16_t = libc::c_ulong;
-pub type uint_fast32_t = libc::c_ulong;
-pub type uint_fast64_t = libc::c_ulong;
+pub type int_fast8_t = core::ffi::c_schar;
+pub type int_fast16_t = core::ffi::c_long;
+pub type int_fast32_t = core::ffi::c_long;
+pub type int_fast64_t = core::ffi::c_long;
+pub type uint_fast8_t = core::ffi::c_uchar;
+pub type uint_fast16_t = core::ffi::c_ulong;
+pub type uint_fast32_t = core::ffi::c_ulong;
+pub type uint_fast64_t = core::ffi::c_ulong;
 pub type intmax_t = __intmax_t;
 pub type uintmax_t = __uintmax_t;
 #[repr(u32)]
@@ -1178,40 +1178,40 @@ pub type Sint32 = i32;
 pub type Uint32 = u32;
 pub type Sint64 = i64;
 pub type Uint64 = u64;
-pub type SDL_compile_time_assert_uint8 = [libc::c_int; 1usize];
-pub type SDL_compile_time_assert_sint8 = [libc::c_int; 1usize];
-pub type SDL_compile_time_assert_uint16 = [libc::c_int; 1usize];
-pub type SDL_compile_time_assert_sint16 = [libc::c_int; 1usize];
-pub type SDL_compile_time_assert_uint32 = [libc::c_int; 1usize];
-pub type SDL_compile_time_assert_sint32 = [libc::c_int; 1usize];
-pub type SDL_compile_time_assert_uint64 = [libc::c_int; 1usize];
-pub type SDL_compile_time_assert_sint64 = [libc::c_int; 1usize];
+pub type SDL_compile_time_assert_uint8 = [core::ffi::c_int; 1usize];
+pub type SDL_compile_time_assert_sint8 = [core::ffi::c_int; 1usize];
+pub type SDL_compile_time_assert_uint16 = [core::ffi::c_int; 1usize];
+pub type SDL_compile_time_assert_sint16 = [core::ffi::c_int; 1usize];
+pub type SDL_compile_time_assert_uint32 = [core::ffi::c_int; 1usize];
+pub type SDL_compile_time_assert_sint32 = [core::ffi::c_int; 1usize];
+pub type SDL_compile_time_assert_uint64 = [core::ffi::c_int; 1usize];
+pub type SDL_compile_time_assert_sint64 = [core::ffi::c_int; 1usize];
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum SDL_DUMMY_ENUM {
     DUMMY_ENUM_VALUE = 0,
 }
-pub type SDL_compile_time_assert_enum = [libc::c_int; 1usize];
+pub type SDL_compile_time_assert_enum = [core::ffi::c_int; 1usize];
 extern "C" {
-    pub fn SDL_malloc(size: size_t) -> *mut libc::c_void;
+    pub fn SDL_malloc(size: size_t) -> *mut core::ffi::c_void;
 }
 extern "C" {
-    pub fn SDL_calloc(nmemb: size_t, size: size_t) -> *mut libc::c_void;
+    pub fn SDL_calloc(nmemb: size_t, size: size_t) -> *mut core::ffi::c_void;
 }
 extern "C" {
-    pub fn SDL_realloc(mem: *mut libc::c_void, size: size_t) -> *mut libc::c_void;
+    pub fn SDL_realloc(mem: *mut core::ffi::c_void, size: size_t) -> *mut core::ffi::c_void;
 }
 extern "C" {
-    pub fn SDL_free(mem: *mut libc::c_void);
+    pub fn SDL_free(mem: *mut core::ffi::c_void);
 }
 pub type SDL_malloc_func =
-    ::core::option::Option<unsafe extern "C" fn(size: size_t) -> *mut libc::c_void>;
+    ::core::option::Option<unsafe extern "C" fn(size: size_t) -> *mut core::ffi::c_void>;
 pub type SDL_calloc_func =
-    ::core::option::Option<unsafe extern "C" fn(nmemb: size_t, size: size_t) -> *mut libc::c_void>;
+    ::core::option::Option<unsafe extern "C" fn(nmemb: size_t, size: size_t) -> *mut core::ffi::c_void>;
 pub type SDL_realloc_func = ::core::option::Option<
-    unsafe extern "C" fn(mem: *mut libc::c_void, size: size_t) -> *mut libc::c_void,
+    unsafe extern "C" fn(mem: *mut core::ffi::c_void, size: size_t) -> *mut core::ffi::c_void,
 >;
-pub type SDL_free_func = ::core::option::Option<unsafe extern "C" fn(mem: *mut libc::c_void)>;
+pub type SDL_free_func = ::core::option::Option<unsafe extern "C" fn(mem: *mut core::ffi::c_void)>;
 extern "C" {
     #[doc = " Get the current set of SDL memory functions"]
     #[doc = ""]
@@ -1232,105 +1232,105 @@ extern "C" {
         calloc_func: SDL_calloc_func,
         realloc_func: SDL_realloc_func,
         free_func: SDL_free_func,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the number of outstanding (unfreed) allocations"]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.7."]
-    pub fn SDL_GetNumAllocations() -> libc::c_int;
+    pub fn SDL_GetNumAllocations() -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_getenv(name: *const libc::c_char) -> *mut libc::c_char;
+    pub fn SDL_getenv(name: *const core::ffi::c_char) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn SDL_setenv(
-        name: *const libc::c_char,
-        value: *const libc::c_char,
-        overwrite: libc::c_int,
-    ) -> libc::c_int;
+        name: *const core::ffi::c_char,
+        value: *const core::ffi::c_char,
+        overwrite: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_qsort(
-        base: *mut libc::c_void,
+        base: *mut core::ffi::c_void,
         nmemb: size_t,
         size: size_t,
         compare: ::core::option::Option<
             unsafe extern "C" fn(
-                arg1: *const libc::c_void,
-                arg2: *const libc::c_void,
-            ) -> libc::c_int,
+                arg1: *const core::ffi::c_void,
+                arg2: *const core::ffi::c_void,
+            ) -> core::ffi::c_int,
         >,
     );
 }
 extern "C" {
-    pub fn SDL_abs(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_abs(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_isalpha(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_isalpha(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_isalnum(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_isalnum(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_isblank(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_isblank(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_iscntrl(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_iscntrl(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_isdigit(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_isdigit(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_isxdigit(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_isxdigit(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_ispunct(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_ispunct(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_isspace(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_isspace(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_isupper(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_isupper(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_islower(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_islower(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_isprint(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_isprint(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_isgraph(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_isgraph(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_toupper(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_toupper(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_tolower(x: libc::c_int) -> libc::c_int;
+    pub fn SDL_tolower(x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_crc32(crc: Uint32, data: *const libc::c_void, len: size_t) -> Uint32;
+    pub fn SDL_crc32(crc: Uint32, data: *const core::ffi::c_void, len: size_t) -> Uint32;
 }
 extern "C" {
-    pub fn SDL_memset(dst: *mut libc::c_void, c: libc::c_int, len: size_t) -> *mut libc::c_void;
+    pub fn SDL_memset(dst: *mut core::ffi::c_void, c: core::ffi::c_int, len: size_t) -> *mut core::ffi::c_void;
 }
 extern "C" {
     pub fn SDL_memcpy(
-        dst: *mut libc::c_void,
-        src: *const libc::c_void,
+        dst: *mut core::ffi::c_void,
+        src: *const core::ffi::c_void,
         len: size_t,
-    ) -> *mut libc::c_void;
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
     pub fn SDL_memmove(
-        dst: *mut libc::c_void,
-        src: *const libc::c_void,
+        dst: *mut core::ffi::c_void,
+        src: *const core::ffi::c_void,
         len: size_t,
-    ) -> *mut libc::c_void;
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
-    pub fn SDL_memcmp(s1: *const libc::c_void, s2: *const libc::c_void, len: size_t)
-        -> libc::c_int;
+    pub fn SDL_memcmp(s1: *const core::ffi::c_void, s2: *const core::ffi::c_void, len: size_t)
+        -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_wcslen(wstr: *const wchar_t) -> size_t;
@@ -1348,202 +1348,202 @@ extern "C" {
     pub fn SDL_wcsstr(haystack: *const wchar_t, needle: *const wchar_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn SDL_wcscmp(str1: *const wchar_t, str2: *const wchar_t) -> libc::c_int;
+    pub fn SDL_wcscmp(str1: *const wchar_t, str2: *const wchar_t) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_wcsncmp(str1: *const wchar_t, str2: *const wchar_t, maxlen: size_t) -> libc::c_int;
+    pub fn SDL_wcsncmp(str1: *const wchar_t, str2: *const wchar_t, maxlen: size_t) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_wcscasecmp(str1: *const wchar_t, str2: *const wchar_t) -> libc::c_int;
+    pub fn SDL_wcscasecmp(str1: *const wchar_t, str2: *const wchar_t) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_wcsncasecmp(str1: *const wchar_t, str2: *const wchar_t, len: size_t) -> libc::c_int;
+    pub fn SDL_wcsncasecmp(str1: *const wchar_t, str2: *const wchar_t, len: size_t) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_strlen(str: *const libc::c_char) -> size_t;
+    pub fn SDL_strlen(str: *const core::ffi::c_char) -> size_t;
 }
 extern "C" {
-    pub fn SDL_strlcpy(dst: *mut libc::c_char, src: *const libc::c_char, maxlen: size_t) -> size_t;
+    pub fn SDL_strlcpy(dst: *mut core::ffi::c_char, src: *const core::ffi::c_char, maxlen: size_t) -> size_t;
 }
 extern "C" {
     pub fn SDL_utf8strlcpy(
-        dst: *mut libc::c_char,
-        src: *const libc::c_char,
+        dst: *mut core::ffi::c_char,
+        src: *const core::ffi::c_char,
         dst_bytes: size_t,
     ) -> size_t;
 }
 extern "C" {
-    pub fn SDL_strlcat(dst: *mut libc::c_char, src: *const libc::c_char, maxlen: size_t) -> size_t;
+    pub fn SDL_strlcat(dst: *mut core::ffi::c_char, src: *const core::ffi::c_char, maxlen: size_t) -> size_t;
 }
 extern "C" {
-    pub fn SDL_strdup(str: *const libc::c_char) -> *mut libc::c_char;
+    pub fn SDL_strdup(str: *const core::ffi::c_char) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn SDL_strrev(str: *mut libc::c_char) -> *mut libc::c_char;
+    pub fn SDL_strrev(str: *mut core::ffi::c_char) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn SDL_strupr(str: *mut libc::c_char) -> *mut libc::c_char;
+    pub fn SDL_strupr(str: *mut core::ffi::c_char) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn SDL_strlwr(str: *mut libc::c_char) -> *mut libc::c_char;
+    pub fn SDL_strlwr(str: *mut core::ffi::c_char) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn SDL_strchr(str: *const libc::c_char, c: libc::c_int) -> *mut libc::c_char;
+    pub fn SDL_strchr(str: *const core::ffi::c_char, c: core::ffi::c_int) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn SDL_strrchr(str: *const libc::c_char, c: libc::c_int) -> *mut libc::c_char;
+    pub fn SDL_strrchr(str: *const core::ffi::c_char, c: core::ffi::c_int) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn SDL_strstr(
-        haystack: *const libc::c_char,
-        needle: *const libc::c_char,
-    ) -> *mut libc::c_char;
+        haystack: *const core::ffi::c_char,
+        needle: *const core::ffi::c_char,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn SDL_strtokr(
-        s1: *mut libc::c_char,
-        s2: *const libc::c_char,
-        saveptr: *mut *mut libc::c_char,
-    ) -> *mut libc::c_char;
+        s1: *mut core::ffi::c_char,
+        s2: *const core::ffi::c_char,
+        saveptr: *mut *mut core::ffi::c_char,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn SDL_utf8strlen(str: *const libc::c_char) -> size_t;
+    pub fn SDL_utf8strlen(str: *const core::ffi::c_char) -> size_t;
 }
 extern "C" {
     pub fn SDL_itoa(
-        value: libc::c_int,
-        str: *mut libc::c_char,
-        radix: libc::c_int,
-    ) -> *mut libc::c_char;
+        value: core::ffi::c_int,
+        str: *mut core::ffi::c_char,
+        radix: core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn SDL_uitoa(
-        value: libc::c_uint,
-        str: *mut libc::c_char,
-        radix: libc::c_int,
-    ) -> *mut libc::c_char;
+        value: core::ffi::c_uint,
+        str: *mut core::ffi::c_char,
+        radix: core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn SDL_ltoa(
-        value: libc::c_long,
-        str: *mut libc::c_char,
-        radix: libc::c_int,
-    ) -> *mut libc::c_char;
+        value: core::ffi::c_long,
+        str: *mut core::ffi::c_char,
+        radix: core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn SDL_ultoa(
-        value: libc::c_ulong,
-        str: *mut libc::c_char,
-        radix: libc::c_int,
-    ) -> *mut libc::c_char;
+        value: core::ffi::c_ulong,
+        str: *mut core::ffi::c_char,
+        radix: core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn SDL_lltoa(
         value: Sint64,
-        str: *mut libc::c_char,
-        radix: libc::c_int,
-    ) -> *mut libc::c_char;
+        str: *mut core::ffi::c_char,
+        radix: core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn SDL_ulltoa(
         value: Uint64,
-        str: *mut libc::c_char,
-        radix: libc::c_int,
-    ) -> *mut libc::c_char;
+        str: *mut core::ffi::c_char,
+        radix: core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn SDL_atoi(str: *const libc::c_char) -> libc::c_int;
+    pub fn SDL_atoi(str: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_atof(str: *const libc::c_char) -> f64;
+    pub fn SDL_atof(str: *const core::ffi::c_char) -> f64;
 }
 extern "C" {
     pub fn SDL_strtol(
-        str: *const libc::c_char,
-        endp: *mut *mut libc::c_char,
-        base: libc::c_int,
-    ) -> libc::c_long;
+        str: *const core::ffi::c_char,
+        endp: *mut *mut core::ffi::c_char,
+        base: core::ffi::c_int,
+    ) -> core::ffi::c_long;
 }
 extern "C" {
     pub fn SDL_strtoul(
-        str: *const libc::c_char,
-        endp: *mut *mut libc::c_char,
-        base: libc::c_int,
-    ) -> libc::c_ulong;
+        str: *const core::ffi::c_char,
+        endp: *mut *mut core::ffi::c_char,
+        base: core::ffi::c_int,
+    ) -> core::ffi::c_ulong;
 }
 extern "C" {
     pub fn SDL_strtoll(
-        str: *const libc::c_char,
-        endp: *mut *mut libc::c_char,
-        base: libc::c_int,
+        str: *const core::ffi::c_char,
+        endp: *mut *mut core::ffi::c_char,
+        base: core::ffi::c_int,
     ) -> Sint64;
 }
 extern "C" {
     pub fn SDL_strtoull(
-        str: *const libc::c_char,
-        endp: *mut *mut libc::c_char,
-        base: libc::c_int,
+        str: *const core::ffi::c_char,
+        endp: *mut *mut core::ffi::c_char,
+        base: core::ffi::c_int,
     ) -> Uint64;
 }
 extern "C" {
-    pub fn SDL_strtod(str: *const libc::c_char, endp: *mut *mut libc::c_char) -> f64;
+    pub fn SDL_strtod(str: *const core::ffi::c_char, endp: *mut *mut core::ffi::c_char) -> f64;
 }
 extern "C" {
-    pub fn SDL_strcmp(str1: *const libc::c_char, str2: *const libc::c_char) -> libc::c_int;
+    pub fn SDL_strcmp(str1: *const core::ffi::c_char, str2: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_strncmp(
-        str1: *const libc::c_char,
-        str2: *const libc::c_char,
+        str1: *const core::ffi::c_char,
+        str2: *const core::ffi::c_char,
         maxlen: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_strcasecmp(str1: *const libc::c_char, str2: *const libc::c_char) -> libc::c_int;
+    pub fn SDL_strcasecmp(str1: *const core::ffi::c_char, str2: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_strncasecmp(
-        str1: *const libc::c_char,
-        str2: *const libc::c_char,
+        str1: *const core::ffi::c_char,
+        str2: *const core::ffi::c_char,
         len: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_sscanf(text: *const libc::c_char, fmt: *const libc::c_char, ...) -> libc::c_int;
+    pub fn SDL_sscanf(text: *const core::ffi::c_char, fmt: *const core::ffi::c_char, ...) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_vsscanf(
-        text: *const libc::c_char,
-        fmt: *const libc::c_char,
+        text: *const core::ffi::c_char,
+        fmt: *const core::ffi::c_char,
         ap: *mut __va_list_tag,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_snprintf(
-        text: *mut libc::c_char,
+        text: *mut core::ffi::c_char,
         maxlen: size_t,
-        fmt: *const libc::c_char,
+        fmt: *const core::ffi::c_char,
         ...
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_vsnprintf(
-        text: *mut libc::c_char,
+        text: *mut core::ffi::c_char,
         maxlen: size_t,
-        fmt: *const libc::c_char,
+        fmt: *const core::ffi::c_char,
         ap: *mut __va_list_tag,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_asprintf(strp: *mut *mut libc::c_char, fmt: *const libc::c_char, ...)
-        -> libc::c_int;
+    pub fn SDL_asprintf(strp: *mut *mut core::ffi::c_char, fmt: *const core::ffi::c_char, ...)
+        -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_vasprintf(
-        strp: *mut *mut libc::c_char,
-        fmt: *const libc::c_char,
+        strp: *mut *mut core::ffi::c_char,
+        fmt: *const core::ffi::c_char,
         ap: *mut __va_list_tag,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Use this function to compute arc cosine of `x`."]
@@ -1654,16 +1654,16 @@ extern "C" {
     pub fn SDL_roundf(x: f32) -> f32;
 }
 extern "C" {
-    pub fn SDL_lround(x: f64) -> libc::c_long;
+    pub fn SDL_lround(x: f64) -> core::ffi::c_long;
 }
 extern "C" {
-    pub fn SDL_lroundf(x: f32) -> libc::c_long;
+    pub fn SDL_lroundf(x: f32) -> core::ffi::c_long;
 }
 extern "C" {
-    pub fn SDL_scalbn(x: f64, n: libc::c_int) -> f64;
+    pub fn SDL_scalbn(x: f64, n: core::ffi::c_int) -> f64;
 }
 extern "C" {
-    pub fn SDL_scalbnf(x: f32, n: libc::c_int) -> f32;
+    pub fn SDL_scalbnf(x: f32, n: core::ffi::c_int) -> f32;
 }
 extern "C" {
     pub fn SDL_sin(x: f64) -> f64;
@@ -1691,19 +1691,19 @@ pub struct _SDL_iconv_t {
 pub type SDL_iconv_t = *mut _SDL_iconv_t;
 extern "C" {
     pub fn SDL_iconv_open(
-        tocode: *const libc::c_char,
-        fromcode: *const libc::c_char,
+        tocode: *const core::ffi::c_char,
+        fromcode: *const core::ffi::c_char,
     ) -> SDL_iconv_t;
 }
 extern "C" {
-    pub fn SDL_iconv_close(cd: SDL_iconv_t) -> libc::c_int;
+    pub fn SDL_iconv_close(cd: SDL_iconv_t) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_iconv(
         cd: SDL_iconv_t,
-        inbuf: *mut *const libc::c_char,
+        inbuf: *mut *const core::ffi::c_char,
         inbytesleft: *mut size_t,
-        outbuf: *mut *mut libc::c_char,
+        outbuf: *mut *mut core::ffi::c_char,
         outbytesleft: *mut size_t,
     ) -> size_t;
 }
@@ -1713,18 +1713,18 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
     pub fn SDL_iconv_string(
-        tocode: *const libc::c_char,
-        fromcode: *const libc::c_char,
-        inbuf: *const libc::c_char,
+        tocode: *const core::ffi::c_char,
+        fromcode: *const core::ffi::c_char,
+        inbuf: *const core::ffi::c_char,
         inbytesleft: size_t,
-    ) -> *mut libc::c_char;
+    ) -> *mut core::ffi::c_char;
 }
 #[doc = "  The prototype for the application's main() function"]
 pub type SDL_main_func = ::core::option::Option<
-    unsafe extern "C" fn(argc: libc::c_int, argv: *mut *mut libc::c_char) -> libc::c_int,
+    unsafe extern "C" fn(argc: core::ffi::c_int, argv: *mut *mut core::ffi::c_char) -> core::ffi::c_int,
 >;
 extern "C" {
-    pub fn SDL_main(argc: libc::c_int, argv: *mut *mut libc::c_char) -> libc::c_int;
+    pub fn SDL_main(argc: core::ffi::c_int, argv: *mut *mut core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Circumvent failure of SDL_Init() when not using SDL_main() as an entry"]
@@ -1757,12 +1757,12 @@ pub enum SDL_AssertState {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct SDL_AssertData {
-    pub always_ignore: libc::c_int,
-    pub trigger_count: libc::c_uint,
-    pub condition: *const libc::c_char,
-    pub filename: *const libc::c_char,
-    pub linenum: libc::c_int,
-    pub function: *const libc::c_char,
+    pub always_ignore: core::ffi::c_int,
+    pub trigger_count: core::ffi::c_uint,
+    pub condition: *const core::ffi::c_char,
+    pub filename: *const core::ffi::c_char,
+    pub linenum: core::ffi::c_int,
+    pub function: *const core::ffi::c_char,
     pub next: *const SDL_AssertData,
 }
 #[test]
@@ -1851,9 +1851,9 @@ fn bindgen_test_layout_SDL_AssertData() {
 extern "C" {
     pub fn SDL_ReportAssertion(
         arg1: *mut SDL_AssertData,
-        arg2: *const libc::c_char,
-        arg3: *const libc::c_char,
-        arg4: libc::c_int,
+        arg2: *const core::ffi::c_char,
+        arg3: *const core::ffi::c_char,
+        arg4: core::ffi::c_int,
     ) -> SDL_AssertState;
 }
 #[doc = " A callback that fires when an SDL assertion fails."]
@@ -1865,7 +1865,7 @@ extern "C" {
 pub type SDL_AssertionHandler = ::core::option::Option<
     unsafe extern "C" fn(
         data: *const SDL_AssertData,
-        userdata: *mut libc::c_void,
+        userdata: *mut core::ffi::c_void,
     ) -> SDL_AssertState,
 >;
 extern "C" {
@@ -1888,7 +1888,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetAssertionHandler"]
-    pub fn SDL_SetAssertionHandler(handler: SDL_AssertionHandler, userdata: *mut libc::c_void);
+    pub fn SDL_SetAssertionHandler(handler: SDL_AssertionHandler, userdata: *mut core::ffi::c_void);
 }
 extern "C" {
     #[doc = " Get the default assertion handler."]
@@ -1926,7 +1926,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.2."]
     #[doc = ""]
     #[doc = " \\sa SDL_SetAssertionHandler"]
-    pub fn SDL_GetAssertionHandler(puserdata: *mut *mut libc::c_void) -> SDL_AssertionHandler;
+    pub fn SDL_GetAssertionHandler(puserdata: *mut *mut core::ffi::c_void) -> SDL_AssertionHandler;
 }
 extern "C" {
     #[doc = " Get a list of all assertion failures."]
@@ -1968,7 +1968,7 @@ extern "C" {
     #[doc = " \\sa SDL_GetAssertionReport"]
     pub fn SDL_ResetAssertionReport();
 }
-pub type SDL_SpinLock = libc::c_int;
+pub type SDL_SpinLock = core::ffi::c_int;
 extern "C" {
     #[doc = " Try to lock a spin lock by setting it to a non-zero value."]
     #[doc = ""]
@@ -2045,7 +2045,7 @@ extern "C" {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct SDL_atomic_t {
-    pub value: libc::c_int,
+    pub value: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_SDL_atomic_t() {
@@ -2088,8 +2088,8 @@ extern "C" {
     #[doc = " \\sa SDL_AtomicSet"]
     pub fn SDL_AtomicCAS(
         a: *mut SDL_atomic_t,
-        oldval: libc::c_int,
-        newval: libc::c_int,
+        oldval: core::ffi::c_int,
+        newval: core::ffi::c_int,
     ) -> SDL_bool;
 }
 extern "C" {
@@ -2107,7 +2107,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.2."]
     #[doc = ""]
     #[doc = " \\sa SDL_AtomicGet"]
-    pub fn SDL_AtomicSet(a: *mut SDL_atomic_t, v: libc::c_int) -> libc::c_int;
+    pub fn SDL_AtomicSet(a: *mut SDL_atomic_t, v: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the value of an atomic variable."]
@@ -2121,7 +2121,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.2."]
     #[doc = ""]
     #[doc = " \\sa SDL_AtomicSet"]
-    pub fn SDL_AtomicGet(a: *mut SDL_atomic_t) -> libc::c_int;
+    pub fn SDL_AtomicGet(a: *mut SDL_atomic_t) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Add to an atomic variable."]
@@ -2139,7 +2139,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_AtomicDecRef"]
     #[doc = " \\sa SDL_AtomicIncRef"]
-    pub fn SDL_AtomicAdd(a: *mut SDL_atomic_t, v: libc::c_int) -> libc::c_int;
+    pub fn SDL_AtomicAdd(a: *mut SDL_atomic_t, v: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set a pointer to a new value if it is currently an old value."]
@@ -2158,9 +2158,9 @@ extern "C" {
     #[doc = " \\sa SDL_AtomicGetPtr"]
     #[doc = " \\sa SDL_AtomicSetPtr"]
     pub fn SDL_AtomicCASPtr(
-        a: *mut *mut libc::c_void,
-        oldval: *mut libc::c_void,
-        newval: *mut libc::c_void,
+        a: *mut *mut core::ffi::c_void,
+        oldval: *mut core::ffi::c_void,
+        newval: *mut core::ffi::c_void,
     ) -> SDL_bool;
 }
 extern "C" {
@@ -2177,7 +2177,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_AtomicCASPtr"]
     #[doc = " \\sa SDL_AtomicGetPtr"]
-    pub fn SDL_AtomicSetPtr(a: *mut *mut libc::c_void, v: *mut libc::c_void) -> *mut libc::c_void;
+    pub fn SDL_AtomicSetPtr(a: *mut *mut core::ffi::c_void, v: *mut core::ffi::c_void) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Get the value of a pointer atomically."]
@@ -2192,7 +2192,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_AtomicCASPtr"]
     #[doc = " \\sa SDL_AtomicSetPtr"]
-    pub fn SDL_AtomicGetPtr(a: *mut *mut libc::c_void) -> *mut libc::c_void;
+    pub fn SDL_AtomicGetPtr(a: *mut *mut core::ffi::c_void) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Set the SDL error message for the current thread."]
@@ -2217,7 +2217,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_ClearError"]
     #[doc = " \\sa SDL_GetError"]
-    pub fn SDL_SetError(fmt: *const libc::c_char, ...) -> libc::c_int;
+    pub fn SDL_SetError(fmt: *const core::ffi::c_char, ...) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Retrieve a message about the last error that occurred on the current"]
@@ -2253,7 +2253,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_ClearError"]
     #[doc = " \\sa SDL_SetError"]
-    pub fn SDL_GetError() -> *const libc::c_char;
+    pub fn SDL_GetError() -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the last error message that was set for the current thread."]
@@ -2269,7 +2269,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.14."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetError"]
-    pub fn SDL_GetErrorMsg(errstr: *mut libc::c_char, maxlen: libc::c_int) -> *mut libc::c_char;
+    pub fn SDL_GetErrorMsg(errstr: *mut core::ffi::c_char, maxlen: core::ffi::c_int) -> *mut core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Clear any previous error message for this thread."]
@@ -2291,7 +2291,7 @@ pub enum SDL_errorcode {
     SDL_LASTERROR = 5,
 }
 extern "C" {
-    pub fn SDL_Error(code: SDL_errorcode) -> libc::c_int;
+    pub fn SDL_Error(code: SDL_errorcode) -> core::ffi::c_int;
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -2334,7 +2334,7 @@ extern "C" {
     #[doc = " \\return 0, or -1 on error."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
-    pub fn SDL_LockMutex(mutex: *mut SDL_mutex) -> libc::c_int;
+    pub fn SDL_LockMutex(mutex: *mut SDL_mutex) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Try to lock a mutex without blocking."]
@@ -2355,7 +2355,7 @@ extern "C" {
     #[doc = " \\sa SDL_DestroyMutex"]
     #[doc = " \\sa SDL_LockMutex"]
     #[doc = " \\sa SDL_UnlockMutex"]
-    pub fn SDL_TryLockMutex(mutex: *mut SDL_mutex) -> libc::c_int;
+    pub fn SDL_TryLockMutex(mutex: *mut SDL_mutex) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Unlock the mutex."]
@@ -2373,7 +2373,7 @@ extern "C" {
     #[doc = " \\returns 0, or -1 on error."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
-    pub fn SDL_UnlockMutex(mutex: *mut SDL_mutex) -> libc::c_int;
+    pub fn SDL_UnlockMutex(mutex: *mut SDL_mutex) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Destroy a mutex created with SDL_CreateMutex()."]
@@ -2465,7 +2465,7 @@ extern "C" {
     #[doc = " \\sa SDL_SemValue"]
     #[doc = " \\sa SDL_SemWait"]
     #[doc = " \\sa SDL_SemWaitTimeout"]
-    pub fn SDL_SemWait(sem: *mut SDL_sem) -> libc::c_int;
+    pub fn SDL_SemWait(sem: *mut SDL_sem) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " See if a semaphore has a positive value and decrement it if it does."]
@@ -2488,7 +2488,7 @@ extern "C" {
     #[doc = " \\sa SDL_SemValue"]
     #[doc = " \\sa SDL_SemWait"]
     #[doc = " \\sa SDL_SemWaitTimeout"]
-    pub fn SDL_SemTryWait(sem: *mut SDL_sem) -> libc::c_int;
+    pub fn SDL_SemTryWait(sem: *mut SDL_sem) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Wait until a semaphore has a positive value and then decrements it."]
@@ -2512,7 +2512,7 @@ extern "C" {
     #[doc = " \\sa SDL_SemTryWait"]
     #[doc = " \\sa SDL_SemValue"]
     #[doc = " \\sa SDL_SemWait"]
-    pub fn SDL_SemWaitTimeout(sem: *mut SDL_sem, ms: Uint32) -> libc::c_int;
+    pub fn SDL_SemWaitTimeout(sem: *mut SDL_sem, ms: Uint32) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Atomically increment a semaphore's value and wake waiting threads."]
@@ -2529,7 +2529,7 @@ extern "C" {
     #[doc = " \\sa SDL_SemValue"]
     #[doc = " \\sa SDL_SemWait"]
     #[doc = " \\sa SDL_SemWaitTimeout"]
-    pub fn SDL_SemPost(sem: *mut SDL_sem) -> libc::c_int;
+    pub fn SDL_SemPost(sem: *mut SDL_sem) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the current value of a semaphore."]
@@ -2590,7 +2590,7 @@ extern "C" {
     #[doc = " \\sa SDL_CondWaitTimeout"]
     #[doc = " \\sa SDL_CreateCond"]
     #[doc = " \\sa SDL_DestroyCond"]
-    pub fn SDL_CondSignal(cond: *mut SDL_cond) -> libc::c_int;
+    pub fn SDL_CondSignal(cond: *mut SDL_cond) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Restart all threads that are waiting on the condition variable."]
@@ -2606,7 +2606,7 @@ extern "C" {
     #[doc = " \\sa SDL_CondWaitTimeout"]
     #[doc = " \\sa SDL_CreateCond"]
     #[doc = " \\sa SDL_DestroyCond"]
-    pub fn SDL_CondBroadcast(cond: *mut SDL_cond) -> libc::c_int;
+    pub fn SDL_CondBroadcast(cond: *mut SDL_cond) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Wait until a condition variable is signaled."]
@@ -2633,7 +2633,7 @@ extern "C" {
     #[doc = " \\sa SDL_CondWaitTimeout"]
     #[doc = " \\sa SDL_CreateCond"]
     #[doc = " \\sa SDL_DestroyCond"]
-    pub fn SDL_CondWait(cond: *mut SDL_cond, mutex: *mut SDL_mutex) -> libc::c_int;
+    pub fn SDL_CondWait(cond: *mut SDL_cond, mutex: *mut SDL_mutex) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Wait until a condition variable is signaled or a certain time has passed."]
@@ -2665,15 +2665,15 @@ extern "C" {
         cond: *mut SDL_cond,
         mutex: *mut SDL_mutex,
         ms: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct SDL_Thread {
     _unused: [u8; 0],
 }
-pub type SDL_threadID = libc::c_ulong;
-pub type SDL_TLSID = libc::c_uint;
+pub type SDL_threadID = core::ffi::c_ulong;
+pub type SDL_TLSID = core::ffi::c_uint;
 #[repr(u32)]
 #[doc = "  The SDL thread priority."]
 #[doc = ""]
@@ -2695,7 +2695,7 @@ pub enum SDL_ThreadPriority {
 #[doc = " \\param data what was passed as `data` to SDL_CreateThread()"]
 #[doc = " \\returns a value that can be reported through SDL_WaitThread()."]
 pub type SDL_ThreadFunction =
-    ::core::option::Option<unsafe extern "C" fn(data: *mut libc::c_void) -> libc::c_int>;
+    ::core::option::Option<unsafe extern "C" fn(data: *mut core::ffi::c_void) -> core::ffi::c_int>;
 extern "C" {
     #[doc = " Create a new thread with a default stack size."]
     #[doc = ""]
@@ -2718,8 +2718,8 @@ extern "C" {
     #[doc = " \\sa SDL_WaitThread"]
     pub fn SDL_CreateThread(
         fn_: SDL_ThreadFunction,
-        name: *const libc::c_char,
-        data: *mut libc::c_void,
+        name: *const core::ffi::c_char,
+        data: *mut core::ffi::c_void,
     ) -> *mut SDL_Thread;
 }
 extern "C" {
@@ -2766,9 +2766,9 @@ extern "C" {
     #[doc = " \\sa SDL_WaitThread"]
     pub fn SDL_CreateThreadWithStackSize(
         fn_: SDL_ThreadFunction,
-        name: *const libc::c_char,
+        name: *const core::ffi::c_char,
         stacksize: size_t,
-        data: *mut libc::c_void,
+        data: *mut core::ffi::c_void,
     ) -> *mut SDL_Thread;
 }
 extern "C" {
@@ -2784,7 +2784,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_CreateThread"]
-    pub fn SDL_GetThreadName(thread: *mut SDL_Thread) -> *const libc::c_char;
+    pub fn SDL_GetThreadName(thread: *mut SDL_Thread) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the thread identifier for the current thread."]
@@ -2831,7 +2831,7 @@ extern "C" {
     #[doc = "          SDL_GetError() for more information."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
-    pub fn SDL_SetThreadPriority(priority: SDL_ThreadPriority) -> libc::c_int;
+    pub fn SDL_SetThreadPriority(priority: SDL_ThreadPriority) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Wait for a thread to finish."]
@@ -2865,7 +2865,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_CreateThread"]
     #[doc = " \\sa SDL_DetachThread"]
-    pub fn SDL_WaitThread(thread: *mut SDL_Thread, status: *mut libc::c_int);
+    pub fn SDL_WaitThread(thread: *mut SDL_Thread, status: *mut core::ffi::c_int);
 }
 extern "C" {
     #[doc = " Let a thread clean up on exit without intervention."]
@@ -2927,7 +2927,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_TLSCreate"]
     #[doc = " \\sa SDL_TLSSet"]
-    pub fn SDL_TLSGet(id: SDL_TLSID) -> *mut libc::c_void;
+    pub fn SDL_TLSGet(id: SDL_TLSID) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Set the current thread's value associated with a thread local storage ID."]
@@ -2953,9 +2953,9 @@ extern "C" {
     #[doc = " \\sa SDL_TLSGet"]
     pub fn SDL_TLSSet(
         id: SDL_TLSID,
-        value: *const libc::c_void,
-        destructor: ::core::option::Option<unsafe extern "C" fn(arg1: *mut libc::c_void)>,
-    ) -> libc::c_int;
+        value: *const core::ffi::c_void,
+        destructor: ::core::option::Option<unsafe extern "C" fn(arg1: *mut core::ffi::c_void)>,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Cleanup all TLS data for this thread."]
@@ -2977,7 +2977,7 @@ pub struct SDL_RWops {
         unsafe extern "C" fn(
             context: *mut SDL_RWops,
             offset: Sint64,
-            whence: libc::c_int,
+            whence: core::ffi::c_int,
         ) -> Sint64,
     >,
     #[doc = "  Read up to \\c maxnum objects each of size \\c size from the data"]
@@ -2987,7 +2987,7 @@ pub struct SDL_RWops {
     pub read: ::core::option::Option<
         unsafe extern "C" fn(
             context: *mut SDL_RWops,
-            ptr: *mut libc::c_void,
+            ptr: *mut core::ffi::c_void,
             size: size_t,
             maxnum: size_t,
         ) -> size_t,
@@ -2999,7 +2999,7 @@ pub struct SDL_RWops {
     pub write: ::core::option::Option<
         unsafe extern "C" fn(
             context: *mut SDL_RWops,
-            ptr: *const libc::c_void,
+            ptr: *const core::ffi::c_void,
             size: size_t,
             num: size_t,
         ) -> size_t,
@@ -3007,7 +3007,7 @@ pub struct SDL_RWops {
     #[doc = "  Close and free an allocated SDL_RWops structure."]
     #[doc = ""]
     #[doc = "  \\return 0 if successful or -1 on write error when flushing data."]
-    pub close: ::core::option::Option<unsafe extern "C" fn(context: *mut SDL_RWops) -> libc::c_int>,
+    pub close: ::core::option::Option<unsafe extern "C" fn(context: *mut SDL_RWops) -> core::ffi::c_int>,
     pub type_: Uint32,
     pub hidden: SDL_RWops__bindgen_ty_1,
 }
@@ -3086,8 +3086,8 @@ fn bindgen_test_layout_SDL_RWops__bindgen_ty_1__bindgen_ty_1() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct SDL_RWops__bindgen_ty_1__bindgen_ty_2 {
-    pub data1: *mut libc::c_void,
-    pub data2: *mut libc::c_void,
+    pub data1: *mut core::ffi::c_void,
+    pub data2: *mut core::ffi::c_void,
 }
 #[test]
 fn bindgen_test_layout_SDL_RWops__bindgen_ty_1__bindgen_ty_2() {
@@ -3312,7 +3312,7 @@ extern "C" {
     #[doc = " \\sa SDL_RWseek"]
     #[doc = " \\sa SDL_RWtell"]
     #[doc = " \\sa SDL_RWwrite"]
-    pub fn SDL_RWFromFile(file: *const libc::c_char, mode: *const libc::c_char) -> *mut SDL_RWops;
+    pub fn SDL_RWFromFile(file: *const core::ffi::c_char, mode: *const core::ffi::c_char) -> *mut SDL_RWops;
 }
 extern "C" {
     #[doc = " Use this function to create an SDL_RWops structure from a standard I/O file"]
@@ -3343,7 +3343,7 @@ extern "C" {
     #[doc = " \\sa SDL_RWseek"]
     #[doc = " \\sa SDL_RWtell"]
     #[doc = " \\sa SDL_RWwrite"]
-    pub fn SDL_RWFromFP(fp: *mut libc::c_void, autoclose: SDL_bool) -> *mut SDL_RWops;
+    pub fn SDL_RWFromFP(fp: *mut core::ffi::c_void, autoclose: SDL_bool) -> *mut SDL_RWops;
 }
 extern "C" {
     #[doc = " Use this function to prepare a read-write memory buffer for use with"]
@@ -3375,7 +3375,7 @@ extern "C" {
     #[doc = " \\sa SDL_RWseek"]
     #[doc = " \\sa SDL_RWtell"]
     #[doc = " \\sa SDL_RWwrite"]
-    pub fn SDL_RWFromMem(mem: *mut libc::c_void, size: libc::c_int) -> *mut SDL_RWops;
+    pub fn SDL_RWFromMem(mem: *mut core::ffi::c_void, size: core::ffi::c_int) -> *mut SDL_RWops;
 }
 extern "C" {
     #[doc = " Use this function to prepare a read-only memory buffer for use with RWops."]
@@ -3408,7 +3408,7 @@ extern "C" {
     #[doc = " \\sa SDL_RWread"]
     #[doc = " \\sa SDL_RWseek"]
     #[doc = " \\sa SDL_RWtell"]
-    pub fn SDL_RWFromConstMem(mem: *const libc::c_void, size: libc::c_int) -> *mut SDL_RWops;
+    pub fn SDL_RWFromConstMem(mem: *const core::ffi::c_void, size: core::ffi::c_int) -> *mut SDL_RWops;
 }
 extern "C" {
     #[doc = " Use this function to allocate an empty, unpopulated SDL_RWops structure."]
@@ -3504,7 +3504,7 @@ extern "C" {
     #[doc = " \\sa SDL_RWread"]
     #[doc = " \\sa SDL_RWtell"]
     #[doc = " \\sa SDL_RWwrite"]
-    pub fn SDL_RWseek(context: *mut SDL_RWops, offset: Sint64, whence: libc::c_int) -> Sint64;
+    pub fn SDL_RWseek(context: *mut SDL_RWops, offset: Sint64, whence: core::ffi::c_int) -> Sint64;
 }
 extern "C" {
     #[doc = " Determine the current read/write offset in an SDL_RWops data stream."]
@@ -3563,7 +3563,7 @@ extern "C" {
     #[doc = " \\sa SDL_RWwrite"]
     pub fn SDL_RWread(
         context: *mut SDL_RWops,
-        ptr: *mut libc::c_void,
+        ptr: *mut core::ffi::c_void,
         size: size_t,
         maxnum: size_t,
     ) -> size_t;
@@ -3599,7 +3599,7 @@ extern "C" {
     #[doc = " \\sa SDL_RWseek"]
     pub fn SDL_RWwrite(
         context: *mut SDL_RWops,
-        ptr: *const libc::c_void,
+        ptr: *const core::ffi::c_void,
         size: size_t,
         num: size_t,
     ) -> size_t;
@@ -3630,7 +3630,7 @@ extern "C" {
     #[doc = " \\sa SDL_RWread"]
     #[doc = " \\sa SDL_RWseek"]
     #[doc = " \\sa SDL_RWwrite"]
-    pub fn SDL_RWclose(context: *mut SDL_RWops) -> libc::c_int;
+    pub fn SDL_RWclose(context: *mut SDL_RWops) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Load all the data from an SDL data stream."]
@@ -3650,8 +3650,8 @@ extern "C" {
     pub fn SDL_LoadFile_RW(
         src: *mut SDL_RWops,
         datasize: *mut size_t,
-        freesrc: libc::c_int,
-    ) -> *mut libc::c_void;
+        freesrc: core::ffi::c_int,
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Load all the data from a file path."]
@@ -3670,7 +3670,7 @@ extern "C" {
     #[doc = " \\returns the data, or NULL if there was an error."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.10."]
-    pub fn SDL_LoadFile(file: *const libc::c_char, datasize: *mut size_t) -> *mut libc::c_void;
+    pub fn SDL_LoadFile(file: *const core::ffi::c_char, datasize: *mut size_t) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Use this function to read a byte from an SDL_RWops."]
@@ -3918,7 +3918,7 @@ pub type SDL_AudioFormat = Uint16;
 #[doc = "  You can choose to avoid callbacks and use SDL_QueueAudio() instead, if"]
 #[doc = "  you like. Just open your audio device with a NULL callback."]
 pub type SDL_AudioCallback = ::core::option::Option<
-    unsafe extern "C" fn(userdata: *mut libc::c_void, stream: *mut Uint8, len: libc::c_int),
+    unsafe extern "C" fn(userdata: *mut core::ffi::c_void, stream: *mut Uint8, len: core::ffi::c_int),
 >;
 #[doc = "  The calculated values in this structure are calculated by SDL_OpenAudio()."]
 #[doc = ""]
@@ -3934,7 +3934,7 @@ pub type SDL_AudioCallback = ::core::option::Option<
 #[derive(Copy, Clone)]
 pub struct SDL_AudioSpec {
     #[doc = "< DSP frequency -- samples per second"]
-    pub freq: libc::c_int,
+    pub freq: core::ffi::c_int,
     #[doc = "< Audio data format"]
     pub format: SDL_AudioFormat,
     #[doc = "< Number of channels: 1 mono, 2 stereo"]
@@ -3950,7 +3950,7 @@ pub struct SDL_AudioSpec {
     #[doc = "< Callback that feeds the audio device (NULL to use SDL_QueueAudio())."]
     pub callback: SDL_AudioCallback,
     #[doc = "< Userdata passed to callback (ignored for NULL callbacks)."]
-    pub userdata: *mut libc::c_void,
+    pub userdata: *mut core::ffi::c_void,
 }
 #[test]
 fn bindgen_test_layout_SDL_AudioSpec() {
@@ -4061,7 +4061,7 @@ pub type SDL_AudioFilter =
 #[derive(Copy, Clone)]
 pub struct SDL_AudioCVT {
     #[doc = "< Set to 1 if conversion possible"]
-    pub needed: libc::c_int,
+    pub needed: core::ffi::c_int,
     #[doc = "< Source audio format"]
     pub src_format: SDL_AudioFormat,
     #[doc = "< Target audio format"]
@@ -4071,17 +4071,17 @@ pub struct SDL_AudioCVT {
     #[doc = "< Buffer to hold entire audio data"]
     pub buf: *mut Uint8,
     #[doc = "< Length of original audio buffer"]
-    pub len: libc::c_int,
+    pub len: core::ffi::c_int,
     #[doc = "< Length of converted audio buffer"]
-    pub len_cvt: libc::c_int,
+    pub len_cvt: core::ffi::c_int,
     #[doc = "< buffer must be len*len_mult big"]
-    pub len_mult: libc::c_int,
+    pub len_mult: core::ffi::c_int,
     #[doc = "< Given len, final size is len*len_ratio"]
     pub len_ratio: f64,
     #[doc = "< NULL-terminated list of filter functions"]
     pub filters: [SDL_AudioFilter; 10usize],
     #[doc = "< Current audio conversion function"]
-    pub filter_index: libc::c_int,
+    pub filter_index: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_SDL_AudioCVT() {
@@ -4224,7 +4224,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetAudioDriver"]
-    pub fn SDL_GetNumAudioDrivers() -> libc::c_int;
+    pub fn SDL_GetNumAudioDrivers() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Use this function to get the name of a built in audio driver."]
@@ -4245,7 +4245,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetNumAudioDrivers"]
-    pub fn SDL_GetAudioDriver(index: libc::c_int) -> *const libc::c_char;
+    pub fn SDL_GetAudioDriver(index: core::ffi::c_int) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Use this function to initialize a particular audio driver."]
@@ -4261,7 +4261,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_AudioQuit"]
-    pub fn SDL_AudioInit(driver_name: *const libc::c_char) -> libc::c_int;
+    pub fn SDL_AudioInit(driver_name: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Use this function to shut down audio if you initialized it with"]
@@ -4291,7 +4291,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_AudioInit"]
-    pub fn SDL_GetCurrentAudioDriver() -> *const libc::c_char;
+    pub fn SDL_GetCurrentAudioDriver() -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " This function is a legacy means of opening the audio device."]
@@ -4339,7 +4339,7 @@ extern "C" {
     #[doc = " \\sa SDL_LockAudio"]
     #[doc = " \\sa SDL_PauseAudio"]
     #[doc = " \\sa SDL_UnlockAudio"]
-    pub fn SDL_OpenAudio(desired: *mut SDL_AudioSpec, obtained: *mut SDL_AudioSpec) -> libc::c_int;
+    pub fn SDL_OpenAudio(desired: *mut SDL_AudioSpec, obtained: *mut SDL_AudioSpec) -> core::ffi::c_int;
 }
 #[doc = "  SDL Audio Device IDs."]
 #[doc = ""]
@@ -4392,7 +4392,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetAudioDeviceName"]
     #[doc = " \\sa SDL_OpenAudioDevice"]
-    pub fn SDL_GetNumAudioDevices(iscapture: libc::c_int) -> libc::c_int;
+    pub fn SDL_GetNumAudioDevices(iscapture: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the human-readable name of a specific audio device."]
@@ -4418,9 +4418,9 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetNumAudioDevices"]
     pub fn SDL_GetAudioDeviceName(
-        index: libc::c_int,
-        iscapture: libc::c_int,
-    ) -> *const libc::c_char;
+        index: core::ffi::c_int,
+        iscapture: core::ffi::c_int,
+    ) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the preferred audio format of a specific audio device."]
@@ -4446,10 +4446,10 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetNumAudioDevices"]
     pub fn SDL_GetAudioDeviceSpec(
-        index: libc::c_int,
-        iscapture: libc::c_int,
+        index: core::ffi::c_int,
+        iscapture: core::ffi::c_int,
         spec: *mut SDL_AudioSpec,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Open a specific audio device."]
@@ -4561,11 +4561,11 @@ extern "C" {
     #[doc = " \\sa SDL_PauseAudioDevice"]
     #[doc = " \\sa SDL_UnlockAudioDevice"]
     pub fn SDL_OpenAudioDevice(
-        device: *const libc::c_char,
-        iscapture: libc::c_int,
+        device: *const core::ffi::c_char,
+        iscapture: core::ffi::c_int,
         desired: *const SDL_AudioSpec,
         obtained: *mut SDL_AudioSpec,
-        allowed_changes: libc::c_int,
+        allowed_changes: core::ffi::c_int,
     ) -> SDL_AudioDeviceID;
 }
 #[repr(u32)]
@@ -4624,7 +4624,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetAudioStatus"]
     #[doc = " \\sa SDL_PauseAudioDevice"]
-    pub fn SDL_PauseAudio(pause_on: libc::c_int);
+    pub fn SDL_PauseAudio(pause_on: core::ffi::c_int);
 }
 extern "C" {
     #[doc = " Use this function to pause and unpause audio playback on a specified"]
@@ -4653,7 +4653,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_LockAudioDevice"]
-    pub fn SDL_PauseAudioDevice(dev: SDL_AudioDeviceID, pause_on: libc::c_int);
+    pub fn SDL_PauseAudioDevice(dev: SDL_AudioDeviceID, pause_on: core::ffi::c_int);
 }
 extern "C" {
     #[doc = " Load the audio data of a WAVE file into memory."]
@@ -4737,7 +4737,7 @@ extern "C" {
     #[doc = " \\sa SDL_LoadWAV"]
     pub fn SDL_LoadWAV_RW(
         src: *mut SDL_RWops,
-        freesrc: libc::c_int,
+        freesrc: core::ffi::c_int,
         spec: *mut SDL_AudioSpec,
         audio_buf: *mut *mut Uint8,
         audio_len: *mut Uint32,
@@ -4794,11 +4794,11 @@ extern "C" {
         cvt: *mut SDL_AudioCVT,
         src_format: SDL_AudioFormat,
         src_channels: Uint8,
-        src_rate: libc::c_int,
+        src_rate: core::ffi::c_int,
         dst_format: SDL_AudioFormat,
         dst_channels: Uint8,
-        dst_rate: libc::c_int,
-    ) -> libc::c_int;
+        dst_rate: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Convert audio data to a desired audio format."]
@@ -4837,7 +4837,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_BuildAudioCVT"]
-    pub fn SDL_ConvertAudio(cvt: *mut SDL_AudioCVT) -> libc::c_int;
+    pub fn SDL_ConvertAudio(cvt: *mut SDL_AudioCVT) -> core::ffi::c_int;
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -4867,10 +4867,10 @@ extern "C" {
     pub fn SDL_NewAudioStream(
         src_format: SDL_AudioFormat,
         src_channels: Uint8,
-        src_rate: libc::c_int,
+        src_rate: core::ffi::c_int,
         dst_format: SDL_AudioFormat,
         dst_channels: Uint8,
-        dst_rate: libc::c_int,
+        dst_rate: core::ffi::c_int,
     ) -> *mut SDL_AudioStream;
 }
 extern "C" {
@@ -4891,9 +4891,9 @@ extern "C" {
     #[doc = " \\sa SDL_FreeAudioStream"]
     pub fn SDL_AudioStreamPut(
         stream: *mut SDL_AudioStream,
-        buf: *const libc::c_void,
-        len: libc::c_int,
-    ) -> libc::c_int;
+        buf: *const core::ffi::c_void,
+        len: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get converted/resampled data from the stream"]
@@ -4913,9 +4913,9 @@ extern "C" {
     #[doc = " \\sa SDL_FreeAudioStream"]
     pub fn SDL_AudioStreamGet(
         stream: *mut SDL_AudioStream,
-        buf: *mut libc::c_void,
-        len: libc::c_int,
-    ) -> libc::c_int;
+        buf: *mut core::ffi::c_void,
+        len: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the number of converted/resampled bytes available."]
@@ -4932,7 +4932,7 @@ extern "C" {
     #[doc = " \\sa SDL_AudioStreamFlush"]
     #[doc = " \\sa SDL_AudioStreamClear"]
     #[doc = " \\sa SDL_FreeAudioStream"]
-    pub fn SDL_AudioStreamAvailable(stream: *mut SDL_AudioStream) -> libc::c_int;
+    pub fn SDL_AudioStreamAvailable(stream: *mut SDL_AudioStream) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Tell the stream that you're done sending data, and anything being buffered"]
@@ -4950,7 +4950,7 @@ extern "C" {
     #[doc = " \\sa SDL_AudioStreamAvailable"]
     #[doc = " \\sa SDL_AudioStreamClear"]
     #[doc = " \\sa SDL_FreeAudioStream"]
-    pub fn SDL_AudioStreamFlush(stream: *mut SDL_AudioStream) -> libc::c_int;
+    pub fn SDL_AudioStreamFlush(stream: *mut SDL_AudioStream) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Clear any pending data in the stream without converting it"]
@@ -4999,7 +4999,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_MixAudioFormat"]
-    pub fn SDL_MixAudio(dst: *mut Uint8, src: *const Uint8, len: Uint32, volume: libc::c_int);
+    pub fn SDL_MixAudio(dst: *mut Uint8, src: *const Uint8, len: Uint32, volume: core::ffi::c_int);
 }
 extern "C" {
     #[doc = " Mix audio data in a specified format."]
@@ -5035,7 +5035,7 @@ extern "C" {
         src: *const Uint8,
         format: SDL_AudioFormat,
         len: Uint32,
-        volume: libc::c_int,
+        volume: core::ffi::c_int,
     );
 }
 extern "C" {
@@ -5085,9 +5085,9 @@ extern "C" {
     #[doc = " \\sa SDL_GetQueuedAudioSize"]
     pub fn SDL_QueueAudio(
         dev: SDL_AudioDeviceID,
-        data: *const libc::c_void,
+        data: *const core::ffi::c_void,
         len: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Dequeue more audio on non-callback devices."]
@@ -5134,7 +5134,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_ClearQueuedAudio"]
     #[doc = " \\sa SDL_GetQueuedAudioSize"]
-    pub fn SDL_DequeueAudio(dev: SDL_AudioDeviceID, data: *mut libc::c_void, len: Uint32)
+    pub fn SDL_DequeueAudio(dev: SDL_AudioDeviceID, data: *mut core::ffi::c_void, len: Uint32)
         -> Uint32;
 }
 extern "C" {
@@ -5341,7 +5341,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetClipboardText"]
     #[doc = " \\sa SDL_HasClipboardText"]
-    pub fn SDL_SetClipboardText(text: *const libc::c_char) -> libc::c_int;
+    pub fn SDL_SetClipboardText(text: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get UTF-8 text from the clipboard, which must be freed with SDL_free()."]
@@ -5358,7 +5358,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_HasClipboardText"]
     #[doc = " \\sa SDL_SetClipboardText"]
-    pub fn SDL_GetClipboardText() -> *mut libc::c_char;
+    pub fn SDL_GetClipboardText() -> *mut core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Query whether the clipboard exists and contains a non-empty text string."]
@@ -5371,16 +5371,16 @@ extern "C" {
     #[doc = " \\sa SDL_SetClipboardText"]
     pub fn SDL_HasClipboardText() -> SDL_bool;
 }
-pub type __m64 = [libc::c_longlong; 1usize];
-pub type __v1di = [libc::c_longlong; 1usize];
-pub type __v2si = [libc::c_int; 2usize];
-pub type __v4hi = [libc::c_short; 4usize];
-pub type __v8qi = [libc::c_char; 8usize];
-pub type __v4si = [libc::c_int; 4usize];
+pub type __m64 = [core::ffi::c_longlong; 1usize];
+pub type __v1di = [core::ffi::c_longlong; 1usize];
+pub type __v2si = [core::ffi::c_int; 2usize];
+pub type __v4hi = [core::ffi::c_short; 4usize];
+pub type __v8qi = [core::ffi::c_char; 8usize];
+pub type __v4si = [core::ffi::c_int; 4usize];
 pub type __v4sf = [f32; 4usize];
 pub type __m128 = [f32; 4usize];
 pub type __m128_u = [f32; 4usize];
-pub type __v4su = [libc::c_uint; 4usize];
+pub type __v4su = [core::ffi::c_uint; 4usize];
 pub type _Float32 = f32;
 pub type _Float64 = f64;
 pub type _Float32x = f64;
@@ -5388,8 +5388,8 @@ pub type _Float64x = u128;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct div_t {
-    pub quot: libc::c_int,
-    pub rem: libc::c_int,
+    pub quot: core::ffi::c_int,
+    pub rem: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_div_t() {
@@ -5427,8 +5427,8 @@ fn bindgen_test_layout_div_t() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct ldiv_t {
-    pub quot: libc::c_long,
-    pub rem: libc::c_long,
+    pub quot: core::ffi::c_long,
+    pub rem: core::ffi::c_long,
 }
 #[test]
 fn bindgen_test_layout_ldiv_t() {
@@ -5466,8 +5466,8 @@ fn bindgen_test_layout_ldiv_t() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct lldiv_t {
-    pub quot: libc::c_longlong,
-    pub rem: libc::c_longlong,
+    pub quot: core::ffi::c_longlong,
+    pub rem: core::ffi::c_longlong,
 }
 #[test]
 fn bindgen_test_layout_lldiv_t() {
@@ -5506,73 +5506,73 @@ extern "C" {
     pub fn __ctype_get_mb_cur_max() -> size_t;
 }
 extern "C" {
-    pub fn atof(__nptr: *const libc::c_char) -> f64;
+    pub fn atof(__nptr: *const core::ffi::c_char) -> f64;
 }
 extern "C" {
-    pub fn atoi(__nptr: *const libc::c_char) -> libc::c_int;
+    pub fn atoi(__nptr: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn atol(__nptr: *const libc::c_char) -> libc::c_long;
+    pub fn atol(__nptr: *const core::ffi::c_char) -> core::ffi::c_long;
 }
 extern "C" {
-    pub fn atoll(__nptr: *const libc::c_char) -> libc::c_longlong;
+    pub fn atoll(__nptr: *const core::ffi::c_char) -> core::ffi::c_longlong;
 }
 extern "C" {
-    pub fn strtod(__nptr: *const libc::c_char, __endptr: *mut *mut libc::c_char) -> f64;
+    pub fn strtod(__nptr: *const core::ffi::c_char, __endptr: *mut *mut core::ffi::c_char) -> f64;
 }
 extern "C" {
-    pub fn strtof(__nptr: *const libc::c_char, __endptr: *mut *mut libc::c_char) -> f32;
+    pub fn strtof(__nptr: *const core::ffi::c_char, __endptr: *mut *mut core::ffi::c_char) -> f32;
 }
 extern "C" {
-    pub fn strtold(__nptr: *const libc::c_char, __endptr: *mut *mut libc::c_char) -> u128;
+    pub fn strtold(__nptr: *const core::ffi::c_char, __endptr: *mut *mut core::ffi::c_char) -> u128;
 }
 extern "C" {
     pub fn strtol(
-        __nptr: *const libc::c_char,
-        __endptr: *mut *mut libc::c_char,
-        __base: libc::c_int,
-    ) -> libc::c_long;
+        __nptr: *const core::ffi::c_char,
+        __endptr: *mut *mut core::ffi::c_char,
+        __base: core::ffi::c_int,
+    ) -> core::ffi::c_long;
 }
 extern "C" {
     pub fn strtoul(
-        __nptr: *const libc::c_char,
-        __endptr: *mut *mut libc::c_char,
-        __base: libc::c_int,
-    ) -> libc::c_ulong;
+        __nptr: *const core::ffi::c_char,
+        __endptr: *mut *mut core::ffi::c_char,
+        __base: core::ffi::c_int,
+    ) -> core::ffi::c_ulong;
 }
 extern "C" {
     pub fn strtoq(
-        __nptr: *const libc::c_char,
-        __endptr: *mut *mut libc::c_char,
-        __base: libc::c_int,
-    ) -> libc::c_longlong;
+        __nptr: *const core::ffi::c_char,
+        __endptr: *mut *mut core::ffi::c_char,
+        __base: core::ffi::c_int,
+    ) -> core::ffi::c_longlong;
 }
 extern "C" {
     pub fn strtouq(
-        __nptr: *const libc::c_char,
-        __endptr: *mut *mut libc::c_char,
-        __base: libc::c_int,
-    ) -> libc::c_ulonglong;
+        __nptr: *const core::ffi::c_char,
+        __endptr: *mut *mut core::ffi::c_char,
+        __base: core::ffi::c_int,
+    ) -> core::ffi::c_ulonglong;
 }
 extern "C" {
     pub fn strtoll(
-        __nptr: *const libc::c_char,
-        __endptr: *mut *mut libc::c_char,
-        __base: libc::c_int,
-    ) -> libc::c_longlong;
+        __nptr: *const core::ffi::c_char,
+        __endptr: *mut *mut core::ffi::c_char,
+        __base: core::ffi::c_int,
+    ) -> core::ffi::c_longlong;
 }
 extern "C" {
     pub fn strtoull(
-        __nptr: *const libc::c_char,
-        __endptr: *mut *mut libc::c_char,
-        __base: libc::c_int,
-    ) -> libc::c_ulonglong;
+        __nptr: *const core::ffi::c_char,
+        __endptr: *mut *mut core::ffi::c_char,
+        __base: core::ffi::c_int,
+    ) -> core::ffi::c_ulonglong;
 }
 extern "C" {
-    pub fn l64a(__n: libc::c_long) -> *mut libc::c_char;
+    pub fn l64a(__n: core::ffi::c_long) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn a64l(__s: *const libc::c_char) -> libc::c_long;
+    pub fn a64l(__s: *const core::ffi::c_char) -> core::ffi::c_long;
 }
 pub type u_char = __u_char;
 pub type u_short = __u_short;
@@ -5599,18 +5599,18 @@ pub type clock_t = __clock_t;
 pub type clockid_t = __clockid_t;
 pub type time_t = __time_t;
 pub type timer_t = __timer_t;
-pub type ulong = libc::c_ulong;
-pub type ushort = libc::c_ushort;
-pub type uint = libc::c_uint;
+pub type ulong = core::ffi::c_ulong;
+pub type ushort = core::ffi::c_ushort;
+pub type uint = core::ffi::c_uint;
 pub type u_int8_t = __uint8_t;
 pub type u_int16_t = __uint16_t;
 pub type u_int32_t = __uint32_t;
 pub type u_int64_t = __uint64_t;
-pub type register_t = libc::c_long;
+pub type register_t = core::ffi::c_long;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct __sigset_t {
-    pub __val: [libc::c_ulong; 16usize],
+    pub __val: [core::ffi::c_ulong; 16usize],
 }
 #[test]
 fn bindgen_test_layout___sigset_t() {
@@ -5715,7 +5715,7 @@ fn bindgen_test_layout_timespec() {
     );
 }
 pub type suseconds_t = __suseconds_t;
-pub type __fd_mask = libc::c_long;
+pub type __fd_mask = core::ffi::c_long;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct fd_set {
@@ -5747,22 +5747,22 @@ fn bindgen_test_layout_fd_set() {
 pub type fd_mask = __fd_mask;
 extern "C" {
     pub fn select(
-        __nfds: libc::c_int,
+        __nfds: core::ffi::c_int,
         __readfds: *mut fd_set,
         __writefds: *mut fd_set,
         __exceptfds: *mut fd_set,
         __timeout: *mut timeval,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn pselect(
-        __nfds: libc::c_int,
+        __nfds: core::ffi::c_int,
         __readfds: *mut fd_set,
         __writefds: *mut fd_set,
         __exceptfds: *mut fd_set,
         __timeout: *const timespec,
         __sigmask: *const __sigset_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 pub type blksize_t = __blksize_t;
 pub type blkcnt_t = __blkcnt_t;
@@ -5771,15 +5771,15 @@ pub type fsfilcnt_t = __fsfilcnt_t;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union __atomic_wide_counter {
-    pub __value64: libc::c_ulonglong,
+    pub __value64: core::ffi::c_ulonglong,
     pub __value32: __atomic_wide_counter__bindgen_ty_1,
     _bindgen_union_align: u64,
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct __atomic_wide_counter__bindgen_ty_1 {
-    pub __low: libc::c_uint,
-    pub __high: libc::c_uint,
+    pub __low: core::ffi::c_uint,
+    pub __high: core::ffi::c_uint,
 }
 #[test]
 fn bindgen_test_layout___atomic_wide_counter__bindgen_ty_1() {
@@ -5934,13 +5934,13 @@ pub type __pthread_slist_t = __pthread_internal_slist;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct __pthread_mutex_s {
-    pub __lock: libc::c_int,
-    pub __count: libc::c_uint,
-    pub __owner: libc::c_int,
-    pub __nusers: libc::c_uint,
-    pub __kind: libc::c_int,
-    pub __spins: libc::c_short,
-    pub __elision: libc::c_short,
+    pub __lock: core::ffi::c_int,
+    pub __count: core::ffi::c_uint,
+    pub __owner: core::ffi::c_int,
+    pub __nusers: core::ffi::c_uint,
+    pub __kind: core::ffi::c_int,
+    pub __spins: core::ffi::c_short,
+    pub __elision: core::ffi::c_short,
     pub __list: __pthread_list_t,
 }
 #[test]
@@ -6039,18 +6039,18 @@ fn bindgen_test_layout___pthread_mutex_s() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct __pthread_rwlock_arch_t {
-    pub __readers: libc::c_uint,
-    pub __writers: libc::c_uint,
-    pub __wrphase_futex: libc::c_uint,
-    pub __writers_futex: libc::c_uint,
-    pub __pad3: libc::c_uint,
-    pub __pad4: libc::c_uint,
-    pub __cur_writer: libc::c_int,
-    pub __shared: libc::c_int,
-    pub __rwelision: libc::c_schar,
-    pub __pad1: [libc::c_uchar; 7usize],
-    pub __pad2: libc::c_ulong,
-    pub __flags: libc::c_uint,
+    pub __readers: core::ffi::c_uint,
+    pub __writers: core::ffi::c_uint,
+    pub __wrphase_futex: core::ffi::c_uint,
+    pub __writers_futex: core::ffi::c_uint,
+    pub __pad3: core::ffi::c_uint,
+    pub __pad4: core::ffi::c_uint,
+    pub __cur_writer: core::ffi::c_int,
+    pub __shared: core::ffi::c_int,
+    pub __rwelision: core::ffi::c_schar,
+    pub __pad1: [core::ffi::c_uchar; 7usize],
+    pub __pad2: core::ffi::c_ulong,
+    pub __flags: core::ffi::c_uint,
 }
 #[test]
 fn bindgen_test_layout___pthread_rwlock_arch_t() {
@@ -6208,11 +6208,11 @@ fn bindgen_test_layout___pthread_rwlock_arch_t() {
 pub struct __pthread_cond_s {
     pub __wseq: __atomic_wide_counter,
     pub __g1_start: __atomic_wide_counter,
-    pub __g_refs: [libc::c_uint; 2usize],
-    pub __g_size: [libc::c_uint; 2usize],
-    pub __g1_orig_size: libc::c_uint,
-    pub __wrefs: libc::c_uint,
-    pub __g_signals: [libc::c_uint; 2usize],
+    pub __g_refs: [core::ffi::c_uint; 2usize],
+    pub __g_size: [core::ffi::c_uint; 2usize],
+    pub __g1_orig_size: core::ffi::c_uint,
+    pub __wrefs: core::ffi::c_uint,
+    pub __g_signals: [core::ffi::c_uint; 2usize],
 }
 #[test]
 fn bindgen_test_layout___pthread_cond_s() {
@@ -6299,12 +6299,12 @@ fn bindgen_test_layout___pthread_cond_s() {
         )
     );
 }
-pub type __tss_t = libc::c_uint;
-pub type __thrd_t = libc::c_ulong;
+pub type __tss_t = core::ffi::c_uint;
+pub type __thrd_t = core::ffi::c_ulong;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct __once_flag {
-    pub __data: libc::c_int,
+    pub __data: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout___once_flag() {
@@ -6329,12 +6329,12 @@ fn bindgen_test_layout___once_flag() {
         )
     );
 }
-pub type pthread_t = libc::c_ulong;
+pub type pthread_t = core::ffi::c_ulong;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union pthread_mutexattr_t {
-    pub __size: [libc::c_char; 4usize],
-    pub __align: libc::c_int,
+    pub __size: [core::ffi::c_char; 4usize],
+    pub __align: core::ffi::c_int,
     _bindgen_union_align: u32,
 }
 #[test]
@@ -6373,8 +6373,8 @@ fn bindgen_test_layout_pthread_mutexattr_t() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union pthread_condattr_t {
-    pub __size: [libc::c_char; 4usize],
-    pub __align: libc::c_int,
+    pub __size: [core::ffi::c_char; 4usize],
+    pub __align: core::ffi::c_int,
     _bindgen_union_align: u32,
 }
 #[test]
@@ -6410,13 +6410,13 @@ fn bindgen_test_layout_pthread_condattr_t() {
         )
     );
 }
-pub type pthread_key_t = libc::c_uint;
-pub type pthread_once_t = libc::c_int;
+pub type pthread_key_t = core::ffi::c_uint;
+pub type pthread_once_t = core::ffi::c_int;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union pthread_attr_t {
-    pub __size: [libc::c_char; 56usize],
-    pub __align: libc::c_long,
+    pub __size: [core::ffi::c_char; 56usize],
+    pub __align: core::ffi::c_long,
     _bindgen_union_align: [u64; 7usize],
 }
 #[test]
@@ -6456,8 +6456,8 @@ fn bindgen_test_layout_pthread_attr_t() {
 #[derive(Copy, Clone)]
 pub union pthread_mutex_t {
     pub __data: __pthread_mutex_s,
-    pub __size: [libc::c_char; 40usize],
-    pub __align: libc::c_long,
+    pub __size: [core::ffi::c_char; 40usize],
+    pub __align: core::ffi::c_long,
     _bindgen_union_align: [u64; 5usize],
 }
 #[test]
@@ -6507,8 +6507,8 @@ fn bindgen_test_layout_pthread_mutex_t() {
 #[derive(Copy, Clone)]
 pub union pthread_cond_t {
     pub __data: __pthread_cond_s,
-    pub __size: [libc::c_char; 48usize],
-    pub __align: libc::c_longlong,
+    pub __size: [core::ffi::c_char; 48usize],
+    pub __align: core::ffi::c_longlong,
     _bindgen_union_align: [u64; 6usize],
 }
 #[test]
@@ -6558,8 +6558,8 @@ fn bindgen_test_layout_pthread_cond_t() {
 #[derive(Copy, Clone)]
 pub union pthread_rwlock_t {
     pub __data: __pthread_rwlock_arch_t,
-    pub __size: [libc::c_char; 56usize],
-    pub __align: libc::c_long,
+    pub __size: [core::ffi::c_char; 56usize],
+    pub __align: core::ffi::c_long,
     _bindgen_union_align: [u64; 7usize],
 }
 #[test]
@@ -6608,8 +6608,8 @@ fn bindgen_test_layout_pthread_rwlock_t() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union pthread_rwlockattr_t {
-    pub __size: [libc::c_char; 8usize],
-    pub __align: libc::c_long,
+    pub __size: [core::ffi::c_char; 8usize],
+    pub __align: core::ffi::c_long,
     _bindgen_union_align: u64,
 }
 #[test]
@@ -6645,12 +6645,12 @@ fn bindgen_test_layout_pthread_rwlockattr_t() {
         )
     );
 }
-pub type pthread_spinlock_t = libc::c_int;
+pub type pthread_spinlock_t = core::ffi::c_int;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union pthread_barrier_t {
-    pub __size: [libc::c_char; 32usize],
-    pub __align: libc::c_long,
+    pub __size: [core::ffi::c_char; 32usize],
+    pub __align: core::ffi::c_long,
     _bindgen_union_align: [u64; 4usize],
 }
 #[test]
@@ -6689,8 +6689,8 @@ fn bindgen_test_layout_pthread_barrier_t() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union pthread_barrierattr_t {
-    pub __size: [libc::c_char; 4usize],
-    pub __align: libc::c_int,
+    pub __size: [core::ffi::c_char; 4usize],
+    pub __align: core::ffi::c_int,
     _bindgen_union_align: u32,
 }
 #[test]
@@ -6727,20 +6727,20 @@ fn bindgen_test_layout_pthread_barrierattr_t() {
     );
 }
 extern "C" {
-    pub fn random() -> libc::c_long;
+    pub fn random() -> core::ffi::c_long;
 }
 extern "C" {
-    pub fn srandom(__seed: libc::c_uint);
+    pub fn srandom(__seed: core::ffi::c_uint);
 }
 extern "C" {
     pub fn initstate(
-        __seed: libc::c_uint,
-        __statebuf: *mut libc::c_char,
+        __seed: core::ffi::c_uint,
+        __statebuf: *mut core::ffi::c_char,
         __statelen: size_t,
-    ) -> *mut libc::c_char;
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn setstate(__statebuf: *mut libc::c_char) -> *mut libc::c_char;
+    pub fn setstate(__statebuf: *mut core::ffi::c_char) -> *mut core::ffi::c_char;
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -6748,9 +6748,9 @@ pub struct random_data {
     pub fptr: *mut i32,
     pub rptr: *mut i32,
     pub state: *mut i32,
-    pub rand_type: libc::c_int,
-    pub rand_deg: libc::c_int,
-    pub rand_sep: libc::c_int,
+    pub rand_type: core::ffi::c_int,
+    pub rand_deg: core::ffi::c_int,
+    pub rand_sep: core::ffi::c_int,
     pub end_ptr: *mut i32,
 }
 #[test]
@@ -6837,66 +6837,66 @@ fn bindgen_test_layout_random_data() {
     );
 }
 extern "C" {
-    pub fn random_r(__buf: *mut random_data, __result: *mut i32) -> libc::c_int;
+    pub fn random_r(__buf: *mut random_data, __result: *mut i32) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn srandom_r(__seed: libc::c_uint, __buf: *mut random_data) -> libc::c_int;
+    pub fn srandom_r(__seed: core::ffi::c_uint, __buf: *mut random_data) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn initstate_r(
-        __seed: libc::c_uint,
-        __statebuf: *mut libc::c_char,
+        __seed: core::ffi::c_uint,
+        __statebuf: *mut core::ffi::c_char,
         __statelen: size_t,
         __buf: *mut random_data,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn setstate_r(__statebuf: *mut libc::c_char, __buf: *mut random_data) -> libc::c_int;
+    pub fn setstate_r(__statebuf: *mut core::ffi::c_char, __buf: *mut random_data) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn rand() -> libc::c_int;
+    pub fn rand() -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn srand(__seed: libc::c_uint);
+    pub fn srand(__seed: core::ffi::c_uint);
 }
 extern "C" {
-    pub fn rand_r(__seed: *mut libc::c_uint) -> libc::c_int;
+    pub fn rand_r(__seed: *mut core::ffi::c_uint) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn drand48() -> f64;
 }
 extern "C" {
-    pub fn erand48(__xsubi: *mut libc::c_ushort) -> f64;
+    pub fn erand48(__xsubi: *mut core::ffi::c_ushort) -> f64;
 }
 extern "C" {
-    pub fn lrand48() -> libc::c_long;
+    pub fn lrand48() -> core::ffi::c_long;
 }
 extern "C" {
-    pub fn nrand48(__xsubi: *mut libc::c_ushort) -> libc::c_long;
+    pub fn nrand48(__xsubi: *mut core::ffi::c_ushort) -> core::ffi::c_long;
 }
 extern "C" {
-    pub fn mrand48() -> libc::c_long;
+    pub fn mrand48() -> core::ffi::c_long;
 }
 extern "C" {
-    pub fn jrand48(__xsubi: *mut libc::c_ushort) -> libc::c_long;
+    pub fn jrand48(__xsubi: *mut core::ffi::c_ushort) -> core::ffi::c_long;
 }
 extern "C" {
-    pub fn srand48(__seedval: libc::c_long);
+    pub fn srand48(__seedval: core::ffi::c_long);
 }
 extern "C" {
-    pub fn seed48(__seed16v: *mut libc::c_ushort) -> *mut libc::c_ushort;
+    pub fn seed48(__seed16v: *mut core::ffi::c_ushort) -> *mut core::ffi::c_ushort;
 }
 extern "C" {
-    pub fn lcong48(__param: *mut libc::c_ushort);
+    pub fn lcong48(__param: *mut core::ffi::c_ushort);
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct drand48_data {
-    pub __x: [libc::c_ushort; 3usize],
-    pub __old_x: [libc::c_ushort; 3usize],
-    pub __c: libc::c_ushort,
-    pub __init: libc::c_ushort,
-    pub __a: libc::c_ulonglong,
+    pub __x: [core::ffi::c_ushort; 3usize],
+    pub __old_x: [core::ffi::c_ushort; 3usize],
+    pub __c: core::ffi::c_ushort,
+    pub __init: core::ffi::c_ushort,
+    pub __a: core::ffi::c_ulonglong,
 }
 #[test]
 fn bindgen_test_layout_drand48_data() {
@@ -6962,317 +6962,317 @@ fn bindgen_test_layout_drand48_data() {
     );
 }
 extern "C" {
-    pub fn drand48_r(__buffer: *mut drand48_data, __result: *mut f64) -> libc::c_int;
+    pub fn drand48_r(__buffer: *mut drand48_data, __result: *mut f64) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn erand48_r(
-        __xsubi: *mut libc::c_ushort,
+        __xsubi: *mut core::ffi::c_ushort,
         __buffer: *mut drand48_data,
         __result: *mut f64,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn lrand48_r(__buffer: *mut drand48_data, __result: *mut libc::c_long) -> libc::c_int;
+    pub fn lrand48_r(__buffer: *mut drand48_data, __result: *mut core::ffi::c_long) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn nrand48_r(
-        __xsubi: *mut libc::c_ushort,
+        __xsubi: *mut core::ffi::c_ushort,
         __buffer: *mut drand48_data,
-        __result: *mut libc::c_long,
-    ) -> libc::c_int;
+        __result: *mut core::ffi::c_long,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn mrand48_r(__buffer: *mut drand48_data, __result: *mut libc::c_long) -> libc::c_int;
+    pub fn mrand48_r(__buffer: *mut drand48_data, __result: *mut core::ffi::c_long) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn jrand48_r(
-        __xsubi: *mut libc::c_ushort,
+        __xsubi: *mut core::ffi::c_ushort,
         __buffer: *mut drand48_data,
-        __result: *mut libc::c_long,
-    ) -> libc::c_int;
+        __result: *mut core::ffi::c_long,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn srand48_r(__seedval: libc::c_long, __buffer: *mut drand48_data) -> libc::c_int;
+    pub fn srand48_r(__seedval: core::ffi::c_long, __buffer: *mut drand48_data) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn seed48_r(__seed16v: *mut libc::c_ushort, __buffer: *mut drand48_data) -> libc::c_int;
+    pub fn seed48_r(__seed16v: *mut core::ffi::c_ushort, __buffer: *mut drand48_data) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn lcong48_r(__param: *mut libc::c_ushort, __buffer: *mut drand48_data) -> libc::c_int;
+    pub fn lcong48_r(__param: *mut core::ffi::c_ushort, __buffer: *mut drand48_data) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn malloc(__size: libc::c_ulong) -> *mut libc::c_void;
+    pub fn malloc(__size: core::ffi::c_ulong) -> *mut core::ffi::c_void;
 }
 extern "C" {
-    pub fn calloc(__nmemb: libc::c_ulong, __size: libc::c_ulong) -> *mut libc::c_void;
+    pub fn calloc(__nmemb: core::ffi::c_ulong, __size: core::ffi::c_ulong) -> *mut core::ffi::c_void;
 }
 extern "C" {
-    pub fn realloc(__ptr: *mut libc::c_void, __size: libc::c_ulong) -> *mut libc::c_void;
+    pub fn realloc(__ptr: *mut core::ffi::c_void, __size: core::ffi::c_ulong) -> *mut core::ffi::c_void;
 }
 extern "C" {
-    pub fn free(__ptr: *mut libc::c_void);
+    pub fn free(__ptr: *mut core::ffi::c_void);
 }
 extern "C" {
     pub fn reallocarray(
-        __ptr: *mut libc::c_void,
+        __ptr: *mut core::ffi::c_void,
         __nmemb: size_t,
         __size: size_t,
-    ) -> *mut libc::c_void;
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
-    pub fn alloca(__size: libc::c_ulong) -> *mut libc::c_void;
+    pub fn alloca(__size: core::ffi::c_ulong) -> *mut core::ffi::c_void;
 }
 extern "C" {
-    pub fn valloc(__size: size_t) -> *mut libc::c_void;
+    pub fn valloc(__size: size_t) -> *mut core::ffi::c_void;
 }
 extern "C" {
     pub fn posix_memalign(
-        __memptr: *mut *mut libc::c_void,
+        __memptr: *mut *mut core::ffi::c_void,
         __alignment: size_t,
         __size: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn aligned_alloc(__alignment: libc::c_ulong, __size: libc::c_ulong) -> *mut libc::c_void;
+    pub fn aligned_alloc(__alignment: core::ffi::c_ulong, __size: core::ffi::c_ulong) -> *mut core::ffi::c_void;
 }
 extern "C" {
     pub fn abort();
 }
 extern "C" {
-    pub fn atexit(__func: ::core::option::Option<unsafe extern "C" fn()>) -> libc::c_int;
+    pub fn atexit(__func: ::core::option::Option<unsafe extern "C" fn()>) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn at_quick_exit(__func: ::core::option::Option<unsafe extern "C" fn()>) -> libc::c_int;
+    pub fn at_quick_exit(__func: ::core::option::Option<unsafe extern "C" fn()>) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn on_exit(
         __func: ::core::option::Option<
-            unsafe extern "C" fn(__status: libc::c_int, __arg: *mut libc::c_void),
+            unsafe extern "C" fn(__status: core::ffi::c_int, __arg: *mut core::ffi::c_void),
         >,
-        __arg: *mut libc::c_void,
-    ) -> libc::c_int;
+        __arg: *mut core::ffi::c_void,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn exit(__status: libc::c_int);
+    pub fn exit(__status: core::ffi::c_int);
 }
 extern "C" {
-    pub fn quick_exit(__status: libc::c_int);
+    pub fn quick_exit(__status: core::ffi::c_int);
 }
 extern "C" {
-    pub fn _Exit(__status: libc::c_int);
+    pub fn _Exit(__status: core::ffi::c_int);
 }
 extern "C" {
-    pub fn getenv(__name: *const libc::c_char) -> *mut libc::c_char;
+    pub fn getenv(__name: *const core::ffi::c_char) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn putenv(__string: *mut libc::c_char) -> libc::c_int;
+    pub fn putenv(__string: *mut core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn setenv(
-        __name: *const libc::c_char,
-        __value: *const libc::c_char,
-        __replace: libc::c_int,
-    ) -> libc::c_int;
+        __name: *const core::ffi::c_char,
+        __value: *const core::ffi::c_char,
+        __replace: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn unsetenv(__name: *const libc::c_char) -> libc::c_int;
+    pub fn unsetenv(__name: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn clearenv() -> libc::c_int;
+    pub fn clearenv() -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn mktemp(__template: *mut libc::c_char) -> *mut libc::c_char;
+    pub fn mktemp(__template: *mut core::ffi::c_char) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn mkstemp(__template: *mut libc::c_char) -> libc::c_int;
+    pub fn mkstemp(__template: *mut core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn mkstemps(__template: *mut libc::c_char, __suffixlen: libc::c_int) -> libc::c_int;
+    pub fn mkstemps(__template: *mut core::ffi::c_char, __suffixlen: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn mkdtemp(__template: *mut libc::c_char) -> *mut libc::c_char;
+    pub fn mkdtemp(__template: *mut core::ffi::c_char) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn system(__command: *const libc::c_char) -> libc::c_int;
+    pub fn system(__command: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn realpath(
-        __name: *const libc::c_char,
-        __resolved: *mut libc::c_char,
-    ) -> *mut libc::c_char;
+        __name: *const core::ffi::c_char,
+        __resolved: *mut core::ffi::c_char,
+    ) -> *mut core::ffi::c_char;
 }
 pub type __compar_fn_t = ::core::option::Option<
-    unsafe extern "C" fn(arg1: *const libc::c_void, arg2: *const libc::c_void) -> libc::c_int,
+    unsafe extern "C" fn(arg1: *const core::ffi::c_void, arg2: *const core::ffi::c_void) -> core::ffi::c_int,
 >;
 extern "C" {
     pub fn bsearch(
-        __key: *const libc::c_void,
-        __base: *const libc::c_void,
+        __key: *const core::ffi::c_void,
+        __base: *const core::ffi::c_void,
         __nmemb: size_t,
         __size: size_t,
         __compar: __compar_fn_t,
-    ) -> *mut libc::c_void;
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
     pub fn qsort(
-        __base: *mut libc::c_void,
+        __base: *mut core::ffi::c_void,
         __nmemb: size_t,
         __size: size_t,
         __compar: __compar_fn_t,
     );
 }
 extern "C" {
-    pub fn abs(__x: libc::c_int) -> libc::c_int;
+    pub fn abs(__x: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn labs(__x: libc::c_long) -> libc::c_long;
+    pub fn labs(__x: core::ffi::c_long) -> core::ffi::c_long;
 }
 extern "C" {
-    pub fn llabs(__x: libc::c_longlong) -> libc::c_longlong;
+    pub fn llabs(__x: core::ffi::c_longlong) -> core::ffi::c_longlong;
 }
 extern "C" {
-    pub fn div(__numer: libc::c_int, __denom: libc::c_int) -> div_t;
+    pub fn div(__numer: core::ffi::c_int, __denom: core::ffi::c_int) -> div_t;
 }
 extern "C" {
-    pub fn ldiv(__numer: libc::c_long, __denom: libc::c_long) -> ldiv_t;
+    pub fn ldiv(__numer: core::ffi::c_long, __denom: core::ffi::c_long) -> ldiv_t;
 }
 extern "C" {
-    pub fn lldiv(__numer: libc::c_longlong, __denom: libc::c_longlong) -> lldiv_t;
+    pub fn lldiv(__numer: core::ffi::c_longlong, __denom: core::ffi::c_longlong) -> lldiv_t;
 }
 extern "C" {
     pub fn ecvt(
         __value: f64,
-        __ndigit: libc::c_int,
-        __decpt: *mut libc::c_int,
-        __sign: *mut libc::c_int,
-    ) -> *mut libc::c_char;
+        __ndigit: core::ffi::c_int,
+        __decpt: *mut core::ffi::c_int,
+        __sign: *mut core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn fcvt(
         __value: f64,
-        __ndigit: libc::c_int,
-        __decpt: *mut libc::c_int,
-        __sign: *mut libc::c_int,
-    ) -> *mut libc::c_char;
+        __ndigit: core::ffi::c_int,
+        __decpt: *mut core::ffi::c_int,
+        __sign: *mut core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn gcvt(__value: f64, __ndigit: libc::c_int, __buf: *mut libc::c_char)
-        -> *mut libc::c_char;
+    pub fn gcvt(__value: f64, __ndigit: core::ffi::c_int, __buf: *mut core::ffi::c_char)
+        -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn qecvt(
         __value: u128,
-        __ndigit: libc::c_int,
-        __decpt: *mut libc::c_int,
-        __sign: *mut libc::c_int,
-    ) -> *mut libc::c_char;
+        __ndigit: core::ffi::c_int,
+        __decpt: *mut core::ffi::c_int,
+        __sign: *mut core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn qfcvt(
         __value: u128,
-        __ndigit: libc::c_int,
-        __decpt: *mut libc::c_int,
-        __sign: *mut libc::c_int,
-    ) -> *mut libc::c_char;
+        __ndigit: core::ffi::c_int,
+        __decpt: *mut core::ffi::c_int,
+        __sign: *mut core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn qgcvt(
         __value: u128,
-        __ndigit: libc::c_int,
-        __buf: *mut libc::c_char,
-    ) -> *mut libc::c_char;
+        __ndigit: core::ffi::c_int,
+        __buf: *mut core::ffi::c_char,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn ecvt_r(
         __value: f64,
-        __ndigit: libc::c_int,
-        __decpt: *mut libc::c_int,
-        __sign: *mut libc::c_int,
-        __buf: *mut libc::c_char,
+        __ndigit: core::ffi::c_int,
+        __decpt: *mut core::ffi::c_int,
+        __sign: *mut core::ffi::c_int,
+        __buf: *mut core::ffi::c_char,
         __len: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn fcvt_r(
         __value: f64,
-        __ndigit: libc::c_int,
-        __decpt: *mut libc::c_int,
-        __sign: *mut libc::c_int,
-        __buf: *mut libc::c_char,
+        __ndigit: core::ffi::c_int,
+        __decpt: *mut core::ffi::c_int,
+        __sign: *mut core::ffi::c_int,
+        __buf: *mut core::ffi::c_char,
         __len: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn qecvt_r(
         __value: u128,
-        __ndigit: libc::c_int,
-        __decpt: *mut libc::c_int,
-        __sign: *mut libc::c_int,
-        __buf: *mut libc::c_char,
+        __ndigit: core::ffi::c_int,
+        __decpt: *mut core::ffi::c_int,
+        __sign: *mut core::ffi::c_int,
+        __buf: *mut core::ffi::c_char,
         __len: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn qfcvt_r(
         __value: u128,
-        __ndigit: libc::c_int,
-        __decpt: *mut libc::c_int,
-        __sign: *mut libc::c_int,
-        __buf: *mut libc::c_char,
+        __ndigit: core::ffi::c_int,
+        __decpt: *mut core::ffi::c_int,
+        __sign: *mut core::ffi::c_int,
+        __buf: *mut core::ffi::c_char,
         __len: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn mblen(__s: *const libc::c_char, __n: size_t) -> libc::c_int;
+    pub fn mblen(__s: *const core::ffi::c_char, __n: size_t) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn mbtowc(__pwc: *mut wchar_t, __s: *const libc::c_char, __n: size_t) -> libc::c_int;
+    pub fn mbtowc(__pwc: *mut wchar_t, __s: *const core::ffi::c_char, __n: size_t) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn wctomb(__s: *mut libc::c_char, __wchar: wchar_t) -> libc::c_int;
+    pub fn wctomb(__s: *mut core::ffi::c_char, __wchar: wchar_t) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn mbstowcs(__pwcs: *mut wchar_t, __s: *const libc::c_char, __n: size_t) -> size_t;
+    pub fn mbstowcs(__pwcs: *mut wchar_t, __s: *const core::ffi::c_char, __n: size_t) -> size_t;
 }
 extern "C" {
-    pub fn wcstombs(__s: *mut libc::c_char, __pwcs: *const wchar_t, __n: size_t) -> size_t;
+    pub fn wcstombs(__s: *mut core::ffi::c_char, __pwcs: *const wchar_t, __n: size_t) -> size_t;
 }
 extern "C" {
-    pub fn rpmatch(__response: *const libc::c_char) -> libc::c_int;
+    pub fn rpmatch(__response: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn getsubopt(
-        __optionp: *mut *mut libc::c_char,
-        __tokens: *const *mut libc::c_char,
-        __valuep: *mut *mut libc::c_char,
-    ) -> libc::c_int;
+        __optionp: *mut *mut core::ffi::c_char,
+        __tokens: *const *mut core::ffi::c_char,
+        __valuep: *mut *mut core::ffi::c_char,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn getloadavg(__loadavg: *mut f64, __nelem: libc::c_int) -> libc::c_int;
+    pub fn getloadavg(__loadavg: *mut f64, __nelem: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn _mm_sfence();
 }
 extern "C" {
-    pub fn _mm_getcsr() -> libc::c_uint;
+    pub fn _mm_getcsr() -> core::ffi::c_uint;
 }
 extern "C" {
-    pub fn _mm_setcsr(__i: libc::c_uint);
+    pub fn _mm_setcsr(__i: core::ffi::c_uint);
 }
 pub type __m128d = [f64; 2usize];
-pub type __m128i = [libc::c_longlong; 2usize];
+pub type __m128i = [core::ffi::c_longlong; 2usize];
 pub type __m128d_u = [f64; 2usize];
-pub type __m128i_u = [libc::c_longlong; 2usize];
+pub type __m128i_u = [core::ffi::c_longlong; 2usize];
 pub type __v2df = [f64; 2usize];
-pub type __v2di = [libc::c_longlong; 2usize];
-pub type __v8hi = [libc::c_short; 8usize];
-pub type __v16qi = [libc::c_char; 16usize];
-pub type __v2du = [libc::c_ulonglong; 2usize];
-pub type __v8hu = [libc::c_ushort; 8usize];
-pub type __v16qu = [libc::c_uchar; 16usize];
-pub type __v16qs = [libc::c_schar; 16usize];
+pub type __v2di = [core::ffi::c_longlong; 2usize];
+pub type __v8hi = [core::ffi::c_short; 8usize];
+pub type __v16qi = [core::ffi::c_char; 16usize];
+pub type __v2du = [core::ffi::c_ulonglong; 2usize];
+pub type __v8hu = [core::ffi::c_ushort; 8usize];
+pub type __v16qu = [core::ffi::c_uchar; 16usize];
+pub type __v16qs = [core::ffi::c_schar; 16usize];
 extern "C" {
-    pub fn _mm_clflush(__p: *const libc::c_void);
+    pub fn _mm_clflush(__p: *const core::ffi::c_void);
 }
 extern "C" {
     pub fn _mm_lfence();
@@ -7291,7 +7291,7 @@ extern "C" {
     #[doc = "          may be more than the number of physical cores."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
-    pub fn SDL_GetCPUCount() -> libc::c_int;
+    pub fn SDL_GetCPUCount() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Determine the L1 cache line size of the CPU."]
@@ -7302,7 +7302,7 @@ extern "C" {
     #[doc = " \\returns the L1 cache line size of the CPU, in bytes."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
-    pub fn SDL_GetCPUCacheLineSize() -> libc::c_int;
+    pub fn SDL_GetCPUCacheLineSize() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Determine whether the CPU has the RDTSC instruction."]
@@ -7578,7 +7578,7 @@ extern "C" {
     #[doc = " \\returns the amount of RAM configured in the system in MB."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.1."]
-    pub fn SDL_GetSystemRAM() -> libc::c_int;
+    pub fn SDL_GetSystemRAM() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Report the alignment this system needs for SIMD allocations."]
@@ -7634,7 +7634,7 @@ extern "C" {
     #[doc = " \\sa SDL_SIMDAlignment"]
     #[doc = " \\sa SDL_SIMDRealloc"]
     #[doc = " \\sa SDL_SIMDFree"]
-    pub fn SDL_SIMDAlloc(len: size_t) -> *mut libc::c_void;
+    pub fn SDL_SIMDAlloc(len: size_t) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Reallocate memory obtained from SDL_SIMDAlloc"]
@@ -7657,7 +7657,7 @@ extern "C" {
     #[doc = " \\sa SDL_SIMDAlignment"]
     #[doc = " \\sa SDL_SIMDAlloc"]
     #[doc = " \\sa SDL_SIMDFree"]
-    pub fn SDL_SIMDRealloc(mem: *mut libc::c_void, len: size_t) -> *mut libc::c_void;
+    pub fn SDL_SIMDRealloc(mem: *mut core::ffi::c_void, len: size_t) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Deallocate memory obtained from SDL_SIMDAlloc"]
@@ -7680,7 +7680,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_SIMDAlloc"]
     #[doc = " \\sa SDL_SIMDRealloc"]
-    pub fn SDL_SIMDFree(ptr: *mut libc::c_void);
+    pub fn SDL_SIMDFree(ptr: *mut core::ffi::c_void);
 }
 #[repr(u32)]
 #[doc = " Pixel type."]
@@ -7906,10 +7906,10 @@ fn bindgen_test_layout_SDL_Color() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct SDL_Palette {
-    pub ncolors: libc::c_int,
+    pub ncolors: core::ffi::c_int,
     pub colors: *mut SDL_Color,
     pub version: Uint32,
-    pub refcount: libc::c_int,
+    pub refcount: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_SDL_Palette() {
@@ -7985,7 +7985,7 @@ pub struct SDL_PixelFormat {
     pub Gshift: Uint8,
     pub Bshift: Uint8,
     pub Ashift: Uint8,
-    pub refcount: libc::c_int,
+    pub refcount: core::ffi::c_int,
     pub next: *mut SDL_PixelFormat,
 }
 #[test]
@@ -8199,7 +8199,7 @@ extern "C" {
     #[doc = "          `SDL_PIXELFORMAT_UNKNOWN` if the format isn't recognized."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
-    pub fn SDL_GetPixelFormatName(format: Uint32) -> *const libc::c_char;
+    pub fn SDL_GetPixelFormatName(format: Uint32) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Convert one of the enumerated pixel formats to a bpp value and RGBA masks."]
@@ -8218,7 +8218,7 @@ extern "C" {
     #[doc = " \\sa SDL_MasksToPixelFormatEnum"]
     pub fn SDL_PixelFormatEnumToMasks(
         format: Uint32,
-        bpp: *mut libc::c_int,
+        bpp: *mut core::ffi::c_int,
         Rmask: *mut Uint32,
         Gmask: *mut Uint32,
         Bmask: *mut Uint32,
@@ -8242,7 +8242,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_PixelFormatEnumToMasks"]
     pub fn SDL_MasksToPixelFormatEnum(
-        bpp: libc::c_int,
+        bpp: core::ffi::c_int,
         Rmask: Uint32,
         Gmask: Uint32,
         Bmask: Uint32,
@@ -8288,7 +8288,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_FreePalette"]
-    pub fn SDL_AllocPalette(ncolors: libc::c_int) -> *mut SDL_Palette;
+    pub fn SDL_AllocPalette(ncolors: core::ffi::c_int) -> *mut SDL_Palette;
 }
 extern "C" {
     #[doc = " Set the palette for a pixel format structure."]
@@ -8305,7 +8305,7 @@ extern "C" {
     pub fn SDL_SetPixelFormatPalette(
         format: *mut SDL_PixelFormat,
         palette: *mut SDL_Palette,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set a range of colors in a palette."]
@@ -8324,9 +8324,9 @@ extern "C" {
     pub fn SDL_SetPaletteColors(
         palette: *mut SDL_Palette,
         colors: *const SDL_Color,
-        firstcolor: libc::c_int,
-        ncolors: libc::c_int,
-    ) -> libc::c_int;
+        firstcolor: core::ffi::c_int,
+        ncolors: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Free a palette created with SDL_AllocPalette()."]
@@ -8487,8 +8487,8 @@ extern "C" {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct SDL_Point {
-    pub x: libc::c_int,
-    pub y: libc::c_int,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_SDL_Point() {
@@ -8577,10 +8577,10 @@ fn bindgen_test_layout_SDL_FPoint() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct SDL_Rect {
-    pub x: libc::c_int,
-    pub y: libc::c_int,
-    pub w: libc::c_int,
-    pub h: libc::c_int,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
+    pub w: core::ffi::c_int,
+    pub h: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_SDL_Rect() {
@@ -8760,7 +8760,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     pub fn SDL_EnclosePoints(
         points: *const SDL_Point,
-        count: libc::c_int,
+        count: core::ffi::c_int,
         clip: *const SDL_Rect,
         result: *mut SDL_Rect,
     ) -> SDL_bool;
@@ -8784,10 +8784,10 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     pub fn SDL_IntersectRectAndLine(
         rect: *const SDL_Rect,
-        X1: *mut libc::c_int,
-        Y1: *mut libc::c_int,
-        X2: *mut libc::c_int,
-        Y2: *mut libc::c_int,
+        X1: *mut core::ffi::c_int,
+        Y1: *mut core::ffi::c_int,
+        X2: *mut core::ffi::c_int,
+        Y2: *mut core::ffi::c_int,
     ) -> SDL_bool;
 }
 #[repr(u32)]
@@ -8967,25 +8967,25 @@ pub struct SDL_Surface {
     #[doc = "< Read-only"]
     pub format: *mut SDL_PixelFormat,
     #[doc = "< Read-only"]
-    pub w: libc::c_int,
+    pub w: core::ffi::c_int,
     #[doc = "< Read-only"]
-    pub h: libc::c_int,
+    pub h: core::ffi::c_int,
     #[doc = "< Read-only"]
-    pub pitch: libc::c_int,
+    pub pitch: core::ffi::c_int,
     #[doc = "< Read-write"]
-    pub pixels: *mut libc::c_void,
+    pub pixels: *mut core::ffi::c_void,
     #[doc = "< Read-write"]
-    pub userdata: *mut libc::c_void,
+    pub userdata: *mut core::ffi::c_void,
     #[doc = "< Read-only"]
-    pub locked: libc::c_int,
+    pub locked: core::ffi::c_int,
     #[doc = "< Private"]
-    pub list_blitmap: *mut libc::c_void,
+    pub list_blitmap: *mut core::ffi::c_void,
     #[doc = "< Read-only"]
     pub clip_rect: SDL_Rect,
     #[doc = "< Private"]
     pub map: *mut SDL_BlitMap,
     #[doc = "< Read-mostly"]
-    pub refcount: libc::c_int,
+    pub refcount: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_SDL_Surface() {
@@ -9127,7 +9127,7 @@ pub type SDL_blit = ::core::option::Option<
         srcrect: *mut SDL_Rect,
         dst: *mut SDL_Surface,
         dstrect: *mut SDL_Rect,
-    ) -> libc::c_int,
+    ) -> core::ffi::c_int,
 >;
 #[repr(u32)]
 #[doc = " \\brief The formula used for converting between YUV and RGB"]
@@ -9187,9 +9187,9 @@ extern "C" {
     #[doc = " \\sa SDL_FreeSurface"]
     pub fn SDL_CreateRGBSurface(
         flags: Uint32,
-        width: libc::c_int,
-        height: libc::c_int,
-        depth: libc::c_int,
+        width: core::ffi::c_int,
+        height: core::ffi::c_int,
+        depth: core::ffi::c_int,
         Rmask: Uint32,
         Gmask: Uint32,
         Bmask: Uint32,
@@ -9218,9 +9218,9 @@ extern "C" {
     #[doc = " \\sa SDL_FreeSurface"]
     pub fn SDL_CreateRGBSurfaceWithFormat(
         flags: Uint32,
-        width: libc::c_int,
-        height: libc::c_int,
-        depth: libc::c_int,
+        width: core::ffi::c_int,
+        height: core::ffi::c_int,
+        depth: core::ffi::c_int,
         format: Uint32,
     ) -> *mut SDL_Surface;
 }
@@ -9252,11 +9252,11 @@ extern "C" {
     #[doc = " \\sa SDL_CreateRGBSurfaceWithFormat"]
     #[doc = " \\sa SDL_FreeSurface"]
     pub fn SDL_CreateRGBSurfaceFrom(
-        pixels: *mut libc::c_void,
-        width: libc::c_int,
-        height: libc::c_int,
-        depth: libc::c_int,
-        pitch: libc::c_int,
+        pixels: *mut core::ffi::c_void,
+        width: core::ffi::c_int,
+        height: core::ffi::c_int,
+        depth: core::ffi::c_int,
+        pitch: core::ffi::c_int,
         Rmask: Uint32,
         Gmask: Uint32,
         Bmask: Uint32,
@@ -9289,11 +9289,11 @@ extern "C" {
     #[doc = " \\sa SDL_CreateRGBSurfaceWithFormat"]
     #[doc = " \\sa SDL_FreeSurface"]
     pub fn SDL_CreateRGBSurfaceWithFormatFrom(
-        pixels: *mut libc::c_void,
-        width: libc::c_int,
-        height: libc::c_int,
-        depth: libc::c_int,
-        pitch: libc::c_int,
+        pixels: *mut core::ffi::c_void,
+        width: core::ffi::c_int,
+        height: core::ffi::c_int,
+        depth: core::ffi::c_int,
+        pitch: core::ffi::c_int,
         format: Uint32,
     ) -> *mut SDL_Surface;
 }
@@ -9326,7 +9326,7 @@ extern "C" {
     pub fn SDL_SetSurfacePalette(
         surface: *mut SDL_Surface,
         palette: *mut SDL_Palette,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set up a surface for directly accessing the pixels."]
@@ -9348,7 +9348,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_MUSTLOCK"]
     #[doc = " \\sa SDL_UnlockSurface"]
-    pub fn SDL_LockSurface(surface: *mut SDL_Surface) -> libc::c_int;
+    pub fn SDL_LockSurface(surface: *mut SDL_Surface) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Release a surface after directly accessing the pixels."]
@@ -9381,7 +9381,7 @@ extern "C" {
     #[doc = " \\sa SDL_RWFromFile"]
     #[doc = " \\sa SDL_LoadBMP"]
     #[doc = " \\sa SDL_SaveBMP_RW"]
-    pub fn SDL_LoadBMP_RW(src: *mut SDL_RWops, freesrc: libc::c_int) -> *mut SDL_Surface;
+    pub fn SDL_LoadBMP_RW(src: *mut SDL_RWops, freesrc: core::ffi::c_int) -> *mut SDL_Surface;
 }
 extern "C" {
     #[doc = " Save a surface to a seekable SDL data stream in BMP format."]
@@ -9405,8 +9405,8 @@ extern "C" {
     pub fn SDL_SaveBMP_RW(
         surface: *mut SDL_Surface,
         dst: *mut SDL_RWops,
-        freedst: libc::c_int,
-    ) -> libc::c_int;
+        freedst: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the RLE acceleration hint for a surface."]
@@ -9424,7 +9424,7 @@ extern "C" {
     #[doc = " \\sa SDL_BlitSurface"]
     #[doc = " \\sa SDL_LockSurface"]
     #[doc = " \\sa SDL_UnlockSurface"]
-    pub fn SDL_SetSurfaceRLE(surface: *mut SDL_Surface, flag: libc::c_int) -> libc::c_int;
+    pub fn SDL_SetSurfaceRLE(surface: *mut SDL_Surface, flag: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Returns whether the surface is RLE enabled"]
@@ -9464,9 +9464,9 @@ extern "C" {
     #[doc = " \\sa SDL_GetColorKey"]
     pub fn SDL_SetColorKey(
         surface: *mut SDL_Surface,
-        flag: libc::c_int,
+        flag: core::ffi::c_int,
         key: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Returns whether the surface has a color key"]
@@ -9499,7 +9499,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_BlitSurface"]
     #[doc = " \\sa SDL_SetColorKey"]
-    pub fn SDL_GetColorKey(surface: *mut SDL_Surface, key: *mut Uint32) -> libc::c_int;
+    pub fn SDL_GetColorKey(surface: *mut SDL_Surface, key: *mut Uint32) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set an additional color value multiplied into blit operations."]
@@ -9526,7 +9526,7 @@ extern "C" {
         r: Uint8,
         g: Uint8,
         b: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the additional color value multiplied into blit operations."]
@@ -9547,7 +9547,7 @@ extern "C" {
         r: *mut Uint8,
         g: *mut Uint8,
         b: *mut Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set an additional alpha value used in blit operations."]
@@ -9566,7 +9566,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetSurfaceAlphaMod"]
     #[doc = " \\sa SDL_SetSurfaceColorMod"]
-    pub fn SDL_SetSurfaceAlphaMod(surface: *mut SDL_Surface, alpha: Uint8) -> libc::c_int;
+    pub fn SDL_SetSurfaceAlphaMod(surface: *mut SDL_Surface, alpha: Uint8) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the additional alpha value used in blit operations."]
@@ -9580,7 +9580,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetSurfaceColorMod"]
     #[doc = " \\sa SDL_SetSurfaceAlphaMod"]
-    pub fn SDL_GetSurfaceAlphaMod(surface: *mut SDL_Surface, alpha: *mut Uint8) -> libc::c_int;
+    pub fn SDL_GetSurfaceAlphaMod(surface: *mut SDL_Surface, alpha: *mut Uint8) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the blend mode used for blit operations."]
@@ -9600,7 +9600,7 @@ extern "C" {
     pub fn SDL_SetSurfaceBlendMode(
         surface: *mut SDL_Surface,
         blendMode: SDL_BlendMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the blend mode used for blit operations."]
@@ -9616,7 +9616,7 @@ extern "C" {
     pub fn SDL_GetSurfaceBlendMode(
         surface: *mut SDL_Surface,
         blendMode: *mut SDL_BlendMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the clipping rectangle for a surface."]
@@ -9729,15 +9729,15 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
     pub fn SDL_ConvertPixels(
-        width: libc::c_int,
-        height: libc::c_int,
+        width: core::ffi::c_int,
+        height: core::ffi::c_int,
         src_format: Uint32,
-        src: *const libc::c_void,
-        src_pitch: libc::c_int,
+        src: *const core::ffi::c_void,
+        src_pitch: core::ffi::c_int,
         dst_format: Uint32,
-        dst: *mut libc::c_void,
-        dst_pitch: libc::c_int,
-    ) -> libc::c_int;
+        dst: *mut core::ffi::c_void,
+        dst_pitch: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Premultiply the alpha on a block of pixels."]
@@ -9759,15 +9759,15 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.18."]
     pub fn SDL_PremultiplyAlpha(
-        width: libc::c_int,
-        height: libc::c_int,
+        width: core::ffi::c_int,
+        height: core::ffi::c_int,
         src_format: Uint32,
-        src: *const libc::c_void,
-        src_pitch: libc::c_int,
+        src: *const core::ffi::c_void,
+        src_pitch: core::ffi::c_int,
         dst_format: Uint32,
-        dst: *mut libc::c_void,
-        dst_pitch: libc::c_int,
-    ) -> libc::c_int;
+        dst: *mut core::ffi::c_void,
+        dst_pitch: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Perform a fast fill of a rectangle with a specific color."]
@@ -9792,7 +9792,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_FillRects"]
     pub fn SDL_FillRect(dst: *mut SDL_Surface, rect: *const SDL_Rect, color: Uint32)
-        -> libc::c_int;
+        -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Perform a fast fill of a set of rectangles with a specific color."]
@@ -9819,9 +9819,9 @@ extern "C" {
     pub fn SDL_FillRects(
         dst: *mut SDL_Surface,
         rects: *const SDL_Rect,
-        count: libc::c_int,
+        count: core::ffi::c_int,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Perform a fast blit from the source surface to the destination surface."]
@@ -9837,7 +9837,7 @@ extern "C" {
         srcrect: *const SDL_Rect,
         dst: *mut SDL_Surface,
         dstrect: *mut SDL_Rect,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Perform low-level surface blitting only."]
@@ -9865,7 +9865,7 @@ extern "C" {
         srcrect: *mut SDL_Rect,
         dst: *mut SDL_Surface,
         dstrect: *mut SDL_Rect,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Perform a fast, low quality, stretch blit between two surfaces of the same"]
@@ -9879,7 +9879,7 @@ extern "C" {
         srcrect: *const SDL_Rect,
         dst: *mut SDL_Surface,
         dstrect: *const SDL_Rect,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Perform bilinear scaling between two surfaces of the same format, 32BPP."]
@@ -9890,7 +9890,7 @@ extern "C" {
         srcrect: *const SDL_Rect,
         dst: *mut SDL_Surface,
         dstrect: *const SDL_Rect,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Perform a scaled surface copy to a destination surface."]
@@ -9906,7 +9906,7 @@ extern "C" {
         srcrect: *const SDL_Rect,
         dst: *mut SDL_Surface,
         dstrect: *mut SDL_Rect,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Perform low-level surface scaled blitting only."]
@@ -9931,7 +9931,7 @@ extern "C" {
         srcrect: *mut SDL_Rect,
         dst: *mut SDL_Surface,
         dstrect: *mut SDL_Rect,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the YUV conversion mode"]
@@ -9951,8 +9951,8 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.8."]
     pub fn SDL_GetYUVConversionModeForResolution(
-        width: libc::c_int,
-        height: libc::c_int,
+        width: core::ffi::c_int,
+        height: core::ffi::c_int,
     ) -> SDL_YUV_CONVERSION_MODE;
 }
 #[doc = "  \\brief  The structure that defines a display mode"]
@@ -9970,13 +9970,13 @@ pub struct SDL_DisplayMode {
     #[doc = "< pixel format"]
     pub format: Uint32,
     #[doc = "< width, in screen coordinates"]
-    pub w: libc::c_int,
+    pub w: core::ffi::c_int,
     #[doc = "< height, in screen coordinates"]
-    pub h: libc::c_int,
+    pub h: core::ffi::c_int,
     #[doc = "< refresh rate (or zero for unspecified)"]
-    pub refresh_rate: libc::c_int,
+    pub refresh_rate: core::ffi::c_int,
     #[doc = "< driver-specific data, initialize to 0"]
-    pub driverdata: *mut libc::c_void,
+    pub driverdata: *mut core::ffi::c_void,
 }
 #[test]
 fn bindgen_test_layout_SDL_DisplayMode() {
@@ -10190,7 +10190,7 @@ pub enum SDL_FlashOperation {
     SDL_FLASH_UNTIL_FOCUSED = 2,
 }
 #[doc = "  \\brief An opaque handle to an OpenGL context."]
-pub type SDL_GLContext = *mut libc::c_void;
+pub type SDL_GLContext = *mut core::ffi::c_void;
 #[repr(u32)]
 #[doc = "  \\brief OpenGL configuration attributes"]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -10260,7 +10260,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetVideoDriver"]
-    pub fn SDL_GetNumVideoDrivers() -> libc::c_int;
+    pub fn SDL_GetNumVideoDrivers() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the name of a built in video driver."]
@@ -10274,7 +10274,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetNumVideoDrivers"]
-    pub fn SDL_GetVideoDriver(index: libc::c_int) -> *const libc::c_char;
+    pub fn SDL_GetVideoDriver(index: core::ffi::c_int) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Initialize the video subsystem, optionally specifying a video driver."]
@@ -10304,7 +10304,7 @@ extern "C" {
     #[doc = " \\sa SDL_GetVideoDriver"]
     #[doc = " \\sa SDL_InitSubSystem"]
     #[doc = " \\sa SDL_VideoQuit"]
-    pub fn SDL_VideoInit(driver_name: *const libc::c_char) -> libc::c_int;
+    pub fn SDL_VideoInit(driver_name: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Shut down the video subsystem, if initialized with SDL_VideoInit()."]
@@ -10326,7 +10326,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetNumVideoDrivers"]
     #[doc = " \\sa SDL_GetVideoDriver"]
-    pub fn SDL_GetCurrentVideoDriver() -> *const libc::c_char;
+    pub fn SDL_GetCurrentVideoDriver() -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the number of available video displays."]
@@ -10337,7 +10337,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetDisplayBounds"]
-    pub fn SDL_GetNumVideoDisplays() -> libc::c_int;
+    pub fn SDL_GetNumVideoDisplays() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the name of a display in UTF-8 encoding."]
@@ -10350,7 +10350,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetNumVideoDisplays"]
-    pub fn SDL_GetDisplayName(displayIndex: libc::c_int) -> *const libc::c_char;
+    pub fn SDL_GetDisplayName(displayIndex: core::ffi::c_int) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the desktop area represented by a display."]
@@ -10365,7 +10365,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetNumVideoDisplays"]
-    pub fn SDL_GetDisplayBounds(displayIndex: libc::c_int, rect: *mut SDL_Rect) -> libc::c_int;
+    pub fn SDL_GetDisplayBounds(displayIndex: core::ffi::c_int, rect: *mut SDL_Rect) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the usable desktop area represented by a display."]
@@ -10396,9 +10396,9 @@ extern "C" {
     #[doc = " \\sa SDL_GetDisplayBounds"]
     #[doc = " \\sa SDL_GetNumVideoDisplays"]
     pub fn SDL_GetDisplayUsableBounds(
-        displayIndex: libc::c_int,
+        displayIndex: core::ffi::c_int,
         rect: *mut SDL_Rect,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the dots/pixels-per-inch for a display."]
@@ -10424,11 +10424,11 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetNumVideoDisplays"]
     pub fn SDL_GetDisplayDPI(
-        displayIndex: libc::c_int,
+        displayIndex: core::ffi::c_int,
         ddpi: *mut f32,
         hdpi: *mut f32,
         vdpi: *mut f32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the orientation of a display."]
@@ -10440,7 +10440,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.9."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetNumVideoDisplays"]
-    pub fn SDL_GetDisplayOrientation(displayIndex: libc::c_int) -> SDL_DisplayOrientation;
+    pub fn SDL_GetDisplayOrientation(displayIndex: core::ffi::c_int) -> SDL_DisplayOrientation;
 }
 extern "C" {
     #[doc = " Get the number of available display modes."]
@@ -10456,7 +10456,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetDisplayMode"]
     #[doc = " \\sa SDL_GetNumVideoDisplays"]
-    pub fn SDL_GetNumDisplayModes(displayIndex: libc::c_int) -> libc::c_int;
+    pub fn SDL_GetNumDisplayModes(displayIndex: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get information about a specific display mode."]
@@ -10480,10 +10480,10 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetNumDisplayModes"]
     pub fn SDL_GetDisplayMode(
-        displayIndex: libc::c_int,
-        modeIndex: libc::c_int,
+        displayIndex: core::ffi::c_int,
+        modeIndex: core::ffi::c_int,
         mode: *mut SDL_DisplayMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get information about the desktop's display mode."]
@@ -10505,9 +10505,9 @@ extern "C" {
     #[doc = " \\sa SDL_GetDisplayMode"]
     #[doc = " \\sa SDL_SetWindowDisplayMode"]
     pub fn SDL_GetDesktopDisplayMode(
-        displayIndex: libc::c_int,
+        displayIndex: core::ffi::c_int,
         mode: *mut SDL_DisplayMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get information about the current display mode."]
@@ -10530,9 +10530,9 @@ extern "C" {
     #[doc = " \\sa SDL_GetNumVideoDisplays"]
     #[doc = " \\sa SDL_SetWindowDisplayMode"]
     pub fn SDL_GetCurrentDisplayMode(
-        displayIndex: libc::c_int,
+        displayIndex: core::ffi::c_int,
         mode: *mut SDL_DisplayMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the closest match to the requested display mode."]
@@ -10557,7 +10557,7 @@ extern "C" {
     #[doc = " \\sa SDL_GetDisplayMode"]
     #[doc = " \\sa SDL_GetNumDisplayModes"]
     pub fn SDL_GetClosestDisplayMode(
-        displayIndex: libc::c_int,
+        displayIndex: core::ffi::c_int,
         mode: *const SDL_DisplayMode,
         closest: *mut SDL_DisplayMode,
     ) -> *mut SDL_DisplayMode;
@@ -10574,7 +10574,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetDisplayBounds"]
     #[doc = " \\sa SDL_GetNumVideoDisplays"]
-    pub fn SDL_GetWindowDisplayIndex(window: *mut SDL_Window) -> libc::c_int;
+    pub fn SDL_GetWindowDisplayIndex(window: *mut SDL_Window) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the display mode to use when a window is visible at fullscreen."]
@@ -10597,7 +10597,7 @@ extern "C" {
     pub fn SDL_SetWindowDisplayMode(
         window: *mut SDL_Window,
         mode: *const SDL_DisplayMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Query the display mode to use when a window is visible at fullscreen."]
@@ -10615,7 +10615,7 @@ extern "C" {
     pub fn SDL_GetWindowDisplayMode(
         window: *mut SDL_Window,
         mode: *mut SDL_DisplayMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the raw ICC profile data for the screen the window is currently on."]
@@ -10629,7 +10629,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.18."]
     pub fn SDL_GetWindowICCProfile(window: *mut SDL_Window, size: *mut size_t)
-        -> *mut libc::c_void;
+        -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Get the pixel format associated with the window."]
@@ -10710,11 +10710,11 @@ extern "C" {
     #[doc = " \\sa SDL_CreateWindowFrom"]
     #[doc = " \\sa SDL_DestroyWindow"]
     pub fn SDL_CreateWindow(
-        title: *const libc::c_char,
-        x: libc::c_int,
-        y: libc::c_int,
-        w: libc::c_int,
-        h: libc::c_int,
+        title: *const core::ffi::c_char,
+        x: core::ffi::c_int,
+        y: core::ffi::c_int,
+        w: core::ffi::c_int,
+        h: core::ffi::c_int,
         flags: Uint32,
     ) -> *mut SDL_Window;
 }
@@ -10734,7 +10734,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_CreateWindow"]
     #[doc = " \\sa SDL_DestroyWindow"]
-    pub fn SDL_CreateWindowFrom(data: *const libc::c_void) -> *mut SDL_Window;
+    pub fn SDL_CreateWindowFrom(data: *const core::ffi::c_void) -> *mut SDL_Window;
 }
 extern "C" {
     #[doc = " Get the numeric ID of a window."]
@@ -10794,7 +10794,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetWindowTitle"]
-    pub fn SDL_SetWindowTitle(window: *mut SDL_Window, title: *const libc::c_char);
+    pub fn SDL_SetWindowTitle(window: *mut SDL_Window, title: *const core::ffi::c_char);
 }
 extern "C" {
     #[doc = " Get the title of a window."]
@@ -10806,7 +10806,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_SetWindowTitle"]
-    pub fn SDL_GetWindowTitle(window: *mut SDL_Window) -> *const libc::c_char;
+    pub fn SDL_GetWindowTitle(window: *mut SDL_Window) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Set the icon for a window."]
@@ -10832,9 +10832,9 @@ extern "C" {
     #[doc = " \\sa SDL_GetWindowData"]
     pub fn SDL_SetWindowData(
         window: *mut SDL_Window,
-        name: *const libc::c_char,
-        userdata: *mut libc::c_void,
-    ) -> *mut libc::c_void;
+        name: *const core::ffi::c_char,
+        userdata: *mut core::ffi::c_void,
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Retrieve the data pointer associated with a window."]
@@ -10848,8 +10848,8 @@ extern "C" {
     #[doc = " \\sa SDL_SetWindowData"]
     pub fn SDL_GetWindowData(
         window: *mut SDL_Window,
-        name: *const libc::c_char,
-    ) -> *mut libc::c_void;
+        name: *const core::ffi::c_char,
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Set the position of a window."]
@@ -10865,7 +10865,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetWindowPosition"]
-    pub fn SDL_SetWindowPosition(window: *mut SDL_Window, x: libc::c_int, y: libc::c_int);
+    pub fn SDL_SetWindowPosition(window: *mut SDL_Window, x: core::ffi::c_int, y: core::ffi::c_int);
 }
 extern "C" {
     #[doc = " Get the position of a window."]
@@ -10882,7 +10882,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_SetWindowPosition"]
-    pub fn SDL_GetWindowPosition(window: *mut SDL_Window, x: *mut libc::c_int, y: *mut libc::c_int);
+    pub fn SDL_GetWindowPosition(window: *mut SDL_Window, x: *mut core::ffi::c_int, y: *mut core::ffi::c_int);
 }
 extern "C" {
     #[doc = " Set the size of a window's client area."]
@@ -10905,7 +10905,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetWindowSize"]
     #[doc = " \\sa SDL_SetWindowDisplayMode"]
-    pub fn SDL_SetWindowSize(window: *mut SDL_Window, w: libc::c_int, h: libc::c_int);
+    pub fn SDL_SetWindowSize(window: *mut SDL_Window, w: core::ffi::c_int, h: core::ffi::c_int);
 }
 extern "C" {
     #[doc = " Get the size of a window's client area."]
@@ -10930,7 +10930,7 @@ extern "C" {
     #[doc = " \\sa SDL_GL_GetDrawableSize"]
     #[doc = " \\sa SDL_Vulkan_GetDrawableSize"]
     #[doc = " \\sa SDL_SetWindowSize"]
-    pub fn SDL_GetWindowSize(window: *mut SDL_Window, w: *mut libc::c_int, h: *mut libc::c_int);
+    pub fn SDL_GetWindowSize(window: *mut SDL_Window, w: *mut core::ffi::c_int, h: *mut core::ffi::c_int);
 }
 extern "C" {
     #[doc = " Get the size of a window's borders (decorations) around the client area."]
@@ -10965,11 +10965,11 @@ extern "C" {
     #[doc = " \\sa SDL_GetWindowSize"]
     pub fn SDL_GetWindowBordersSize(
         window: *mut SDL_Window,
-        top: *mut libc::c_int,
-        left: *mut libc::c_int,
-        bottom: *mut libc::c_int,
-        right: *mut libc::c_int,
-    ) -> libc::c_int;
+        top: *mut core::ffi::c_int,
+        left: *mut core::ffi::c_int,
+        bottom: *mut core::ffi::c_int,
+        right: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the minimum size of a window's client area."]
@@ -10984,8 +10984,8 @@ extern "C" {
     #[doc = " \\sa SDL_SetWindowMaximumSize"]
     pub fn SDL_SetWindowMinimumSize(
         window: *mut SDL_Window,
-        min_w: libc::c_int,
-        min_h: libc::c_int,
+        min_w: core::ffi::c_int,
+        min_h: core::ffi::c_int,
     );
 }
 extern "C" {
@@ -11003,8 +11003,8 @@ extern "C" {
     #[doc = " \\sa SDL_SetWindowMinimumSize"]
     pub fn SDL_GetWindowMinimumSize(
         window: *mut SDL_Window,
-        w: *mut libc::c_int,
-        h: *mut libc::c_int,
+        w: *mut core::ffi::c_int,
+        h: *mut core::ffi::c_int,
     );
 }
 extern "C" {
@@ -11020,8 +11020,8 @@ extern "C" {
     #[doc = " \\sa SDL_SetWindowMinimumSize"]
     pub fn SDL_SetWindowMaximumSize(
         window: *mut SDL_Window,
-        max_w: libc::c_int,
-        max_h: libc::c_int,
+        max_w: core::ffi::c_int,
+        max_h: core::ffi::c_int,
     );
 }
 extern "C" {
@@ -11039,8 +11039,8 @@ extern "C" {
     #[doc = " \\sa SDL_SetWindowMaximumSize"]
     pub fn SDL_GetWindowMaximumSize(
         window: *mut SDL_Window,
-        w: *mut libc::c_int,
-        h: *mut libc::c_int,
+        w: *mut core::ffi::c_int,
+        h: *mut core::ffi::c_int,
     );
 }
 extern "C" {
@@ -11170,7 +11170,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetWindowDisplayMode"]
     #[doc = " \\sa SDL_SetWindowDisplayMode"]
-    pub fn SDL_SetWindowFullscreen(window: *mut SDL_Window, flags: Uint32) -> libc::c_int;
+    pub fn SDL_SetWindowFullscreen(window: *mut SDL_Window, flags: Uint32) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the SDL surface associated with the window."]
@@ -11212,7 +11212,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetWindowSurface"]
     #[doc = " \\sa SDL_UpdateWindowSurfaceRects"]
-    pub fn SDL_UpdateWindowSurface(window: *mut SDL_Window) -> libc::c_int;
+    pub fn SDL_UpdateWindowSurface(window: *mut SDL_Window) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Copy areas of the window surface to the screen."]
@@ -11236,8 +11236,8 @@ extern "C" {
     pub fn SDL_UpdateWindowSurfaceRects(
         window: *mut SDL_Window,
         rects: *const SDL_Rect,
-        numrects: libc::c_int,
-    ) -> libc::c_int;
+        numrects: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set a window's input grab mode."]
@@ -11363,7 +11363,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetWindowMouseRect"]
     #[doc = " \\sa SDL_SetWindowMouseGrab"]
-    pub fn SDL_SetWindowMouseRect(window: *mut SDL_Window, rect: *const SDL_Rect) -> libc::c_int;
+    pub fn SDL_SetWindowMouseRect(window: *mut SDL_Window, rect: *const SDL_Rect) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the mouse confinement rectangle of a window."]
@@ -11402,7 +11402,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetWindowBrightness"]
     #[doc = " \\sa SDL_SetWindowGammaRamp"]
-    pub fn SDL_SetWindowBrightness(window: *mut SDL_Window, brightness: f32) -> libc::c_int;
+    pub fn SDL_SetWindowBrightness(window: *mut SDL_Window, brightness: f32) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the brightness (gamma multiplier) for a given window's display."]
@@ -11438,7 +11438,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.5."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetWindowOpacity"]
-    pub fn SDL_SetWindowOpacity(window: *mut SDL_Window, opacity: f32) -> libc::c_int;
+    pub fn SDL_SetWindowOpacity(window: *mut SDL_Window, opacity: f32) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the opacity of a window."]
@@ -11458,7 +11458,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.5."]
     #[doc = ""]
     #[doc = " \\sa SDL_SetWindowOpacity"]
-    pub fn SDL_GetWindowOpacity(window: *mut SDL_Window, out_opacity: *mut f32) -> libc::c_int;
+    pub fn SDL_GetWindowOpacity(window: *mut SDL_Window, out_opacity: *mut f32) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the window as a modal for another window."]
@@ -11472,7 +11472,7 @@ extern "C" {
     pub fn SDL_SetWindowModalFor(
         modal_window: *mut SDL_Window,
         parent_window: *mut SDL_Window,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Explicitly set input focus to the window."]
@@ -11488,7 +11488,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.5."]
     #[doc = ""]
     #[doc = " \\sa SDL_RaiseWindow"]
-    pub fn SDL_SetWindowInputFocus(window: *mut SDL_Window) -> libc::c_int;
+    pub fn SDL_SetWindowInputFocus(window: *mut SDL_Window) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the gamma ramp for the display that owns a given window."]
@@ -11524,7 +11524,7 @@ extern "C" {
         red: *const Uint16,
         green: *const Uint16,
         blue: *const Uint16,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the gamma ramp for a given window's display."]
@@ -11553,7 +11553,7 @@ extern "C" {
         red: *mut Uint16,
         green: *mut Uint16,
         blue: *mut Uint16,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 #[repr(u32)]
 #[doc = " Possible return values from the SDL_HitTest callback."]
@@ -11586,7 +11586,7 @@ pub type SDL_HitTest = ::core::option::Option<
     unsafe extern "C" fn(
         win: *mut SDL_Window,
         area: *const SDL_Point,
-        data: *mut libc::c_void,
+        data: *mut core::ffi::c_void,
     ) -> SDL_HitTestResult,
 >;
 extern "C" {
@@ -11631,8 +11631,8 @@ extern "C" {
     pub fn SDL_SetWindowHitTest(
         window: *mut SDL_Window,
         callback: SDL_HitTest,
-        callback_data: *mut libc::c_void,
-    ) -> libc::c_int;
+        callback_data: *mut core::ffi::c_void,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Request a window to demand attention from the user."]
@@ -11643,7 +11643,7 @@ extern "C" {
     #[doc = "          SDL_GetError() for more information."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.16."]
-    pub fn SDL_FlashWindow(window: *mut SDL_Window, operation: SDL_FlashOperation) -> libc::c_int;
+    pub fn SDL_FlashWindow(window: *mut SDL_Window, operation: SDL_FlashOperation) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Destroy a window."]
@@ -11716,7 +11716,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GL_GetProcAddress"]
     #[doc = " \\sa SDL_GL_UnloadLibrary"]
-    pub fn SDL_GL_LoadLibrary(path: *const libc::c_char) -> libc::c_int;
+    pub fn SDL_GL_LoadLibrary(path: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get an OpenGL function by name."]
@@ -11768,7 +11768,7 @@ extern "C" {
     #[doc = " \\sa SDL_GL_ExtensionSupported"]
     #[doc = " \\sa SDL_GL_LoadLibrary"]
     #[doc = " \\sa SDL_GL_UnloadLibrary"]
-    pub fn SDL_GL_GetProcAddress(proc_: *const libc::c_char) -> *mut libc::c_void;
+    pub fn SDL_GL_GetProcAddress(proc_: *const core::ffi::c_char) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Unload the OpenGL library previously loaded by SDL_GL_LoadLibrary()."]
@@ -11796,7 +11796,7 @@ extern "C" {
     #[doc = " \\returns SDL_TRUE if the extension is supported, SDL_FALSE otherwise."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
-    pub fn SDL_GL_ExtensionSupported(extension: *const libc::c_char) -> SDL_bool;
+    pub fn SDL_GL_ExtensionSupported(extension: *const core::ffi::c_char) -> SDL_bool;
 }
 extern "C" {
     #[doc = " Reset all previously set OpenGL context attributes to their default values."]
@@ -11824,7 +11824,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GL_GetAttribute"]
     #[doc = " \\sa SDL_GL_ResetAttributes"]
-    pub fn SDL_GL_SetAttribute(attr: SDL_GLattr, value: libc::c_int) -> libc::c_int;
+    pub fn SDL_GL_SetAttribute(attr: SDL_GLattr, value: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the actual value for an attribute from the current context."]
@@ -11838,7 +11838,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GL_ResetAttributes"]
     #[doc = " \\sa SDL_GL_SetAttribute"]
-    pub fn SDL_GL_GetAttribute(attr: SDL_GLattr, value: *mut libc::c_int) -> libc::c_int;
+    pub fn SDL_GL_GetAttribute(attr: SDL_GLattr, value: *mut core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Create an OpenGL context for an OpenGL window, and make it current."]
@@ -11874,7 +11874,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GL_CreateContext"]
-    pub fn SDL_GL_MakeCurrent(window: *mut SDL_Window, context: SDL_GLContext) -> libc::c_int;
+    pub fn SDL_GL_MakeCurrent(window: *mut SDL_Window, context: SDL_GLContext) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the currently active OpenGL window."]
@@ -11917,8 +11917,8 @@ extern "C" {
     #[doc = " \\sa SDL_GetWindowSize"]
     pub fn SDL_GL_GetDrawableSize(
         window: *mut SDL_Window,
-        w: *mut libc::c_int,
-        h: *mut libc::c_int,
+        w: *mut core::ffi::c_int,
+        h: *mut core::ffi::c_int,
     );
 }
 extern "C" {
@@ -11952,7 +11952,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GL_GetSwapInterval"]
-    pub fn SDL_GL_SetSwapInterval(interval: libc::c_int) -> libc::c_int;
+    pub fn SDL_GL_SetSwapInterval(interval: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the swap interval for the current OpenGL context."]
@@ -11968,7 +11968,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GL_SetSwapInterval"]
-    pub fn SDL_GL_GetSwapInterval() -> libc::c_int;
+    pub fn SDL_GL_GetSwapInterval() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Update a window with OpenGL rendering."]
@@ -12714,7 +12714,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_PumpEvents"]
-    pub fn SDL_GetKeyboardState(numkeys: *mut libc::c_int) -> *const Uint8;
+    pub fn SDL_GetKeyboardState(numkeys: *mut core::ffi::c_int) -> *const Uint8;
 }
 extern "C" {
     #[doc = " Get the current key modifier state for the keyboard."]
@@ -12798,7 +12798,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetScancodeFromKey"]
     #[doc = " \\sa SDL_GetScancodeFromName"]
-    pub fn SDL_GetScancodeName(scancode: SDL_Scancode) -> *const libc::c_char;
+    pub fn SDL_GetScancodeName(scancode: SDL_Scancode) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get a scancode from a human-readable name."]
@@ -12812,7 +12812,7 @@ extern "C" {
     #[doc = " \\sa SDL_GetKeyFromName"]
     #[doc = " \\sa SDL_GetScancodeFromKey"]
     #[doc = " \\sa SDL_GetScancodeName"]
-    pub fn SDL_GetScancodeFromName(name: *const libc::c_char) -> SDL_Scancode;
+    pub fn SDL_GetScancodeFromName(name: *const core::ffi::c_char) -> SDL_Scancode;
 }
 extern "C" {
     #[doc = " Get a human-readable name for a key."]
@@ -12830,7 +12830,7 @@ extern "C" {
     #[doc = " \\sa SDL_GetKeyFromName"]
     #[doc = " \\sa SDL_GetKeyFromScancode"]
     #[doc = " \\sa SDL_GetScancodeFromKey"]
-    pub fn SDL_GetKeyName(key: SDL_Keycode) -> *const libc::c_char;
+    pub fn SDL_GetKeyName(key: SDL_Keycode) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get a key code from a human-readable name."]
@@ -12844,7 +12844,7 @@ extern "C" {
     #[doc = " \\sa SDL_GetKeyFromScancode"]
     #[doc = " \\sa SDL_GetKeyName"]
     #[doc = " \\sa SDL_GetScancodeFromName"]
-    pub fn SDL_GetKeyFromName(name: *const libc::c_char) -> SDL_Keycode;
+    pub fn SDL_GetKeyFromName(name: *const core::ffi::c_char) -> SDL_Keycode;
 }
 extern "C" {
     #[doc = " Start accepting Unicode text input events."]
@@ -12986,7 +12986,7 @@ extern "C" {
     #[doc = " \\sa SDL_GetGlobalMouseState"]
     #[doc = " \\sa SDL_GetRelativeMouseState"]
     #[doc = " \\sa SDL_PumpEvents"]
-    pub fn SDL_GetMouseState(x: *mut libc::c_int, y: *mut libc::c_int) -> Uint32;
+    pub fn SDL_GetMouseState(x: *mut core::ffi::c_int, y: *mut core::ffi::c_int) -> Uint32;
 }
 extern "C" {
     #[doc = " Get the current state of the mouse in relation to the desktop."]
@@ -13014,7 +13014,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.4."]
     #[doc = ""]
     #[doc = " \\sa SDL_CaptureMouse"]
-    pub fn SDL_GetGlobalMouseState(x: *mut libc::c_int, y: *mut libc::c_int) -> Uint32;
+    pub fn SDL_GetGlobalMouseState(x: *mut core::ffi::c_int, y: *mut core::ffi::c_int) -> Uint32;
 }
 extern "C" {
     #[doc = " Retrieve the relative state of the mouse."]
@@ -13032,7 +13032,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetMouseState"]
-    pub fn SDL_GetRelativeMouseState(x: *mut libc::c_int, y: *mut libc::c_int) -> Uint32;
+    pub fn SDL_GetRelativeMouseState(x: *mut core::ffi::c_int, y: *mut core::ffi::c_int) -> Uint32;
 }
 extern "C" {
     #[doc = " Move the mouse cursor to the given position within the window."]
@@ -13050,7 +13050,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_WarpMouseGlobal"]
-    pub fn SDL_WarpMouseInWindow(window: *mut SDL_Window, x: libc::c_int, y: libc::c_int);
+    pub fn SDL_WarpMouseInWindow(window: *mut SDL_Window, x: core::ffi::c_int, y: core::ffi::c_int);
 }
 extern "C" {
     #[doc = " Move the mouse to the given position in global screen space."]
@@ -13071,7 +13071,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.4."]
     #[doc = ""]
     #[doc = " \\sa SDL_WarpMouseInWindow"]
-    pub fn SDL_WarpMouseGlobal(x: libc::c_int, y: libc::c_int) -> libc::c_int;
+    pub fn SDL_WarpMouseGlobal(x: core::ffi::c_int, y: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set relative mouse mode."]
@@ -13095,7 +13095,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetRelativeMouseMode"]
-    pub fn SDL_SetRelativeMouseMode(enabled: SDL_bool) -> libc::c_int;
+    pub fn SDL_SetRelativeMouseMode(enabled: SDL_bool) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Capture the mouse and to track input outside an SDL window."]
@@ -13131,7 +13131,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.4."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetGlobalMouseState"]
-    pub fn SDL_CaptureMouse(enabled: SDL_bool) -> libc::c_int;
+    pub fn SDL_CaptureMouse(enabled: SDL_bool) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Query whether relative mouse mode is enabled."]
@@ -13186,10 +13186,10 @@ extern "C" {
     pub fn SDL_CreateCursor(
         data: *const Uint8,
         mask: *const Uint8,
-        w: libc::c_int,
-        h: libc::c_int,
-        hot_x: libc::c_int,
-        hot_y: libc::c_int,
+        w: core::ffi::c_int,
+        h: core::ffi::c_int,
+        hot_x: core::ffi::c_int,
+        hot_y: core::ffi::c_int,
     ) -> *mut SDL_Cursor;
 }
 extern "C" {
@@ -13207,8 +13207,8 @@ extern "C" {
     #[doc = " \\sa SDL_FreeCursor"]
     pub fn SDL_CreateColorCursor(
         surface: *mut SDL_Surface,
-        hot_x: libc::c_int,
-        hot_y: libc::c_int,
+        hot_x: core::ffi::c_int,
+        hot_y: core::ffi::c_int,
     ) -> *mut SDL_Cursor;
 }
 extern "C" {
@@ -13297,7 +13297,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_CreateCursor"]
     #[doc = " \\sa SDL_SetCursor"]
-    pub fn SDL_ShowCursor(toggle: libc::c_int) -> libc::c_int;
+    pub fn SDL_ShowCursor(toggle: core::ffi::c_int) -> core::ffi::c_int;
 }
 #[doc = " The joystick structure used to identify an SDL joystick"]
 #[repr(C)]
@@ -13401,7 +13401,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickName"]
     #[doc = " \\sa SDL_JoystickOpen"]
-    pub fn SDL_NumJoysticks() -> libc::c_int;
+    pub fn SDL_NumJoysticks() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the implementation dependent name of a joystick."]
@@ -13417,14 +13417,14 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickName"]
     #[doc = " \\sa SDL_JoystickOpen"]
-    pub fn SDL_JoystickNameForIndex(device_index: libc::c_int) -> *const libc::c_char;
+    pub fn SDL_JoystickNameForIndex(device_index: core::ffi::c_int) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the player index of a joystick, or -1 if it's not available This can be"]
     #[doc = " called before any joysticks are opened."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
-    pub fn SDL_JoystickGetDevicePlayerIndex(device_index: libc::c_int) -> libc::c_int;
+    pub fn SDL_JoystickGetDevicePlayerIndex(device_index: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the implementation-dependent GUID for the joystick at a given device"]
@@ -13441,7 +13441,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickGetGUID"]
     #[doc = " \\sa SDL_JoystickGetGUIDString"]
-    pub fn SDL_JoystickGetDeviceGUID(device_index: libc::c_int) -> SDL_JoystickGUID;
+    pub fn SDL_JoystickGetDeviceGUID(device_index: core::ffi::c_int) -> SDL_JoystickGUID;
 }
 extern "C" {
     #[doc = " Get the USB vendor ID of a joystick, if available."]
@@ -13455,7 +13455,7 @@ extern "C" {
     #[doc = "          invalid index, this function returns zero"]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.6."]
-    pub fn SDL_JoystickGetDeviceVendor(device_index: libc::c_int) -> Uint16;
+    pub fn SDL_JoystickGetDeviceVendor(device_index: core::ffi::c_int) -> Uint16;
 }
 extern "C" {
     #[doc = " Get the USB product ID of a joystick, if available."]
@@ -13469,7 +13469,7 @@ extern "C" {
     #[doc = "          invalid index, this function returns zero"]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.6."]
-    pub fn SDL_JoystickGetDeviceProduct(device_index: libc::c_int) -> Uint16;
+    pub fn SDL_JoystickGetDeviceProduct(device_index: core::ffi::c_int) -> Uint16;
 }
 extern "C" {
     #[doc = " Get the product version of a joystick, if available."]
@@ -13483,7 +13483,7 @@ extern "C" {
     #[doc = "          invalid index, this function returns zero"]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.6."]
-    pub fn SDL_JoystickGetDeviceProductVersion(device_index: libc::c_int) -> Uint16;
+    pub fn SDL_JoystickGetDeviceProductVersion(device_index: core::ffi::c_int) -> Uint16;
 }
 extern "C" {
     #[doc = " Get the type of a joystick, if available."]
@@ -13496,7 +13496,7 @@ extern "C" {
     #[doc = "          invalid index, this function returns `SDL_JOYSTICK_TYPE_UNKNOWN`"]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.6."]
-    pub fn SDL_JoystickGetDeviceType(device_index: libc::c_int) -> SDL_JoystickType;
+    pub fn SDL_JoystickGetDeviceType(device_index: core::ffi::c_int) -> SDL_JoystickType;
 }
 extern "C" {
     #[doc = " Get the instance ID of a joystick."]
@@ -13510,7 +13510,7 @@ extern "C" {
     #[doc = "          index, this function returns zero"]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.6."]
-    pub fn SDL_JoystickGetDeviceInstanceID(device_index: libc::c_int) -> SDL_JoystickID;
+    pub fn SDL_JoystickGetDeviceInstanceID(device_index: core::ffi::c_int) -> SDL_JoystickID;
 }
 extern "C" {
     #[doc = " Open a joystick for use."]
@@ -13531,7 +13531,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickClose"]
     #[doc = " \\sa SDL_JoystickInstanceID"]
-    pub fn SDL_JoystickOpen(device_index: libc::c_int) -> *mut SDL_Joystick;
+    pub fn SDL_JoystickOpen(device_index: core::ffi::c_int) -> *mut SDL_Joystick;
 }
 extern "C" {
     #[doc = " Get the SDL_Joystick associated with an instance id."]
@@ -13551,7 +13551,7 @@ extern "C" {
     #[doc = "          for more information."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.12."]
-    pub fn SDL_JoystickFromPlayerIndex(player_index: libc::c_int) -> *mut SDL_Joystick;
+    pub fn SDL_JoystickFromPlayerIndex(player_index: core::ffi::c_int) -> *mut SDL_Joystick;
 }
 extern "C" {
     #[doc = " Attach a new virtual joystick."]
@@ -13561,10 +13561,10 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.14."]
     pub fn SDL_JoystickAttachVirtual(
         type_: SDL_JoystickType,
-        naxes: libc::c_int,
-        nbuttons: libc::c_int,
-        nhats: libc::c_int,
-    ) -> libc::c_int;
+        naxes: core::ffi::c_int,
+        nbuttons: core::ffi::c_int,
+        nhats: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Detach a virtual joystick."]
@@ -13574,7 +13574,7 @@ extern "C" {
     #[doc = " \\returns 0 on success, or -1 if an error occurred."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.14."]
-    pub fn SDL_JoystickDetachVirtual(device_index: libc::c_int) -> libc::c_int;
+    pub fn SDL_JoystickDetachVirtual(device_index: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Query whether or not the joystick at a given device index is virtual."]
@@ -13583,7 +13583,7 @@ extern "C" {
     #[doc = " \\returns SDL_TRUE if the joystick is virtual, SDL_FALSE otherwise."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.14."]
-    pub fn SDL_JoystickIsVirtual(device_index: libc::c_int) -> SDL_bool;
+    pub fn SDL_JoystickIsVirtual(device_index: core::ffi::c_int) -> SDL_bool;
 }
 extern "C" {
     #[doc = " Set values on an opened, virtual-joystick's axis."]
@@ -13602,9 +13602,9 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.14."]
     pub fn SDL_JoystickSetVirtualAxis(
         joystick: *mut SDL_Joystick,
-        axis: libc::c_int,
+        axis: core::ffi::c_int,
         value: Sint16,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set values on an opened, virtual-joystick's button."]
@@ -13623,9 +13623,9 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.14."]
     pub fn SDL_JoystickSetVirtualButton(
         joystick: *mut SDL_Joystick,
-        button: libc::c_int,
+        button: core::ffi::c_int,
         value: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set values on an opened, virtual-joystick's hat."]
@@ -13644,9 +13644,9 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.14."]
     pub fn SDL_JoystickSetVirtualHat(
         joystick: *mut SDL_Joystick,
-        hat: libc::c_int,
+        hat: core::ffi::c_int,
         value: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the implementation dependent name of a joystick."]
@@ -13659,7 +13659,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickNameForIndex"]
     #[doc = " \\sa SDL_JoystickOpen"]
-    pub fn SDL_JoystickName(joystick: *mut SDL_Joystick) -> *const libc::c_char;
+    pub fn SDL_JoystickName(joystick: *mut SDL_Joystick) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the player index of an opened joystick."]
@@ -13671,7 +13671,7 @@ extern "C" {
     #[doc = " \\returns the player index, or -1 if it's not available."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
-    pub fn SDL_JoystickGetPlayerIndex(joystick: *mut SDL_Joystick) -> libc::c_int;
+    pub fn SDL_JoystickGetPlayerIndex(joystick: *mut SDL_Joystick) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the player index of an opened joystick."]
@@ -13680,7 +13680,7 @@ extern "C" {
     #[doc = " \\param player_index the player index to set."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.12."]
-    pub fn SDL_JoystickSetPlayerIndex(joystick: *mut SDL_Joystick, player_index: libc::c_int);
+    pub fn SDL_JoystickSetPlayerIndex(joystick: *mut SDL_Joystick, player_index: core::ffi::c_int);
 }
 extern "C" {
     #[doc = " Get the implementation-dependent GUID for the joystick."]
@@ -13741,7 +13741,7 @@ extern "C" {
     #[doc = "          unavailable."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.14."]
-    pub fn SDL_JoystickGetSerial(joystick: *mut SDL_Joystick) -> *const libc::c_char;
+    pub fn SDL_JoystickGetSerial(joystick: *mut SDL_Joystick) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the type of an opened joystick."]
@@ -13768,8 +13768,8 @@ extern "C" {
     #[doc = " \\sa SDL_JoystickGetGUIDFromString"]
     pub fn SDL_JoystickGetGUIDString(
         guid: SDL_JoystickGUID,
-        pszGUID: *mut libc::c_char,
-        cbGUID: libc::c_int,
+        pszGUID: *mut core::ffi::c_char,
+        cbGUID: core::ffi::c_int,
     );
 }
 extern "C" {
@@ -13785,7 +13785,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickGetGUIDString"]
-    pub fn SDL_JoystickGetGUIDFromString(pchGUID: *const libc::c_char) -> SDL_JoystickGUID;
+    pub fn SDL_JoystickGetGUIDFromString(pchGUID: *const core::ffi::c_char) -> SDL_JoystickGUID;
 }
 extern "C" {
     #[doc = " Get the status of a specified joystick."]
@@ -13828,7 +13828,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickGetAxis"]
     #[doc = " \\sa SDL_JoystickOpen"]
-    pub fn SDL_JoystickNumAxes(joystick: *mut SDL_Joystick) -> libc::c_int;
+    pub fn SDL_JoystickNumAxes(joystick: *mut SDL_Joystick) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the number of trackballs on a joystick."]
@@ -13845,7 +13845,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickGetBall"]
-    pub fn SDL_JoystickNumBalls(joystick: *mut SDL_Joystick) -> libc::c_int;
+    pub fn SDL_JoystickNumBalls(joystick: *mut SDL_Joystick) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the number of POV hats on a joystick."]
@@ -13858,7 +13858,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickGetHat"]
     #[doc = " \\sa SDL_JoystickOpen"]
-    pub fn SDL_JoystickNumHats(joystick: *mut SDL_Joystick) -> libc::c_int;
+    pub fn SDL_JoystickNumHats(joystick: *mut SDL_Joystick) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the number of buttons on a joystick."]
@@ -13871,7 +13871,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickGetButton"]
     #[doc = " \\sa SDL_JoystickOpen"]
-    pub fn SDL_JoystickNumButtons(joystick: *mut SDL_Joystick) -> libc::c_int;
+    pub fn SDL_JoystickNumButtons(joystick: *mut SDL_Joystick) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Update the current state of the open joysticks."]
@@ -13906,7 +13906,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GameControllerEventState"]
-    pub fn SDL_JoystickEventState(state: libc::c_int) -> libc::c_int;
+    pub fn SDL_JoystickEventState(state: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the current state of an axis control on a joystick."]
@@ -13929,7 +13929,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickNumAxes"]
-    pub fn SDL_JoystickGetAxis(joystick: *mut SDL_Joystick, axis: libc::c_int) -> Sint16;
+    pub fn SDL_JoystickGetAxis(joystick: *mut SDL_Joystick, axis: core::ffi::c_int) -> Sint16;
 }
 extern "C" {
     #[doc = " Get the initial state of an axis control on a joystick."]
@@ -13946,7 +13946,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.6."]
     pub fn SDL_JoystickGetAxisInitialState(
         joystick: *mut SDL_Joystick,
-        axis: libc::c_int,
+        axis: core::ffi::c_int,
         state: *mut Sint16,
     ) -> SDL_bool;
 }
@@ -13972,7 +13972,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickNumHats"]
-    pub fn SDL_JoystickGetHat(joystick: *mut SDL_Joystick, hat: libc::c_int) -> Uint8;
+    pub fn SDL_JoystickGetHat(joystick: *mut SDL_Joystick, hat: core::ffi::c_int) -> Uint8;
 }
 extern "C" {
     #[doc = " Get the ball axis change since the last poll."]
@@ -13994,10 +13994,10 @@ extern "C" {
     #[doc = " \\sa SDL_JoystickNumBalls"]
     pub fn SDL_JoystickGetBall(
         joystick: *mut SDL_Joystick,
-        ball: libc::c_int,
-        dx: *mut libc::c_int,
-        dy: *mut libc::c_int,
-    ) -> libc::c_int;
+        ball: core::ffi::c_int,
+        dx: *mut core::ffi::c_int,
+        dy: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the current state of a button on a joystick."]
@@ -14010,7 +14010,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickNumButtons"]
-    pub fn SDL_JoystickGetButton(joystick: *mut SDL_Joystick, button: libc::c_int) -> Uint8;
+    pub fn SDL_JoystickGetButton(joystick: *mut SDL_Joystick, button: core::ffi::c_int) -> Uint8;
 }
 extern "C" {
     #[doc = " Start a rumble effect."]
@@ -14034,7 +14034,7 @@ extern "C" {
         low_frequency_rumble: Uint16,
         high_frequency_rumble: Uint16,
         duration_ms: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Start a rumble effect in the joystick's triggers"]
@@ -14063,7 +14063,7 @@ extern "C" {
         left_rumble: Uint16,
         right_rumble: Uint16,
         duration_ms: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Query whether a joystick has an LED."]
@@ -14117,7 +14117,7 @@ extern "C" {
         red: Uint8,
         green: Uint8,
         blue: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Send a joystick specific effect packet"]
@@ -14130,9 +14130,9 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.16."]
     pub fn SDL_JoystickSendEffect(
         joystick: *mut SDL_Joystick,
-        data: *const libc::c_void,
-        size: libc::c_int,
-    ) -> libc::c_int;
+        data: *const core::ffi::c_void,
+        size: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Close a joystick previously opened with SDL_JoystickOpen()."]
@@ -14204,7 +14204,7 @@ extern "C" {
     #[doc = " \\returns the number of sensors detected."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
-    pub fn SDL_NumSensors() -> libc::c_int;
+    pub fn SDL_NumSensors() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the implementation dependent name of a sensor."]
@@ -14213,7 +14213,7 @@ extern "C" {
     #[doc = " \\returns the sensor name, or NULL if `device_index` is out of range."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
-    pub fn SDL_SensorGetDeviceName(device_index: libc::c_int) -> *const libc::c_char;
+    pub fn SDL_SensorGetDeviceName(device_index: core::ffi::c_int) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the type of a sensor."]
@@ -14223,7 +14223,7 @@ extern "C" {
     #[doc = "          out of range."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
-    pub fn SDL_SensorGetDeviceType(device_index: libc::c_int) -> SDL_SensorType;
+    pub fn SDL_SensorGetDeviceType(device_index: core::ffi::c_int) -> SDL_SensorType;
 }
 extern "C" {
     #[doc = " Get the platform dependent type of a sensor."]
@@ -14233,7 +14233,7 @@ extern "C" {
     #[doc = "          of range."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
-    pub fn SDL_SensorGetDeviceNonPortableType(device_index: libc::c_int) -> libc::c_int;
+    pub fn SDL_SensorGetDeviceNonPortableType(device_index: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the instance ID of a sensor."]
@@ -14242,7 +14242,7 @@ extern "C" {
     #[doc = " \\returns the sensor instance ID, or -1 if `device_index` is out of range."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
-    pub fn SDL_SensorGetDeviceInstanceID(device_index: libc::c_int) -> SDL_SensorID;
+    pub fn SDL_SensorGetDeviceInstanceID(device_index: core::ffi::c_int) -> SDL_SensorID;
 }
 extern "C" {
     #[doc = " Open a sensor for use."]
@@ -14251,7 +14251,7 @@ extern "C" {
     #[doc = " \\returns an SDL_Sensor sensor object, or NULL if an error occurred."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
-    pub fn SDL_SensorOpen(device_index: libc::c_int) -> *mut SDL_Sensor;
+    pub fn SDL_SensorOpen(device_index: core::ffi::c_int) -> *mut SDL_Sensor;
 }
 extern "C" {
     #[doc = " Return the SDL_Sensor associated with an instance id."]
@@ -14269,7 +14269,7 @@ extern "C" {
     #[doc = " \\returns the sensor name, or NULL if `sensor` is NULL."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
-    pub fn SDL_SensorGetName(sensor: *mut SDL_Sensor) -> *const libc::c_char;
+    pub fn SDL_SensorGetName(sensor: *mut SDL_Sensor) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the type of a sensor."]
@@ -14288,7 +14288,7 @@ extern "C" {
     #[doc = " \\returns the sensor platform dependent type, or -1 if `sensor` is NULL."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
-    pub fn SDL_SensorGetNonPortableType(sensor: *mut SDL_Sensor) -> libc::c_int;
+    pub fn SDL_SensorGetNonPortableType(sensor: *mut SDL_Sensor) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the instance ID of a sensor."]
@@ -14313,8 +14313,8 @@ extern "C" {
     pub fn SDL_SensorGetData(
         sensor: *mut SDL_Sensor,
         data: *mut f32,
-        num_values: libc::c_int,
-    ) -> libc::c_int;
+        num_values: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Close a sensor previously opened with SDL_SensorOpen()."]
@@ -14375,16 +14375,16 @@ pub struct SDL_GameControllerButtonBind {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union SDL_GameControllerButtonBind__bindgen_ty_1 {
-    pub button: libc::c_int,
-    pub axis: libc::c_int,
+    pub button: core::ffi::c_int,
+    pub axis: core::ffi::c_int,
     pub hat: SDL_GameControllerButtonBind__bindgen_ty_1__bindgen_ty_1,
     _bindgen_union_align: [u32; 2usize],
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct SDL_GameControllerButtonBind__bindgen_ty_1__bindgen_ty_1 {
-    pub hat: libc::c_int,
-    pub hat_mask: libc::c_int,
+    pub hat: core::ffi::c_int,
+    pub hat_mask: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_SDL_GameControllerButtonBind__bindgen_ty_1__bindgen_ty_1() {
@@ -14555,8 +14555,8 @@ extern "C" {
     #[doc = " \\sa SDL_GameControllerMappingForGUID"]
     pub fn SDL_GameControllerAddMappingsFromRW(
         rw: *mut SDL_RWops,
-        freerw: libc::c_int,
-    ) -> libc::c_int;
+        freerw: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Add support for controllers that SDL is unaware of or to cause an existing"]
@@ -14584,7 +14584,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GameControllerMapping"]
     #[doc = " \\sa SDL_GameControllerMappingForGUID"]
-    pub fn SDL_GameControllerAddMapping(mappingString: *const libc::c_char) -> libc::c_int;
+    pub fn SDL_GameControllerAddMapping(mappingString: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the number of mappings installed."]
@@ -14592,7 +14592,7 @@ extern "C" {
     #[doc = " \\returns the number of mappings."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.6."]
-    pub fn SDL_GameControllerNumMappings() -> libc::c_int;
+    pub fn SDL_GameControllerNumMappings() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the mapping at a particular index."]
@@ -14601,7 +14601,7 @@ extern "C" {
     #[doc = "          the index is out of range."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.6."]
-    pub fn SDL_GameControllerMappingForIndex(mapping_index: libc::c_int) -> *mut libc::c_char;
+    pub fn SDL_GameControllerMappingForIndex(mapping_index: core::ffi::c_int) -> *mut core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the game controller mapping string for a given GUID."]
@@ -14616,7 +14616,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickGetDeviceGUID"]
     #[doc = " \\sa SDL_JoystickGetGUID"]
-    pub fn SDL_GameControllerMappingForGUID(guid: SDL_JoystickGUID) -> *mut libc::c_char;
+    pub fn SDL_GameControllerMappingForGUID(guid: SDL_JoystickGUID) -> *mut core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the current mapping of a Game Controller."]
@@ -14634,7 +14634,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GameControllerAddMapping"]
     #[doc = " \\sa SDL_GameControllerMappingForGUID"]
-    pub fn SDL_GameControllerMapping(gamecontroller: *mut SDL_GameController) -> *mut libc::c_char;
+    pub fn SDL_GameControllerMapping(gamecontroller: *mut SDL_GameController) -> *mut core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Check if the given joystick is supported by the game controller interface."]
@@ -14651,7 +14651,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GameControllerNameForIndex"]
     #[doc = " \\sa SDL_GameControllerOpen"]
-    pub fn SDL_IsGameController(joystick_index: libc::c_int) -> SDL_bool;
+    pub fn SDL_IsGameController(joystick_index: core::ffi::c_int) -> SDL_bool;
 }
 extern "C" {
     #[doc = " Get the implementation dependent name for the game controller."]
@@ -14671,7 +14671,7 @@ extern "C" {
     #[doc = " \\sa SDL_GameControllerName"]
     #[doc = " \\sa SDL_GameControllerOpen"]
     #[doc = " \\sa SDL_IsGameController"]
-    pub fn SDL_GameControllerNameForIndex(joystick_index: libc::c_int) -> *const libc::c_char;
+    pub fn SDL_GameControllerNameForIndex(joystick_index: core::ffi::c_int) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the type of a game controller."]
@@ -14683,7 +14683,7 @@ extern "C" {
     #[doc = " \\returns the controller type."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.12."]
-    pub fn SDL_GameControllerTypeForIndex(joystick_index: libc::c_int) -> SDL_GameControllerType;
+    pub fn SDL_GameControllerTypeForIndex(joystick_index: core::ffi::c_int) -> SDL_GameControllerType;
 }
 extern "C" {
     #[doc = " Get the mapping of a game controller."]
@@ -14697,8 +14697,8 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
     pub fn SDL_GameControllerMappingForDeviceIndex(
-        joystick_index: libc::c_int,
-    ) -> *mut libc::c_char;
+        joystick_index: core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Open a game controller for use."]
@@ -14721,7 +14721,7 @@ extern "C" {
     #[doc = " \\sa SDL_GameControllerClose"]
     #[doc = " \\sa SDL_GameControllerNameForIndex"]
     #[doc = " \\sa SDL_IsGameController"]
-    pub fn SDL_GameControllerOpen(joystick_index: libc::c_int) -> *mut SDL_GameController;
+    pub fn SDL_GameControllerOpen(joystick_index: core::ffi::c_int) -> *mut SDL_GameController;
 }
 extern "C" {
     #[doc = " Get the SDL_GameController associated with an instance id."]
@@ -14747,7 +14747,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GameControllerGetPlayerIndex"]
     #[doc = " \\sa SDL_GameControllerSetPlayerIndex"]
-    pub fn SDL_GameControllerFromPlayerIndex(player_index: libc::c_int) -> *mut SDL_GameController;
+    pub fn SDL_GameControllerFromPlayerIndex(player_index: core::ffi::c_int) -> *mut SDL_GameController;
 }
 extern "C" {
     #[doc = " Get the implementation-dependent name for an opened game controller."]
@@ -14764,7 +14764,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GameControllerNameForIndex"]
     #[doc = " \\sa SDL_GameControllerOpen"]
-    pub fn SDL_GameControllerName(gamecontroller: *mut SDL_GameController) -> *const libc::c_char;
+    pub fn SDL_GameControllerName(gamecontroller: *mut SDL_GameController) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the type of this currently opened controller"]
@@ -14790,7 +14790,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
     pub fn SDL_GameControllerGetPlayerIndex(gamecontroller: *mut SDL_GameController)
-        -> libc::c_int;
+        -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the player index of an opened game controller."]
@@ -14801,7 +14801,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.12."]
     pub fn SDL_GameControllerSetPlayerIndex(
         gamecontroller: *mut SDL_GameController,
-        player_index: libc::c_int,
+        player_index: core::ffi::c_int,
     );
 }
 extern "C" {
@@ -14849,7 +14849,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.14."]
     pub fn SDL_GameControllerGetSerial(
         gamecontroller: *mut SDL_GameController,
-    ) -> *const libc::c_char;
+    ) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Check if a controller has been opened and is currently connected."]
@@ -14904,7 +14904,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_JoystickEventState"]
-    pub fn SDL_GameControllerEventState(state: libc::c_int) -> libc::c_int;
+    pub fn SDL_GameControllerEventState(state: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Manually pump game controller updates if not using the loop."]
@@ -14954,7 +14954,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GameControllerGetStringForAxis"]
-    pub fn SDL_GameControllerGetAxisFromString(str: *const libc::c_char) -> SDL_GameControllerAxis;
+    pub fn SDL_GameControllerGetAxisFromString(str: *const core::ffi::c_char) -> SDL_GameControllerAxis;
 }
 extern "C" {
     #[doc = " Convert from an SDL_GameControllerAxis enum to a string."]
@@ -14969,7 +14969,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GameControllerGetAxisFromString"]
-    pub fn SDL_GameControllerGetStringForAxis(axis: SDL_GameControllerAxis) -> *const libc::c_char;
+    pub fn SDL_GameControllerGetStringForAxis(axis: SDL_GameControllerAxis) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the SDL joystick layer binding for a controller axis mapping."]
@@ -15067,7 +15067,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
     pub fn SDL_GameControllerGetButtonFromString(
-        str: *const libc::c_char,
+        str: *const core::ffi::c_char,
     ) -> SDL_GameControllerButton;
 }
 extern "C" {
@@ -15085,7 +15085,7 @@ extern "C" {
     #[doc = " \\sa SDL_GameControllerGetButtonFromString"]
     pub fn SDL_GameControllerGetStringForButton(
         button: SDL_GameControllerButton,
-    ) -> *const libc::c_char;
+    ) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the SDL joystick layer binding for a controller button mapping."]
@@ -15142,7 +15142,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.14."]
     pub fn SDL_GameControllerGetNumTouchpads(
         gamecontroller: *mut SDL_GameController,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the number of supported simultaneous fingers on a touchpad on a game"]
@@ -15151,8 +15151,8 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.14."]
     pub fn SDL_GameControllerGetNumTouchpadFingers(
         gamecontroller: *mut SDL_GameController,
-        touchpad: libc::c_int,
-    ) -> libc::c_int;
+        touchpad: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the current state of a finger on a touchpad on a game controller."]
@@ -15160,13 +15160,13 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.14."]
     pub fn SDL_GameControllerGetTouchpadFinger(
         gamecontroller: *mut SDL_GameController,
-        touchpad: libc::c_int,
-        finger: libc::c_int,
+        touchpad: core::ffi::c_int,
+        finger: core::ffi::c_int,
         state: *mut Uint8,
         x: *mut f32,
         y: *mut f32,
         pressure: *mut f32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Return whether a game controller has a particular sensor."]
@@ -15194,7 +15194,7 @@ extern "C" {
         gamecontroller: *mut SDL_GameController,
         type_: SDL_SensorType,
         enabled: SDL_bool,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Query whether sensor data reporting is enabled for a game controller."]
@@ -15240,8 +15240,8 @@ extern "C" {
         gamecontroller: *mut SDL_GameController,
         type_: SDL_SensorType,
         data: *mut f32,
-        num_values: libc::c_int,
-    ) -> libc::c_int;
+        num_values: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Start a rumble effect on a game controller."]
@@ -15265,7 +15265,7 @@ extern "C" {
         low_frequency_rumble: Uint16,
         high_frequency_rumble: Uint16,
         duration_ms: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Start a rumble effect in the game controller's triggers."]
@@ -15293,7 +15293,7 @@ extern "C" {
         left_rumble: Uint16,
         right_rumble: Uint16,
         duration_ms: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Query whether a game controller has an LED."]
@@ -15345,7 +15345,7 @@ extern "C" {
         red: Uint8,
         green: Uint8,
         blue: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Send a controller specific effect packet"]
@@ -15359,9 +15359,9 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.16."]
     pub fn SDL_GameControllerSendEffect(
         gamecontroller: *mut SDL_GameController,
-        data: *const libc::c_void,
-        size: libc::c_int,
-    ) -> libc::c_int;
+        data: *const core::ffi::c_void,
+        size: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Close a game controller previously opened with SDL_GameControllerOpen()."]
@@ -15388,7 +15388,7 @@ extern "C" {
     pub fn SDL_GameControllerGetAppleSFSymbolsNameForButton(
         gamecontroller: *mut SDL_GameController,
         button: SDL_GameControllerButton,
-    ) -> *const libc::c_char;
+    ) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Return the sfSymbolsName for a given axis on a game controller on Apple"]
@@ -15404,7 +15404,7 @@ extern "C" {
     pub fn SDL_GameControllerGetAppleSFSymbolsNameForAxis(
         gamecontroller: *mut SDL_GameController,
         axis: SDL_GameControllerAxis,
-    ) -> *const libc::c_char;
+    ) -> *const core::ffi::c_char;
 }
 pub type SDL_TouchID = Sint64;
 pub type SDL_FingerID = Sint64;
@@ -15492,7 +15492,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetTouchDevice"]
-    pub fn SDL_GetNumTouchDevices() -> libc::c_int;
+    pub fn SDL_GetNumTouchDevices() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the touch ID with the given index."]
@@ -15504,7 +15504,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetNumTouchDevices"]
-    pub fn SDL_GetTouchDevice(index: libc::c_int) -> SDL_TouchID;
+    pub fn SDL_GetTouchDevice(index: core::ffi::c_int) -> SDL_TouchID;
 }
 extern "C" {
     #[doc = " Get the type of the given touch device."]
@@ -15522,7 +15522,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetTouchFinger"]
-    pub fn SDL_GetNumTouchFingers(touchID: SDL_TouchID) -> libc::c_int;
+    pub fn SDL_GetNumTouchFingers(touchID: SDL_TouchID) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the finger object for specified touch device ID and finger index."]
@@ -15537,7 +15537,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_RecordGesture"]
-    pub fn SDL_GetTouchFinger(touchID: SDL_TouchID, index: libc::c_int) -> *mut SDL_Finger;
+    pub fn SDL_GetTouchFinger(touchID: SDL_TouchID, index: core::ffi::c_int) -> *mut SDL_Finger;
 }
 pub type SDL_GestureID = Sint64;
 extern "C" {
@@ -15552,7 +15552,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetTouchDevice"]
-    pub fn SDL_RecordGesture(touchId: SDL_TouchID) -> libc::c_int;
+    pub fn SDL_RecordGesture(touchId: SDL_TouchID) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Save all currently loaded Dollar Gesture templates."]
@@ -15565,7 +15565,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_LoadDollarTemplates"]
     #[doc = " \\sa SDL_SaveDollarTemplate"]
-    pub fn SDL_SaveAllDollarTemplates(dst: *mut SDL_RWops) -> libc::c_int;
+    pub fn SDL_SaveAllDollarTemplates(dst: *mut SDL_RWops) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Save a currently loaded Dollar Gesture template."]
@@ -15579,7 +15579,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_LoadDollarTemplates"]
     #[doc = " \\sa SDL_SaveAllDollarTemplates"]
-    pub fn SDL_SaveDollarTemplate(gestureId: SDL_GestureID, dst: *mut SDL_RWops) -> libc::c_int;
+    pub fn SDL_SaveDollarTemplate(gestureId: SDL_GestureID, dst: *mut SDL_RWops) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Load Dollar Gesture templates from a file."]
@@ -15593,7 +15593,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_SaveAllDollarTemplates"]
     #[doc = " \\sa SDL_SaveDollarTemplate"]
-    pub fn SDL_LoadDollarTemplates(touchId: SDL_TouchID, src: *mut SDL_RWops) -> libc::c_int;
+    pub fn SDL_LoadDollarTemplates(touchId: SDL_TouchID, src: *mut SDL_RWops) -> core::ffi::c_int;
 }
 #[repr(u32)]
 #[doc = " The types of events that can be delivered."]
@@ -16120,7 +16120,7 @@ pub struct SDL_TextEditingEvent {
     #[doc = "< The window with keyboard focus, if any"]
     pub windowID: Uint32,
     #[doc = "< The editing text"]
-    pub text: [libc::c_char; 32usize],
+    pub text: [core::ffi::c_char; 32usize],
     #[doc = "< The start cursor of selected editing text"]
     pub start: Sint32,
     #[doc = "< The length of selected editing text"]
@@ -16210,7 +16210,7 @@ pub struct SDL_TextInputEvent {
     #[doc = "< The window with keyboard focus, if any"]
     pub windowID: Uint32,
     #[doc = "< The input text"]
-    pub text: [libc::c_char; 32usize],
+    pub text: [core::ffi::c_char; 32usize],
 }
 #[test]
 fn bindgen_test_layout_SDL_TextInputEvent() {
@@ -18164,7 +18164,7 @@ pub struct SDL_DropEvent {
     #[doc = "< In milliseconds, populated using SDL_GetTicks()"]
     pub timestamp: Uint32,
     #[doc = "< The file name, which should be freed with SDL_free(), is NULL on begin/complete"]
-    pub file: *mut libc::c_char,
+    pub file: *mut core::ffi::c_char,
     #[doc = "< The window that was dropped on, if any"]
     pub windowID: Uint32,
 }
@@ -18384,9 +18384,9 @@ pub struct SDL_UserEvent {
     #[doc = "< User defined event code"]
     pub code: Sint32,
     #[doc = "< User defined data pointer"]
-    pub data1: *mut libc::c_void,
+    pub data1: *mut core::ffi::c_void,
     #[doc = "< User defined data pointer"]
-    pub data2: *mut libc::c_void,
+    pub data2: *mut core::ffi::c_void,
 }
 #[test]
 fn bindgen_test_layout_SDL_UserEvent() {
@@ -18896,7 +18896,7 @@ fn bindgen_test_layout_SDL_Event() {
         )
     );
 }
-pub type SDL_compile_time_assert_SDL_Event = [libc::c_int; 1usize];
+pub type SDL_compile_time_assert_SDL_Event = [core::ffi::c_int; 1usize];
 extern "C" {
     #[doc = " Pump the event loop, gathering events from the input devices."]
     #[doc = ""]
@@ -18966,11 +18966,11 @@ extern "C" {
     #[doc = " \\sa SDL_PushEvent"]
     pub fn SDL_PeepEvents(
         events: *mut SDL_Event,
-        numevents: libc::c_int,
+        numevents: core::ffi::c_int,
         action: SDL_eventaction,
         minType: Uint32,
         maxType: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Check for the existence of a certain event type in the event queue."]
@@ -19093,7 +19093,7 @@ extern "C" {
     #[doc = " \\sa SDL_SetEventFilter"]
     #[doc = " \\sa SDL_WaitEvent"]
     #[doc = " \\sa SDL_WaitEventTimeout"]
-    pub fn SDL_PollEvent(event: *mut SDL_Event) -> libc::c_int;
+    pub fn SDL_PollEvent(event: *mut SDL_Event) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Wait indefinitely for the next available event."]
@@ -19114,7 +19114,7 @@ extern "C" {
     #[doc = " \\sa SDL_PollEvent"]
     #[doc = " \\sa SDL_PumpEvents"]
     #[doc = " \\sa SDL_WaitEventTimeout"]
-    pub fn SDL_WaitEvent(event: *mut SDL_Event) -> libc::c_int;
+    pub fn SDL_WaitEvent(event: *mut SDL_Event) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Wait until the specified timeout (in milliseconds) for the next available"]
@@ -19139,7 +19139,7 @@ extern "C" {
     #[doc = " \\sa SDL_PollEvent"]
     #[doc = " \\sa SDL_PumpEvents"]
     #[doc = " \\sa SDL_WaitEvent"]
-    pub fn SDL_WaitEventTimeout(event: *mut SDL_Event, timeout: libc::c_int) -> libc::c_int;
+    pub fn SDL_WaitEventTimeout(event: *mut SDL_Event, timeout: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Add an event to the event queue."]
@@ -19172,7 +19172,7 @@ extern "C" {
     #[doc = " \\sa SDL_PeepEvents"]
     #[doc = " \\sa SDL_PollEvent"]
     #[doc = " \\sa SDL_RegisterEvents"]
-    pub fn SDL_PushEvent(event: *mut SDL_Event) -> libc::c_int;
+    pub fn SDL_PushEvent(event: *mut SDL_Event) -> core::ffi::c_int;
 }
 #[doc = " A function pointer used for callbacks that watch the event queue."]
 #[doc = ""]
@@ -19185,7 +19185,7 @@ extern "C" {
 #[doc = " \\sa SDL_SetEventFilter"]
 #[doc = " \\sa SDL_AddEventWatch"]
 pub type SDL_EventFilter = ::core::option::Option<
-    unsafe extern "C" fn(userdata: *mut libc::c_void, event: *mut SDL_Event) -> libc::c_int,
+    unsafe extern "C" fn(userdata: *mut core::ffi::c_void, event: *mut SDL_Event) -> core::ffi::c_int,
 >;
 extern "C" {
     #[doc = " Set up a filter to process all events before they change internal state and"]
@@ -19228,7 +19228,7 @@ extern "C" {
     #[doc = " \\sa SDL_GetEventFilter"]
     #[doc = " \\sa SDL_PeepEvents"]
     #[doc = " \\sa SDL_PushEvent"]
-    pub fn SDL_SetEventFilter(filter: SDL_EventFilter, userdata: *mut libc::c_void);
+    pub fn SDL_SetEventFilter(filter: SDL_EventFilter, userdata: *mut core::ffi::c_void);
 }
 extern "C" {
     #[doc = " Query the current event filter."]
@@ -19246,7 +19246,7 @@ extern "C" {
     #[doc = " \\sa SDL_SetEventFilter"]
     pub fn SDL_GetEventFilter(
         filter: *mut SDL_EventFilter,
-        userdata: *mut *mut libc::c_void,
+        userdata: *mut *mut core::ffi::c_void,
     ) -> SDL_bool;
 }
 extern "C" {
@@ -19274,7 +19274,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_DelEventWatch"]
     #[doc = " \\sa SDL_SetEventFilter"]
-    pub fn SDL_AddEventWatch(filter: SDL_EventFilter, userdata: *mut libc::c_void);
+    pub fn SDL_AddEventWatch(filter: SDL_EventFilter, userdata: *mut core::ffi::c_void);
 }
 extern "C" {
     #[doc = " Remove an event watch callback added with SDL_AddEventWatch()."]
@@ -19288,7 +19288,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_AddEventWatch"]
-    pub fn SDL_DelEventWatch(filter: SDL_EventFilter, userdata: *mut libc::c_void);
+    pub fn SDL_DelEventWatch(filter: SDL_EventFilter, userdata: *mut core::ffi::c_void);
 }
 extern "C" {
     #[doc = " Run a specific filter function on the current event queue, removing any"]
@@ -19305,7 +19305,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetEventFilter"]
     #[doc = " \\sa SDL_SetEventFilter"]
-    pub fn SDL_FilterEvents(filter: SDL_EventFilter, userdata: *mut libc::c_void);
+    pub fn SDL_FilterEvents(filter: SDL_EventFilter, userdata: *mut core::ffi::c_void);
 }
 extern "C" {
     #[doc = " Set the state of processing events by type."]
@@ -19325,7 +19325,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetEventState"]
-    pub fn SDL_EventState(type_: Uint32, state: libc::c_int) -> Uint8;
+    pub fn SDL_EventState(type_: Uint32, state: core::ffi::c_int) -> Uint8;
 }
 extern "C" {
     #[doc = " Allocate a set of user-defined events, and return the beginning event"]
@@ -19344,7 +19344,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_PushEvent"]
-    pub fn SDL_RegisterEvents(numevents: libc::c_int) -> Uint32;
+    pub fn SDL_RegisterEvents(numevents: core::ffi::c_int) -> Uint32;
 }
 extern "C" {
     #[doc = " Get the directory where the application was run from."]
@@ -19383,7 +19383,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.1."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetPrefPath"]
-    pub fn SDL_GetBasePath() -> *mut libc::c_char;
+    pub fn SDL_GetBasePath() -> *mut core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the user-and-app-specific path where files can be written."]
@@ -19439,8 +19439,8 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.1."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetBasePath"]
-    pub fn SDL_GetPrefPath(org: *const libc::c_char, app: *const libc::c_char)
-        -> *mut libc::c_char;
+    pub fn SDL_GetPrefPath(org: *const core::ffi::c_char, app: *const core::ffi::c_char)
+        -> *mut core::ffi::c_char;
 }
 #[doc = "  \\typedef SDL_Haptic"]
 #[doc = ""]
@@ -20803,7 +20803,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_HapticName"]
-    pub fn SDL_NumHaptics() -> libc::c_int;
+    pub fn SDL_NumHaptics() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the implementation dependent name of a haptic device."]
@@ -20818,7 +20818,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_NumHaptics"]
-    pub fn SDL_HapticName(device_index: libc::c_int) -> *const libc::c_char;
+    pub fn SDL_HapticName(device_index: core::ffi::c_int) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Open a haptic device for use."]
@@ -20844,7 +20844,7 @@ extern "C" {
     #[doc = " \\sa SDL_HapticSetAutocenter"]
     #[doc = " \\sa SDL_HapticSetGain"]
     #[doc = " \\sa SDL_HapticStopAll"]
-    pub fn SDL_HapticOpen(device_index: libc::c_int) -> *mut SDL_Haptic;
+    pub fn SDL_HapticOpen(device_index: core::ffi::c_int) -> *mut SDL_Haptic;
 }
 extern "C" {
     #[doc = " Check if the haptic device at the designated index has been opened."]
@@ -20857,7 +20857,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_HapticIndex"]
     #[doc = " \\sa SDL_HapticOpen"]
-    pub fn SDL_HapticOpened(device_index: libc::c_int) -> libc::c_int;
+    pub fn SDL_HapticOpened(device_index: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the index of a haptic device."]
@@ -20870,7 +20870,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_HapticOpen"]
     #[doc = " \\sa SDL_HapticOpened"]
-    pub fn SDL_HapticIndex(haptic: *mut SDL_Haptic) -> libc::c_int;
+    pub fn SDL_HapticIndex(haptic: *mut SDL_Haptic) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Query whether or not the current mouse has haptic capabilities."]
@@ -20880,7 +20880,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_HapticOpenFromMouse"]
-    pub fn SDL_MouseIsHaptic() -> libc::c_int;
+    pub fn SDL_MouseIsHaptic() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Try to open a haptic device from the current mouse."]
@@ -20905,7 +20905,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_HapticOpenFromJoystick"]
-    pub fn SDL_JoystickIsHaptic(joystick: *mut SDL_Joystick) -> libc::c_int;
+    pub fn SDL_JoystickIsHaptic(joystick: *mut SDL_Joystick) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Open a haptic device for use from a joystick device."]
@@ -20954,7 +20954,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_HapticNumEffectsPlaying"]
     #[doc = " \\sa SDL_HapticQuery"]
-    pub fn SDL_HapticNumEffects(haptic: *mut SDL_Haptic) -> libc::c_int;
+    pub fn SDL_HapticNumEffects(haptic: *mut SDL_Haptic) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the number of effects a haptic device can play at the same time."]
@@ -20970,7 +20970,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_HapticNumEffects"]
     #[doc = " \\sa SDL_HapticQuery"]
-    pub fn SDL_HapticNumEffectsPlaying(haptic: *mut SDL_Haptic) -> libc::c_int;
+    pub fn SDL_HapticNumEffectsPlaying(haptic: *mut SDL_Haptic) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the haptic device's supported features in bitwise manner."]
@@ -20983,7 +20983,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_HapticEffectSupported"]
     #[doc = " \\sa SDL_HapticNumEffects"]
-    pub fn SDL_HapticQuery(haptic: *mut SDL_Haptic) -> libc::c_uint;
+    pub fn SDL_HapticQuery(haptic: *mut SDL_Haptic) -> core::ffi::c_uint;
 }
 extern "C" {
     #[doc = " Get the number of haptic axes the device has."]
@@ -20996,7 +20996,7 @@ extern "C" {
     #[doc = "          call SDL_GetError() for more information."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
-    pub fn SDL_HapticNumAxes(haptic: *mut SDL_Haptic) -> libc::c_int;
+    pub fn SDL_HapticNumAxes(haptic: *mut SDL_Haptic) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Check to see if an effect is supported by a haptic device."]
@@ -21014,7 +21014,7 @@ extern "C" {
     pub fn SDL_HapticEffectSupported(
         haptic: *mut SDL_Haptic,
         effect: *mut SDL_HapticEffect,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Create a new haptic effect on a specified device."]
@@ -21033,7 +21033,7 @@ extern "C" {
     pub fn SDL_HapticNewEffect(
         haptic: *mut SDL_Haptic,
         effect: *mut SDL_HapticEffect,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Update the properties of an effect."]
@@ -21057,9 +21057,9 @@ extern "C" {
     #[doc = " \\sa SDL_HapticRunEffect"]
     pub fn SDL_HapticUpdateEffect(
         haptic: *mut SDL_Haptic,
-        effect: libc::c_int,
+        effect: core::ffi::c_int,
         data: *mut SDL_HapticEffect,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Run the haptic effect on its associated haptic device."]
@@ -21084,9 +21084,9 @@ extern "C" {
     #[doc = " \\sa SDL_HapticStopEffect"]
     pub fn SDL_HapticRunEffect(
         haptic: *mut SDL_Haptic,
-        effect: libc::c_int,
+        effect: core::ffi::c_int,
         iterations: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Stop the haptic effect on its associated haptic device."]
@@ -21102,7 +21102,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_HapticDestroyEffect"]
     #[doc = " \\sa SDL_HapticRunEffect"]
-    pub fn SDL_HapticStopEffect(haptic: *mut SDL_Haptic, effect: libc::c_int) -> libc::c_int;
+    pub fn SDL_HapticStopEffect(haptic: *mut SDL_Haptic, effect: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Destroy a haptic effect on the device."]
@@ -21116,7 +21116,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_HapticNewEffect"]
-    pub fn SDL_HapticDestroyEffect(haptic: *mut SDL_Haptic, effect: libc::c_int);
+    pub fn SDL_HapticDestroyEffect(haptic: *mut SDL_Haptic, effect: core::ffi::c_int);
 }
 extern "C" {
     #[doc = " Get the status of the current effect on the specified haptic device."]
@@ -21132,7 +21132,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_HapticRunEffect"]
     #[doc = " \\sa SDL_HapticStopEffect"]
-    pub fn SDL_HapticGetEffectStatus(haptic: *mut SDL_Haptic, effect: libc::c_int) -> libc::c_int;
+    pub fn SDL_HapticGetEffectStatus(haptic: *mut SDL_Haptic, effect: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the global gain of the specified haptic device."]
@@ -21152,7 +21152,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_HapticQuery"]
-    pub fn SDL_HapticSetGain(haptic: *mut SDL_Haptic, gain: libc::c_int) -> libc::c_int;
+    pub fn SDL_HapticSetGain(haptic: *mut SDL_Haptic, gain: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the global autocenter of the device."]
@@ -21170,8 +21170,8 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_HapticQuery"]
-    pub fn SDL_HapticSetAutocenter(haptic: *mut SDL_Haptic, autocenter: libc::c_int)
-        -> libc::c_int;
+    pub fn SDL_HapticSetAutocenter(haptic: *mut SDL_Haptic, autocenter: core::ffi::c_int)
+        -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Pause a haptic device."]
@@ -21189,7 +21189,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_HapticUnpause"]
-    pub fn SDL_HapticPause(haptic: *mut SDL_Haptic) -> libc::c_int;
+    pub fn SDL_HapticPause(haptic: *mut SDL_Haptic) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Unpause a haptic device."]
@@ -21203,7 +21203,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_HapticPause"]
-    pub fn SDL_HapticUnpause(haptic: *mut SDL_Haptic) -> libc::c_int;
+    pub fn SDL_HapticUnpause(haptic: *mut SDL_Haptic) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Stop all the currently playing effects on a haptic device."]
@@ -21213,7 +21213,7 @@ extern "C" {
     #[doc = "          SDL_GetError() for more information."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
-    pub fn SDL_HapticStopAll(haptic: *mut SDL_Haptic) -> libc::c_int;
+    pub fn SDL_HapticStopAll(haptic: *mut SDL_Haptic) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Check whether rumble is supported on a haptic device."]
@@ -21228,7 +21228,7 @@ extern "C" {
     #[doc = " \\sa SDL_HapticRumbleInit"]
     #[doc = " \\sa SDL_HapticRumblePlay"]
     #[doc = " \\sa SDL_HapticRumbleStop"]
-    pub fn SDL_HapticRumbleSupported(haptic: *mut SDL_Haptic) -> libc::c_int;
+    pub fn SDL_HapticRumbleSupported(haptic: *mut SDL_Haptic) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Initialize a haptic device for simple rumble playback."]
@@ -21243,7 +21243,7 @@ extern "C" {
     #[doc = " \\sa SDL_HapticRumblePlay"]
     #[doc = " \\sa SDL_HapticRumbleStop"]
     #[doc = " \\sa SDL_HapticRumbleSupported"]
-    pub fn SDL_HapticRumbleInit(haptic: *mut SDL_Haptic) -> libc::c_int;
+    pub fn SDL_HapticRumbleInit(haptic: *mut SDL_Haptic) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Run a simple rumble effect on a haptic device."]
@@ -21263,7 +21263,7 @@ extern "C" {
         haptic: *mut SDL_Haptic,
         strength: f32,
         length: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Stop the simple rumble on a haptic device."]
@@ -21277,7 +21277,7 @@ extern "C" {
     #[doc = " \\sa SDL_HapticRumbleInit"]
     #[doc = " \\sa SDL_HapticRumblePlay"]
     #[doc = " \\sa SDL_HapticRumbleSupported"]
-    pub fn SDL_HapticRumbleStop(haptic: *mut SDL_Haptic) -> libc::c_int;
+    pub fn SDL_HapticRumbleStop(haptic: *mut SDL_Haptic) -> core::ffi::c_int;
 }
 #[doc = "  \\brief  A handle representing an open HID device"]
 #[repr(C)]
@@ -21292,38 +21292,38 @@ pub type SDL_hid_device = SDL_hid_device_;
 #[derive(Copy, Clone)]
 pub struct SDL_hid_device_info {
     #[doc = " Platform-specific device path"]
-    pub path: *mut libc::c_char,
+    pub path: *mut core::ffi::c_char,
     #[doc = " Device Vendor ID"]
-    pub vendor_id: libc::c_ushort,
+    pub vendor_id: core::ffi::c_ushort,
     #[doc = " Device Product ID"]
-    pub product_id: libc::c_ushort,
+    pub product_id: core::ffi::c_ushort,
     #[doc = " Serial Number"]
     pub serial_number: *mut wchar_t,
     #[doc = " Device Release Number in binary-coded decimal,"]
     #[doc = "also known as Device Version Number"]
-    pub release_number: libc::c_ushort,
+    pub release_number: core::ffi::c_ushort,
     #[doc = " Manufacturer String"]
     pub manufacturer_string: *mut wchar_t,
     #[doc = " Product string"]
     pub product_string: *mut wchar_t,
     #[doc = " Usage Page for this Device/Interface"]
     #[doc = "(Windows/Mac only)."]
-    pub usage_page: libc::c_ushort,
+    pub usage_page: core::ffi::c_ushort,
     #[doc = " Usage for this Device/Interface"]
     #[doc = "(Windows/Mac only)."]
-    pub usage: libc::c_ushort,
+    pub usage: core::ffi::c_ushort,
     #[doc = " The USB interface which this logical device"]
     #[doc = "represents."]
     #[doc = ""]
     #[doc = " Valid on both Linux implementations in all cases."]
     #[doc = " Valid on the Windows implementation only if the device"]
     #[doc = "contains more than one interface."]
-    pub interface_number: libc::c_int,
+    pub interface_number: core::ffi::c_int,
     #[doc = " Additional information about the USB interface."]
     #[doc = "Valid on libusb and Android implementations."]
-    pub interface_class: libc::c_int,
-    pub interface_subclass: libc::c_int,
-    pub interface_protocol: libc::c_int,
+    pub interface_class: core::ffi::c_int,
+    pub interface_subclass: core::ffi::c_int,
+    pub interface_protocol: core::ffi::c_int,
     #[doc = " Pointer to the next device"]
     pub next: *mut SDL_hid_device_info,
 }
@@ -21513,7 +21513,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.18."]
     #[doc = ""]
     #[doc = " \\sa SDL_hid_exit"]
-    pub fn SDL_hid_init() -> libc::c_int;
+    pub fn SDL_hid_init() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Finalize the HIDAPI library."]
@@ -21526,7 +21526,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.18."]
     #[doc = ""]
     #[doc = " \\sa SDL_hid_init"]
-    pub fn SDL_hid_exit() -> libc::c_int;
+    pub fn SDL_hid_exit() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Check to see if devices may have been added or removed."]
@@ -21568,8 +21568,8 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_hid_device_change_count"]
     pub fn SDL_hid_enumerate(
-        vendor_id: libc::c_ushort,
-        product_id: libc::c_ushort,
+        vendor_id: core::ffi::c_ushort,
+        product_id: core::ffi::c_ushort,
     ) -> *mut SDL_hid_device_info;
 }
 extern "C" {
@@ -21599,8 +21599,8 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.18."]
     pub fn SDL_hid_open(
-        vendor_id: libc::c_ushort,
-        product_id: libc::c_ushort,
+        vendor_id: core::ffi::c_ushort,
+        product_id: core::ffi::c_ushort,
         serial_number: *const wchar_t,
     ) -> *mut SDL_hid_device;
 }
@@ -21616,8 +21616,8 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.18."]
     pub fn SDL_hid_open_path(
-        path: *const libc::c_char,
-        bExclusive: libc::c_int,
+        path: *const core::ffi::c_char,
+        bExclusive: core::ffi::c_int,
     ) -> *mut SDL_hid_device;
 }
 extern "C" {
@@ -21645,9 +21645,9 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.18."]
     pub fn SDL_hid_write(
         dev: *mut SDL_hid_device,
-        data: *const libc::c_uchar,
+        data: *const core::ffi::c_uchar,
         length: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Read an Input report from a HID device with timeout."]
@@ -21669,10 +21669,10 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.18."]
     pub fn SDL_hid_read_timeout(
         dev: *mut SDL_hid_device,
-        data: *mut libc::c_uchar,
+        data: *mut core::ffi::c_uchar,
         length: size_t,
-        milliseconds: libc::c_int,
-    ) -> libc::c_int;
+        milliseconds: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Read an Input report from a HID device."]
@@ -21693,9 +21693,9 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.18."]
     pub fn SDL_hid_read(
         dev: *mut SDL_hid_device,
-        data: *mut libc::c_uchar,
+        data: *mut core::ffi::c_uchar,
         length: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the device handle to be non-blocking."]
@@ -21712,7 +21712,7 @@ extern "C" {
     #[doc = " \\returns 0 on success and -1 on error."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.18."]
-    pub fn SDL_hid_set_nonblocking(dev: *mut SDL_hid_device, nonblock: libc::c_int) -> libc::c_int;
+    pub fn SDL_hid_set_nonblocking(dev: *mut SDL_hid_device, nonblock: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Send a Feature report to the device."]
@@ -21737,9 +21737,9 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.18."]
     pub fn SDL_hid_send_feature_report(
         dev: *mut SDL_hid_device,
-        data: *const libc::c_uchar,
+        data: *const core::ffi::c_uchar,
         length: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get a feature report from a HID device."]
@@ -21762,9 +21762,9 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.18."]
     pub fn SDL_hid_get_feature_report(
         dev: *mut SDL_hid_device,
-        data: *mut libc::c_uchar,
+        data: *mut core::ffi::c_uchar,
         length: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Close a HID device."]
@@ -21787,7 +21787,7 @@ extern "C" {
         dev: *mut SDL_hid_device,
         string: *mut wchar_t,
         maxlen: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get The Product String from a HID device."]
@@ -21802,7 +21802,7 @@ extern "C" {
         dev: *mut SDL_hid_device,
         string: *mut wchar_t,
         maxlen: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get The Serial Number String from a HID device."]
@@ -21817,7 +21817,7 @@ extern "C" {
         dev: *mut SDL_hid_device,
         string: *mut wchar_t,
         maxlen: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get a string from a HID device, based on its string index."]
@@ -21831,10 +21831,10 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.18."]
     pub fn SDL_hid_get_indexed_string(
         dev: *mut SDL_hid_device,
-        string_index: libc::c_int,
+        string_index: core::ffi::c_int,
         string: *mut wchar_t,
         maxlen: size_t,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Start or stop a BLE scan on iOS and tvOS to pair Steam Controllers"]
@@ -21869,8 +21869,8 @@ extern "C" {
     #[doc = " \\sa SDL_GetHint"]
     #[doc = " \\sa SDL_SetHint"]
     pub fn SDL_SetHintWithPriority(
-        name: *const libc::c_char,
-        value: *const libc::c_char,
+        name: *const core::ffi::c_char,
+        value: *const core::ffi::c_char,
         priority: SDL_HintPriority,
     ) -> SDL_bool;
 }
@@ -21889,7 +21889,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetHint"]
     #[doc = " \\sa SDL_SetHintWithPriority"]
-    pub fn SDL_SetHint(name: *const libc::c_char, value: *const libc::c_char) -> SDL_bool;
+    pub fn SDL_SetHint(name: *const core::ffi::c_char, value: *const core::ffi::c_char) -> SDL_bool;
 }
 extern "C" {
     #[doc = " Get the value of a hint."]
@@ -21901,7 +21901,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_SetHint"]
     #[doc = " \\sa SDL_SetHintWithPriority"]
-    pub fn SDL_GetHint(name: *const libc::c_char) -> *const libc::c_char;
+    pub fn SDL_GetHint(name: *const core::ffi::c_char) -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Get the boolean value of a hint variable."]
@@ -21915,7 +21915,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetHint"]
     #[doc = " \\sa SDL_SetHint"]
-    pub fn SDL_GetHintBoolean(name: *const libc::c_char, default_value: SDL_bool) -> SDL_bool;
+    pub fn SDL_GetHintBoolean(name: *const core::ffi::c_char, default_value: SDL_bool) -> SDL_bool;
 }
 #[doc = " Type definition of the hint callback function."]
 #[doc = ""]
@@ -21925,10 +21925,10 @@ extern "C" {
 #[doc = " \\param newValue the new value hint is to be set to"]
 pub type SDL_HintCallback = ::core::option::Option<
     unsafe extern "C" fn(
-        userdata: *mut libc::c_void,
-        name: *const libc::c_char,
-        oldValue: *const libc::c_char,
-        newValue: *const libc::c_char,
+        userdata: *mut core::ffi::c_void,
+        name: *const core::ffi::c_char,
+        oldValue: *const core::ffi::c_char,
+        newValue: *const core::ffi::c_char,
     ),
 >;
 extern "C" {
@@ -21943,9 +21943,9 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_DelHintCallback"]
     pub fn SDL_AddHintCallback(
-        name: *const libc::c_char,
+        name: *const core::ffi::c_char,
         callback: SDL_HintCallback,
-        userdata: *mut libc::c_void,
+        userdata: *mut core::ffi::c_void,
     );
 }
 extern "C" {
@@ -21960,9 +21960,9 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_AddHintCallback"]
     pub fn SDL_DelHintCallback(
-        name: *const libc::c_char,
+        name: *const core::ffi::c_char,
         callback: SDL_HintCallback,
-        userdata: *mut libc::c_void,
+        userdata: *mut core::ffi::c_void,
     );
 }
 extern "C" {
@@ -21984,7 +21984,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_LoadFunction"]
     #[doc = " \\sa SDL_UnloadObject"]
-    pub fn SDL_LoadObject(sofile: *const libc::c_char) -> *mut libc::c_void;
+    pub fn SDL_LoadObject(sofile: *const core::ffi::c_char) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Look up the address of the named function in a shared object."]
@@ -22011,9 +22011,9 @@ extern "C" {
     #[doc = " \\sa SDL_LoadObject"]
     #[doc = " \\sa SDL_UnloadObject"]
     pub fn SDL_LoadFunction(
-        handle: *mut libc::c_void,
-        name: *const libc::c_char,
-    ) -> *mut libc::c_void;
+        handle: *mut core::ffi::c_void,
+        name: *const core::ffi::c_char,
+    ) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Unload a shared object from memory."]
@@ -22024,7 +22024,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_LoadFunction"]
     #[doc = " \\sa SDL_LoadObject"]
-    pub fn SDL_UnloadObject(handle: *mut libc::c_void);
+    pub fn SDL_UnloadObject(handle: *mut core::ffi::c_void);
 }
 #[repr(u32)]
 #[doc = "  \\brief The predefined log categories"]
@@ -22088,7 +22088,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_LogGetPriority"]
     #[doc = " \\sa SDL_LogSetAllPriority"]
-    pub fn SDL_LogSetPriority(category: libc::c_int, priority: SDL_LogPriority);
+    pub fn SDL_LogSetPriority(category: core::ffi::c_int, priority: SDL_LogPriority);
 }
 extern "C" {
     #[doc = " Get the priority of a particular log category."]
@@ -22099,7 +22099,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_LogSetPriority"]
-    pub fn SDL_LogGetPriority(category: libc::c_int) -> SDL_LogPriority;
+    pub fn SDL_LogGetPriority(category: core::ffi::c_int) -> SDL_LogPriority;
 }
 extern "C" {
     #[doc = " Reset all priorities to default."]
@@ -22130,7 +22130,7 @@ extern "C" {
     #[doc = " \\sa SDL_LogMessageV"]
     #[doc = " \\sa SDL_LogVerbose"]
     #[doc = " \\sa SDL_LogWarn"]
-    pub fn SDL_Log(fmt: *const libc::c_char, ...);
+    pub fn SDL_Log(fmt: *const core::ffi::c_char, ...);
 }
 extern "C" {
     #[doc = " Log a message with SDL_LOG_PRIORITY_VERBOSE."]
@@ -22150,7 +22150,7 @@ extern "C" {
     #[doc = " \\sa SDL_LogMessage"]
     #[doc = " \\sa SDL_LogMessageV"]
     #[doc = " \\sa SDL_LogWarn"]
-    pub fn SDL_LogVerbose(category: libc::c_int, fmt: *const libc::c_char, ...);
+    pub fn SDL_LogVerbose(category: core::ffi::c_int, fmt: *const core::ffi::c_char, ...);
 }
 extern "C" {
     #[doc = " Log a message with SDL_LOG_PRIORITY_DEBUG."]
@@ -22170,7 +22170,7 @@ extern "C" {
     #[doc = " \\sa SDL_LogMessageV"]
     #[doc = " \\sa SDL_LogVerbose"]
     #[doc = " \\sa SDL_LogWarn"]
-    pub fn SDL_LogDebug(category: libc::c_int, fmt: *const libc::c_char, ...);
+    pub fn SDL_LogDebug(category: core::ffi::c_int, fmt: *const core::ffi::c_char, ...);
 }
 extern "C" {
     #[doc = " Log a message with SDL_LOG_PRIORITY_INFO."]
@@ -22190,7 +22190,7 @@ extern "C" {
     #[doc = " \\sa SDL_LogMessageV"]
     #[doc = " \\sa SDL_LogVerbose"]
     #[doc = " \\sa SDL_LogWarn"]
-    pub fn SDL_LogInfo(category: libc::c_int, fmt: *const libc::c_char, ...);
+    pub fn SDL_LogInfo(category: core::ffi::c_int, fmt: *const core::ffi::c_char, ...);
 }
 extern "C" {
     #[doc = " Log a message with SDL_LOG_PRIORITY_WARN."]
@@ -22210,7 +22210,7 @@ extern "C" {
     #[doc = " \\sa SDL_LogMessage"]
     #[doc = " \\sa SDL_LogMessageV"]
     #[doc = " \\sa SDL_LogVerbose"]
-    pub fn SDL_LogWarn(category: libc::c_int, fmt: *const libc::c_char, ...);
+    pub fn SDL_LogWarn(category: core::ffi::c_int, fmt: *const core::ffi::c_char, ...);
 }
 extern "C" {
     #[doc = " Log a message with SDL_LOG_PRIORITY_ERROR."]
@@ -22230,7 +22230,7 @@ extern "C" {
     #[doc = " \\sa SDL_LogMessageV"]
     #[doc = " \\sa SDL_LogVerbose"]
     #[doc = " \\sa SDL_LogWarn"]
-    pub fn SDL_LogError(category: libc::c_int, fmt: *const libc::c_char, ...);
+    pub fn SDL_LogError(category: core::ffi::c_int, fmt: *const core::ffi::c_char, ...);
 }
 extern "C" {
     #[doc = " Log a message with SDL_LOG_PRIORITY_CRITICAL."]
@@ -22250,7 +22250,7 @@ extern "C" {
     #[doc = " \\sa SDL_LogMessageV"]
     #[doc = " \\sa SDL_LogVerbose"]
     #[doc = " \\sa SDL_LogWarn"]
-    pub fn SDL_LogCritical(category: libc::c_int, fmt: *const libc::c_char, ...);
+    pub fn SDL_LogCritical(category: core::ffi::c_int, fmt: *const core::ffi::c_char, ...);
 }
 extern "C" {
     #[doc = " Log a message with the specified category and priority."]
@@ -22272,9 +22272,9 @@ extern "C" {
     #[doc = " \\sa SDL_LogVerbose"]
     #[doc = " \\sa SDL_LogWarn"]
     pub fn SDL_LogMessage(
-        category: libc::c_int,
+        category: core::ffi::c_int,
         priority: SDL_LogPriority,
-        fmt: *const libc::c_char,
+        fmt: *const core::ffi::c_char,
         ...
     );
 }
@@ -22297,9 +22297,9 @@ extern "C" {
     #[doc = " \\sa SDL_LogVerbose"]
     #[doc = " \\sa SDL_LogWarn"]
     pub fn SDL_LogMessageV(
-        category: libc::c_int,
+        category: core::ffi::c_int,
         priority: SDL_LogPriority,
-        fmt: *const libc::c_char,
+        fmt: *const core::ffi::c_char,
         ap: *mut __va_list_tag,
     );
 }
@@ -22313,10 +22313,10 @@ extern "C" {
 #[doc = " \\param message the message being output"]
 pub type SDL_LogOutputFunction = ::core::option::Option<
     unsafe extern "C" fn(
-        userdata: *mut libc::c_void,
-        category: libc::c_int,
+        userdata: *mut core::ffi::c_void,
+        category: core::ffi::c_int,
         priority: SDL_LogPriority,
-        message: *const libc::c_char,
+        message: *const core::ffi::c_char,
     ),
 >;
 extern "C" {
@@ -22332,7 +22332,7 @@ extern "C" {
     #[doc = " \\sa SDL_LogSetOutputFunction"]
     pub fn SDL_LogGetOutputFunction(
         callback: *mut SDL_LogOutputFunction,
-        userdata: *mut *mut libc::c_void,
+        userdata: *mut *mut core::ffi::c_void,
     );
 }
 extern "C" {
@@ -22344,7 +22344,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_LogGetOutputFunction"]
-    pub fn SDL_LogSetOutputFunction(callback: SDL_LogOutputFunction, userdata: *mut libc::c_void);
+    pub fn SDL_LogSetOutputFunction(callback: SDL_LogOutputFunction, userdata: *mut core::ffi::c_void);
 }
 #[repr(u32)]
 #[doc = " SDL_MessageBox flags. If supported will display warning icon, etc."]
@@ -22377,9 +22377,9 @@ pub struct SDL_MessageBoxButtonData {
     #[doc = "< ::SDL_MessageBoxButtonFlags"]
     pub flags: Uint32,
     #[doc = "< User defined button id (value returned via SDL_ShowMessageBox)"]
-    pub buttonid: libc::c_int,
+    pub buttonid: core::ffi::c_int,
     #[doc = "< The UTF-8 button text"]
-    pub text: *const libc::c_char,
+    pub text: *const core::ffi::c_char,
 }
 #[test]
 fn bindgen_test_layout_SDL_MessageBoxButtonData() {
@@ -22527,10 +22527,10 @@ pub struct SDL_MessageBoxData {
     #[doc = "< Parent window, can be NULL"]
     pub window: *mut SDL_Window,
     #[doc = "< UTF-8 title"]
-    pub title: *const libc::c_char,
+    pub title: *const core::ffi::c_char,
     #[doc = "< UTF-8 message text"]
-    pub message: *const libc::c_char,
-    pub numbuttons: libc::c_int,
+    pub message: *const core::ffi::c_char,
+    pub numbuttons: core::ffi::c_int,
     pub buttons: *const SDL_MessageBoxButtonData,
     #[doc = "< ::SDL_MessageBoxColorScheme, can be NULL to use system settings"]
     pub colorScheme: *const SDL_MessageBoxColorScheme,
@@ -22652,8 +22652,8 @@ extern "C" {
     #[doc = " \\sa SDL_ShowSimpleMessageBox"]
     pub fn SDL_ShowMessageBox(
         messageboxdata: *const SDL_MessageBoxData,
-        buttonid: *mut libc::c_int,
-    ) -> libc::c_int;
+        buttonid: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Display a simple modal message box."]
@@ -22696,15 +22696,15 @@ extern "C" {
     #[doc = " \\sa SDL_ShowMessageBox"]
     pub fn SDL_ShowSimpleMessageBox(
         flags: Uint32,
-        title: *const libc::c_char,
-        message: *const libc::c_char,
+        title: *const core::ffi::c_char,
+        message: *const core::ffi::c_char,
         window: *mut SDL_Window,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 #[doc = "  \\brief A handle to a CAMetalLayer-backed NSView (macOS) or UIView (iOS/tvOS)."]
 #[doc = ""]
 #[doc = "  \\note This can be cast directly to an NSView or UIView."]
-pub type SDL_MetalView = *mut libc::c_void;
+pub type SDL_MetalView = *mut core::ffi::c_void;
 extern "C" {
     #[doc = " Create a CAMetalLayer-backed NSView/UIView and attach it to the specified"]
     #[doc = " window."]
@@ -22738,7 +22738,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.14."]
     #[doc = ""]
     #[doc = " \\sa SDL_MetalCreateView"]
-    pub fn SDL_Metal_GetLayer(view: SDL_MetalView) -> *mut libc::c_void;
+    pub fn SDL_Metal_GetLayer(view: SDL_MetalView) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Get the size of a window's underlying drawable in pixels (for use with"]
@@ -22753,8 +22753,8 @@ extern "C" {
     #[doc = " \\sa SDL_CreateWindow"]
     pub fn SDL_Metal_GetDrawableSize(
         window: *mut SDL_Window,
-        w: *mut libc::c_int,
-        h: *mut libc::c_int,
+        w: *mut core::ffi::c_int,
+        h: *mut core::ffi::c_int,
     );
 }
 #[repr(u32)]
@@ -22797,7 +22797,7 @@ extern "C" {
     #[doc = " \\returns an SDL_PowerState enum representing the current battery state."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.0."]
-    pub fn SDL_GetPowerInfo(secs: *mut libc::c_int, pct: *mut libc::c_int) -> SDL_PowerState;
+    pub fn SDL_GetPowerInfo(secs: *mut core::ffi::c_int, pct: *mut core::ffi::c_int) -> SDL_PowerState;
 }
 #[repr(u32)]
 #[doc = " Flags used when creating a rendering context"]
@@ -22820,7 +22820,7 @@ pub enum SDL_RendererFlags {
 #[derive(Copy, Clone)]
 pub struct SDL_RendererInfo {
     #[doc = "< The name of the renderer"]
-    pub name: *const libc::c_char,
+    pub name: *const core::ffi::c_char,
     #[doc = "< Supported ::SDL_RendererFlags"]
     pub flags: Uint32,
     #[doc = "< The number of available texture formats"]
@@ -22828,9 +22828,9 @@ pub struct SDL_RendererInfo {
     #[doc = "< The available texture formats"]
     pub texture_formats: [Uint32; 16usize],
     #[doc = "< The maximum texture width"]
-    pub max_texture_width: libc::c_int,
+    pub max_texture_width: core::ffi::c_int,
     #[doc = "< The maximum texture height"]
-    pub max_texture_height: libc::c_int,
+    pub max_texture_height: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_SDL_RendererInfo() {
@@ -23039,7 +23039,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_CreateRenderer"]
     #[doc = " \\sa SDL_GetRenderDriverInfo"]
-    pub fn SDL_GetNumRenderDrivers() -> libc::c_int;
+    pub fn SDL_GetNumRenderDrivers() -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get info about a specific 2D rendering driver for the current display."]
@@ -23054,7 +23054,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_CreateRenderer"]
     #[doc = " \\sa SDL_GetNumRenderDrivers"]
-    pub fn SDL_GetRenderDriverInfo(index: libc::c_int, info: *mut SDL_RendererInfo) -> libc::c_int;
+    pub fn SDL_GetRenderDriverInfo(index: core::ffi::c_int, info: *mut SDL_RendererInfo) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Create a window and default renderer."]
@@ -23073,12 +23073,12 @@ extern "C" {
     #[doc = " \\sa SDL_CreateRenderer"]
     #[doc = " \\sa SDL_CreateWindow"]
     pub fn SDL_CreateWindowAndRenderer(
-        width: libc::c_int,
-        height: libc::c_int,
+        width: core::ffi::c_int,
+        height: core::ffi::c_int,
         window_flags: Uint32,
         window: *mut *mut SDL_Window,
         renderer: *mut *mut SDL_Renderer,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Create a 2D rendering context for a window."]
@@ -23098,7 +23098,7 @@ extern "C" {
     #[doc = " \\sa SDL_GetRendererInfo"]
     pub fn SDL_CreateRenderer(
         window: *mut SDL_Window,
-        index: libc::c_int,
+        index: core::ffi::c_int,
         flags: Uint32,
     ) -> *mut SDL_Renderer;
 }
@@ -23149,7 +23149,7 @@ extern "C" {
     pub fn SDL_GetRendererInfo(
         renderer: *mut SDL_Renderer,
         info: *mut SDL_RendererInfo,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the output size in pixels of a rendering context."]
@@ -23169,9 +23169,9 @@ extern "C" {
     #[doc = " \\sa SDL_GetRenderer"]
     pub fn SDL_GetRendererOutputSize(
         renderer: *mut SDL_Renderer,
-        w: *mut libc::c_int,
-        h: *mut libc::c_int,
-    ) -> libc::c_int;
+        w: *mut core::ffi::c_int,
+        h: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Create a texture for a rendering context."]
@@ -23197,9 +23197,9 @@ extern "C" {
     pub fn SDL_CreateTexture(
         renderer: *mut SDL_Renderer,
         format: Uint32,
-        access: libc::c_int,
-        w: libc::c_int,
-        h: libc::c_int,
+        access: core::ffi::c_int,
+        w: core::ffi::c_int,
+        h: core::ffi::c_int,
     ) -> *mut SDL_Texture;
 }
 extern "C" {
@@ -23250,10 +23250,10 @@ extern "C" {
     pub fn SDL_QueryTexture(
         texture: *mut SDL_Texture,
         format: *mut Uint32,
-        access: *mut libc::c_int,
-        w: *mut libc::c_int,
-        h: *mut libc::c_int,
-    ) -> libc::c_int;
+        access: *mut core::ffi::c_int,
+        w: *mut core::ffi::c_int,
+        h: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set an additional color value multiplied into render copy operations."]
@@ -23283,7 +23283,7 @@ extern "C" {
         r: Uint8,
         g: Uint8,
         b: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the additional color value multiplied into render copy operations."]
@@ -23304,7 +23304,7 @@ extern "C" {
         r: *mut Uint8,
         g: *mut Uint8,
         b: *mut Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set an additional alpha value multiplied into render copy operations."]
@@ -23326,7 +23326,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetTextureAlphaMod"]
     #[doc = " \\sa SDL_SetTextureColorMod"]
-    pub fn SDL_SetTextureAlphaMod(texture: *mut SDL_Texture, alpha: Uint8) -> libc::c_int;
+    pub fn SDL_SetTextureAlphaMod(texture: *mut SDL_Texture, alpha: Uint8) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the additional alpha value multiplied into render copy operations."]
@@ -23340,7 +23340,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GetTextureColorMod"]
     #[doc = " \\sa SDL_SetTextureAlphaMod"]
-    pub fn SDL_GetTextureAlphaMod(texture: *mut SDL_Texture, alpha: *mut Uint8) -> libc::c_int;
+    pub fn SDL_GetTextureAlphaMod(texture: *mut SDL_Texture, alpha: *mut Uint8) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the blend mode for a texture, used by SDL_RenderCopy()."]
@@ -23360,7 +23360,7 @@ extern "C" {
     pub fn SDL_SetTextureBlendMode(
         texture: *mut SDL_Texture,
         blendMode: SDL_BlendMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the blend mode used for texture copy operations."]
@@ -23376,7 +23376,7 @@ extern "C" {
     pub fn SDL_GetTextureBlendMode(
         texture: *mut SDL_Texture,
         blendMode: *mut SDL_BlendMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the scale mode used for texture scale operations."]
@@ -23393,7 +23393,7 @@ extern "C" {
     pub fn SDL_SetTextureScaleMode(
         texture: *mut SDL_Texture,
         scaleMode: SDL_ScaleMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the scale mode used for texture scale operations."]
@@ -23408,7 +23408,7 @@ extern "C" {
     pub fn SDL_GetTextureScaleMode(
         texture: *mut SDL_Texture,
         scaleMode: *mut SDL_ScaleMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Associate a user-specified pointer with a texture."]
@@ -23422,8 +23422,8 @@ extern "C" {
     #[doc = " \\sa SDL_GetTextureUserData"]
     pub fn SDL_SetTextureUserData(
         texture: *mut SDL_Texture,
-        userdata: *mut libc::c_void,
-    ) -> libc::c_int;
+        userdata: *mut core::ffi::c_void,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the user-specified pointer associated with a texture"]
@@ -23435,7 +23435,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.18."]
     #[doc = ""]
     #[doc = " \\sa SDL_SetTextureUserData"]
-    pub fn SDL_GetTextureUserData(texture: *mut SDL_Texture) -> *mut libc::c_void;
+    pub fn SDL_GetTextureUserData(texture: *mut SDL_Texture) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Update the given texture rectangle with new pixel data."]
@@ -23468,9 +23468,9 @@ extern "C" {
     pub fn SDL_UpdateTexture(
         texture: *mut SDL_Texture,
         rect: *const SDL_Rect,
-        pixels: *const libc::c_void,
-        pitch: libc::c_int,
-    ) -> libc::c_int;
+        pixels: *const core::ffi::c_void,
+        pitch: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Update a rectangle within a planar YV12 or IYUV texture with new pixel"]
@@ -23502,12 +23502,12 @@ extern "C" {
         texture: *mut SDL_Texture,
         rect: *const SDL_Rect,
         Yplane: *const Uint8,
-        Ypitch: libc::c_int,
+        Ypitch: core::ffi::c_int,
         Uplane: *const Uint8,
-        Upitch: libc::c_int,
+        Upitch: core::ffi::c_int,
         Vplane: *const Uint8,
-        Vpitch: libc::c_int,
-    ) -> libc::c_int;
+        Vpitch: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Update a rectangle within a planar NV12 or NV21 texture with new pixels."]
@@ -23532,10 +23532,10 @@ extern "C" {
         texture: *mut SDL_Texture,
         rect: *const SDL_Rect,
         Yplane: *const Uint8,
-        Ypitch: libc::c_int,
+        Ypitch: core::ffi::c_int,
         UVplane: *const Uint8,
-        UVpitch: libc::c_int,
-    ) -> libc::c_int;
+        UVpitch: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Lock a portion of the texture for **write-only** pixel access."]
@@ -23566,9 +23566,9 @@ extern "C" {
     pub fn SDL_LockTexture(
         texture: *mut SDL_Texture,
         rect: *const SDL_Rect,
-        pixels: *mut *mut libc::c_void,
-        pitch: *mut libc::c_int,
-    ) -> libc::c_int;
+        pixels: *mut *mut core::ffi::c_void,
+        pitch: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Lock a portion of the texture for **write-only** pixel access, and expose"]
@@ -23605,7 +23605,7 @@ extern "C" {
         texture: *mut SDL_Texture,
         rect: *const SDL_Rect,
         surface: *mut *mut SDL_Surface,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Unlock a texture, uploading the changes to video memory, if needed."]
@@ -23660,7 +23660,7 @@ extern "C" {
     pub fn SDL_SetRenderTarget(
         renderer: *mut SDL_Renderer,
         texture: *mut SDL_Texture,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the current render target."]
@@ -23703,9 +23703,9 @@ extern "C" {
     #[doc = " \\sa SDL_RenderGetLogicalSize"]
     pub fn SDL_RenderSetLogicalSize(
         renderer: *mut SDL_Renderer,
-        w: libc::c_int,
-        h: libc::c_int,
-    ) -> libc::c_int;
+        w: core::ffi::c_int,
+        h: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get device independent resolution for rendering."]
@@ -23723,8 +23723,8 @@ extern "C" {
     #[doc = " \\sa SDL_RenderSetLogicalSize"]
     pub fn SDL_RenderGetLogicalSize(
         renderer: *mut SDL_Renderer,
-        w: *mut libc::c_int,
-        h: *mut libc::c_int,
+        w: *mut core::ffi::c_int,
+        h: *mut core::ffi::c_int,
     );
 }
 extern "C" {
@@ -23743,7 +23743,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_RenderGetIntegerScale"]
     #[doc = " \\sa SDL_RenderSetLogicalSize"]
-    pub fn SDL_RenderSetIntegerScale(renderer: *mut SDL_Renderer, enable: SDL_bool) -> libc::c_int;
+    pub fn SDL_RenderSetIntegerScale(renderer: *mut SDL_Renderer, enable: SDL_bool) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get whether integer scales are forced for resolution-independent rendering."]
@@ -23773,7 +23773,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_RenderGetViewport"]
     pub fn SDL_RenderSetViewport(renderer: *mut SDL_Renderer, rect: *const SDL_Rect)
-        -> libc::c_int;
+        -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the drawing area for the current target."]
@@ -23801,7 +23801,7 @@ extern "C" {
     #[doc = " \\sa SDL_RenderGetClipRect"]
     #[doc = " \\sa SDL_RenderIsClipEnabled"]
     pub fn SDL_RenderSetClipRect(renderer: *mut SDL_Renderer, rect: *const SDL_Rect)
-        -> libc::c_int;
+        -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the clip rectangle for the current target."]
@@ -23852,7 +23852,7 @@ extern "C" {
     #[doc = " \\sa SDL_RenderGetScale"]
     #[doc = " \\sa SDL_RenderSetLogicalSize"]
     pub fn SDL_RenderSetScale(renderer: *mut SDL_Renderer, scaleX: f32, scaleY: f32)
-        -> libc::c_int;
+        -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the drawing scale for the current target."]
@@ -23888,8 +23888,8 @@ extern "C" {
     #[doc = " \\sa SDL_RenderSetLogicalSize"]
     pub fn SDL_RenderWindowToLogical(
         renderer: *mut SDL_Renderer,
-        windowX: libc::c_int,
-        windowY: libc::c_int,
+        windowX: core::ffi::c_int,
+        windowY: core::ffi::c_int,
         logicalX: *mut f32,
         logicalY: *mut f32,
     );
@@ -23915,8 +23915,8 @@ extern "C" {
         renderer: *mut SDL_Renderer,
         logicalX: f32,
         logicalY: f32,
-        windowX: *mut libc::c_int,
-        windowY: *mut libc::c_int,
+        windowX: *mut core::ffi::c_int,
+        windowY: *mut core::ffi::c_int,
     );
 }
 extern "C" {
@@ -23953,7 +23953,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the color used for drawing operations (Rect, Line and Clear)."]
@@ -23979,7 +23979,7 @@ extern "C" {
         g: *mut Uint8,
         b: *mut Uint8,
         a: *mut Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Set the blend mode used for drawing operations (Fill and Line)."]
@@ -24005,7 +24005,7 @@ extern "C" {
     pub fn SDL_SetRenderDrawBlendMode(
         renderer: *mut SDL_Renderer,
         blendMode: SDL_BlendMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the blend mode used for drawing operations."]
@@ -24021,7 +24021,7 @@ extern "C" {
     pub fn SDL_GetRenderDrawBlendMode(
         renderer: *mut SDL_Renderer,
         blendMode: *mut SDL_BlendMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Clear the current rendering target with the drawing color."]
@@ -24036,7 +24036,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_SetRenderDrawColor"]
-    pub fn SDL_RenderClear(renderer: *mut SDL_Renderer) -> libc::c_int;
+    pub fn SDL_RenderClear(renderer: *mut SDL_Renderer) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Draw a point on the current rendering target."]
@@ -24064,9 +24064,9 @@ extern "C" {
     #[doc = " \\sa SDL_SetRenderDrawColor"]
     pub fn SDL_RenderDrawPoint(
         renderer: *mut SDL_Renderer,
-        x: libc::c_int,
-        y: libc::c_int,
-    ) -> libc::c_int;
+        x: core::ffi::c_int,
+        y: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Draw multiple points on the current rendering target."]
@@ -24093,8 +24093,8 @@ extern "C" {
     pub fn SDL_RenderDrawPoints(
         renderer: *mut SDL_Renderer,
         points: *const SDL_Point,
-        count: libc::c_int,
-    ) -> libc::c_int;
+        count: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Draw a line on the current rendering target."]
@@ -24124,11 +24124,11 @@ extern "C" {
     #[doc = " \\sa SDL_SetRenderDrawColor"]
     pub fn SDL_RenderDrawLine(
         renderer: *mut SDL_Renderer,
-        x1: libc::c_int,
-        y1: libc::c_int,
-        x2: libc::c_int,
-        y2: libc::c_int,
-    ) -> libc::c_int;
+        x1: core::ffi::c_int,
+        y1: core::ffi::c_int,
+        x2: core::ffi::c_int,
+        y2: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Draw a series of connected lines on the current rendering target."]
@@ -24155,8 +24155,8 @@ extern "C" {
     pub fn SDL_RenderDrawLines(
         renderer: *mut SDL_Renderer,
         points: *const SDL_Point,
-        count: libc::c_int,
-    ) -> libc::c_int;
+        count: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Draw a rectangle on the current rendering target."]
@@ -24179,7 +24179,7 @@ extern "C" {
     #[doc = " \\sa SDL_RenderPresent"]
     #[doc = " \\sa SDL_SetRenderDrawBlendMode"]
     #[doc = " \\sa SDL_SetRenderDrawColor"]
-    pub fn SDL_RenderDrawRect(renderer: *mut SDL_Renderer, rect: *const SDL_Rect) -> libc::c_int;
+    pub fn SDL_RenderDrawRect(renderer: *mut SDL_Renderer, rect: *const SDL_Rect) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Draw some number of rectangles on the current rendering target."]
@@ -24206,8 +24206,8 @@ extern "C" {
     pub fn SDL_RenderDrawRects(
         renderer: *mut SDL_Renderer,
         rects: *const SDL_Rect,
-        count: libc::c_int,
-    ) -> libc::c_int;
+        count: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Fill a rectangle on the current rendering target with the drawing color."]
@@ -24234,7 +24234,7 @@ extern "C" {
     #[doc = " \\sa SDL_RenderPresent"]
     #[doc = " \\sa SDL_SetRenderDrawBlendMode"]
     #[doc = " \\sa SDL_SetRenderDrawColor"]
-    pub fn SDL_RenderFillRect(renderer: *mut SDL_Renderer, rect: *const SDL_Rect) -> libc::c_int;
+    pub fn SDL_RenderFillRect(renderer: *mut SDL_Renderer, rect: *const SDL_Rect) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Fill some number of rectangles on the current rendering target with the"]
@@ -24260,8 +24260,8 @@ extern "C" {
     pub fn SDL_RenderFillRects(
         renderer: *mut SDL_Renderer,
         rects: *const SDL_Rect,
-        count: libc::c_int,
-    ) -> libc::c_int;
+        count: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Copy a portion of the texture to the current rendering target."]
@@ -24295,7 +24295,7 @@ extern "C" {
         texture: *mut SDL_Texture,
         srcrect: *const SDL_Rect,
         dstrect: *const SDL_Rect,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Copy a portion of the texture to the current rendering, with optional"]
@@ -24343,7 +24343,7 @@ extern "C" {
         angle: f64,
         center: *const SDL_Point,
         flip: SDL_RendererFlip,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Draw a point on the current rendering target at subpixel precision."]
@@ -24354,7 +24354,7 @@ extern "C" {
     #[doc = " \\return 0 on success, or -1 on error"]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.10."]
-    pub fn SDL_RenderDrawPointF(renderer: *mut SDL_Renderer, x: f32, y: f32) -> libc::c_int;
+    pub fn SDL_RenderDrawPointF(renderer: *mut SDL_Renderer, x: f32, y: f32) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Draw multiple points on the current rendering target at subpixel precision."]
@@ -24368,8 +24368,8 @@ extern "C" {
     pub fn SDL_RenderDrawPointsF(
         renderer: *mut SDL_Renderer,
         points: *const SDL_FPoint,
-        count: libc::c_int,
-    ) -> libc::c_int;
+        count: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Draw a line on the current rendering target at subpixel precision."]
@@ -24388,7 +24388,7 @@ extern "C" {
         y1: f32,
         x2: f32,
         y2: f32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Draw a series of connected lines on the current rendering target at"]
@@ -24403,8 +24403,8 @@ extern "C" {
     pub fn SDL_RenderDrawLinesF(
         renderer: *mut SDL_Renderer,
         points: *const SDL_FPoint,
-        count: libc::c_int,
-    ) -> libc::c_int;
+        count: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Draw a rectangle on the current rendering target at subpixel precision."]
@@ -24415,7 +24415,7 @@ extern "C" {
     #[doc = " \\return 0 on success, or -1 on error"]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.10."]
-    pub fn SDL_RenderDrawRectF(renderer: *mut SDL_Renderer, rect: *const SDL_FRect) -> libc::c_int;
+    pub fn SDL_RenderDrawRectF(renderer: *mut SDL_Renderer, rect: *const SDL_FRect) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Draw some number of rectangles on the current rendering target at subpixel"]
@@ -24430,8 +24430,8 @@ extern "C" {
     pub fn SDL_RenderDrawRectsF(
         renderer: *mut SDL_Renderer,
         rects: *const SDL_FRect,
-        count: libc::c_int,
-    ) -> libc::c_int;
+        count: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Fill a rectangle on the current rendering target with the drawing color at"]
@@ -24443,7 +24443,7 @@ extern "C" {
     #[doc = " \\return 0 on success, or -1 on error"]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.10."]
-    pub fn SDL_RenderFillRectF(renderer: *mut SDL_Renderer, rect: *const SDL_FRect) -> libc::c_int;
+    pub fn SDL_RenderFillRectF(renderer: *mut SDL_Renderer, rect: *const SDL_FRect) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Fill some number of rectangles on the current rendering target with the"]
@@ -24458,8 +24458,8 @@ extern "C" {
     pub fn SDL_RenderFillRectsF(
         renderer: *mut SDL_Renderer,
         rects: *const SDL_FRect,
-        count: libc::c_int,
-    ) -> libc::c_int;
+        count: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Copy a portion of the texture to the current rendering target at subpixel"]
@@ -24479,7 +24479,7 @@ extern "C" {
         texture: *mut SDL_Texture,
         srcrect: *const SDL_Rect,
         dstrect: *const SDL_FRect,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Copy a portion of the source texture to the current rendering target, with"]
@@ -24509,7 +24509,7 @@ extern "C" {
         angle: f64,
         center: *const SDL_FPoint,
         flip: SDL_RendererFlip,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Render a list of triangles, optionally using a texture and indices into the"]
@@ -24533,10 +24533,10 @@ extern "C" {
         renderer: *mut SDL_Renderer,
         texture: *mut SDL_Texture,
         vertices: *const SDL_Vertex,
-        num_vertices: libc::c_int,
-        indices: *const libc::c_int,
-        num_indices: libc::c_int,
-    ) -> libc::c_int;
+        num_vertices: core::ffi::c_int,
+        indices: *const core::ffi::c_int,
+        num_indices: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Render a list of triangles, optionally using a texture and indices into the"]
@@ -24565,16 +24565,16 @@ extern "C" {
         renderer: *mut SDL_Renderer,
         texture: *mut SDL_Texture,
         xy: *const f32,
-        xy_stride: libc::c_int,
+        xy_stride: core::ffi::c_int,
         color: *const SDL_Color,
-        color_stride: libc::c_int,
+        color_stride: core::ffi::c_int,
         uv: *const f32,
-        uv_stride: libc::c_int,
-        num_vertices: libc::c_int,
-        indices: *const libc::c_void,
-        num_indices: libc::c_int,
-        size_indices: libc::c_int,
-    ) -> libc::c_int;
+        uv_stride: core::ffi::c_int,
+        num_vertices: core::ffi::c_int,
+        indices: *const core::ffi::c_void,
+        num_indices: core::ffi::c_int,
+        size_indices: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Read pixels from the current rendering target to an array of pixels."]
@@ -24604,9 +24604,9 @@ extern "C" {
         renderer: *mut SDL_Renderer,
         rect: *const SDL_Rect,
         format: Uint32,
-        pixels: *mut libc::c_void,
-        pitch: libc::c_int,
-    ) -> libc::c_int;
+        pixels: *mut core::ffi::c_void,
+        pitch: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Update the screen with any rendering performed since the previous call."]
@@ -24696,7 +24696,7 @@ extern "C" {
     #[doc = "          SDL_GetError() for more information."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.10."]
-    pub fn SDL_RenderFlush(renderer: *mut SDL_Renderer) -> libc::c_int;
+    pub fn SDL_RenderFlush(renderer: *mut SDL_Renderer) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Bind an OpenGL/ES/ES2 texture to the current context."]
@@ -24736,7 +24736,7 @@ extern "C" {
         texture: *mut SDL_Texture,
         texw: *mut f32,
         texh: *mut f32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Unbind an OpenGL/ES/ES2 texture from the current context."]
@@ -24750,7 +24750,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_GL_BindTexture"]
     #[doc = " \\sa SDL_GL_MakeCurrent"]
-    pub fn SDL_GL_UnbindTexture(texture: *mut SDL_Texture) -> libc::c_int;
+    pub fn SDL_GL_UnbindTexture(texture: *mut SDL_Texture) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the CAMetalLayer associated with the given Metal renderer."]
@@ -24765,7 +24765,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.8."]
     #[doc = ""]
     #[doc = " \\sa SDL_RenderGetMetalCommandEncoder"]
-    pub fn SDL_RenderGetMetalLayer(renderer: *mut SDL_Renderer) -> *mut libc::c_void;
+    pub fn SDL_RenderGetMetalLayer(renderer: *mut SDL_Renderer) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Get the Metal command encoder for the current frame"]
@@ -24785,7 +24785,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.8."]
     #[doc = ""]
     #[doc = " \\sa SDL_RenderGetMetalLayer"]
-    pub fn SDL_RenderGetMetalCommandEncoder(renderer: *mut SDL_Renderer) -> *mut libc::c_void;
+    pub fn SDL_RenderGetMetalCommandEncoder(renderer: *mut SDL_Renderer) -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Toggle VSync of the given renderer."]
@@ -24795,7 +24795,7 @@ extern "C" {
     #[doc = " \\returns a 0 int on success, or non-zero on failure"]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.18."]
-    pub fn SDL_RenderSetVSync(renderer: *mut SDL_Renderer, vsync: libc::c_int) -> libc::c_int;
+    pub fn SDL_RenderSetVSync(renderer: *mut SDL_Renderer, vsync: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Create a window that can be shaped with the specified position, dimensions,"]
@@ -24820,11 +24820,11 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_DestroyWindow"]
     pub fn SDL_CreateShapedWindow(
-        title: *const libc::c_char,
-        x: libc::c_uint,
-        y: libc::c_uint,
-        w: libc::c_uint,
-        h: libc::c_uint,
+        title: *const core::ffi::c_char,
+        x: core::ffi::c_uint,
+        y: core::ffi::c_uint,
+        w: core::ffi::c_uint,
+        h: core::ffi::c_uint,
         flags: Uint32,
     ) -> *mut SDL_Window;
 }
@@ -24958,7 +24958,7 @@ extern "C" {
         window: *mut SDL_Window,
         shape: *mut SDL_Surface,
         shape_mode: *mut SDL_WindowShapeMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the shape parameters of a shaped window."]
@@ -24979,7 +24979,7 @@ extern "C" {
     pub fn SDL_GetShapedWindowMode(
         window: *mut SDL_Window,
         shape_mode: *mut SDL_WindowShapeMode,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Sets the UNIX nice value for a thread."]
@@ -24991,7 +24991,7 @@ extern "C" {
     #[doc = " \\returns 0 on success, or -1 on error."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.9."]
-    pub fn SDL_LinuxSetThreadPriority(threadID: Sint64, priority: libc::c_int) -> libc::c_int;
+    pub fn SDL_LinuxSetThreadPriority(threadID: Sint64, priority: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Sets the priority (not nice level) and scheduling policy for a thread."]
@@ -25007,9 +25007,9 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.18."]
     pub fn SDL_LinuxSetThreadPriorityAndPolicy(
         threadID: Sint64,
-        sdlPriority: libc::c_int,
-        schedPolicy: libc::c_int,
-    ) -> libc::c_int;
+        sdlPriority: core::ffi::c_int,
+        schedPolicy: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Query if the current device is a tablet."]
@@ -25126,10 +25126,10 @@ extern "C" {
 #[doc = " passed in, the periodic alarm continues, otherwise a new alarm is"]
 #[doc = " scheduled. If the callback returns 0, the periodic alarm is cancelled."]
 pub type SDL_TimerCallback = ::core::option::Option<
-    unsafe extern "C" fn(interval: Uint32, param: *mut libc::c_void) -> Uint32,
+    unsafe extern "C" fn(interval: Uint32, param: *mut core::ffi::c_void) -> Uint32,
 >;
 #[doc = " Definition of the timer ID type."]
-pub type SDL_TimerID = libc::c_int;
+pub type SDL_TimerID = core::ffi::c_int;
 extern "C" {
     #[doc = " Call a callback function at a future time."]
     #[doc = ""]
@@ -25164,7 +25164,7 @@ extern "C" {
     pub fn SDL_AddTimer(
         interval: Uint32,
         callback: SDL_TimerCallback,
-        param: *mut libc::c_void,
+        param: *mut core::ffi::c_void,
     ) -> SDL_TimerID;
 }
 extern "C" {
@@ -25285,7 +25285,7 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetVersion"]
-    pub fn SDL_GetRevision() -> *const libc::c_char;
+    pub fn SDL_GetRevision() -> *const core::ffi::c_char;
 }
 extern "C" {
     #[doc = " Obsolete function, do not use."]
@@ -25307,15 +25307,15 @@ extern "C" {
     #[doc = " \\since This function is available since SDL 2.0.0."]
     #[doc = ""]
     #[doc = " \\sa SDL_GetRevision"]
-    pub fn SDL_GetRevisionNumber() -> libc::c_int;
+    pub fn SDL_GetRevisionNumber() -> core::ffi::c_int;
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct SDL_Locale {
     #[doc = "< A language name, like \"en\" for English."]
-    pub language: *const libc::c_char,
+    pub language: *const core::ffi::c_char,
     #[doc = "< A country, like \"US\" for America. Can be NULL."]
-    pub country: *const libc::c_char,
+    pub country: *const core::ffi::c_char,
 }
 #[test]
 fn bindgen_test_layout_SDL_Locale() {
@@ -25421,7 +25421,7 @@ extern "C" {
     #[doc = "          information."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.14."]
-    pub fn SDL_OpenURL(url: *const libc::c_char) -> libc::c_int;
+    pub fn SDL_OpenURL(url: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Initialize the SDL library."]
@@ -25469,7 +25469,7 @@ extern "C" {
     #[doc = " \\sa SDL_Quit"]
     #[doc = " \\sa SDL_SetMainReady"]
     #[doc = " \\sa SDL_WasInit"]
-    pub fn SDL_Init(flags: Uint32) -> libc::c_int;
+    pub fn SDL_Init(flags: Uint32) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Compatibility function to initialize the SDL library."]
@@ -25485,7 +25485,7 @@ extern "C" {
     #[doc = " \\sa SDL_Init"]
     #[doc = " \\sa SDL_Quit"]
     #[doc = " \\sa SDL_QuitSubSystem"]
-    pub fn SDL_InitSubSystem(flags: Uint32) -> libc::c_int;
+    pub fn SDL_InitSubSystem(flags: Uint32) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Shut down specific SDL subsystems."]
@@ -25546,11 +25546,11 @@ extern "C" {
     #[doc = " \\sa SDL_QuitSubSystem"]
     pub fn SDL_Quit();
 }
-pub type XID = libc::c_ulong;
-pub type Mask = libc::c_ulong;
-pub type Atom = libc::c_ulong;
-pub type VisualID = libc::c_ulong;
-pub type Time = libc::c_ulong;
+pub type XID = core::ffi::c_ulong;
+pub type Mask = core::ffi::c_ulong;
+pub type Atom = core::ffi::c_ulong;
+pub type VisualID = core::ffi::c_ulong;
+pub type Time = core::ffi::c_ulong;
 pub type Window = XID;
 pub type Drawable = XID;
 pub type Font = XID;
@@ -25559,18 +25559,18 @@ pub type Cursor = XID;
 pub type Colormap = XID;
 pub type GContext = XID;
 pub type KeySym = XID;
-pub type KeyCode = libc::c_uchar;
+pub type KeyCode = core::ffi::c_uchar;
 extern "C" {
-    pub fn _Xmblen(str: *mut libc::c_char, len: libc::c_int) -> libc::c_int;
+    pub fn _Xmblen(str: *mut core::ffi::c_char, len: core::ffi::c_int) -> core::ffi::c_int;
 }
-pub type XPointer = *mut libc::c_char;
+pub type XPointer = *mut core::ffi::c_char;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct _XExtData {
-    pub number: libc::c_int,
+    pub number: core::ffi::c_int,
     pub next: *mut _XExtData,
     pub free_private:
-        ::core::option::Option<unsafe extern "C" fn(extension: *mut _XExtData) -> libc::c_int>,
+        ::core::option::Option<unsafe extern "C" fn(extension: *mut _XExtData) -> core::ffi::c_int>,
     pub private_data: XPointer,
 }
 #[test]
@@ -25630,10 +25630,10 @@ pub type XExtData = _XExtData;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XExtCodes {
-    pub extension: libc::c_int,
-    pub major_opcode: libc::c_int,
-    pub first_event: libc::c_int,
-    pub first_error: libc::c_int,
+    pub extension: core::ffi::c_int,
+    pub major_opcode: core::ffi::c_int,
+    pub first_event: core::ffi::c_int,
+    pub first_error: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XExtCodes() {
@@ -25691,9 +25691,9 @@ fn bindgen_test_layout_XExtCodes() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XPixmapFormatValues {
-    pub depth: libc::c_int,
-    pub bits_per_pixel: libc::c_int,
-    pub scanline_pad: libc::c_int,
+    pub depth: core::ffi::c_int,
+    pub bits_per_pixel: core::ffi::c_int,
+    pub scanline_pad: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XPixmapFormatValues() {
@@ -25745,29 +25745,29 @@ fn bindgen_test_layout_XPixmapFormatValues() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XGCValues {
-    pub function: libc::c_int,
-    pub plane_mask: libc::c_ulong,
-    pub foreground: libc::c_ulong,
-    pub background: libc::c_ulong,
-    pub line_width: libc::c_int,
-    pub line_style: libc::c_int,
-    pub cap_style: libc::c_int,
-    pub join_style: libc::c_int,
-    pub fill_style: libc::c_int,
-    pub fill_rule: libc::c_int,
-    pub arc_mode: libc::c_int,
+    pub function: core::ffi::c_int,
+    pub plane_mask: core::ffi::c_ulong,
+    pub foreground: core::ffi::c_ulong,
+    pub background: core::ffi::c_ulong,
+    pub line_width: core::ffi::c_int,
+    pub line_style: core::ffi::c_int,
+    pub cap_style: core::ffi::c_int,
+    pub join_style: core::ffi::c_int,
+    pub fill_style: core::ffi::c_int,
+    pub fill_rule: core::ffi::c_int,
+    pub arc_mode: core::ffi::c_int,
     pub tile: Pixmap,
     pub stipple: Pixmap,
-    pub ts_x_origin: libc::c_int,
-    pub ts_y_origin: libc::c_int,
+    pub ts_x_origin: core::ffi::c_int,
+    pub ts_y_origin: core::ffi::c_int,
     pub font: Font,
-    pub subwindow_mode: libc::c_int,
-    pub graphics_exposures: libc::c_int,
-    pub clip_x_origin: libc::c_int,
-    pub clip_y_origin: libc::c_int,
+    pub subwindow_mode: core::ffi::c_int,
+    pub graphics_exposures: core::ffi::c_int,
+    pub clip_x_origin: core::ffi::c_int,
+    pub clip_y_origin: core::ffi::c_int,
     pub clip_mask: Pixmap,
-    pub dash_offset: libc::c_int,
-    pub dashes: libc::c_char,
+    pub dash_offset: core::ffi::c_int,
+    pub dashes: core::ffi::c_char,
 }
 #[test]
 fn bindgen_test_layout_XGCValues() {
@@ -26023,12 +26023,12 @@ pub type GC = *mut _XGC;
 pub struct Visual {
     pub ext_data: *mut XExtData,
     pub visualid: VisualID,
-    pub class: libc::c_int,
-    pub red_mask: libc::c_ulong,
-    pub green_mask: libc::c_ulong,
-    pub blue_mask: libc::c_ulong,
-    pub bits_per_rgb: libc::c_int,
-    pub map_entries: libc::c_int,
+    pub class: core::ffi::c_int,
+    pub red_mask: core::ffi::c_ulong,
+    pub green_mask: core::ffi::c_ulong,
+    pub blue_mask: core::ffi::c_ulong,
+    pub bits_per_rgb: core::ffi::c_int,
+    pub map_entries: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_Visual() {
@@ -26126,8 +26126,8 @@ fn bindgen_test_layout_Visual() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct Depth {
-    pub depth: libc::c_int,
-    pub nvisuals: libc::c_int,
+    pub depth: core::ffi::c_int,
+    pub nvisuals: core::ffi::c_int,
     pub visuals: *mut Visual,
 }
 #[test]
@@ -26184,23 +26184,23 @@ pub struct Screen {
     pub ext_data: *mut XExtData,
     pub display: *mut _XDisplay,
     pub root: Window,
-    pub width: libc::c_int,
-    pub height: libc::c_int,
-    pub mwidth: libc::c_int,
-    pub mheight: libc::c_int,
-    pub ndepths: libc::c_int,
+    pub width: core::ffi::c_int,
+    pub height: core::ffi::c_int,
+    pub mwidth: core::ffi::c_int,
+    pub mheight: core::ffi::c_int,
+    pub ndepths: core::ffi::c_int,
     pub depths: *mut Depth,
-    pub root_depth: libc::c_int,
+    pub root_depth: core::ffi::c_int,
     pub root_visual: *mut Visual,
     pub default_gc: GC,
     pub cmap: Colormap,
-    pub white_pixel: libc::c_ulong,
-    pub black_pixel: libc::c_ulong,
-    pub max_maps: libc::c_int,
-    pub min_maps: libc::c_int,
-    pub backing_store: libc::c_int,
-    pub save_unders: libc::c_int,
-    pub root_input_mask: libc::c_long,
+    pub white_pixel: core::ffi::c_ulong,
+    pub black_pixel: core::ffi::c_ulong,
+    pub max_maps: core::ffi::c_int,
+    pub min_maps: core::ffi::c_int,
+    pub backing_store: core::ffi::c_int,
+    pub save_unders: core::ffi::c_int,
+    pub root_input_mask: core::ffi::c_long,
 }
 #[test]
 fn bindgen_test_layout_Screen() {
@@ -26419,9 +26419,9 @@ fn bindgen_test_layout_Screen() {
 #[derive(Copy, Clone)]
 pub struct ScreenFormat {
     pub ext_data: *mut XExtData,
-    pub depth: libc::c_int,
-    pub bits_per_pixel: libc::c_int,
-    pub scanline_pad: libc::c_int,
+    pub depth: core::ffi::c_int,
+    pub bits_per_pixel: core::ffi::c_int,
+    pub scanline_pad: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_ScreenFormat() {
@@ -26480,18 +26480,18 @@ fn bindgen_test_layout_ScreenFormat() {
 #[derive(Copy, Clone)]
 pub struct XSetWindowAttributes {
     pub background_pixmap: Pixmap,
-    pub background_pixel: libc::c_ulong,
+    pub background_pixel: core::ffi::c_ulong,
     pub border_pixmap: Pixmap,
-    pub border_pixel: libc::c_ulong,
-    pub bit_gravity: libc::c_int,
-    pub win_gravity: libc::c_int,
-    pub backing_store: libc::c_int,
-    pub backing_planes: libc::c_ulong,
-    pub backing_pixel: libc::c_ulong,
-    pub save_under: libc::c_int,
-    pub event_mask: libc::c_long,
-    pub do_not_propagate_mask: libc::c_long,
-    pub override_redirect: libc::c_int,
+    pub border_pixel: core::ffi::c_ulong,
+    pub bit_gravity: core::ffi::c_int,
+    pub win_gravity: core::ffi::c_int,
+    pub backing_store: core::ffi::c_int,
+    pub backing_planes: core::ffi::c_ulong,
+    pub backing_pixel: core::ffi::c_ulong,
+    pub save_under: core::ffi::c_int,
+    pub event_mask: core::ffi::c_long,
+    pub do_not_propagate_mask: core::ffi::c_long,
+    pub override_redirect: core::ffi::c_int,
     pub colormap: Colormap,
     pub cursor: Cursor,
 }
@@ -26688,28 +26688,28 @@ fn bindgen_test_layout_XSetWindowAttributes() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XWindowAttributes {
-    pub x: libc::c_int,
-    pub y: libc::c_int,
-    pub width: libc::c_int,
-    pub height: libc::c_int,
-    pub border_width: libc::c_int,
-    pub depth: libc::c_int,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
+    pub width: core::ffi::c_int,
+    pub height: core::ffi::c_int,
+    pub border_width: core::ffi::c_int,
+    pub depth: core::ffi::c_int,
     pub visual: *mut Visual,
     pub root: Window,
-    pub class: libc::c_int,
-    pub bit_gravity: libc::c_int,
-    pub win_gravity: libc::c_int,
-    pub backing_store: libc::c_int,
-    pub backing_planes: libc::c_ulong,
-    pub backing_pixel: libc::c_ulong,
-    pub save_under: libc::c_int,
+    pub class: core::ffi::c_int,
+    pub bit_gravity: core::ffi::c_int,
+    pub win_gravity: core::ffi::c_int,
+    pub backing_store: core::ffi::c_int,
+    pub backing_planes: core::ffi::c_ulong,
+    pub backing_pixel: core::ffi::c_ulong,
+    pub save_under: core::ffi::c_int,
     pub colormap: Colormap,
-    pub map_installed: libc::c_int,
-    pub map_state: libc::c_int,
-    pub all_event_masks: libc::c_long,
-    pub your_event_mask: libc::c_long,
-    pub do_not_propagate_mask: libc::c_long,
-    pub override_redirect: libc::c_int,
+    pub map_installed: core::ffi::c_int,
+    pub map_state: core::ffi::c_int,
+    pub all_event_masks: core::ffi::c_long,
+    pub your_event_mask: core::ffi::c_long,
+    pub do_not_propagate_mask: core::ffi::c_long,
+    pub override_redirect: core::ffi::c_int,
     pub screen: *mut Screen,
 }
 #[test]
@@ -26975,9 +26975,9 @@ fn bindgen_test_layout_XWindowAttributes() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XHostAddress {
-    pub family: libc::c_int,
-    pub length: libc::c_int,
-    pub address: *mut libc::c_char,
+    pub family: core::ffi::c_int,
+    pub length: core::ffi::c_int,
+    pub address: *mut core::ffi::c_char,
 }
 #[test]
 fn bindgen_test_layout_XHostAddress() {
@@ -27025,10 +27025,10 @@ fn bindgen_test_layout_XHostAddress() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XServerInterpretedAddress {
-    pub typelength: libc::c_int,
-    pub valuelength: libc::c_int,
-    pub type_: *mut libc::c_char,
-    pub value: *mut libc::c_char,
+    pub typelength: core::ffi::c_int,
+    pub valuelength: core::ffi::c_int,
+    pub type_: *mut core::ffi::c_char,
+    pub value: *mut core::ffi::c_char,
 }
 #[test]
 fn bindgen_test_layout_XServerInterpretedAddress() {
@@ -27094,21 +27094,21 @@ fn bindgen_test_layout_XServerInterpretedAddress() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct _XImage {
-    pub width: libc::c_int,
-    pub height: libc::c_int,
-    pub xoffset: libc::c_int,
-    pub format: libc::c_int,
-    pub data: *mut libc::c_char,
-    pub byte_order: libc::c_int,
-    pub bitmap_unit: libc::c_int,
-    pub bitmap_bit_order: libc::c_int,
-    pub bitmap_pad: libc::c_int,
-    pub depth: libc::c_int,
-    pub bytes_per_line: libc::c_int,
-    pub bits_per_pixel: libc::c_int,
-    pub red_mask: libc::c_ulong,
-    pub green_mask: libc::c_ulong,
-    pub blue_mask: libc::c_ulong,
+    pub width: core::ffi::c_int,
+    pub height: core::ffi::c_int,
+    pub xoffset: core::ffi::c_int,
+    pub format: core::ffi::c_int,
+    pub data: *mut core::ffi::c_char,
+    pub byte_order: core::ffi::c_int,
+    pub bitmap_unit: core::ffi::c_int,
+    pub bitmap_bit_order: core::ffi::c_int,
+    pub bitmap_pad: core::ffi::c_int,
+    pub depth: core::ffi::c_int,
+    pub bytes_per_line: core::ffi::c_int,
+    pub bits_per_pixel: core::ffi::c_int,
+    pub red_mask: core::ffi::c_ulong,
+    pub green_mask: core::ffi::c_ulong,
+    pub blue_mask: core::ffi::c_ulong,
     pub obdata: XPointer,
     pub f: _XImage_funcs,
 }
@@ -27119,44 +27119,44 @@ pub struct _XImage_funcs {
         unsafe extern "C" fn(
             arg1: *mut _XDisplay,
             arg2: *mut Visual,
-            arg3: libc::c_uint,
-            arg4: libc::c_int,
-            arg5: libc::c_int,
-            arg6: *mut libc::c_char,
-            arg7: libc::c_uint,
-            arg8: libc::c_uint,
-            arg9: libc::c_int,
-            arg10: libc::c_int,
+            arg3: core::ffi::c_uint,
+            arg4: core::ffi::c_int,
+            arg5: core::ffi::c_int,
+            arg6: *mut core::ffi::c_char,
+            arg7: core::ffi::c_uint,
+            arg8: core::ffi::c_uint,
+            arg9: core::ffi::c_int,
+            arg10: core::ffi::c_int,
         ) -> *mut _XImage,
     >,
     pub destroy_image:
-        ::core::option::Option<unsafe extern "C" fn(arg1: *mut _XImage) -> libc::c_int>,
+        ::core::option::Option<unsafe extern "C" fn(arg1: *mut _XImage) -> core::ffi::c_int>,
     pub get_pixel: ::core::option::Option<
         unsafe extern "C" fn(
             arg1: *mut _XImage,
-            arg2: libc::c_int,
-            arg3: libc::c_int,
-        ) -> libc::c_ulong,
+            arg2: core::ffi::c_int,
+            arg3: core::ffi::c_int,
+        ) -> core::ffi::c_ulong,
     >,
     pub put_pixel: ::core::option::Option<
         unsafe extern "C" fn(
             arg1: *mut _XImage,
-            arg2: libc::c_int,
-            arg3: libc::c_int,
-            arg4: libc::c_ulong,
-        ) -> libc::c_int,
+            arg2: core::ffi::c_int,
+            arg3: core::ffi::c_int,
+            arg4: core::ffi::c_ulong,
+        ) -> core::ffi::c_int,
     >,
     pub sub_image: ::core::option::Option<
         unsafe extern "C" fn(
             arg1: *mut _XImage,
-            arg2: libc::c_int,
-            arg3: libc::c_int,
-            arg4: libc::c_uint,
-            arg5: libc::c_uint,
+            arg2: core::ffi::c_int,
+            arg3: core::ffi::c_int,
+            arg4: core::ffi::c_uint,
+            arg5: core::ffi::c_uint,
         ) -> *mut _XImage,
     >,
     pub add_pixel: ::core::option::Option<
-        unsafe extern "C" fn(arg1: *mut _XImage, arg2: libc::c_long) -> libc::c_int,
+        unsafe extern "C" fn(arg1: *mut _XImage, arg2: core::ffi::c_long) -> core::ffi::c_int,
     >,
 }
 #[test]
@@ -27419,13 +27419,13 @@ pub type XImage = _XImage;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XWindowChanges {
-    pub x: libc::c_int,
-    pub y: libc::c_int,
-    pub width: libc::c_int,
-    pub height: libc::c_int,
-    pub border_width: libc::c_int,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
+    pub width: core::ffi::c_int,
+    pub height: core::ffi::c_int,
+    pub border_width: core::ffi::c_int,
     pub sibling: Window,
-    pub stack_mode: libc::c_int,
+    pub stack_mode: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XWindowChanges() {
@@ -27513,12 +27513,12 @@ fn bindgen_test_layout_XWindowChanges() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XColor {
-    pub pixel: libc::c_ulong,
-    pub red: libc::c_ushort,
-    pub green: libc::c_ushort,
-    pub blue: libc::c_ushort,
-    pub flags: libc::c_char,
-    pub pad: libc::c_char,
+    pub pixel: core::ffi::c_ulong,
+    pub red: core::ffi::c_ushort,
+    pub green: core::ffi::c_ushort,
+    pub blue: core::ffi::c_ushort,
+    pub flags: core::ffi::c_char,
+    pub pad: core::ffi::c_char,
 }
 #[test]
 fn bindgen_test_layout_XColor() {
@@ -27596,10 +27596,10 @@ fn bindgen_test_layout_XColor() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XSegment {
-    pub x1: libc::c_short,
-    pub y1: libc::c_short,
-    pub x2: libc::c_short,
-    pub y2: libc::c_short,
+    pub x1: core::ffi::c_short,
+    pub y1: core::ffi::c_short,
+    pub x2: core::ffi::c_short,
+    pub y2: core::ffi::c_short,
 }
 #[test]
 fn bindgen_test_layout_XSegment() {
@@ -27657,8 +27657,8 @@ fn bindgen_test_layout_XSegment() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XPoint {
-    pub x: libc::c_short,
-    pub y: libc::c_short,
+    pub x: core::ffi::c_short,
+    pub y: core::ffi::c_short,
 }
 #[test]
 fn bindgen_test_layout_XPoint() {
@@ -27686,10 +27686,10 @@ fn bindgen_test_layout_XPoint() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XRectangle {
-    pub x: libc::c_short,
-    pub y: libc::c_short,
-    pub width: libc::c_ushort,
-    pub height: libc::c_ushort,
+    pub x: core::ffi::c_short,
+    pub y: core::ffi::c_short,
+    pub width: core::ffi::c_ushort,
+    pub height: core::ffi::c_ushort,
 }
 #[test]
 fn bindgen_test_layout_XRectangle() {
@@ -27747,12 +27747,12 @@ fn bindgen_test_layout_XRectangle() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XArc {
-    pub x: libc::c_short,
-    pub y: libc::c_short,
-    pub width: libc::c_ushort,
-    pub height: libc::c_ushort,
-    pub angle1: libc::c_short,
-    pub angle2: libc::c_short,
+    pub x: core::ffi::c_short,
+    pub y: core::ffi::c_short,
+    pub width: core::ffi::c_ushort,
+    pub height: core::ffi::c_ushort,
+    pub angle1: core::ffi::c_short,
+    pub angle2: core::ffi::c_short,
 }
 #[test]
 fn bindgen_test_layout_XArc() {
@@ -27820,14 +27820,14 @@ fn bindgen_test_layout_XArc() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XKeyboardControl {
-    pub key_click_percent: libc::c_int,
-    pub bell_percent: libc::c_int,
-    pub bell_pitch: libc::c_int,
-    pub bell_duration: libc::c_int,
-    pub led: libc::c_int,
-    pub led_mode: libc::c_int,
-    pub key: libc::c_int,
-    pub auto_repeat_mode: libc::c_int,
+    pub key_click_percent: core::ffi::c_int,
+    pub bell_percent: core::ffi::c_int,
+    pub bell_pitch: core::ffi::c_int,
+    pub bell_duration: core::ffi::c_int,
+    pub led: core::ffi::c_int,
+    pub led_mode: core::ffi::c_int,
+    pub key: core::ffi::c_int,
+    pub auto_repeat_mode: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XKeyboardControl() {
@@ -27929,13 +27929,13 @@ fn bindgen_test_layout_XKeyboardControl() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XKeyboardState {
-    pub key_click_percent: libc::c_int,
-    pub bell_percent: libc::c_int,
-    pub bell_pitch: libc::c_uint,
-    pub bell_duration: libc::c_uint,
-    pub led_mask: libc::c_ulong,
-    pub global_auto_repeat: libc::c_int,
-    pub auto_repeats: [libc::c_char; 32usize],
+    pub key_click_percent: core::ffi::c_int,
+    pub bell_percent: core::ffi::c_int,
+    pub bell_pitch: core::ffi::c_uint,
+    pub bell_duration: core::ffi::c_uint,
+    pub led_mask: core::ffi::c_ulong,
+    pub global_auto_repeat: core::ffi::c_int,
+    pub auto_repeats: [core::ffi::c_char; 32usize],
 }
 #[test]
 fn bindgen_test_layout_XKeyboardState() {
@@ -28028,8 +28028,8 @@ fn bindgen_test_layout_XKeyboardState() {
 #[derive(Copy, Clone)]
 pub struct XTimeCoord {
     pub time: Time,
-    pub x: libc::c_short,
-    pub y: libc::c_short,
+    pub x: core::ffi::c_short,
+    pub y: core::ffi::c_short,
 }
 #[test]
 fn bindgen_test_layout_XTimeCoord() {
@@ -28077,7 +28077,7 @@ fn bindgen_test_layout_XTimeCoord() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XModifierKeymap {
-    pub max_keypermod: libc::c_int,
+    pub max_keypermod: core::ffi::c_int,
     pub modifiermap: *mut KeyCode,
 }
 #[test]
@@ -28129,49 +28129,49 @@ pub struct _XrmHashBucketRec {
 pub struct _bindgen_ty_1 {
     pub ext_data: *mut XExtData,
     pub private1: *mut _XPrivate,
-    pub fd: libc::c_int,
-    pub private2: libc::c_int,
-    pub proto_major_version: libc::c_int,
-    pub proto_minor_version: libc::c_int,
-    pub vendor: *mut libc::c_char,
+    pub fd: core::ffi::c_int,
+    pub private2: core::ffi::c_int,
+    pub proto_major_version: core::ffi::c_int,
+    pub proto_minor_version: core::ffi::c_int,
+    pub vendor: *mut core::ffi::c_char,
     pub private3: XID,
     pub private4: XID,
     pub private5: XID,
-    pub private6: libc::c_int,
+    pub private6: core::ffi::c_int,
     pub resource_alloc: ::core::option::Option<unsafe extern "C" fn(arg1: *mut _XDisplay) -> XID>,
-    pub byte_order: libc::c_int,
-    pub bitmap_unit: libc::c_int,
-    pub bitmap_pad: libc::c_int,
-    pub bitmap_bit_order: libc::c_int,
-    pub nformats: libc::c_int,
+    pub byte_order: core::ffi::c_int,
+    pub bitmap_unit: core::ffi::c_int,
+    pub bitmap_pad: core::ffi::c_int,
+    pub bitmap_bit_order: core::ffi::c_int,
+    pub nformats: core::ffi::c_int,
     pub pixmap_format: *mut ScreenFormat,
-    pub private8: libc::c_int,
-    pub release: libc::c_int,
+    pub private8: core::ffi::c_int,
+    pub release: core::ffi::c_int,
     pub private9: *mut _XPrivate,
     pub private10: *mut _XPrivate,
-    pub qlen: libc::c_int,
-    pub last_request_read: libc::c_ulong,
-    pub request: libc::c_ulong,
+    pub qlen: core::ffi::c_int,
+    pub last_request_read: core::ffi::c_ulong,
+    pub request: core::ffi::c_ulong,
     pub private11: XPointer,
     pub private12: XPointer,
     pub private13: XPointer,
     pub private14: XPointer,
-    pub max_request_size: libc::c_uint,
+    pub max_request_size: core::ffi::c_uint,
     pub db: *mut _XrmHashBucketRec,
     pub private15:
-        ::core::option::Option<unsafe extern "C" fn(arg1: *mut _XDisplay) -> libc::c_int>,
-    pub display_name: *mut libc::c_char,
-    pub default_screen: libc::c_int,
-    pub nscreens: libc::c_int,
+        ::core::option::Option<unsafe extern "C" fn(arg1: *mut _XDisplay) -> core::ffi::c_int>,
+    pub display_name: *mut core::ffi::c_char,
+    pub default_screen: core::ffi::c_int,
+    pub nscreens: core::ffi::c_int,
     pub screens: *mut Screen,
-    pub motion_buffer: libc::c_ulong,
-    pub private16: libc::c_ulong,
-    pub min_keycode: libc::c_int,
-    pub max_keycode: libc::c_int,
+    pub motion_buffer: core::ffi::c_ulong,
+    pub private16: core::ffi::c_ulong,
+    pub min_keycode: core::ffi::c_int,
+    pub max_keycode: core::ffi::c_int,
     pub private17: XPointer,
     pub private18: XPointer,
-    pub private19: libc::c_int,
-    pub xdefaults: *mut libc::c_char,
+    pub private19: core::ffi::c_int,
+    pub xdefaults: *mut core::ffi::c_char,
 }
 #[test]
 fn bindgen_test_layout__bindgen_ty_1() {
@@ -28636,21 +28636,21 @@ pub type _XPrivDisplay = *mut _bindgen_ty_1;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XKeyEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
     pub root: Window,
     pub subwindow: Window,
     pub time: Time,
-    pub x: libc::c_int,
-    pub y: libc::c_int,
-    pub x_root: libc::c_int,
-    pub y_root: libc::c_int,
-    pub state: libc::c_uint,
-    pub keycode: libc::c_uint,
-    pub same_screen: libc::c_int,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
+    pub x_root: core::ffi::c_int,
+    pub y_root: core::ffi::c_int,
+    pub state: core::ffi::c_uint,
+    pub keycode: core::ffi::c_uint,
+    pub same_screen: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XKeyEvent() {
@@ -28820,21 +28820,21 @@ pub type XKeyReleasedEvent = XKeyEvent;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XButtonEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
     pub root: Window,
     pub subwindow: Window,
     pub time: Time,
-    pub x: libc::c_int,
-    pub y: libc::c_int,
-    pub x_root: libc::c_int,
-    pub y_root: libc::c_int,
-    pub state: libc::c_uint,
-    pub button: libc::c_uint,
-    pub same_screen: libc::c_int,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
+    pub x_root: core::ffi::c_int,
+    pub y_root: core::ffi::c_int,
+    pub state: core::ffi::c_uint,
+    pub button: core::ffi::c_uint,
+    pub same_screen: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XButtonEvent() {
@@ -29004,21 +29004,21 @@ pub type XButtonReleasedEvent = XButtonEvent;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XMotionEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
     pub root: Window,
     pub subwindow: Window,
     pub time: Time,
-    pub x: libc::c_int,
-    pub y: libc::c_int,
-    pub x_root: libc::c_int,
-    pub y_root: libc::c_int,
-    pub state: libc::c_uint,
-    pub is_hint: libc::c_char,
-    pub same_screen: libc::c_int,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
+    pub x_root: core::ffi::c_int,
+    pub y_root: core::ffi::c_int,
+    pub state: core::ffi::c_uint,
+    pub is_hint: core::ffi::c_char,
+    pub same_screen: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XMotionEvent() {
@@ -29187,23 +29187,23 @@ pub type XPointerMovedEvent = XMotionEvent;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XCrossingEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
     pub root: Window,
     pub subwindow: Window,
     pub time: Time,
-    pub x: libc::c_int,
-    pub y: libc::c_int,
-    pub x_root: libc::c_int,
-    pub y_root: libc::c_int,
-    pub mode: libc::c_int,
-    pub detail: libc::c_int,
-    pub same_screen: libc::c_int,
-    pub focus: libc::c_int,
-    pub state: libc::c_uint,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
+    pub x_root: core::ffi::c_int,
+    pub y_root: core::ffi::c_int,
+    pub mode: core::ffi::c_int,
+    pub detail: core::ffi::c_int,
+    pub same_screen: core::ffi::c_int,
+    pub focus: core::ffi::c_int,
+    pub state: core::ffi::c_uint,
 }
 #[test]
 fn bindgen_test_layout_XCrossingEvent() {
@@ -29393,13 +29393,13 @@ pub type XLeaveWindowEvent = XCrossingEvent;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XFocusChangeEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
-    pub mode: libc::c_int,
-    pub detail: libc::c_int,
+    pub mode: core::ffi::c_int,
+    pub detail: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XFocusChangeEvent() {
@@ -29489,12 +29489,12 @@ pub type XFocusOutEvent = XFocusChangeEvent;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XKeymapEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
-    pub key_vector: [libc::c_char; 32usize],
+    pub key_vector: [core::ffi::c_char; 32usize],
 }
 #[test]
 fn bindgen_test_layout_XKeymapEvent() {
@@ -29572,16 +29572,16 @@ fn bindgen_test_layout_XKeymapEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XExposeEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
-    pub x: libc::c_int,
-    pub y: libc::c_int,
-    pub width: libc::c_int,
-    pub height: libc::c_int,
-    pub count: libc::c_int,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
+    pub width: core::ffi::c_int,
+    pub height: core::ffi::c_int,
+    pub count: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XExposeEvent() {
@@ -29699,18 +29699,18 @@ fn bindgen_test_layout_XExposeEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XGraphicsExposeEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub drawable: Drawable,
-    pub x: libc::c_int,
-    pub y: libc::c_int,
-    pub width: libc::c_int,
-    pub height: libc::c_int,
-    pub count: libc::c_int,
-    pub major_code: libc::c_int,
-    pub minor_code: libc::c_int,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
+    pub width: core::ffi::c_int,
+    pub height: core::ffi::c_int,
+    pub count: core::ffi::c_int,
+    pub major_code: core::ffi::c_int,
+    pub minor_code: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XGraphicsExposeEvent() {
@@ -29854,13 +29854,13 @@ fn bindgen_test_layout_XGraphicsExposeEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XNoExposeEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub drawable: Drawable,
-    pub major_code: libc::c_int,
-    pub minor_code: libc::c_int,
+    pub major_code: core::ffi::c_int,
+    pub minor_code: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XNoExposeEvent() {
@@ -29948,12 +29948,12 @@ fn bindgen_test_layout_XNoExposeEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XVisibilityEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
-    pub state: libc::c_int,
+    pub state: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XVisibilityEvent() {
@@ -30031,18 +30031,18 @@ fn bindgen_test_layout_XVisibilityEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XCreateWindowEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub parent: Window,
     pub window: Window,
-    pub x: libc::c_int,
-    pub y: libc::c_int,
-    pub width: libc::c_int,
-    pub height: libc::c_int,
-    pub border_width: libc::c_int,
-    pub override_redirect: libc::c_int,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
+    pub width: core::ffi::c_int,
+    pub height: core::ffi::c_int,
+    pub border_width: core::ffi::c_int,
+    pub override_redirect: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XCreateWindowEvent() {
@@ -30184,9 +30184,9 @@ fn bindgen_test_layout_XCreateWindowEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XDestroyWindowEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub event: Window,
     pub window: Window,
@@ -30267,13 +30267,13 @@ fn bindgen_test_layout_XDestroyWindowEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XUnmapEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub event: Window,
     pub window: Window,
-    pub from_configure: libc::c_int,
+    pub from_configure: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XUnmapEvent() {
@@ -30361,13 +30361,13 @@ fn bindgen_test_layout_XUnmapEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XMapEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub event: Window,
     pub window: Window,
-    pub override_redirect: libc::c_int,
+    pub override_redirect: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XMapEvent() {
@@ -30455,9 +30455,9 @@ fn bindgen_test_layout_XMapEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XMapRequestEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub parent: Window,
     pub window: Window,
@@ -30538,16 +30538,16 @@ fn bindgen_test_layout_XMapRequestEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XReparentEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub event: Window,
     pub window: Window,
     pub parent: Window,
-    pub x: libc::c_int,
-    pub y: libc::c_int,
-    pub override_redirect: libc::c_int,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
+    pub override_redirect: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XReparentEvent() {
@@ -30667,19 +30667,19 @@ fn bindgen_test_layout_XReparentEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XConfigureEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub event: Window,
     pub window: Window,
-    pub x: libc::c_int,
-    pub y: libc::c_int,
-    pub width: libc::c_int,
-    pub height: libc::c_int,
-    pub border_width: libc::c_int,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
+    pub width: core::ffi::c_int,
+    pub height: core::ffi::c_int,
+    pub border_width: core::ffi::c_int,
     pub above: Window,
-    pub override_redirect: libc::c_int,
+    pub override_redirect: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XConfigureEvent() {
@@ -30829,14 +30829,14 @@ fn bindgen_test_layout_XConfigureEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XGravityEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub event: Window,
     pub window: Window,
-    pub x: libc::c_int,
-    pub y: libc::c_int,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XGravityEvent() {
@@ -30934,13 +30934,13 @@ fn bindgen_test_layout_XGravityEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XResizeRequestEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
-    pub width: libc::c_int,
-    pub height: libc::c_int,
+    pub width: core::ffi::c_int,
+    pub height: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XResizeRequestEvent() {
@@ -31028,20 +31028,20 @@ fn bindgen_test_layout_XResizeRequestEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XConfigureRequestEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub parent: Window,
     pub window: Window,
-    pub x: libc::c_int,
-    pub y: libc::c_int,
-    pub width: libc::c_int,
-    pub height: libc::c_int,
-    pub border_width: libc::c_int,
+    pub x: core::ffi::c_int,
+    pub y: core::ffi::c_int,
+    pub width: core::ffi::c_int,
+    pub height: core::ffi::c_int,
+    pub border_width: core::ffi::c_int,
     pub above: Window,
-    pub detail: libc::c_int,
-    pub value_mask: libc::c_ulong,
+    pub detail: core::ffi::c_int,
+    pub value_mask: core::ffi::c_ulong,
 }
 #[test]
 fn bindgen_test_layout_XConfigureRequestEvent() {
@@ -31205,13 +31205,13 @@ fn bindgen_test_layout_XConfigureRequestEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XCirculateEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub event: Window,
     pub window: Window,
-    pub place: libc::c_int,
+    pub place: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XCirculateEvent() {
@@ -31299,13 +31299,13 @@ fn bindgen_test_layout_XCirculateEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XCirculateRequestEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub parent: Window,
     pub window: Window,
-    pub place: libc::c_int,
+    pub place: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XCirculateRequestEvent() {
@@ -31395,14 +31395,14 @@ fn bindgen_test_layout_XCirculateRequestEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XPropertyEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
     pub atom: Atom,
     pub time: Time,
-    pub state: libc::c_int,
+    pub state: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XPropertyEvent() {
@@ -31500,9 +31500,9 @@ fn bindgen_test_layout_XPropertyEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XSelectionClearEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
     pub selection: Atom,
@@ -31596,9 +31596,9 @@ fn bindgen_test_layout_XSelectionClearEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XSelectionRequestEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub owner: Window,
     pub requestor: Window,
@@ -31731,9 +31731,9 @@ fn bindgen_test_layout_XSelectionRequestEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XSelectionEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub requestor: Window,
     pub selection: Atom,
@@ -31847,14 +31847,14 @@ fn bindgen_test_layout_XSelectionEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XColormapEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
     pub colormap: Colormap,
-    pub new: libc::c_int,
-    pub state: libc::c_int,
+    pub new: core::ffi::c_int,
+    pub state: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XColormapEvent() {
@@ -31952,21 +31952,21 @@ fn bindgen_test_layout_XColormapEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XClientMessageEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
     pub message_type: Atom,
-    pub format: libc::c_int,
+    pub format: core::ffi::c_int,
     pub data: XClientMessageEvent__bindgen_ty_1,
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union XClientMessageEvent__bindgen_ty_1 {
-    pub b: [libc::c_char; 20usize],
-    pub s: [libc::c_short; 10usize],
-    pub l: [libc::c_long; 5usize],
+    pub b: [core::ffi::c_char; 20usize],
+    pub s: [core::ffi::c_short; 10usize],
+    pub l: [core::ffi::c_long; 5usize],
     _bindgen_union_align: [u64; 5usize],
 }
 #[test]
@@ -32119,14 +32119,14 @@ fn bindgen_test_layout_XClientMessageEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XMappingEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
-    pub request: libc::c_int,
-    pub first_keycode: libc::c_int,
-    pub count: libc::c_int,
+    pub request: core::ffi::c_int,
+    pub first_keycode: core::ffi::c_int,
+    pub count: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XMappingEvent() {
@@ -32224,13 +32224,13 @@ fn bindgen_test_layout_XMappingEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XErrorEvent {
-    pub type_: libc::c_int,
+    pub type_: core::ffi::c_int,
     pub display: *mut Display,
     pub resourceid: XID,
-    pub serial: libc::c_ulong,
-    pub error_code: libc::c_uchar,
-    pub request_code: libc::c_uchar,
-    pub minor_code: libc::c_uchar,
+    pub serial: core::ffi::c_ulong,
+    pub error_code: core::ffi::c_uchar,
+    pub request_code: core::ffi::c_uchar,
+    pub minor_code: core::ffi::c_uchar,
 }
 #[test]
 fn bindgen_test_layout_XErrorEvent() {
@@ -32318,9 +32318,9 @@ fn bindgen_test_layout_XErrorEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XAnyEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
     pub window: Window,
 }
@@ -32390,12 +32390,12 @@ fn bindgen_test_layout_XAnyEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XGenericEvent {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
-    pub extension: libc::c_int,
-    pub evtype: libc::c_int,
+    pub extension: core::ffi::c_int,
+    pub evtype: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XGenericEvent() {
@@ -32473,14 +32473,14 @@ fn bindgen_test_layout_XGenericEvent() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XGenericEventCookie {
-    pub type_: libc::c_int,
-    pub serial: libc::c_ulong,
-    pub send_event: libc::c_int,
+    pub type_: core::ffi::c_int,
+    pub serial: core::ffi::c_ulong,
+    pub send_event: core::ffi::c_int,
     pub display: *mut Display,
-    pub extension: libc::c_int,
-    pub evtype: libc::c_int,
-    pub cookie: libc::c_uint,
-    pub data: *mut libc::c_void,
+    pub extension: core::ffi::c_int,
+    pub evtype: core::ffi::c_int,
+    pub cookie: core::ffi::c_uint,
+    pub data: *mut core::ffi::c_void,
 }
 #[test]
 fn bindgen_test_layout_XGenericEventCookie() {
@@ -32578,7 +32578,7 @@ fn bindgen_test_layout_XGenericEventCookie() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union _XEvent {
-    pub type_: libc::c_int,
+    pub type_: core::ffi::c_int,
     pub xany: XAnyEvent,
     pub xkey: XKeyEvent,
     pub xbutton: XButtonEvent,
@@ -32612,7 +32612,7 @@ pub union _XEvent {
     pub xkeymap: XKeymapEvent,
     pub xgeneric: XGenericEvent,
     pub xcookie: XGenericEventCookie,
-    pub pad: [libc::c_long; 24usize],
+    pub pad: [core::ffi::c_long; 24usize],
     _bindgen_union_align: [u64; 24usize],
 }
 #[test]
@@ -32982,12 +32982,12 @@ pub type XEvent = _XEvent;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XCharStruct {
-    pub lbearing: libc::c_short,
-    pub rbearing: libc::c_short,
-    pub width: libc::c_short,
-    pub ascent: libc::c_short,
-    pub descent: libc::c_short,
-    pub attributes: libc::c_ushort,
+    pub lbearing: core::ffi::c_short,
+    pub rbearing: core::ffi::c_short,
+    pub width: core::ffi::c_short,
+    pub ascent: core::ffi::c_short,
+    pub descent: core::ffi::c_short,
+    pub attributes: core::ffi::c_ushort,
 }
 #[test]
 fn bindgen_test_layout_XCharStruct() {
@@ -33066,7 +33066,7 @@ fn bindgen_test_layout_XCharStruct() {
 #[derive(Copy, Clone)]
 pub struct XFontProp {
     pub name: Atom,
-    pub card32: libc::c_ulong,
+    pub card32: core::ffi::c_ulong,
 }
 #[test]
 fn bindgen_test_layout_XFontProp() {
@@ -33106,20 +33106,20 @@ fn bindgen_test_layout_XFontProp() {
 pub struct XFontStruct {
     pub ext_data: *mut XExtData,
     pub fid: Font,
-    pub direction: libc::c_uint,
-    pub min_char_or_byte2: libc::c_uint,
-    pub max_char_or_byte2: libc::c_uint,
-    pub min_byte1: libc::c_uint,
-    pub max_byte1: libc::c_uint,
-    pub all_chars_exist: libc::c_int,
-    pub default_char: libc::c_uint,
-    pub n_properties: libc::c_int,
+    pub direction: core::ffi::c_uint,
+    pub min_char_or_byte2: core::ffi::c_uint,
+    pub max_char_or_byte2: core::ffi::c_uint,
+    pub min_byte1: core::ffi::c_uint,
+    pub max_byte1: core::ffi::c_uint,
+    pub all_chars_exist: core::ffi::c_int,
+    pub default_char: core::ffi::c_uint,
+    pub n_properties: core::ffi::c_int,
     pub properties: *mut XFontProp,
     pub min_bounds: XCharStruct,
     pub max_bounds: XCharStruct,
     pub per_char: *mut XCharStruct,
-    pub ascent: libc::c_int,
-    pub descent: libc::c_int,
+    pub ascent: core::ffi::c_int,
+    pub descent: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout_XFontStruct() {
@@ -33297,9 +33297,9 @@ fn bindgen_test_layout_XFontStruct() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XTextItem {
-    pub chars: *mut libc::c_char,
-    pub nchars: libc::c_int,
-    pub delta: libc::c_int,
+    pub chars: *mut core::ffi::c_char,
+    pub nchars: core::ffi::c_int,
+    pub delta: core::ffi::c_int,
     pub font: Font,
 }
 #[test]
@@ -33358,8 +33358,8 @@ fn bindgen_test_layout_XTextItem() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XChar2b {
-    pub byte1: libc::c_uchar,
-    pub byte2: libc::c_uchar,
+    pub byte1: core::ffi::c_uchar,
+    pub byte2: core::ffi::c_uchar,
 }
 #[test]
 fn bindgen_test_layout_XChar2b() {
@@ -33398,8 +33398,8 @@ fn bindgen_test_layout_XChar2b() {
 #[derive(Copy, Clone)]
 pub struct XTextItem16 {
     pub chars: *mut XChar2b,
-    pub nchars: libc::c_int,
-    pub delta: libc::c_int,
+    pub nchars: core::ffi::c_int,
+    pub delta: core::ffi::c_int,
     pub font: Font,
 }
 #[test]
@@ -33596,9 +33596,9 @@ pub type XFontSet = *mut _XOC;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XmbTextItem {
-    pub chars: *mut libc::c_char,
-    pub nchars: libc::c_int,
-    pub delta: libc::c_int,
+    pub chars: *mut core::ffi::c_char,
+    pub nchars: core::ffi::c_int,
+    pub delta: core::ffi::c_int,
     pub font_set: XFontSet,
 }
 #[test]
@@ -33658,8 +33658,8 @@ fn bindgen_test_layout_XmbTextItem() {
 #[derive(Copy, Clone)]
 pub struct XwcTextItem {
     pub chars: *mut wchar_t,
-    pub nchars: libc::c_int,
-    pub delta: libc::c_int,
+    pub nchars: core::ffi::c_int,
+    pub delta: core::ffi::c_int,
     pub font_set: XFontSet,
 }
 #[test]
@@ -33718,8 +33718,8 @@ fn bindgen_test_layout_XwcTextItem() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XOMCharSetList {
-    pub charset_count: libc::c_int,
-    pub charset_list: *mut *mut libc::c_char,
+    pub charset_count: core::ffi::c_int,
+    pub charset_list: *mut *mut core::ffi::c_char,
 }
 #[test]
 fn bindgen_test_layout_XOMCharSetList() {
@@ -33766,7 +33766,7 @@ pub enum XOrientation {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XOMOrientation {
-    pub num_orientation: libc::c_int,
+    pub num_orientation: core::ffi::c_int,
     pub orientation: *mut XOrientation,
 }
 #[test]
@@ -33805,9 +33805,9 @@ fn bindgen_test_layout_XOMOrientation() {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XOMFontInfo {
-    pub num_font: libc::c_int,
+    pub num_font: core::ffi::c_int,
     pub font_struct_list: *mut *mut XFontStruct,
-    pub font_name_list: *mut *mut libc::c_char,
+    pub font_name_list: *mut *mut core::ffi::c_char,
 }
 #[test]
 fn bindgen_test_layout_XOMFontInfo() {
@@ -33867,16 +33867,16 @@ pub type XIC = *mut _XIC;
 pub type XIMProc =
     ::core::option::Option<unsafe extern "C" fn(arg1: XIM, arg2: XPointer, arg3: XPointer)>;
 pub type XICProc = ::core::option::Option<
-    unsafe extern "C" fn(arg1: XIC, arg2: XPointer, arg3: XPointer) -> libc::c_int,
+    unsafe extern "C" fn(arg1: XIC, arg2: XPointer, arg3: XPointer) -> core::ffi::c_int,
 >;
 pub type XIDProc = ::core::option::Option<
     unsafe extern "C" fn(arg1: *mut Display, arg2: XPointer, arg3: XPointer),
 >;
-pub type XIMStyle = libc::c_ulong;
+pub type XIMStyle = core::ffi::c_ulong;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XIMStyles {
-    pub count_styles: libc::c_ushort,
+    pub count_styles: core::ffi::c_ushort,
     pub supported_styles: *mut XIMStyle,
 }
 #[test]
@@ -33912,7 +33912,7 @@ fn bindgen_test_layout_XIMStyles() {
         )
     );
 }
-pub type XVaNestedList = *mut libc::c_void;
+pub type XVaNestedList = *mut core::ffi::c_void;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XIMCallback {
@@ -33991,19 +33991,19 @@ fn bindgen_test_layout_XICCallback() {
         )
     );
 }
-pub type XIMFeedback = libc::c_ulong;
+pub type XIMFeedback = core::ffi::c_ulong;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct _XIMText {
-    pub length: libc::c_ushort,
+    pub length: core::ffi::c_ushort,
     pub feedback: *mut XIMFeedback,
-    pub encoding_is_wchar: libc::c_int,
+    pub encoding_is_wchar: core::ffi::c_int,
     pub string: _XIMText__bindgen_ty_1,
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union _XIMText__bindgen_ty_1 {
-    pub multi_byte: *mut libc::c_char,
+    pub multi_byte: *mut core::ffi::c_char,
     pub wide_char: *mut wchar_t,
     _bindgen_union_align: u64,
 }
@@ -34098,7 +34098,7 @@ fn bindgen_test_layout__XIMText() {
     );
 }
 pub type XIMText = _XIMText;
-pub type XIMPreeditState = libc::c_ulong;
+pub type XIMPreeditState = core::ffi::c_ulong;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct _XIMPreeditStateNotifyCallbackStruct {
@@ -34137,20 +34137,20 @@ fn bindgen_test_layout__XIMPreeditStateNotifyCallbackStruct() {
     );
 }
 pub type XIMPreeditStateNotifyCallbackStruct = _XIMPreeditStateNotifyCallbackStruct;
-pub type XIMResetState = libc::c_ulong;
-pub type XIMStringConversionFeedback = libc::c_ulong;
+pub type XIMResetState = core::ffi::c_ulong;
+pub type XIMStringConversionFeedback = core::ffi::c_ulong;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct _XIMStringConversionText {
-    pub length: libc::c_ushort,
+    pub length: core::ffi::c_ushort,
     pub feedback: *mut XIMStringConversionFeedback,
-    pub encoding_is_wchar: libc::c_int,
+    pub encoding_is_wchar: core::ffi::c_int,
     pub string: _XIMStringConversionText__bindgen_ty_1,
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union _XIMStringConversionText__bindgen_ty_1 {
-    pub mbs: *mut libc::c_char,
+    pub mbs: *mut core::ffi::c_char,
     pub wcs: *mut wchar_t,
     _bindgen_union_align: u64,
 }
@@ -34262,9 +34262,9 @@ fn bindgen_test_layout__XIMStringConversionText() {
     );
 }
 pub type XIMStringConversionText = _XIMStringConversionText;
-pub type XIMStringConversionPosition = libc::c_ushort;
-pub type XIMStringConversionType = libc::c_ushort;
-pub type XIMStringConversionOperation = libc::c_ushort;
+pub type XIMStringConversionPosition = core::ffi::c_ushort;
+pub type XIMStringConversionType = core::ffi::c_ushort;
+pub type XIMStringConversionOperation = core::ffi::c_ushort;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum XIMCaretDirection {
@@ -34287,7 +34287,7 @@ pub struct _XIMStringConversionCallbackStruct {
     pub position: XIMStringConversionPosition,
     pub direction: XIMCaretDirection,
     pub operation: XIMStringConversionOperation,
-    pub factor: libc::c_ushort,
+    pub factor: core::ffi::c_ushort,
     pub text: *mut XIMStringConversionText,
 }
 #[test]
@@ -34375,9 +34375,9 @@ pub type XIMStringConversionCallbackStruct = _XIMStringConversionCallbackStruct;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct _XIMPreeditDrawCallbackStruct {
-    pub caret: libc::c_int,
-    pub chg_first: libc::c_int,
-    pub chg_length: libc::c_int,
+    pub caret: core::ffi::c_int,
+    pub chg_first: core::ffi::c_int,
+    pub chg_length: core::ffi::c_int,
     pub text: *mut XIMText,
 }
 #[test]
@@ -34454,7 +34454,7 @@ pub enum XIMCaretStyle {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct _XIMPreeditCaretCallbackStruct {
-    pub position: libc::c_int,
+    pub position: core::ffi::c_int,
     pub direction: XIMCaretDirection,
     pub style: XIMCaretStyle,
 }
@@ -34616,8 +34616,8 @@ pub type XIMStatusDrawCallbackStruct = _XIMStatusDrawCallbackStruct;
 #[derive(Copy, Clone)]
 pub struct _XIMHotKeyTrigger {
     pub keysym: KeySym,
-    pub modifier: libc::c_int,
-    pub modifier_mask: libc::c_int,
+    pub modifier: core::ffi::c_int,
+    pub modifier_mask: core::ffi::c_int,
 }
 #[test]
 fn bindgen_test_layout__XIMHotKeyTrigger() {
@@ -34668,7 +34668,7 @@ pub type XIMHotKeyTrigger = _XIMHotKeyTrigger;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct _XIMHotKeyTriggers {
-    pub num_hot_key: libc::c_int,
+    pub num_hot_key: core::ffi::c_int,
     pub key: *mut XIMHotKeyTrigger,
 }
 #[test]
@@ -34705,12 +34705,12 @@ fn bindgen_test_layout__XIMHotKeyTriggers() {
     );
 }
 pub type XIMHotKeyTriggers = _XIMHotKeyTriggers;
-pub type XIMHotKeyState = libc::c_ulong;
+pub type XIMHotKeyState = core::ffi::c_ulong;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XIMValuesList {
-    pub count_values: libc::c_ushort,
-    pub supported_values: *mut *mut libc::c_char,
+    pub count_values: core::ffi::c_ushort,
+    pub supported_values: *mut *mut core::ffi::c_char,
 }
 #[test]
 fn bindgen_test_layout_XIMValuesList() {
@@ -34746,10 +34746,10 @@ fn bindgen_test_layout_XIMValuesList() {
     );
 }
 extern "C" {
-    pub static mut _Xdebug: libc::c_int;
+    pub static mut _Xdebug: core::ffi::c_int;
 }
 extern "C" {
-    pub fn XLoadQueryFont(arg1: *mut Display, arg2: *const libc::c_char) -> *mut XFontStruct;
+    pub fn XLoadQueryFont(arg1: *mut Display, arg2: *const core::ffi::c_char) -> *mut XFontStruct;
 }
 extern "C" {
     pub fn XQueryFont(arg1: *mut Display, arg2: XID) -> *mut XFontStruct;
@@ -34760,14 +34760,14 @@ extern "C" {
         arg2: Window,
         arg3: Time,
         arg4: Time,
-        arg5: *mut libc::c_int,
+        arg5: *mut core::ffi::c_int,
     ) -> *mut XTimeCoord;
 }
 extern "C" {
     pub fn XDeleteModifiermapEntry(
         arg1: *mut XModifierKeymap,
         arg2: KeyCode,
-        arg3: libc::c_int,
+        arg3: core::ffi::c_int,
     ) -> *mut XModifierKeymap;
 }
 extern "C" {
@@ -34777,126 +34777,126 @@ extern "C" {
     pub fn XInsertModifiermapEntry(
         arg1: *mut XModifierKeymap,
         arg2: KeyCode,
-        arg3: libc::c_int,
+        arg3: core::ffi::c_int,
     ) -> *mut XModifierKeymap;
 }
 extern "C" {
-    pub fn XNewModifiermap(arg1: libc::c_int) -> *mut XModifierKeymap;
+    pub fn XNewModifiermap(arg1: core::ffi::c_int) -> *mut XModifierKeymap;
 }
 extern "C" {
     pub fn XCreateImage(
         arg1: *mut Display,
         arg2: *mut Visual,
-        arg3: libc::c_uint,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-        arg6: *mut libc::c_char,
-        arg7: libc::c_uint,
-        arg8: libc::c_uint,
-        arg9: libc::c_int,
-        arg10: libc::c_int,
+        arg3: core::ffi::c_uint,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+        arg6: *mut core::ffi::c_char,
+        arg7: core::ffi::c_uint,
+        arg8: core::ffi::c_uint,
+        arg9: core::ffi::c_int,
+        arg10: core::ffi::c_int,
     ) -> *mut XImage;
 }
 extern "C" {
-    pub fn XInitImage(arg1: *mut XImage) -> libc::c_int;
+    pub fn XInitImage(arg1: *mut XImage) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetImage(
         arg1: *mut Display,
         arg2: Drawable,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
-        arg5: libc::c_uint,
-        arg6: libc::c_uint,
-        arg7: libc::c_ulong,
-        arg8: libc::c_int,
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_uint,
+        arg6: core::ffi::c_uint,
+        arg7: core::ffi::c_ulong,
+        arg8: core::ffi::c_int,
     ) -> *mut XImage;
 }
 extern "C" {
     pub fn XGetSubImage(
         arg1: *mut Display,
         arg2: Drawable,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
-        arg5: libc::c_uint,
-        arg6: libc::c_uint,
-        arg7: libc::c_ulong,
-        arg8: libc::c_int,
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_uint,
+        arg6: core::ffi::c_uint,
+        arg7: core::ffi::c_ulong,
+        arg8: core::ffi::c_int,
         arg9: *mut XImage,
-        arg10: libc::c_int,
-        arg11: libc::c_int,
+        arg10: core::ffi::c_int,
+        arg11: core::ffi::c_int,
     ) -> *mut XImage;
 }
 extern "C" {
-    pub fn XOpenDisplay(arg1: *const libc::c_char) -> *mut Display;
+    pub fn XOpenDisplay(arg1: *const core::ffi::c_char) -> *mut Display;
 }
 extern "C" {
     pub fn XrmInitialize();
 }
 extern "C" {
-    pub fn XFetchBytes(arg1: *mut Display, arg2: *mut libc::c_int) -> *mut libc::c_char;
+    pub fn XFetchBytes(arg1: *mut Display, arg2: *mut core::ffi::c_int) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn XFetchBuffer(
         arg1: *mut Display,
-        arg2: *mut libc::c_int,
-        arg3: libc::c_int,
-    ) -> *mut libc::c_char;
+        arg2: *mut core::ffi::c_int,
+        arg3: core::ffi::c_int,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XGetAtomName(arg1: *mut Display, arg2: Atom) -> *mut libc::c_char;
+    pub fn XGetAtomName(arg1: *mut Display, arg2: Atom) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn XGetAtomNames(
         arg1: *mut Display,
         arg2: *mut Atom,
-        arg3: libc::c_int,
-        arg4: *mut *mut libc::c_char,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_int,
+        arg4: *mut *mut core::ffi::c_char,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetDefault(
         arg1: *mut Display,
-        arg2: *const libc::c_char,
-        arg3: *const libc::c_char,
-    ) -> *mut libc::c_char;
+        arg2: *const core::ffi::c_char,
+        arg3: *const core::ffi::c_char,
+    ) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XDisplayName(arg1: *const libc::c_char) -> *mut libc::c_char;
+    pub fn XDisplayName(arg1: *const core::ffi::c_char) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XKeysymToString(arg1: KeySym) -> *mut libc::c_char;
+    pub fn XKeysymToString(arg1: KeySym) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn XSynchronize(
         arg1: *mut Display,
-        arg2: libc::c_int,
+        arg2: core::ffi::c_int,
     ) -> ::core::option::Option<
-        unsafe extern "C" fn(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int,
+        unsafe extern "C" fn(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int,
     >;
 }
 extern "C" {
     pub fn XSetAfterFunction(
         arg1: *mut Display,
-        arg2: ::core::option::Option<unsafe extern "C" fn(arg1: *mut Display) -> libc::c_int>,
+        arg2: ::core::option::Option<unsafe extern "C" fn(arg1: *mut Display) -> core::ffi::c_int>,
     ) -> ::core::option::Option<
         unsafe extern "C" fn(
             arg1: *mut Display,
-            arg2: ::core::option::Option<unsafe extern "C" fn(arg1: *mut Display) -> libc::c_int>,
-        ) -> libc::c_int,
+            arg2: ::core::option::Option<unsafe extern "C" fn(arg1: *mut Display) -> core::ffi::c_int>,
+        ) -> core::ffi::c_int,
     >;
 }
 extern "C" {
-    pub fn XInternAtom(arg1: *mut Display, arg2: *const libc::c_char, arg3: libc::c_int) -> Atom;
+    pub fn XInternAtom(arg1: *mut Display, arg2: *const core::ffi::c_char, arg3: core::ffi::c_int) -> Atom;
 }
 extern "C" {
     pub fn XInternAtoms(
         arg1: *mut Display,
-        arg2: *mut *mut libc::c_char,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
+        arg2: *mut *mut core::ffi::c_char,
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
         arg5: *mut Atom,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XCopyColormapAndFree(arg1: *mut Display, arg2: Colormap) -> Colormap;
@@ -34906,7 +34906,7 @@ extern "C" {
         arg1: *mut Display,
         arg2: Window,
         arg3: *mut Visual,
-        arg4: libc::c_int,
+        arg4: core::ffi::c_int,
     ) -> Colormap;
 }
 extern "C" {
@@ -34916,8 +34916,8 @@ extern "C" {
         arg3: Pixmap,
         arg4: *mut XColor,
         arg5: *mut XColor,
-        arg6: libc::c_uint,
-        arg7: libc::c_uint,
+        arg6: core::ffi::c_uint,
+        arg7: core::ffi::c_uint,
     ) -> Cursor;
 }
 extern "C" {
@@ -34925,23 +34925,23 @@ extern "C" {
         arg1: *mut Display,
         arg2: Font,
         arg3: Font,
-        arg4: libc::c_uint,
-        arg5: libc::c_uint,
+        arg4: core::ffi::c_uint,
+        arg5: core::ffi::c_uint,
         arg6: *const XColor,
         arg7: *const XColor,
     ) -> Cursor;
 }
 extern "C" {
-    pub fn XCreateFontCursor(arg1: *mut Display, arg2: libc::c_uint) -> Cursor;
+    pub fn XCreateFontCursor(arg1: *mut Display, arg2: core::ffi::c_uint) -> Cursor;
 }
 extern "C" {
-    pub fn XLoadFont(arg1: *mut Display, arg2: *const libc::c_char) -> Font;
+    pub fn XLoadFont(arg1: *mut Display, arg2: *const core::ffi::c_char) -> Font;
 }
 extern "C" {
     pub fn XCreateGC(
         arg1: *mut Display,
         arg2: Drawable,
-        arg3: libc::c_ulong,
+        arg3: core::ffi::c_ulong,
         arg4: *mut XGCValues,
     ) -> GC;
 }
@@ -34955,43 +34955,43 @@ extern "C" {
     pub fn XCreatePixmap(
         arg1: *mut Display,
         arg2: Drawable,
-        arg3: libc::c_uint,
-        arg4: libc::c_uint,
-        arg5: libc::c_uint,
+        arg3: core::ffi::c_uint,
+        arg4: core::ffi::c_uint,
+        arg5: core::ffi::c_uint,
     ) -> Pixmap;
 }
 extern "C" {
     pub fn XCreateBitmapFromData(
         arg1: *mut Display,
         arg2: Drawable,
-        arg3: *const libc::c_char,
-        arg4: libc::c_uint,
-        arg5: libc::c_uint,
+        arg3: *const core::ffi::c_char,
+        arg4: core::ffi::c_uint,
+        arg5: core::ffi::c_uint,
     ) -> Pixmap;
 }
 extern "C" {
     pub fn XCreatePixmapFromBitmapData(
         arg1: *mut Display,
         arg2: Drawable,
-        arg3: *mut libc::c_char,
-        arg4: libc::c_uint,
-        arg5: libc::c_uint,
-        arg6: libc::c_ulong,
-        arg7: libc::c_ulong,
-        arg8: libc::c_uint,
+        arg3: *mut core::ffi::c_char,
+        arg4: core::ffi::c_uint,
+        arg5: core::ffi::c_uint,
+        arg6: core::ffi::c_ulong,
+        arg7: core::ffi::c_ulong,
+        arg8: core::ffi::c_uint,
     ) -> Pixmap;
 }
 extern "C" {
     pub fn XCreateSimpleWindow(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
-        arg5: libc::c_uint,
-        arg6: libc::c_uint,
-        arg7: libc::c_uint,
-        arg8: libc::c_ulong,
-        arg9: libc::c_ulong,
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_uint,
+        arg6: core::ffi::c_uint,
+        arg7: core::ffi::c_uint,
+        arg8: core::ffi::c_ulong,
+        arg9: core::ffi::c_ulong,
     ) -> Window;
 }
 extern "C" {
@@ -35001,15 +35001,15 @@ extern "C" {
     pub fn XCreateWindow(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
-        arg5: libc::c_uint,
-        arg6: libc::c_uint,
-        arg7: libc::c_uint,
-        arg8: libc::c_int,
-        arg9: libc::c_uint,
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_uint,
+        arg6: core::ffi::c_uint,
+        arg7: core::ffi::c_uint,
+        arg8: core::ffi::c_int,
+        arg9: core::ffi::c_uint,
         arg10: *mut Visual,
-        arg11: libc::c_ulong,
+        arg11: core::ffi::c_ulong,
         arg12: *mut XSetWindowAttributes,
     ) -> Window;
 }
@@ -35017,79 +35017,79 @@ extern "C" {
     pub fn XListInstalledColormaps(
         arg1: *mut Display,
         arg2: Window,
-        arg3: *mut libc::c_int,
+        arg3: *mut core::ffi::c_int,
     ) -> *mut Colormap;
 }
 extern "C" {
     pub fn XListFonts(
         arg1: *mut Display,
-        arg2: *const libc::c_char,
-        arg3: libc::c_int,
-        arg4: *mut libc::c_int,
-    ) -> *mut *mut libc::c_char;
+        arg2: *const core::ffi::c_char,
+        arg3: core::ffi::c_int,
+        arg4: *mut core::ffi::c_int,
+    ) -> *mut *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn XListFontsWithInfo(
         arg1: *mut Display,
-        arg2: *const libc::c_char,
-        arg3: libc::c_int,
-        arg4: *mut libc::c_int,
+        arg2: *const core::ffi::c_char,
+        arg3: core::ffi::c_int,
+        arg4: *mut core::ffi::c_int,
         arg5: *mut *mut XFontStruct,
-    ) -> *mut *mut libc::c_char;
+    ) -> *mut *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XGetFontPath(arg1: *mut Display, arg2: *mut libc::c_int) -> *mut *mut libc::c_char;
+    pub fn XGetFontPath(arg1: *mut Display, arg2: *mut core::ffi::c_int) -> *mut *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XListExtensions(arg1: *mut Display, arg2: *mut libc::c_int) -> *mut *mut libc::c_char;
+    pub fn XListExtensions(arg1: *mut Display, arg2: *mut core::ffi::c_int) -> *mut *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XListProperties(arg1: *mut Display, arg2: Window, arg3: *mut libc::c_int) -> *mut Atom;
+    pub fn XListProperties(arg1: *mut Display, arg2: Window, arg3: *mut core::ffi::c_int) -> *mut Atom;
 }
 extern "C" {
     pub fn XListHosts(
         arg1: *mut Display,
-        arg2: *mut libc::c_int,
-        arg3: *mut libc::c_int,
+        arg2: *mut core::ffi::c_int,
+        arg3: *mut core::ffi::c_int,
     ) -> *mut XHostAddress;
 }
 extern "C" {
-    pub fn XKeycodeToKeysym(arg1: *mut Display, arg2: KeyCode, arg3: libc::c_int) -> KeySym;
+    pub fn XKeycodeToKeysym(arg1: *mut Display, arg2: KeyCode, arg3: core::ffi::c_int) -> KeySym;
 }
 extern "C" {
-    pub fn XLookupKeysym(arg1: *mut XKeyEvent, arg2: libc::c_int) -> KeySym;
+    pub fn XLookupKeysym(arg1: *mut XKeyEvent, arg2: core::ffi::c_int) -> KeySym;
 }
 extern "C" {
     pub fn XGetKeyboardMapping(
         arg1: *mut Display,
         arg2: KeyCode,
-        arg3: libc::c_int,
-        arg4: *mut libc::c_int,
+        arg3: core::ffi::c_int,
+        arg4: *mut core::ffi::c_int,
     ) -> *mut KeySym;
 }
 extern "C" {
-    pub fn XStringToKeysym(arg1: *const libc::c_char) -> KeySym;
+    pub fn XStringToKeysym(arg1: *const core::ffi::c_char) -> KeySym;
 }
 extern "C" {
-    pub fn XMaxRequestSize(arg1: *mut Display) -> libc::c_long;
+    pub fn XMaxRequestSize(arg1: *mut Display) -> core::ffi::c_long;
 }
 extern "C" {
-    pub fn XExtendedMaxRequestSize(arg1: *mut Display) -> libc::c_long;
+    pub fn XExtendedMaxRequestSize(arg1: *mut Display) -> core::ffi::c_long;
 }
 extern "C" {
-    pub fn XResourceManagerString(arg1: *mut Display) -> *mut libc::c_char;
+    pub fn XResourceManagerString(arg1: *mut Display) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XScreenResourceString(arg1: *mut Screen) -> *mut libc::c_char;
+    pub fn XScreenResourceString(arg1: *mut Screen) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XDisplayMotionBufferSize(arg1: *mut Display) -> libc::c_ulong;
+    pub fn XDisplayMotionBufferSize(arg1: *mut Display) -> core::ffi::c_ulong;
 }
 extern "C" {
     pub fn XVisualIDFromVisual(arg1: *mut Visual) -> VisualID;
 }
 extern "C" {
-    pub fn XInitThreads() -> libc::c_int;
+    pub fn XInitThreads() -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XLockDisplay(arg1: *mut Display);
@@ -35098,19 +35098,19 @@ extern "C" {
     pub fn XUnlockDisplay(arg1: *mut Display);
 }
 extern "C" {
-    pub fn XInitExtension(arg1: *mut Display, arg2: *const libc::c_char) -> *mut XExtCodes;
+    pub fn XInitExtension(arg1: *mut Display, arg2: *const core::ffi::c_char) -> *mut XExtCodes;
 }
 extern "C" {
     pub fn XAddExtension(arg1: *mut Display) -> *mut XExtCodes;
 }
 extern "C" {
-    pub fn XFindOnExtensionList(arg1: *mut *mut XExtData, arg2: libc::c_int) -> *mut XExtData;
+    pub fn XFindOnExtensionList(arg1: *mut *mut XExtData, arg2: core::ffi::c_int) -> *mut XExtData;
 }
 extern "C" {
     pub fn XEHeadOfExtensionList(arg1: XEDataObject) -> *mut *mut XExtData;
 }
 extern "C" {
-    pub fn XRootWindow(arg1: *mut Display, arg2: libc::c_int) -> Window;
+    pub fn XRootWindow(arg1: *mut Display, arg2: core::ffi::c_int) -> Window;
 }
 extern "C" {
     pub fn XDefaultRootWindow(arg1: *mut Display) -> Window;
@@ -35119,46 +35119,46 @@ extern "C" {
     pub fn XRootWindowOfScreen(arg1: *mut Screen) -> Window;
 }
 extern "C" {
-    pub fn XDefaultVisual(arg1: *mut Display, arg2: libc::c_int) -> *mut Visual;
+    pub fn XDefaultVisual(arg1: *mut Display, arg2: core::ffi::c_int) -> *mut Visual;
 }
 extern "C" {
     pub fn XDefaultVisualOfScreen(arg1: *mut Screen) -> *mut Visual;
 }
 extern "C" {
-    pub fn XDefaultGC(arg1: *mut Display, arg2: libc::c_int) -> GC;
+    pub fn XDefaultGC(arg1: *mut Display, arg2: core::ffi::c_int) -> GC;
 }
 extern "C" {
     pub fn XDefaultGCOfScreen(arg1: *mut Screen) -> GC;
 }
 extern "C" {
-    pub fn XBlackPixel(arg1: *mut Display, arg2: libc::c_int) -> libc::c_ulong;
+    pub fn XBlackPixel(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_ulong;
 }
 extern "C" {
-    pub fn XWhitePixel(arg1: *mut Display, arg2: libc::c_int) -> libc::c_ulong;
+    pub fn XWhitePixel(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_ulong;
 }
 extern "C" {
-    pub fn XAllPlanes() -> libc::c_ulong;
+    pub fn XAllPlanes() -> core::ffi::c_ulong;
 }
 extern "C" {
-    pub fn XBlackPixelOfScreen(arg1: *mut Screen) -> libc::c_ulong;
+    pub fn XBlackPixelOfScreen(arg1: *mut Screen) -> core::ffi::c_ulong;
 }
 extern "C" {
-    pub fn XWhitePixelOfScreen(arg1: *mut Screen) -> libc::c_ulong;
+    pub fn XWhitePixelOfScreen(arg1: *mut Screen) -> core::ffi::c_ulong;
 }
 extern "C" {
-    pub fn XNextRequest(arg1: *mut Display) -> libc::c_ulong;
+    pub fn XNextRequest(arg1: *mut Display) -> core::ffi::c_ulong;
 }
 extern "C" {
-    pub fn XLastKnownRequestProcessed(arg1: *mut Display) -> libc::c_ulong;
+    pub fn XLastKnownRequestProcessed(arg1: *mut Display) -> core::ffi::c_ulong;
 }
 extern "C" {
-    pub fn XServerVendor(arg1: *mut Display) -> *mut libc::c_char;
+    pub fn XServerVendor(arg1: *mut Display) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XDisplayString(arg1: *mut Display) -> *mut libc::c_char;
+    pub fn XDisplayString(arg1: *mut Display) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XDefaultColormap(arg1: *mut Display, arg2: libc::c_int) -> Colormap;
+    pub fn XDefaultColormap(arg1: *mut Display, arg2: core::ffi::c_int) -> Colormap;
 }
 extern "C" {
     pub fn XDefaultColormapOfScreen(arg1: *mut Screen) -> Colormap;
@@ -35167,230 +35167,230 @@ extern "C" {
     pub fn XDisplayOfScreen(arg1: *mut Screen) -> *mut Display;
 }
 extern "C" {
-    pub fn XScreenOfDisplay(arg1: *mut Display, arg2: libc::c_int) -> *mut Screen;
+    pub fn XScreenOfDisplay(arg1: *mut Display, arg2: core::ffi::c_int) -> *mut Screen;
 }
 extern "C" {
     pub fn XDefaultScreenOfDisplay(arg1: *mut Display) -> *mut Screen;
 }
 extern "C" {
-    pub fn XEventMaskOfScreen(arg1: *mut Screen) -> libc::c_long;
+    pub fn XEventMaskOfScreen(arg1: *mut Screen) -> core::ffi::c_long;
 }
 extern "C" {
-    pub fn XScreenNumberOfScreen(arg1: *mut Screen) -> libc::c_int;
+    pub fn XScreenNumberOfScreen(arg1: *mut Screen) -> core::ffi::c_int;
 }
 pub type XErrorHandler = ::core::option::Option<
-    unsafe extern "C" fn(arg1: *mut Display, arg2: *mut XErrorEvent) -> libc::c_int,
+    unsafe extern "C" fn(arg1: *mut Display, arg2: *mut XErrorEvent) -> core::ffi::c_int,
 >;
 extern "C" {
     pub fn XSetErrorHandler(arg1: XErrorHandler) -> XErrorHandler;
 }
 pub type XIOErrorHandler =
-    ::core::option::Option<unsafe extern "C" fn(arg1: *mut Display) -> libc::c_int>;
+    ::core::option::Option<unsafe extern "C" fn(arg1: *mut Display) -> core::ffi::c_int>;
 extern "C" {
     pub fn XSetIOErrorHandler(arg1: XIOErrorHandler) -> XIOErrorHandler;
 }
 pub type XIOErrorExitHandler =
-    ::core::option::Option<unsafe extern "C" fn(arg1: *mut Display, arg2: *mut libc::c_void)>;
+    ::core::option::Option<unsafe extern "C" fn(arg1: *mut Display, arg2: *mut core::ffi::c_void)>;
 extern "C" {
     pub fn XSetIOErrorExitHandler(
         arg1: *mut Display,
         arg2: XIOErrorExitHandler,
-        arg3: *mut libc::c_void,
+        arg3: *mut core::ffi::c_void,
     );
 }
 extern "C" {
     pub fn XListPixmapFormats(
         arg1: *mut Display,
-        arg2: *mut libc::c_int,
+        arg2: *mut core::ffi::c_int,
     ) -> *mut XPixmapFormatValues;
 }
 extern "C" {
     pub fn XListDepths(
         arg1: *mut Display,
-        arg2: libc::c_int,
-        arg3: *mut libc::c_int,
-    ) -> *mut libc::c_int;
+        arg2: core::ffi::c_int,
+        arg3: *mut core::ffi::c_int,
+    ) -> *mut core::ffi::c_int;
 }
 extern "C" {
     pub fn XReconfigureWMWindow(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_int,
-        arg4: libc::c_uint,
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_uint,
         arg5: *mut XWindowChanges,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetWMProtocols(
         arg1: *mut Display,
         arg2: Window,
         arg3: *mut *mut Atom,
-        arg4: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg4: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetWMProtocols(
         arg1: *mut Display,
         arg2: Window,
         arg3: *mut Atom,
-        arg4: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XIconifyWindow(arg1: *mut Display, arg2: Window, arg3: libc::c_int) -> libc::c_int;
+    pub fn XIconifyWindow(arg1: *mut Display, arg2: Window, arg3: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XWithdrawWindow(arg1: *mut Display, arg2: Window, arg3: libc::c_int) -> libc::c_int;
+    pub fn XWithdrawWindow(arg1: *mut Display, arg2: Window, arg3: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetCommand(
         arg1: *mut Display,
         arg2: Window,
-        arg3: *mut *mut *mut libc::c_char,
-        arg4: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg3: *mut *mut *mut core::ffi::c_char,
+        arg4: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetWMColormapWindows(
         arg1: *mut Display,
         arg2: Window,
         arg3: *mut *mut Window,
-        arg4: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg4: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetWMColormapWindows(
         arg1: *mut Display,
         arg2: Window,
         arg3: *mut Window,
-        arg4: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XFreeStringList(arg1: *mut *mut libc::c_char);
+    pub fn XFreeStringList(arg1: *mut *mut core::ffi::c_char);
 }
 extern "C" {
-    pub fn XSetTransientForHint(arg1: *mut Display, arg2: Window, arg3: Window) -> libc::c_int;
+    pub fn XSetTransientForHint(arg1: *mut Display, arg2: Window, arg3: Window) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XActivateScreenSaver(arg1: *mut Display) -> libc::c_int;
+    pub fn XActivateScreenSaver(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XAddHost(arg1: *mut Display, arg2: *mut XHostAddress) -> libc::c_int;
+    pub fn XAddHost(arg1: *mut Display, arg2: *mut XHostAddress) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XAddHosts(arg1: *mut Display, arg2: *mut XHostAddress, arg3: libc::c_int)
-        -> libc::c_int;
+    pub fn XAddHosts(arg1: *mut Display, arg2: *mut XHostAddress, arg3: core::ffi::c_int)
+        -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XAddToExtensionList(arg1: *mut *mut _XExtData, arg2: *mut XExtData) -> libc::c_int;
+    pub fn XAddToExtensionList(arg1: *mut *mut _XExtData, arg2: *mut XExtData) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XAddToSaveSet(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XAddToSaveSet(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XAllocColor(arg1: *mut Display, arg2: Colormap, arg3: *mut XColor) -> libc::c_int;
+    pub fn XAllocColor(arg1: *mut Display, arg2: Colormap, arg3: *mut XColor) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XAllocColorCells(
         arg1: *mut Display,
         arg2: Colormap,
-        arg3: libc::c_int,
-        arg4: *mut libc::c_ulong,
-        arg5: libc::c_uint,
-        arg6: *mut libc::c_ulong,
-        arg7: libc::c_uint,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_int,
+        arg4: *mut core::ffi::c_ulong,
+        arg5: core::ffi::c_uint,
+        arg6: *mut core::ffi::c_ulong,
+        arg7: core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XAllocColorPlanes(
         arg1: *mut Display,
         arg2: Colormap,
-        arg3: libc::c_int,
-        arg4: *mut libc::c_ulong,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-        arg7: libc::c_int,
-        arg8: libc::c_int,
-        arg9: *mut libc::c_ulong,
-        arg10: *mut libc::c_ulong,
-        arg11: *mut libc::c_ulong,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_int,
+        arg4: *mut core::ffi::c_ulong,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+        arg7: core::ffi::c_int,
+        arg8: core::ffi::c_int,
+        arg9: *mut core::ffi::c_ulong,
+        arg10: *mut core::ffi::c_ulong,
+        arg11: *mut core::ffi::c_ulong,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XAllocNamedColor(
         arg1: *mut Display,
         arg2: Colormap,
-        arg3: *const libc::c_char,
+        arg3: *const core::ffi::c_char,
         arg4: *mut XColor,
         arg5: *mut XColor,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XAllowEvents(arg1: *mut Display, arg2: libc::c_int, arg3: Time) -> libc::c_int;
+    pub fn XAllowEvents(arg1: *mut Display, arg2: core::ffi::c_int, arg3: Time) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XAutoRepeatOff(arg1: *mut Display) -> libc::c_int;
+    pub fn XAutoRepeatOff(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XAutoRepeatOn(arg1: *mut Display) -> libc::c_int;
+    pub fn XAutoRepeatOn(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XBell(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int;
+    pub fn XBell(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XBitmapBitOrder(arg1: *mut Display) -> libc::c_int;
+    pub fn XBitmapBitOrder(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XBitmapPad(arg1: *mut Display) -> libc::c_int;
+    pub fn XBitmapPad(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XBitmapUnit(arg1: *mut Display) -> libc::c_int;
+    pub fn XBitmapUnit(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XCellsOfScreen(arg1: *mut Screen) -> libc::c_int;
+    pub fn XCellsOfScreen(arg1: *mut Screen) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XChangeActivePointerGrab(
         arg1: *mut Display,
-        arg2: libc::c_uint,
+        arg2: core::ffi::c_uint,
         arg3: Cursor,
         arg4: Time,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XChangeGC(
         arg1: *mut Display,
         arg2: GC,
-        arg3: libc::c_ulong,
+        arg3: core::ffi::c_ulong,
         arg4: *mut XGCValues,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XChangeKeyboardControl(
         arg1: *mut Display,
-        arg2: libc::c_ulong,
+        arg2: core::ffi::c_ulong,
         arg3: *mut XKeyboardControl,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XChangeKeyboardMapping(
         arg1: *mut Display,
-        arg2: libc::c_int,
-        arg3: libc::c_int,
+        arg2: core::ffi::c_int,
+        arg3: core::ffi::c_int,
         arg4: *mut KeySym,
-        arg5: libc::c_int,
-    ) -> libc::c_int;
+        arg5: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XChangePointerControl(
         arg1: *mut Display,
-        arg2: libc::c_int,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-    ) -> libc::c_int;
+        arg2: core::ffi::c_int,
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XChangeProperty(
@@ -35398,22 +35398,22 @@ extern "C" {
         arg2: Window,
         arg3: Atom,
         arg4: Atom,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-        arg7: *const libc::c_uchar,
-        arg8: libc::c_int,
-    ) -> libc::c_int;
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+        arg7: *const core::ffi::c_uchar,
+        arg8: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XChangeSaveSet(arg1: *mut Display, arg2: Window, arg3: libc::c_int) -> libc::c_int;
+    pub fn XChangeSaveSet(arg1: *mut Display, arg2: Window, arg3: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XChangeWindowAttributes(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_ulong,
+        arg3: core::ffi::c_ulong,
         arg4: *mut XSetWindowAttributes,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XCheckIfEvent(
@@ -35424,78 +35424,78 @@ extern "C" {
                 arg1: *mut Display,
                 arg2: *mut XEvent,
                 arg3: XPointer,
-            ) -> libc::c_int,
+            ) -> core::ffi::c_int,
         >,
         arg4: XPointer,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XCheckMaskEvent(
         arg1: *mut Display,
-        arg2: libc::c_long,
+        arg2: core::ffi::c_long,
         arg3: *mut XEvent,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XCheckTypedEvent(
         arg1: *mut Display,
-        arg2: libc::c_int,
+        arg2: core::ffi::c_int,
         arg3: *mut XEvent,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XCheckTypedWindowEvent(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_int,
+        arg3: core::ffi::c_int,
         arg4: *mut XEvent,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XCheckWindowEvent(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_long,
+        arg3: core::ffi::c_long,
         arg4: *mut XEvent,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XCirculateSubwindows(arg1: *mut Display, arg2: Window, arg3: libc::c_int)
-        -> libc::c_int;
+    pub fn XCirculateSubwindows(arg1: *mut Display, arg2: Window, arg3: core::ffi::c_int)
+        -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XCirculateSubwindowsDown(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XCirculateSubwindowsDown(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XCirculateSubwindowsUp(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XCirculateSubwindowsUp(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XClearArea(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
-        arg5: libc::c_uint,
-        arg6: libc::c_uint,
-        arg7: libc::c_int,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_uint,
+        arg6: core::ffi::c_uint,
+        arg7: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XClearWindow(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XClearWindow(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XCloseDisplay(arg1: *mut Display) -> libc::c_int;
+    pub fn XCloseDisplay(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XConfigureWindow(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_uint,
+        arg3: core::ffi::c_uint,
         arg4: *mut XWindowChanges,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XConnectionNumber(arg1: *mut Display) -> libc::c_int;
+    pub fn XConnectionNumber(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XConvertSelection(
@@ -35505,7 +35505,7 @@ extern "C" {
         arg4: Atom,
         arg5: Window,
         arg6: Time,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XCopyArea(
@@ -35513,16 +35513,16 @@ extern "C" {
         arg2: Drawable,
         arg3: Drawable,
         arg4: GC,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-        arg7: libc::c_uint,
-        arg8: libc::c_uint,
-        arg9: libc::c_int,
-        arg10: libc::c_int,
-    ) -> libc::c_int;
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+        arg7: core::ffi::c_uint,
+        arg8: core::ffi::c_uint,
+        arg9: core::ffi::c_int,
+        arg10: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XCopyGC(arg1: *mut Display, arg2: GC, arg3: libc::c_ulong, arg4: GC) -> libc::c_int;
+    pub fn XCopyGC(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_ulong, arg4: GC) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XCopyPlane(
@@ -35530,82 +35530,82 @@ extern "C" {
         arg2: Drawable,
         arg3: Drawable,
         arg4: GC,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-        arg7: libc::c_uint,
-        arg8: libc::c_uint,
-        arg9: libc::c_int,
-        arg10: libc::c_int,
-        arg11: libc::c_ulong,
-    ) -> libc::c_int;
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+        arg7: core::ffi::c_uint,
+        arg8: core::ffi::c_uint,
+        arg9: core::ffi::c_int,
+        arg10: core::ffi::c_int,
+        arg11: core::ffi::c_ulong,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDefaultDepth(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int;
+    pub fn XDefaultDepth(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDefaultDepthOfScreen(arg1: *mut Screen) -> libc::c_int;
+    pub fn XDefaultDepthOfScreen(arg1: *mut Screen) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDefaultScreen(arg1: *mut Display) -> libc::c_int;
+    pub fn XDefaultScreen(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDefineCursor(arg1: *mut Display, arg2: Window, arg3: Cursor) -> libc::c_int;
+    pub fn XDefineCursor(arg1: *mut Display, arg2: Window, arg3: Cursor) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDeleteProperty(arg1: *mut Display, arg2: Window, arg3: Atom) -> libc::c_int;
+    pub fn XDeleteProperty(arg1: *mut Display, arg2: Window, arg3: Atom) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDestroyWindow(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XDestroyWindow(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDestroySubwindows(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XDestroySubwindows(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDoesBackingStore(arg1: *mut Screen) -> libc::c_int;
+    pub fn XDoesBackingStore(arg1: *mut Screen) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDoesSaveUnders(arg1: *mut Screen) -> libc::c_int;
+    pub fn XDoesSaveUnders(arg1: *mut Screen) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDisableAccessControl(arg1: *mut Display) -> libc::c_int;
+    pub fn XDisableAccessControl(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDisplayCells(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int;
+    pub fn XDisplayCells(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDisplayHeight(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int;
+    pub fn XDisplayHeight(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDisplayHeightMM(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int;
+    pub fn XDisplayHeightMM(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDisplayKeycodes(
         arg1: *mut Display,
-        arg2: *mut libc::c_int,
-        arg3: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg2: *mut core::ffi::c_int,
+        arg3: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDisplayPlanes(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int;
+    pub fn XDisplayPlanes(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDisplayWidth(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int;
+    pub fn XDisplayWidth(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDisplayWidthMM(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int;
+    pub fn XDisplayWidthMM(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawArc(
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-        arg6: libc::c_uint,
-        arg7: libc::c_uint,
-        arg8: libc::c_int,
-        arg9: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_uint,
+        arg7: core::ffi::c_uint,
+        arg8: core::ffi::c_int,
+        arg9: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawArcs(
@@ -35613,41 +35613,41 @@ extern "C" {
         arg2: Drawable,
         arg3: GC,
         arg4: *mut XArc,
-        arg5: libc::c_int,
-    ) -> libc::c_int;
+        arg5: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawImageString(
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-        arg6: *const libc::c_char,
-        arg7: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+        arg6: *const core::ffi::c_char,
+        arg7: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawImageString16(
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
         arg6: *const XChar2b,
-        arg7: libc::c_int,
-    ) -> libc::c_int;
+        arg7: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawLine(
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-        arg7: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+        arg7: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawLines(
@@ -35655,18 +35655,18 @@ extern "C" {
         arg2: Drawable,
         arg3: GC,
         arg4: *mut XPoint,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-    ) -> libc::c_int;
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawPoint(
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawPoints(
@@ -35674,20 +35674,20 @@ extern "C" {
         arg2: Drawable,
         arg3: GC,
         arg4: *mut XPoint,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-    ) -> libc::c_int;
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawRectangle(
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-        arg6: libc::c_uint,
-        arg7: libc::c_uint,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_uint,
+        arg7: core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawRectangles(
@@ -35695,8 +35695,8 @@ extern "C" {
         arg2: Drawable,
         arg3: GC,
         arg4: *mut XRectangle,
-        arg5: libc::c_int,
-    ) -> libc::c_int;
+        arg5: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawSegments(
@@ -35704,78 +35704,78 @@ extern "C" {
         arg2: Drawable,
         arg3: GC,
         arg4: *mut XSegment,
-        arg5: libc::c_int,
-    ) -> libc::c_int;
+        arg5: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawString(
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-        arg6: *const libc::c_char,
-        arg7: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+        arg6: *const core::ffi::c_char,
+        arg7: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawString16(
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
         arg6: *const XChar2b,
-        arg7: libc::c_int,
-    ) -> libc::c_int;
+        arg7: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawText(
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
         arg6: *mut XTextItem,
-        arg7: libc::c_int,
-    ) -> libc::c_int;
+        arg7: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XDrawText16(
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
         arg6: *mut XTextItem16,
-        arg7: libc::c_int,
-    ) -> libc::c_int;
+        arg7: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XEnableAccessControl(arg1: *mut Display) -> libc::c_int;
+    pub fn XEnableAccessControl(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XEventsQueued(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int;
+    pub fn XEventsQueued(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XFetchName(
         arg1: *mut Display,
         arg2: Window,
-        arg3: *mut *mut libc::c_char,
-    ) -> libc::c_int;
+        arg3: *mut *mut core::ffi::c_char,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XFillArc(
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-        arg6: libc::c_uint,
-        arg7: libc::c_uint,
-        arg8: libc::c_int,
-        arg9: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_uint,
+        arg7: core::ffi::c_uint,
+        arg8: core::ffi::c_int,
+        arg9: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XFillArcs(
@@ -35783,8 +35783,8 @@ extern "C" {
         arg2: Drawable,
         arg3: GC,
         arg4: *mut XArc,
-        arg5: libc::c_int,
-    ) -> libc::c_int;
+        arg5: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XFillPolygon(
@@ -35792,21 +35792,21 @@ extern "C" {
         arg2: Drawable,
         arg3: GC,
         arg4: *mut XPoint,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-        arg7: libc::c_int,
-    ) -> libc::c_int;
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+        arg7: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XFillRectangle(
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-        arg6: libc::c_uint,
-        arg7: libc::c_uint,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_uint,
+        arg7: core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XFillRectangles(
@@ -35814,248 +35814,248 @@ extern "C" {
         arg2: Drawable,
         arg3: GC,
         arg4: *mut XRectangle,
-        arg5: libc::c_int,
-    ) -> libc::c_int;
+        arg5: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XFlush(arg1: *mut Display) -> libc::c_int;
+    pub fn XFlush(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XForceScreenSaver(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int;
+    pub fn XForceScreenSaver(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XFree(arg1: *mut libc::c_void) -> libc::c_int;
+    pub fn XFree(arg1: *mut core::ffi::c_void) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XFreeColormap(arg1: *mut Display, arg2: Colormap) -> libc::c_int;
+    pub fn XFreeColormap(arg1: *mut Display, arg2: Colormap) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XFreeColors(
         arg1: *mut Display,
         arg2: Colormap,
-        arg3: *mut libc::c_ulong,
-        arg4: libc::c_int,
-        arg5: libc::c_ulong,
-    ) -> libc::c_int;
+        arg3: *mut core::ffi::c_ulong,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_ulong,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XFreeCursor(arg1: *mut Display, arg2: Cursor) -> libc::c_int;
+    pub fn XFreeCursor(arg1: *mut Display, arg2: Cursor) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XFreeExtensionList(arg1: *mut *mut libc::c_char) -> libc::c_int;
+    pub fn XFreeExtensionList(arg1: *mut *mut core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XFreeFont(arg1: *mut Display, arg2: *mut XFontStruct) -> libc::c_int;
+    pub fn XFreeFont(arg1: *mut Display, arg2: *mut XFontStruct) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XFreeFontInfo(
-        arg1: *mut *mut libc::c_char,
+        arg1: *mut *mut core::ffi::c_char,
         arg2: *mut XFontStruct,
-        arg3: libc::c_int,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XFreeFontNames(arg1: *mut *mut libc::c_char) -> libc::c_int;
+    pub fn XFreeFontNames(arg1: *mut *mut core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XFreeFontPath(arg1: *mut *mut libc::c_char) -> libc::c_int;
+    pub fn XFreeFontPath(arg1: *mut *mut core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XFreeGC(arg1: *mut Display, arg2: GC) -> libc::c_int;
+    pub fn XFreeGC(arg1: *mut Display, arg2: GC) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XFreeModifiermap(arg1: *mut XModifierKeymap) -> libc::c_int;
+    pub fn XFreeModifiermap(arg1: *mut XModifierKeymap) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XFreePixmap(arg1: *mut Display, arg2: Pixmap) -> libc::c_int;
+    pub fn XFreePixmap(arg1: *mut Display, arg2: Pixmap) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGeometry(
         arg1: *mut Display,
-        arg2: libc::c_int,
-        arg3: *const libc::c_char,
-        arg4: *const libc::c_char,
-        arg5: libc::c_uint,
-        arg6: libc::c_uint,
-        arg7: libc::c_uint,
-        arg8: libc::c_int,
-        arg9: libc::c_int,
-        arg10: *mut libc::c_int,
-        arg11: *mut libc::c_int,
-        arg12: *mut libc::c_int,
-        arg13: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg2: core::ffi::c_int,
+        arg3: *const core::ffi::c_char,
+        arg4: *const core::ffi::c_char,
+        arg5: core::ffi::c_uint,
+        arg6: core::ffi::c_uint,
+        arg7: core::ffi::c_uint,
+        arg8: core::ffi::c_int,
+        arg9: core::ffi::c_int,
+        arg10: *mut core::ffi::c_int,
+        arg11: *mut core::ffi::c_int,
+        arg12: *mut core::ffi::c_int,
+        arg13: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetErrorDatabaseText(
         arg1: *mut Display,
-        arg2: *const libc::c_char,
-        arg3: *const libc::c_char,
-        arg4: *const libc::c_char,
-        arg5: *mut libc::c_char,
-        arg6: libc::c_int,
-    ) -> libc::c_int;
+        arg2: *const core::ffi::c_char,
+        arg3: *const core::ffi::c_char,
+        arg4: *const core::ffi::c_char,
+        arg5: *mut core::ffi::c_char,
+        arg6: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetErrorText(
         arg1: *mut Display,
-        arg2: libc::c_int,
-        arg3: *mut libc::c_char,
-        arg4: libc::c_int,
-    ) -> libc::c_int;
+        arg2: core::ffi::c_int,
+        arg3: *mut core::ffi::c_char,
+        arg4: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetFontProperty(
         arg1: *mut XFontStruct,
         arg2: Atom,
-        arg3: *mut libc::c_ulong,
-    ) -> libc::c_int;
+        arg3: *mut core::ffi::c_ulong,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetGCValues(
         arg1: *mut Display,
         arg2: GC,
-        arg3: libc::c_ulong,
+        arg3: core::ffi::c_ulong,
         arg4: *mut XGCValues,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetGeometry(
         arg1: *mut Display,
         arg2: Drawable,
         arg3: *mut Window,
-        arg4: *mut libc::c_int,
-        arg5: *mut libc::c_int,
-        arg6: *mut libc::c_uint,
-        arg7: *mut libc::c_uint,
-        arg8: *mut libc::c_uint,
-        arg9: *mut libc::c_uint,
-    ) -> libc::c_int;
+        arg4: *mut core::ffi::c_int,
+        arg5: *mut core::ffi::c_int,
+        arg6: *mut core::ffi::c_uint,
+        arg7: *mut core::ffi::c_uint,
+        arg8: *mut core::ffi::c_uint,
+        arg9: *mut core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetIconName(
         arg1: *mut Display,
         arg2: Window,
-        arg3: *mut *mut libc::c_char,
-    ) -> libc::c_int;
+        arg3: *mut *mut core::ffi::c_char,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetInputFocus(
         arg1: *mut Display,
         arg2: *mut Window,
-        arg3: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg3: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XGetKeyboardControl(arg1: *mut Display, arg2: *mut XKeyboardState) -> libc::c_int;
+    pub fn XGetKeyboardControl(arg1: *mut Display, arg2: *mut XKeyboardState) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetPointerControl(
         arg1: *mut Display,
-        arg2: *mut libc::c_int,
-        arg3: *mut libc::c_int,
-        arg4: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg2: *mut core::ffi::c_int,
+        arg3: *mut core::ffi::c_int,
+        arg4: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetPointerMapping(
         arg1: *mut Display,
-        arg2: *mut libc::c_uchar,
-        arg3: libc::c_int,
-    ) -> libc::c_int;
+        arg2: *mut core::ffi::c_uchar,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetScreenSaver(
         arg1: *mut Display,
-        arg2: *mut libc::c_int,
-        arg3: *mut libc::c_int,
-        arg4: *mut libc::c_int,
-        arg5: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg2: *mut core::ffi::c_int,
+        arg3: *mut core::ffi::c_int,
+        arg4: *mut core::ffi::c_int,
+        arg5: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetTransientForHint(arg1: *mut Display, arg2: Window, arg3: *mut Window)
-        -> libc::c_int;
+        -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetWindowProperty(
         arg1: *mut Display,
         arg2: Window,
         arg3: Atom,
-        arg4: libc::c_long,
-        arg5: libc::c_long,
-        arg6: libc::c_int,
+        arg4: core::ffi::c_long,
+        arg5: core::ffi::c_long,
+        arg6: core::ffi::c_int,
         arg7: Atom,
         arg8: *mut Atom,
-        arg9: *mut libc::c_int,
-        arg10: *mut libc::c_ulong,
-        arg11: *mut libc::c_ulong,
-        arg12: *mut *mut libc::c_uchar,
-    ) -> libc::c_int;
+        arg9: *mut core::ffi::c_int,
+        arg10: *mut core::ffi::c_ulong,
+        arg11: *mut core::ffi::c_ulong,
+        arg12: *mut *mut core::ffi::c_uchar,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGetWindowAttributes(
         arg1: *mut Display,
         arg2: Window,
         arg3: *mut XWindowAttributes,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGrabButton(
         arg1: *mut Display,
-        arg2: libc::c_uint,
-        arg3: libc::c_uint,
+        arg2: core::ffi::c_uint,
+        arg3: core::ffi::c_uint,
         arg4: Window,
-        arg5: libc::c_int,
-        arg6: libc::c_uint,
-        arg7: libc::c_int,
-        arg8: libc::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_uint,
+        arg7: core::ffi::c_int,
+        arg8: core::ffi::c_int,
         arg9: Window,
         arg10: Cursor,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGrabKey(
         arg1: *mut Display,
-        arg2: libc::c_int,
-        arg3: libc::c_uint,
+        arg2: core::ffi::c_int,
+        arg3: core::ffi::c_uint,
         arg4: Window,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-        arg7: libc::c_int,
-    ) -> libc::c_int;
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+        arg7: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGrabKeyboard(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
         arg6: Time,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XGrabPointer(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_int,
-        arg4: libc::c_uint,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_uint,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
         arg7: Window,
         arg8: Cursor,
         arg9: Time,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XGrabServer(arg1: *mut Display) -> libc::c_int;
+    pub fn XGrabServer(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XHeightMMOfScreen(arg1: *mut Screen) -> libc::c_int;
+    pub fn XHeightMMOfScreen(arg1: *mut Screen) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XHeightOfScreen(arg1: *mut Screen) -> libc::c_int;
+    pub fn XHeightOfScreen(arg1: *mut Screen) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XIfEvent(
@@ -36066,96 +36066,96 @@ extern "C" {
                 arg1: *mut Display,
                 arg2: *mut XEvent,
                 arg3: XPointer,
-            ) -> libc::c_int,
+            ) -> core::ffi::c_int,
         >,
         arg4: XPointer,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XImageByteOrder(arg1: *mut Display) -> libc::c_int;
+    pub fn XImageByteOrder(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XInstallColormap(arg1: *mut Display, arg2: Colormap) -> libc::c_int;
+    pub fn XInstallColormap(arg1: *mut Display, arg2: Colormap) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XKeysymToKeycode(arg1: *mut Display, arg2: KeySym) -> KeyCode;
 }
 extern "C" {
-    pub fn XKillClient(arg1: *mut Display, arg2: XID) -> libc::c_int;
+    pub fn XKillClient(arg1: *mut Display, arg2: XID) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XLookupColor(
         arg1: *mut Display,
         arg2: Colormap,
-        arg3: *const libc::c_char,
+        arg3: *const core::ffi::c_char,
         arg4: *mut XColor,
         arg5: *mut XColor,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XLowerWindow(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XLowerWindow(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XMapRaised(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XMapRaised(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XMapSubwindows(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XMapSubwindows(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XMapWindow(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XMapWindow(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XMaskEvent(arg1: *mut Display, arg2: libc::c_long, arg3: *mut XEvent) -> libc::c_int;
+    pub fn XMaskEvent(arg1: *mut Display, arg2: core::ffi::c_long, arg3: *mut XEvent) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XMaxCmapsOfScreen(arg1: *mut Screen) -> libc::c_int;
+    pub fn XMaxCmapsOfScreen(arg1: *mut Screen) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XMinCmapsOfScreen(arg1: *mut Screen) -> libc::c_int;
+    pub fn XMinCmapsOfScreen(arg1: *mut Screen) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XMoveResizeWindow(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
-        arg5: libc::c_uint,
-        arg6: libc::c_uint,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_uint,
+        arg6: core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XMoveWindow(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XNextEvent(arg1: *mut Display, arg2: *mut XEvent) -> libc::c_int;
+    pub fn XNextEvent(arg1: *mut Display, arg2: *mut XEvent) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XNoOp(arg1: *mut Display) -> libc::c_int;
+    pub fn XNoOp(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XParseColor(
         arg1: *mut Display,
         arg2: Colormap,
-        arg3: *const libc::c_char,
+        arg3: *const core::ffi::c_char,
         arg4: *mut XColor,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XParseGeometry(
-        arg1: *const libc::c_char,
-        arg2: *mut libc::c_int,
-        arg3: *mut libc::c_int,
-        arg4: *mut libc::c_uint,
-        arg5: *mut libc::c_uint,
-    ) -> libc::c_int;
+        arg1: *const core::ffi::c_char,
+        arg2: *mut core::ffi::c_int,
+        arg3: *mut core::ffi::c_int,
+        arg4: *mut core::ffi::c_uint,
+        arg5: *mut core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XPeekEvent(arg1: *mut Display, arg2: *mut XEvent) -> libc::c_int;
+    pub fn XPeekEvent(arg1: *mut Display, arg2: *mut XEvent) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XPeekIfEvent(
@@ -36166,25 +36166,25 @@ extern "C" {
                 arg1: *mut Display,
                 arg2: *mut XEvent,
                 arg3: XPointer,
-            ) -> libc::c_int,
+            ) -> core::ffi::c_int,
         >,
         arg4: XPointer,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XPending(arg1: *mut Display) -> libc::c_int;
+    pub fn XPending(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XPlanesOfScreen(arg1: *mut Screen) -> libc::c_int;
+    pub fn XPlanesOfScreen(arg1: *mut Screen) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XProtocolRevision(arg1: *mut Display) -> libc::c_int;
+    pub fn XProtocolRevision(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XProtocolVersion(arg1: *mut Display) -> libc::c_int;
+    pub fn XProtocolVersion(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XPutBackEvent(arg1: *mut Display, arg2: *mut XEvent) -> libc::c_int;
+    pub fn XPutBackEvent(arg1: *mut Display, arg2: *mut XEvent) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XPutImage(
@@ -36192,80 +36192,80 @@ extern "C" {
         arg2: Drawable,
         arg3: GC,
         arg4: *mut XImage,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-        arg7: libc::c_int,
-        arg8: libc::c_int,
-        arg9: libc::c_uint,
-        arg10: libc::c_uint,
-    ) -> libc::c_int;
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+        arg7: core::ffi::c_int,
+        arg8: core::ffi::c_int,
+        arg9: core::ffi::c_uint,
+        arg10: core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XQLength(arg1: *mut Display) -> libc::c_int;
+    pub fn XQLength(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XQueryBestCursor(
         arg1: *mut Display,
         arg2: Drawable,
-        arg3: libc::c_uint,
-        arg4: libc::c_uint,
-        arg5: *mut libc::c_uint,
-        arg6: *mut libc::c_uint,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_uint,
+        arg4: core::ffi::c_uint,
+        arg5: *mut core::ffi::c_uint,
+        arg6: *mut core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XQueryBestSize(
         arg1: *mut Display,
-        arg2: libc::c_int,
+        arg2: core::ffi::c_int,
         arg3: Drawable,
-        arg4: libc::c_uint,
-        arg5: libc::c_uint,
-        arg6: *mut libc::c_uint,
-        arg7: *mut libc::c_uint,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_uint,
+        arg5: core::ffi::c_uint,
+        arg6: *mut core::ffi::c_uint,
+        arg7: *mut core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XQueryBestStipple(
         arg1: *mut Display,
         arg2: Drawable,
-        arg3: libc::c_uint,
-        arg4: libc::c_uint,
-        arg5: *mut libc::c_uint,
-        arg6: *mut libc::c_uint,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_uint,
+        arg4: core::ffi::c_uint,
+        arg5: *mut core::ffi::c_uint,
+        arg6: *mut core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XQueryBestTile(
         arg1: *mut Display,
         arg2: Drawable,
-        arg3: libc::c_uint,
-        arg4: libc::c_uint,
-        arg5: *mut libc::c_uint,
-        arg6: *mut libc::c_uint,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_uint,
+        arg4: core::ffi::c_uint,
+        arg5: *mut core::ffi::c_uint,
+        arg6: *mut core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XQueryColor(arg1: *mut Display, arg2: Colormap, arg3: *mut XColor) -> libc::c_int;
+    pub fn XQueryColor(arg1: *mut Display, arg2: Colormap, arg3: *mut XColor) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XQueryColors(
         arg1: *mut Display,
         arg2: Colormap,
         arg3: *mut XColor,
-        arg4: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XQueryExtension(
         arg1: *mut Display,
-        arg2: *const libc::c_char,
-        arg3: *mut libc::c_int,
-        arg4: *mut libc::c_int,
-        arg5: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg2: *const core::ffi::c_char,
+        arg3: *mut core::ffi::c_int,
+        arg4: *mut core::ffi::c_int,
+        arg5: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XQueryKeymap(arg1: *mut Display, arg2: *mut libc::c_char) -> libc::c_int;
+    pub fn XQueryKeymap(arg1: *mut Display, arg2: *mut core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XQueryPointer(
@@ -36273,36 +36273,36 @@ extern "C" {
         arg2: Window,
         arg3: *mut Window,
         arg4: *mut Window,
-        arg5: *mut libc::c_int,
-        arg6: *mut libc::c_int,
-        arg7: *mut libc::c_int,
-        arg8: *mut libc::c_int,
-        arg9: *mut libc::c_uint,
-    ) -> libc::c_int;
+        arg5: *mut core::ffi::c_int,
+        arg6: *mut core::ffi::c_int,
+        arg7: *mut core::ffi::c_int,
+        arg8: *mut core::ffi::c_int,
+        arg9: *mut core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XQueryTextExtents(
         arg1: *mut Display,
         arg2: XID,
-        arg3: *const libc::c_char,
-        arg4: libc::c_int,
-        arg5: *mut libc::c_int,
-        arg6: *mut libc::c_int,
-        arg7: *mut libc::c_int,
+        arg3: *const core::ffi::c_char,
+        arg4: core::ffi::c_int,
+        arg5: *mut core::ffi::c_int,
+        arg6: *mut core::ffi::c_int,
+        arg7: *mut core::ffi::c_int,
         arg8: *mut XCharStruct,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XQueryTextExtents16(
         arg1: *mut Display,
         arg2: XID,
         arg3: *const XChar2b,
-        arg4: libc::c_int,
-        arg5: *mut libc::c_int,
-        arg6: *mut libc::c_int,
-        arg7: *mut libc::c_int,
+        arg4: core::ffi::c_int,
+        arg5: *mut core::ffi::c_int,
+        arg6: *mut core::ffi::c_int,
+        arg7: *mut core::ffi::c_int,
         arg8: *mut XCharStruct,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XQueryTree(
@@ -36311,43 +36311,43 @@ extern "C" {
         arg3: *mut Window,
         arg4: *mut Window,
         arg5: *mut *mut Window,
-        arg6: *mut libc::c_uint,
-    ) -> libc::c_int;
+        arg6: *mut core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XRaiseWindow(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XRaiseWindow(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XReadBitmapFile(
         arg1: *mut Display,
         arg2: Drawable,
-        arg3: *const libc::c_char,
-        arg4: *mut libc::c_uint,
-        arg5: *mut libc::c_uint,
+        arg3: *const core::ffi::c_char,
+        arg4: *mut core::ffi::c_uint,
+        arg5: *mut core::ffi::c_uint,
         arg6: *mut Pixmap,
-        arg7: *mut libc::c_int,
-        arg8: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg7: *mut core::ffi::c_int,
+        arg8: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XReadBitmapFileData(
-        arg1: *const libc::c_char,
-        arg2: *mut libc::c_uint,
-        arg3: *mut libc::c_uint,
-        arg4: *mut *mut libc::c_uchar,
-        arg5: *mut libc::c_int,
-        arg6: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg1: *const core::ffi::c_char,
+        arg2: *mut core::ffi::c_uint,
+        arg3: *mut core::ffi::c_uint,
+        arg4: *mut *mut core::ffi::c_uchar,
+        arg5: *mut core::ffi::c_int,
+        arg6: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XRebindKeysym(
         arg1: *mut Display,
         arg2: KeySym,
         arg3: *mut KeySym,
-        arg4: libc::c_int,
-        arg5: *const libc::c_uchar,
-        arg6: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+        arg5: *const core::ffi::c_uchar,
+        arg6: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XRecolorCursor(
@@ -36355,194 +36355,194 @@ extern "C" {
         arg2: Cursor,
         arg3: *mut XColor,
         arg4: *mut XColor,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XRefreshKeyboardMapping(arg1: *mut XMappingEvent) -> libc::c_int;
+    pub fn XRefreshKeyboardMapping(arg1: *mut XMappingEvent) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XRemoveFromSaveSet(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XRemoveFromSaveSet(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XRemoveHost(arg1: *mut Display, arg2: *mut XHostAddress) -> libc::c_int;
+    pub fn XRemoveHost(arg1: *mut Display, arg2: *mut XHostAddress) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XRemoveHosts(
         arg1: *mut Display,
         arg2: *mut XHostAddress,
-        arg3: libc::c_int,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XReparentWindow(
         arg1: *mut Display,
         arg2: Window,
         arg3: Window,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XResetScreenSaver(arg1: *mut Display) -> libc::c_int;
+    pub fn XResetScreenSaver(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XResizeWindow(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_uint,
-        arg4: libc::c_uint,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_uint,
+        arg4: core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XRestackWindows(arg1: *mut Display, arg2: *mut Window, arg3: libc::c_int)
-        -> libc::c_int;
+    pub fn XRestackWindows(arg1: *mut Display, arg2: *mut Window, arg3: core::ffi::c_int)
+        -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XRotateBuffers(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int;
+    pub fn XRotateBuffers(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XRotateWindowProperties(
         arg1: *mut Display,
         arg2: Window,
         arg3: *mut Atom,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XScreenCount(arg1: *mut Display) -> libc::c_int;
+    pub fn XScreenCount(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSelectInput(arg1: *mut Display, arg2: Window, arg3: libc::c_long) -> libc::c_int;
+    pub fn XSelectInput(arg1: *mut Display, arg2: Window, arg3: core::ffi::c_long) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSendEvent(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_int,
-        arg4: libc::c_long,
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_long,
         arg5: *mut XEvent,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetAccessControl(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int;
+    pub fn XSetAccessControl(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetArcMode(arg1: *mut Display, arg2: GC, arg3: libc::c_int) -> libc::c_int;
+    pub fn XSetArcMode(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetBackground(arg1: *mut Display, arg2: GC, arg3: libc::c_ulong) -> libc::c_int;
+    pub fn XSetBackground(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_ulong) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetClipMask(arg1: *mut Display, arg2: GC, arg3: Pixmap) -> libc::c_int;
+    pub fn XSetClipMask(arg1: *mut Display, arg2: GC, arg3: Pixmap) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetClipOrigin(
         arg1: *mut Display,
         arg2: GC,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetClipRectangles(
         arg1: *mut Display,
         arg2: GC,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
         arg5: *mut XRectangle,
-        arg6: libc::c_int,
-        arg7: libc::c_int,
-    ) -> libc::c_int;
+        arg6: core::ffi::c_int,
+        arg7: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetCloseDownMode(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int;
+    pub fn XSetCloseDownMode(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetCommand(
         arg1: *mut Display,
         arg2: Window,
-        arg3: *mut *mut libc::c_char,
-        arg4: libc::c_int,
-    ) -> libc::c_int;
+        arg3: *mut *mut core::ffi::c_char,
+        arg4: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetDashes(
         arg1: *mut Display,
         arg2: GC,
-        arg3: libc::c_int,
-        arg4: *const libc::c_char,
-        arg5: libc::c_int,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_int,
+        arg4: *const core::ffi::c_char,
+        arg5: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetFillRule(arg1: *mut Display, arg2: GC, arg3: libc::c_int) -> libc::c_int;
+    pub fn XSetFillRule(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetFillStyle(arg1: *mut Display, arg2: GC, arg3: libc::c_int) -> libc::c_int;
+    pub fn XSetFillStyle(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetFont(arg1: *mut Display, arg2: GC, arg3: Font) -> libc::c_int;
+    pub fn XSetFont(arg1: *mut Display, arg2: GC, arg3: Font) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetFontPath(
         arg1: *mut Display,
-        arg2: *mut *mut libc::c_char,
-        arg3: libc::c_int,
-    ) -> libc::c_int;
+        arg2: *mut *mut core::ffi::c_char,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetForeground(arg1: *mut Display, arg2: GC, arg3: libc::c_ulong) -> libc::c_int;
+    pub fn XSetForeground(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_ulong) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetFunction(arg1: *mut Display, arg2: GC, arg3: libc::c_int) -> libc::c_int;
+    pub fn XSetFunction(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetGraphicsExposures(arg1: *mut Display, arg2: GC, arg3: libc::c_int) -> libc::c_int;
+    pub fn XSetGraphicsExposures(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetIconName(arg1: *mut Display, arg2: Window, arg3: *const libc::c_char)
-        -> libc::c_int;
+    pub fn XSetIconName(arg1: *mut Display, arg2: Window, arg3: *const core::ffi::c_char)
+        -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetInputFocus(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_int,
+        arg3: core::ffi::c_int,
         arg4: Time,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetLineAttributes(
         arg1: *mut Display,
         arg2: GC,
-        arg3: libc::c_uint,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_uint,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetModifierMapping(arg1: *mut Display, arg2: *mut XModifierKeymap) -> libc::c_int;
+    pub fn XSetModifierMapping(arg1: *mut Display, arg2: *mut XModifierKeymap) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetPlaneMask(arg1: *mut Display, arg2: GC, arg3: libc::c_ulong) -> libc::c_int;
+    pub fn XSetPlaneMask(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_ulong) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetPointerMapping(
         arg1: *mut Display,
-        arg2: *const libc::c_uchar,
-        arg3: libc::c_int,
-    ) -> libc::c_int;
+        arg2: *const core::ffi::c_uchar,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetScreenSaver(
         arg1: *mut Display,
-        arg2: libc::c_int,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-    ) -> libc::c_int;
+        arg2: core::ffi::c_int,
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetSelectionOwner(
@@ -36550,263 +36550,263 @@ extern "C" {
         arg2: Atom,
         arg3: Window,
         arg4: Time,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetState(
         arg1: *mut Display,
         arg2: GC,
-        arg3: libc::c_ulong,
-        arg4: libc::c_ulong,
-        arg5: libc::c_int,
-        arg6: libc::c_ulong,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_ulong,
+        arg4: core::ffi::c_ulong,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_ulong,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetStipple(arg1: *mut Display, arg2: GC, arg3: Pixmap) -> libc::c_int;
+    pub fn XSetStipple(arg1: *mut Display, arg2: GC, arg3: Pixmap) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetSubwindowMode(arg1: *mut Display, arg2: GC, arg3: libc::c_int) -> libc::c_int;
+    pub fn XSetSubwindowMode(arg1: *mut Display, arg2: GC, arg3: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetTSOrigin(
         arg1: *mut Display,
         arg2: GC,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetTile(arg1: *mut Display, arg2: GC, arg3: Pixmap) -> libc::c_int;
+    pub fn XSetTile(arg1: *mut Display, arg2: GC, arg3: Pixmap) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetWindowBackground(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_ulong,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_ulong,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetWindowBackgroundPixmap(
         arg1: *mut Display,
         arg2: Window,
         arg3: Pixmap,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetWindowBorder(arg1: *mut Display, arg2: Window, arg3: libc::c_ulong) -> libc::c_int;
+    pub fn XSetWindowBorder(arg1: *mut Display, arg2: Window, arg3: core::ffi::c_ulong) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetWindowBorderPixmap(arg1: *mut Display, arg2: Window, arg3: Pixmap) -> libc::c_int;
+    pub fn XSetWindowBorderPixmap(arg1: *mut Display, arg2: Window, arg3: Pixmap) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XSetWindowBorderWidth(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_uint,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_uint,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetWindowColormap(arg1: *mut Display, arg2: Window, arg3: Colormap) -> libc::c_int;
+    pub fn XSetWindowColormap(arg1: *mut Display, arg2: Window, arg3: Colormap) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XStoreBuffer(
         arg1: *mut Display,
-        arg2: *const libc::c_char,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
-    ) -> libc::c_int;
+        arg2: *const core::ffi::c_char,
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XStoreBytes(
         arg1: *mut Display,
-        arg2: *const libc::c_char,
-        arg3: libc::c_int,
-    ) -> libc::c_int;
+        arg2: *const core::ffi::c_char,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XStoreColor(arg1: *mut Display, arg2: Colormap, arg3: *mut XColor) -> libc::c_int;
+    pub fn XStoreColor(arg1: *mut Display, arg2: Colormap, arg3: *mut XColor) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XStoreColors(
         arg1: *mut Display,
         arg2: Colormap,
         arg3: *mut XColor,
-        arg4: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XStoreName(arg1: *mut Display, arg2: Window, arg3: *const libc::c_char) -> libc::c_int;
+    pub fn XStoreName(arg1: *mut Display, arg2: Window, arg3: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XStoreNamedColor(
         arg1: *mut Display,
         arg2: Colormap,
-        arg3: *const libc::c_char,
-        arg4: libc::c_ulong,
-        arg5: libc::c_int,
-    ) -> libc::c_int;
+        arg3: *const core::ffi::c_char,
+        arg4: core::ffi::c_ulong,
+        arg5: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSync(arg1: *mut Display, arg2: libc::c_int) -> libc::c_int;
+    pub fn XSync(arg1: *mut Display, arg2: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XTextExtents(
         arg1: *mut XFontStruct,
-        arg2: *const libc::c_char,
-        arg3: libc::c_int,
-        arg4: *mut libc::c_int,
-        arg5: *mut libc::c_int,
-        arg6: *mut libc::c_int,
+        arg2: *const core::ffi::c_char,
+        arg3: core::ffi::c_int,
+        arg4: *mut core::ffi::c_int,
+        arg5: *mut core::ffi::c_int,
+        arg6: *mut core::ffi::c_int,
         arg7: *mut XCharStruct,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XTextExtents16(
         arg1: *mut XFontStruct,
         arg2: *const XChar2b,
-        arg3: libc::c_int,
-        arg4: *mut libc::c_int,
-        arg5: *mut libc::c_int,
-        arg6: *mut libc::c_int,
+        arg3: core::ffi::c_int,
+        arg4: *mut core::ffi::c_int,
+        arg5: *mut core::ffi::c_int,
+        arg6: *mut core::ffi::c_int,
         arg7: *mut XCharStruct,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XTextWidth(
         arg1: *mut XFontStruct,
-        arg2: *const libc::c_char,
-        arg3: libc::c_int,
-    ) -> libc::c_int;
+        arg2: *const core::ffi::c_char,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XTextWidth16(
         arg1: *mut XFontStruct,
         arg2: *const XChar2b,
-        arg3: libc::c_int,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XTranslateCoordinates(
         arg1: *mut Display,
         arg2: Window,
         arg3: Window,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-        arg6: *mut libc::c_int,
-        arg7: *mut libc::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+        arg6: *mut core::ffi::c_int,
+        arg7: *mut core::ffi::c_int,
         arg8: *mut Window,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XUndefineCursor(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XUndefineCursor(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XUngrabButton(
         arg1: *mut Display,
-        arg2: libc::c_uint,
-        arg3: libc::c_uint,
+        arg2: core::ffi::c_uint,
+        arg3: core::ffi::c_uint,
         arg4: Window,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XUngrabKey(
         arg1: *mut Display,
-        arg2: libc::c_int,
-        arg3: libc::c_uint,
+        arg2: core::ffi::c_int,
+        arg3: core::ffi::c_uint,
         arg4: Window,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XUngrabKeyboard(arg1: *mut Display, arg2: Time) -> libc::c_int;
+    pub fn XUngrabKeyboard(arg1: *mut Display, arg2: Time) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XUngrabPointer(arg1: *mut Display, arg2: Time) -> libc::c_int;
+    pub fn XUngrabPointer(arg1: *mut Display, arg2: Time) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XUngrabServer(arg1: *mut Display) -> libc::c_int;
+    pub fn XUngrabServer(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XUninstallColormap(arg1: *mut Display, arg2: Colormap) -> libc::c_int;
+    pub fn XUninstallColormap(arg1: *mut Display, arg2: Colormap) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XUnloadFont(arg1: *mut Display, arg2: Font) -> libc::c_int;
+    pub fn XUnloadFont(arg1: *mut Display, arg2: Font) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XUnmapSubwindows(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XUnmapSubwindows(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XUnmapWindow(arg1: *mut Display, arg2: Window) -> libc::c_int;
+    pub fn XUnmapWindow(arg1: *mut Display, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XVendorRelease(arg1: *mut Display) -> libc::c_int;
+    pub fn XVendorRelease(arg1: *mut Display) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XWarpPointer(
         arg1: *mut Display,
         arg2: Window,
         arg3: Window,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
-        arg6: libc::c_uint,
-        arg7: libc::c_uint,
-        arg8: libc::c_int,
-        arg9: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_uint,
+        arg7: core::ffi::c_uint,
+        arg8: core::ffi::c_int,
+        arg9: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XWidthMMOfScreen(arg1: *mut Screen) -> libc::c_int;
+    pub fn XWidthMMOfScreen(arg1: *mut Screen) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XWidthOfScreen(arg1: *mut Screen) -> libc::c_int;
+    pub fn XWidthOfScreen(arg1: *mut Screen) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XWindowEvent(
         arg1: *mut Display,
         arg2: Window,
-        arg3: libc::c_long,
+        arg3: core::ffi::c_long,
         arg4: *mut XEvent,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XWriteBitmapFile(
         arg1: *mut Display,
-        arg2: *const libc::c_char,
+        arg2: *const core::ffi::c_char,
         arg3: Pixmap,
-        arg4: libc::c_uint,
-        arg5: libc::c_uint,
-        arg6: libc::c_int,
-        arg7: libc::c_int,
-    ) -> libc::c_int;
+        arg4: core::ffi::c_uint,
+        arg5: core::ffi::c_uint,
+        arg6: core::ffi::c_int,
+        arg7: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSupportsLocale() -> libc::c_int;
+    pub fn XSupportsLocale() -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetLocaleModifiers(arg1: *const libc::c_char) -> *mut libc::c_char;
+    pub fn XSetLocaleModifiers(arg1: *const core::ffi::c_char) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn XOpenOM(
         arg1: *mut Display,
         arg2: *mut _XrmHashBucketRec,
-        arg3: *const libc::c_char,
-        arg4: *const libc::c_char,
+        arg3: *const core::ffi::c_char,
+        arg4: *const core::ffi::c_char,
     ) -> XOM;
 }
 extern "C" {
-    pub fn XCloseOM(arg1: XOM) -> libc::c_int;
+    pub fn XCloseOM(arg1: XOM) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XSetOMValues(arg1: XOM, ...) -> *mut libc::c_char;
+    pub fn XSetOMValues(arg1: XOM, ...) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XGetOMValues(arg1: XOM, ...) -> *mut libc::c_char;
+    pub fn XGetOMValues(arg1: XOM, ...) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn XDisplayOfOM(arg1: XOM) -> *mut Display;
 }
 extern "C" {
-    pub fn XLocaleOfOM(arg1: XOM) -> *mut libc::c_char;
+    pub fn XLocaleOfOM(arg1: XOM) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn XCreateOC(arg1: XOM, ...) -> XOC;
@@ -36818,18 +36818,18 @@ extern "C" {
     pub fn XOMOfOC(arg1: XOC) -> XOM;
 }
 extern "C" {
-    pub fn XSetOCValues(arg1: XOC, ...) -> *mut libc::c_char;
+    pub fn XSetOCValues(arg1: XOC, ...) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XGetOCValues(arg1: XOC, ...) -> *mut libc::c_char;
+    pub fn XGetOCValues(arg1: XOC, ...) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn XCreateFontSet(
         arg1: *mut Display,
-        arg2: *const libc::c_char,
-        arg3: *mut *mut *mut libc::c_char,
-        arg4: *mut libc::c_int,
-        arg5: *mut *mut libc::c_char,
+        arg2: *const core::ffi::c_char,
+        arg3: *mut *mut *mut core::ffi::c_char,
+        arg4: *mut core::ffi::c_int,
+        arg5: *mut *mut core::ffi::c_char,
     ) -> XFontSet;
 }
 extern "C" {
@@ -36839,23 +36839,23 @@ extern "C" {
     pub fn XFontsOfFontSet(
         arg1: XFontSet,
         arg2: *mut *mut *mut XFontStruct,
-        arg3: *mut *mut *mut libc::c_char,
-    ) -> libc::c_int;
+        arg3: *mut *mut *mut core::ffi::c_char,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XBaseFontNameListOfFontSet(arg1: XFontSet) -> *mut libc::c_char;
+    pub fn XBaseFontNameListOfFontSet(arg1: XFontSet) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XLocaleOfFontSet(arg1: XFontSet) -> *mut libc::c_char;
+    pub fn XLocaleOfFontSet(arg1: XFontSet) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XContextDependentDrawing(arg1: XFontSet) -> libc::c_int;
+    pub fn XContextDependentDrawing(arg1: XFontSet) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XDirectionalDependentDrawing(arg1: XFontSet) -> libc::c_int;
+    pub fn XDirectionalDependentDrawing(arg1: XFontSet) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XContextualDrawing(arg1: XFontSet) -> libc::c_int;
+    pub fn XContextualDrawing(arg1: XFontSet) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XExtentsOfFontSet(arg1: XFontSet) -> *mut XFontSetExtents;
@@ -36863,99 +36863,99 @@ extern "C" {
 extern "C" {
     pub fn XmbTextEscapement(
         arg1: XFontSet,
-        arg2: *const libc::c_char,
-        arg3: libc::c_int,
-    ) -> libc::c_int;
+        arg2: *const core::ffi::c_char,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XwcTextEscapement(
         arg1: XFontSet,
         arg2: *const wchar_t,
-        arg3: libc::c_int,
-    ) -> libc::c_int;
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn Xutf8TextEscapement(
         arg1: XFontSet,
-        arg2: *const libc::c_char,
-        arg3: libc::c_int,
-    ) -> libc::c_int;
+        arg2: *const core::ffi::c_char,
+        arg3: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XmbTextExtents(
         arg1: XFontSet,
-        arg2: *const libc::c_char,
-        arg3: libc::c_int,
+        arg2: *const core::ffi::c_char,
+        arg3: core::ffi::c_int,
         arg4: *mut XRectangle,
         arg5: *mut XRectangle,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XwcTextExtents(
         arg1: XFontSet,
         arg2: *const wchar_t,
-        arg3: libc::c_int,
+        arg3: core::ffi::c_int,
         arg4: *mut XRectangle,
         arg5: *mut XRectangle,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn Xutf8TextExtents(
         arg1: XFontSet,
-        arg2: *const libc::c_char,
-        arg3: libc::c_int,
+        arg2: *const core::ffi::c_char,
+        arg3: core::ffi::c_int,
         arg4: *mut XRectangle,
         arg5: *mut XRectangle,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XmbTextPerCharExtents(
         arg1: XFontSet,
-        arg2: *const libc::c_char,
-        arg3: libc::c_int,
+        arg2: *const core::ffi::c_char,
+        arg3: core::ffi::c_int,
         arg4: *mut XRectangle,
         arg5: *mut XRectangle,
-        arg6: libc::c_int,
-        arg7: *mut libc::c_int,
+        arg6: core::ffi::c_int,
+        arg7: *mut core::ffi::c_int,
         arg8: *mut XRectangle,
         arg9: *mut XRectangle,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XwcTextPerCharExtents(
         arg1: XFontSet,
         arg2: *const wchar_t,
-        arg3: libc::c_int,
+        arg3: core::ffi::c_int,
         arg4: *mut XRectangle,
         arg5: *mut XRectangle,
-        arg6: libc::c_int,
-        arg7: *mut libc::c_int,
+        arg6: core::ffi::c_int,
+        arg7: *mut core::ffi::c_int,
         arg8: *mut XRectangle,
         arg9: *mut XRectangle,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn Xutf8TextPerCharExtents(
         arg1: XFontSet,
-        arg2: *const libc::c_char,
-        arg3: libc::c_int,
+        arg2: *const core::ffi::c_char,
+        arg3: core::ffi::c_int,
         arg4: *mut XRectangle,
         arg5: *mut XRectangle,
-        arg6: libc::c_int,
-        arg7: *mut libc::c_int,
+        arg6: core::ffi::c_int,
+        arg7: *mut core::ffi::c_int,
         arg8: *mut XRectangle,
         arg9: *mut XRectangle,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XmbDrawText(
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
         arg6: *mut XmbTextItem,
-        arg7: libc::c_int,
+        arg7: core::ffi::c_int,
     );
 }
 extern "C" {
@@ -36963,10 +36963,10 @@ extern "C" {
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
         arg6: *mut XwcTextItem,
-        arg7: libc::c_int,
+        arg7: core::ffi::c_int,
     );
 }
 extern "C" {
@@ -36974,10 +36974,10 @@ extern "C" {
         arg1: *mut Display,
         arg2: Drawable,
         arg3: GC,
-        arg4: libc::c_int,
-        arg5: libc::c_int,
+        arg4: core::ffi::c_int,
+        arg5: core::ffi::c_int,
         arg6: *mut XmbTextItem,
-        arg7: libc::c_int,
+        arg7: core::ffi::c_int,
     );
 }
 extern "C" {
@@ -36986,10 +36986,10 @@ extern "C" {
         arg2: Drawable,
         arg3: XFontSet,
         arg4: GC,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-        arg7: *const libc::c_char,
-        arg8: libc::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+        arg7: *const core::ffi::c_char,
+        arg8: core::ffi::c_int,
     );
 }
 extern "C" {
@@ -36998,10 +36998,10 @@ extern "C" {
         arg2: Drawable,
         arg3: XFontSet,
         arg4: GC,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
         arg7: *const wchar_t,
-        arg8: libc::c_int,
+        arg8: core::ffi::c_int,
     );
 }
 extern "C" {
@@ -37010,10 +37010,10 @@ extern "C" {
         arg2: Drawable,
         arg3: XFontSet,
         arg4: GC,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-        arg7: *const libc::c_char,
-        arg8: libc::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+        arg7: *const core::ffi::c_char,
+        arg8: core::ffi::c_int,
     );
 }
 extern "C" {
@@ -37022,10 +37022,10 @@ extern "C" {
         arg2: Drawable,
         arg3: XFontSet,
         arg4: GC,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-        arg7: *const libc::c_char,
-        arg8: libc::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+        arg7: *const core::ffi::c_char,
+        arg8: core::ffi::c_int,
     );
 }
 extern "C" {
@@ -37034,10 +37034,10 @@ extern "C" {
         arg2: Drawable,
         arg3: XFontSet,
         arg4: GC,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
         arg7: *const wchar_t,
-        arg8: libc::c_int,
+        arg8: core::ffi::c_int,
     );
 }
 extern "C" {
@@ -37046,34 +37046,34 @@ extern "C" {
         arg2: Drawable,
         arg3: XFontSet,
         arg4: GC,
-        arg5: libc::c_int,
-        arg6: libc::c_int,
-        arg7: *const libc::c_char,
-        arg8: libc::c_int,
+        arg5: core::ffi::c_int,
+        arg6: core::ffi::c_int,
+        arg7: *const core::ffi::c_char,
+        arg8: core::ffi::c_int,
     );
 }
 extern "C" {
     pub fn XOpenIM(
         arg1: *mut Display,
         arg2: *mut _XrmHashBucketRec,
-        arg3: *mut libc::c_char,
-        arg4: *mut libc::c_char,
+        arg3: *mut core::ffi::c_char,
+        arg4: *mut core::ffi::c_char,
     ) -> XIM;
 }
 extern "C" {
-    pub fn XCloseIM(arg1: XIM) -> libc::c_int;
+    pub fn XCloseIM(arg1: XIM) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XGetIMValues(arg1: XIM, ...) -> *mut libc::c_char;
+    pub fn XGetIMValues(arg1: XIM, ...) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XSetIMValues(arg1: XIM, ...) -> *mut libc::c_char;
+    pub fn XSetIMValues(arg1: XIM, ...) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn XDisplayOfIM(arg1: XIM) -> *mut Display;
 }
 extern "C" {
-    pub fn XLocaleOfIM(arg1: XIM) -> *mut libc::c_char;
+    pub fn XLocaleOfIM(arg1: XIM) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn XCreateIC(arg1: XIM, ...) -> XIC;
@@ -37091,121 +37091,121 @@ extern "C" {
     pub fn XwcResetIC(arg1: XIC) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn XmbResetIC(arg1: XIC) -> *mut libc::c_char;
+    pub fn XmbResetIC(arg1: XIC) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn Xutf8ResetIC(arg1: XIC) -> *mut libc::c_char;
+    pub fn Xutf8ResetIC(arg1: XIC) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XSetICValues(arg1: XIC, ...) -> *mut libc::c_char;
+    pub fn XSetICValues(arg1: XIC, ...) -> *mut core::ffi::c_char;
 }
 extern "C" {
-    pub fn XGetICValues(arg1: XIC, ...) -> *mut libc::c_char;
+    pub fn XGetICValues(arg1: XIC, ...) -> *mut core::ffi::c_char;
 }
 extern "C" {
     pub fn XIMOfIC(arg1: XIC) -> XIM;
 }
 extern "C" {
-    pub fn XFilterEvent(arg1: *mut XEvent, arg2: Window) -> libc::c_int;
+    pub fn XFilterEvent(arg1: *mut XEvent, arg2: Window) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XmbLookupString(
         arg1: XIC,
         arg2: *mut XKeyPressedEvent,
-        arg3: *mut libc::c_char,
-        arg4: libc::c_int,
+        arg3: *mut core::ffi::c_char,
+        arg4: core::ffi::c_int,
         arg5: *mut KeySym,
-        arg6: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg6: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XwcLookupString(
         arg1: XIC,
         arg2: *mut XKeyPressedEvent,
         arg3: *mut wchar_t,
-        arg4: libc::c_int,
+        arg4: core::ffi::c_int,
         arg5: *mut KeySym,
-        arg6: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg6: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn Xutf8LookupString(
         arg1: XIC,
         arg2: *mut XKeyPressedEvent,
-        arg3: *mut libc::c_char,
-        arg4: libc::c_int,
+        arg3: *mut core::ffi::c_char,
+        arg4: core::ffi::c_int,
         arg5: *mut KeySym,
-        arg6: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg6: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XVaCreateNestedList(arg1: libc::c_int, ...) -> XVaNestedList;
+    pub fn XVaCreateNestedList(arg1: core::ffi::c_int, ...) -> XVaNestedList;
 }
 extern "C" {
     pub fn XRegisterIMInstantiateCallback(
         arg1: *mut Display,
         arg2: *mut _XrmHashBucketRec,
-        arg3: *mut libc::c_char,
-        arg4: *mut libc::c_char,
+        arg3: *mut core::ffi::c_char,
+        arg4: *mut core::ffi::c_char,
         arg5: XIDProc,
         arg6: XPointer,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XUnregisterIMInstantiateCallback(
         arg1: *mut Display,
         arg2: *mut _XrmHashBucketRec,
-        arg3: *mut libc::c_char,
-        arg4: *mut libc::c_char,
+        arg3: *mut core::ffi::c_char,
+        arg4: *mut core::ffi::c_char,
         arg5: XIDProc,
         arg6: XPointer,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 pub type XConnectionWatchProc = ::core::option::Option<
     unsafe extern "C" fn(
         arg1: *mut Display,
         arg2: XPointer,
-        arg3: libc::c_int,
-        arg4: libc::c_int,
+        arg3: core::ffi::c_int,
+        arg4: core::ffi::c_int,
         arg5: *mut XPointer,
     ),
 >;
 extern "C" {
     pub fn XInternalConnectionNumbers(
         arg1: *mut Display,
-        arg2: *mut *mut libc::c_int,
-        arg3: *mut libc::c_int,
-    ) -> libc::c_int;
+        arg2: *mut *mut core::ffi::c_int,
+        arg3: *mut core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XProcessInternalConnection(arg1: *mut Display, arg2: libc::c_int);
+    pub fn XProcessInternalConnection(arg1: *mut Display, arg2: core::ffi::c_int);
 }
 extern "C" {
     pub fn XAddConnectionWatch(
         arg1: *mut Display,
         arg2: XConnectionWatchProc,
         arg3: XPointer,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XRemoveConnectionWatch(arg1: *mut Display, arg2: XConnectionWatchProc, arg3: XPointer);
 }
 extern "C" {
     pub fn XSetAuthorization(
-        arg1: *mut libc::c_char,
-        arg2: libc::c_int,
-        arg3: *mut libc::c_char,
-        arg4: libc::c_int,
+        arg1: *mut core::ffi::c_char,
+        arg2: core::ffi::c_int,
+        arg3: *mut core::ffi::c_char,
+        arg4: core::ffi::c_int,
     );
 }
 extern "C" {
-    pub fn _Xmbtowc(arg1: *mut wchar_t, arg2: *mut libc::c_char, arg3: libc::c_int) -> libc::c_int;
+    pub fn _Xmbtowc(arg1: *mut wchar_t, arg2: *mut core::ffi::c_char, arg3: core::ffi::c_int) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn _Xwctomb(arg1: *mut libc::c_char, arg2: wchar_t) -> libc::c_int;
+    pub fn _Xwctomb(arg1: *mut core::ffi::c_char, arg2: wchar_t) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn XGetEventData(arg1: *mut Display, arg2: *mut XGenericEventCookie) -> libc::c_int;
+    pub fn XGetEventData(arg1: *mut Display, arg2: *mut XGenericEventCookie) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn XFreeEventData(arg1: *mut Display, arg2: *mut XGenericEventCookie);
@@ -37242,7 +37242,7 @@ pub struct SDL_SysWMmsg {
 #[derive(Copy, Clone)]
 pub union SDL_SysWMmsg__bindgen_ty_1 {
     pub x11: SDL_SysWMmsg__bindgen_ty_1__bindgen_ty_1,
-    pub dummy: libc::c_int,
+    pub dummy: core::ffi::c_int,
     _bindgen_union_align: [u64; 24usize],
 }
 #[repr(C)]
@@ -37442,7 +37442,7 @@ pub struct SDL_SysWMinfo__bindgen_ty_1__bindgen_ty_2 {
     #[doc = "< Wayland surface"]
     pub surface: *mut wl_surface,
     #[doc = "< DEPRECATED Wayland shell_surface (window manager handle)"]
-    pub shell_surface: *mut libc::c_void,
+    pub shell_surface: *mut core::ffi::c_void,
     #[doc = "< Wayland EGL window (native window)"]
     pub egl_window: *mut wl_egl_window,
     #[doc = "< Wayland xdg surface (window manager handle)"]
@@ -37707,7 +37707,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " \\sa SDL_Vulkan_GetVkInstanceProcAddr"]
     #[doc = " \\sa SDL_Vulkan_UnloadLibrary"]
-    pub fn SDL_Vulkan_LoadLibrary(path: *const libc::c_char) -> libc::c_int;
+    pub fn SDL_Vulkan_LoadLibrary(path: *const core::ffi::c_char) -> core::ffi::c_int;
 }
 extern "C" {
     #[doc = " Get the address of the `vkGetInstanceProcAddr` function."]
@@ -37718,7 +37718,7 @@ extern "C" {
     #[doc = " \\returns the function pointer for `vkGetInstanceProcAddr` or NULL on error."]
     #[doc = ""]
     #[doc = " \\since This function is available since SDL 2.0.6."]
-    pub fn SDL_Vulkan_GetVkGetInstanceProcAddr() -> *mut libc::c_void;
+    pub fn SDL_Vulkan_GetVkGetInstanceProcAddr() -> *mut core::ffi::c_void;
 }
 extern "C" {
     #[doc = " Unload the Vulkan library previously loaded by SDL_Vulkan_LoadLibrary()"]
@@ -37757,8 +37757,8 @@ extern "C" {
     #[doc = " \\sa SDL_Vulkan_CreateSurface"]
     pub fn SDL_Vulkan_GetInstanceExtensions(
         window: *mut SDL_Window,
-        pCount: *mut libc::c_uint,
-        pNames: *mut *const libc::c_char,
+        pCount: *mut core::ffi::c_uint,
+        pNames: *mut *const core::ffi::c_char,
     ) -> SDL_bool;
 }
 extern "C" {
@@ -37803,8 +37803,8 @@ extern "C" {
     #[doc = " \\sa SDL_Vulkan_CreateSurface"]
     pub fn SDL_Vulkan_GetDrawableSize(
         window: *mut SDL_Window,
-        w: *mut libc::c_int,
-        h: *mut libc::c_int,
+        w: *mut core::ffi::c_int,
+        h: *mut core::ffi::c_int,
     );
 }
 #[doc = " <div rustbindgen replaces=\"VkInstance\"></div>"]
@@ -37815,10 +37815,10 @@ pub type __builtin_va_list = [__va_list_tag; 1usize];
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct __va_list_tag {
-    pub gp_offset: libc::c_uint,
-    pub fp_offset: libc::c_uint,
-    pub overflow_arg_area: *mut libc::c_void,
-    pub reg_save_area: *mut libc::c_void,
+    pub gp_offset: core::ffi::c_uint,
+    pub fp_offset: core::ffi::c_uint,
+    pub overflow_arg_area: *mut core::ffi::c_void,
+    pub reg_save_area: *mut core::ffi::c_void,
 }
 #[test]
 fn bindgen_test_layout___va_list_tag() {

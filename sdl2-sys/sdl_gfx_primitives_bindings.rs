@@ -2,9 +2,9 @@
 
 use crate::*;
 
-pub type __uint8_t = libc::c_uchar;
-pub type __int16_t = libc::c_short;
-pub type __uint32_t = libc::c_uint;
+pub type __uint8_t = core::ffi::c_uchar;
+pub type __int16_t = core::ffi::c_short;
+pub type __uint32_t = core::ffi::c_uint;
 pub type Uint8 = u8;
 pub type Sint16 = i16;
 pub type Uint32 = u32;
@@ -14,7 +14,7 @@ extern "C" {
         x: Sint16,
         y: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn pixelRGBA(
@@ -25,7 +25,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn hlineColor(
@@ -34,7 +34,7 @@ extern "C" {
         x2: Sint16,
         y: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn hlineRGBA(
@@ -46,7 +46,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn vlineColor(
@@ -55,7 +55,7 @@ extern "C" {
         y1: Sint16,
         y2: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn vlineRGBA(
@@ -67,7 +67,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn rectangleColor(
@@ -77,7 +77,7 @@ extern "C" {
         x2: Sint16,
         y2: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn rectangleRGBA(
@@ -90,7 +90,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn roundedRectangleColor(
@@ -101,7 +101,7 @@ extern "C" {
         y2: Sint16,
         rad: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn roundedRectangleRGBA(
@@ -115,7 +115,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn boxColor(
@@ -125,7 +125,7 @@ extern "C" {
         x2: Sint16,
         y2: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn boxRGBA(
@@ -138,7 +138,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn roundedBoxColor(
@@ -149,7 +149,7 @@ extern "C" {
         y2: Sint16,
         rad: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn roundedBoxRGBA(
@@ -163,7 +163,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn lineColor(
@@ -173,7 +173,7 @@ extern "C" {
         x2: Sint16,
         y2: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn lineRGBA(
@@ -186,7 +186,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn aalineColor(
@@ -196,7 +196,7 @@ extern "C" {
         x2: Sint16,
         y2: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn aalineRGBA(
@@ -209,7 +209,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn thickLineColor(
@@ -220,7 +220,7 @@ extern "C" {
         y2: Sint16,
         width: Uint8,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn thickLineRGBA(
@@ -234,7 +234,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn circleColor(
@@ -243,7 +243,7 @@ extern "C" {
         y: Sint16,
         rad: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn circleRGBA(
@@ -255,7 +255,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn arcColor(
@@ -266,7 +266,7 @@ extern "C" {
         start: Sint16,
         end: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn arcRGBA(
@@ -280,7 +280,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn aacircleColor(
@@ -289,7 +289,7 @@ extern "C" {
         y: Sint16,
         rad: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn aacircleRGBA(
@@ -301,7 +301,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn filledCircleColor(
@@ -310,7 +310,7 @@ extern "C" {
         y: Sint16,
         r: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn filledCircleRGBA(
@@ -322,7 +322,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn ellipseColor(
@@ -332,7 +332,7 @@ extern "C" {
         rx: Sint16,
         ry: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn ellipseRGBA(
@@ -345,7 +345,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn aaellipseColor(
@@ -355,7 +355,7 @@ extern "C" {
         rx: Sint16,
         ry: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn aaellipseRGBA(
@@ -368,7 +368,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn filledEllipseColor(
@@ -378,7 +378,7 @@ extern "C" {
         rx: Sint16,
         ry: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn filledEllipseRGBA(
@@ -391,7 +391,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn pieColor(
@@ -402,7 +402,7 @@ extern "C" {
         start: Sint16,
         end: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn pieRGBA(
@@ -416,7 +416,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn filledPieColor(
@@ -427,7 +427,7 @@ extern "C" {
         start: Sint16,
         end: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn filledPieRGBA(
@@ -441,7 +441,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn trigonColor(
@@ -453,7 +453,7 @@ extern "C" {
         x3: Sint16,
         y3: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn trigonRGBA(
@@ -468,7 +468,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn aatrigonColor(
@@ -480,7 +480,7 @@ extern "C" {
         x3: Sint16,
         y3: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn aatrigonRGBA(
@@ -495,7 +495,7 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn filledTrigonColor(
@@ -507,7 +507,7 @@ extern "C" {
         x3: Sint16,
         y3: Sint16,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn filledTrigonRGBA(
@@ -522,107 +522,107 @@ extern "C" {
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn polygonColor(
         renderer: *mut SDL_Renderer,
         vx: *const Sint16,
         vy: *const Sint16,
-        n: libc::c_int,
+        n: core::ffi::c_int,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn polygonRGBA(
         renderer: *mut SDL_Renderer,
         vx: *const Sint16,
         vy: *const Sint16,
-        n: libc::c_int,
+        n: core::ffi::c_int,
         r: Uint8,
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn aapolygonColor(
         renderer: *mut SDL_Renderer,
         vx: *const Sint16,
         vy: *const Sint16,
-        n: libc::c_int,
+        n: core::ffi::c_int,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn aapolygonRGBA(
         renderer: *mut SDL_Renderer,
         vx: *const Sint16,
         vy: *const Sint16,
-        n: libc::c_int,
+        n: core::ffi::c_int,
         r: Uint8,
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn filledPolygonColor(
         renderer: *mut SDL_Renderer,
         vx: *const Sint16,
         vy: *const Sint16,
-        n: libc::c_int,
+        n: core::ffi::c_int,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn filledPolygonRGBA(
         renderer: *mut SDL_Renderer,
         vx: *const Sint16,
         vy: *const Sint16,
-        n: libc::c_int,
+        n: core::ffi::c_int,
         r: Uint8,
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn texturedPolygon(
         renderer: *mut SDL_Renderer,
         vx: *const Sint16,
         vy: *const Sint16,
-        n: libc::c_int,
+        n: core::ffi::c_int,
         texture: *mut SDL_Surface,
-        texture_dx: libc::c_int,
-        texture_dy: libc::c_int,
-    ) -> libc::c_int;
+        texture_dx: core::ffi::c_int,
+        texture_dy: core::ffi::c_int,
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn bezierColor(
         renderer: *mut SDL_Renderer,
         vx: *const Sint16,
         vy: *const Sint16,
-        n: libc::c_int,
-        s: libc::c_int,
+        n: core::ffi::c_int,
+        s: core::ffi::c_int,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn bezierRGBA(
         renderer: *mut SDL_Renderer,
         vx: *const Sint16,
         vy: *const Sint16,
-        n: libc::c_int,
-        s: libc::c_int,
+        n: core::ffi::c_int,
+        s: core::ffi::c_int,
         r: Uint8,
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn gfxPrimitivesSetFont(fontdata: *const libc::c_void, cw: Uint32, ch: Uint32);
+    pub fn gfxPrimitivesSetFont(fontdata: *const core::ffi::c_void, cw: Uint32, ch: Uint32);
 }
 extern "C" {
     pub fn gfxPrimitivesSetFontRotation(rotation: Uint32);
@@ -632,40 +632,40 @@ extern "C" {
         renderer: *mut SDL_Renderer,
         x: Sint16,
         y: Sint16,
-        c: libc::c_char,
+        c: core::ffi::c_char,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn characterRGBA(
         renderer: *mut SDL_Renderer,
         x: Sint16,
         y: Sint16,
-        c: libc::c_char,
+        c: core::ffi::c_char,
         r: Uint8,
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn stringColor(
         renderer: *mut SDL_Renderer,
         x: Sint16,
         y: Sint16,
-        s: *const libc::c_char,
+        s: *const core::ffi::c_char,
         color: Uint32,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn stringRGBA(
         renderer: *mut SDL_Renderer,
         x: Sint16,
         y: Sint16,
-        s: *const libc::c_char,
+        s: *const core::ffi::c_char,
         r: Uint8,
         g: Uint8,
         b: Uint8,
         a: Uint8,
-    ) -> libc::c_int;
+    ) -> core::ffi::c_int;
 }

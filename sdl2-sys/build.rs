@@ -1,6 +1,6 @@
 #![allow(unused_imports, dead_code, unused_variables)]
 
-#[cfg(feature = "bindgen")]
+#[cfg(feature = "use-bindgen")]
 extern crate bindgen;
 #[macro_use]
 extern crate cfg_if;
@@ -13,7 +13,7 @@ use std::path::{Path, PathBuf};
 use std::process::Command;
 use std::{env, fs, io};
 
-#[cfg(feature = "bindgen")]
+#[cfg(feature = "use-bindgen")]
 macro_rules! add_msvc_includes_to_bindings {
     ($bindings:expr) => {
         $bindings = $bindings.clang_arg(format!(
@@ -36,7 +36,7 @@ fn init_submodule(sdl_path: &Path) {
     if !sdl_path.join("CMakeLists.txt").exists() {
         Command::new("git")
             .args(&["submodule", "update", "--init"])
-            .current_dir(sdl_path.clone())
+            .current_dir(sdl_path)
             .status()
             .expect("Git is needed to retrieve the SDL source files");
     }
@@ -497,7 +497,7 @@ fn main() {
         .unwrap()
         .to_string();
 
-    #[cfg(feature = "bindgen")]
+    #[cfg(feature = "use-bindgen")]
     {
         let include_paths: Vec<String>;
         #[cfg(feature = "bundled")]
@@ -512,7 +512,7 @@ fn main() {
         println!("cargo:include={}", include_paths.join(":"));
     }
 
-    #[cfg(not(feature = "bindgen"))]
+    #[cfg(not(feature = "use-bindgen"))]
     {
         copy_pregenerated_bindings();
         println!("cargo:include={}", sdl2_includes);
@@ -530,7 +530,7 @@ fn main() {
     }
 }
 
-#[cfg(not(feature = "bindgen"))]
+#[cfg(not(feature = "use-bindgen"))]
 fn copy_pregenerated_bindings() {
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
     let crate_path = PathBuf::from(env::var("CARGO_MANIFEST_DIR").unwrap());
@@ -589,44 +589,52 @@ fn copy_pregenerated_bindings() {
     }
 }
 
-#[cfg(feature = "bindgen")]
+#[cfg(feature = "use-bindgen")]
 // headers_path is a list of directories where the SDL2 headers are expected
 // to be found by bindgen (should point to the include/ directories)
 fn generate_bindings(target: &str, host: &str, headers_paths: &[String]) {
     let target_os = get_os_from_triple(target).unwrap();
+
+    // let ctypes_prefix = "libc";
+    let ctypes_prefix = "core::ffi";
+
     let mut bindings = bindgen::Builder::default()
         // enable no_std-friendly output by only using core definitions
         .use_core()
         .default_enum_style(bindgen::EnumVariation::Rust {
             non_exhaustive: false,
         })
-        .ctypes_prefix("libc");
+        .ctypes_prefix(ctypes_prefix);
 
     let mut image_bindings = bindgen::Builder::default()
         .use_core()
         .raw_line("use crate::*;")
-        .ctypes_prefix("libc");
+        .ctypes_prefix(ctypes_prefix);
 
     let mut ttf_bindings = bindgen::Builder::default()
         .use_core()
         .raw_line("use crate::*;")
-        .ctypes_prefix("libc");
+        .ctypes_prefix(ctypes_prefix);
 
     let mut mixer_bindings = bindgen::Builder::default()
         .use_core()
         .raw_line("use crate::*;")
-        .ctypes_prefix("libc");
+        .ctypes_prefix(ctypes_prefix);
 
-    let mut gfx_framerate_bindings = bindgen::Builder::default().use_core().ctypes_prefix("libc");
+    let mut gfx_framerate_bindings = bindgen::Builder::default()
+        .use_core()
+        .ctypes_prefix(ctypes_prefix);
     let mut gfx_primitives_bindings = bindgen::Builder::default()
         .use_core()
         .raw_line("use crate::*;")
-        .ctypes_prefix("libc");
-    let mut gfx_imagefilter_bindings = bindgen::Builder::default().use_core().ctypes_prefix("libc");
+        .ctypes_prefix(ctypes_prefix);
+    let mut gfx_imagefilter_bindings = bindgen::Builder::default()
+        .use_core()
+        .ctypes_prefix(ctypes_prefix);
     let mut gfx_rotozoom_bindings = bindgen::Builder::default()
         .use_core()
         .raw_line("use crate::*;")
-        .ctypes_prefix("libc");
+        .ctypes_prefix(ctypes_prefix);
 
     // Set correct target triple for bindgen when cross-compiling
     if target != host {

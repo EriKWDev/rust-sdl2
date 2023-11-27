@@ -2,8 +2,8 @@
 
 use crate::*;
 
-pub type __uint8_t = libc::c_uchar;
-pub type __uint32_t = libc::c_uint;
+pub type __uint8_t = core::ffi::c_uchar;
+pub type __uint32_t = core::ffi::c_uint;
 pub type Uint8 = u8;
 pub type Uint32 = u32;
 extern "C" {
@@ -11,7 +11,7 @@ extern "C" {
         src: *mut SDL_Surface,
         angle: f64,
         zoom: f64,
-        smooth: libc::c_int,
+        smooth: core::ffi::c_int,
     ) -> *mut SDL_Surface;
 }
 extern "C" {
@@ -20,28 +20,28 @@ extern "C" {
         angle: f64,
         zoomx: f64,
         zoomy: f64,
-        smooth: libc::c_int,
+        smooth: core::ffi::c_int,
     ) -> *mut SDL_Surface;
 }
 extern "C" {
     pub fn rotozoomSurfaceSize(
-        width: libc::c_int,
-        height: libc::c_int,
+        width: core::ffi::c_int,
+        height: core::ffi::c_int,
         angle: f64,
         zoom: f64,
-        dstwidth: *mut libc::c_int,
-        dstheight: *mut libc::c_int,
+        dstwidth: *mut core::ffi::c_int,
+        dstheight: *mut core::ffi::c_int,
     );
 }
 extern "C" {
     pub fn rotozoomSurfaceSizeXY(
-        width: libc::c_int,
-        height: libc::c_int,
+        width: core::ffi::c_int,
+        height: core::ffi::c_int,
         angle: f64,
         zoomx: f64,
         zoomy: f64,
-        dstwidth: *mut libc::c_int,
-        dstheight: *mut libc::c_int,
+        dstwidth: *mut core::ffi::c_int,
+        dstheight: *mut core::ffi::c_int,
     );
 }
 extern "C" {
@@ -49,29 +49,29 @@ extern "C" {
         src: *mut SDL_Surface,
         zoomx: f64,
         zoomy: f64,
-        smooth: libc::c_int,
+        smooth: core::ffi::c_int,
     ) -> *mut SDL_Surface;
 }
 extern "C" {
     pub fn zoomSurfaceSize(
-        width: libc::c_int,
-        height: libc::c_int,
+        width: core::ffi::c_int,
+        height: core::ffi::c_int,
         zoomx: f64,
         zoomy: f64,
-        dstwidth: *mut libc::c_int,
-        dstheight: *mut libc::c_int,
+        dstwidth: *mut core::ffi::c_int,
+        dstheight: *mut core::ffi::c_int,
     );
 }
 extern "C" {
     pub fn shrinkSurface(
         src: *mut SDL_Surface,
-        factorx: libc::c_int,
-        factory: libc::c_int,
+        factorx: core::ffi::c_int,
+        factory: core::ffi::c_int,
     ) -> *mut SDL_Surface;
 }
 extern "C" {
     pub fn rotateSurface90Degrees(
         src: *mut SDL_Surface,
-        numClockwiseTurns: libc::c_int,
+        numClockwiseTurns: core::ffi::c_int,
     ) -> *mut SDL_Surface;
 }

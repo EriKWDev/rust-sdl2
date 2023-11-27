@@ -3,7 +3,7 @@
 pub const FPS_UPPER_LIMIT: u32 = 200;
 pub const FPS_LOWER_LIMIT: u32 = 1;
 pub const FPS_DEFAULT: u32 = 30;
-pub type __uint32_t = libc::c_uint;
+pub type __uint32_t = core::ffi::c_uint;
 pub type Uint32 = u32;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -81,13 +81,13 @@ extern "C" {
     pub fn SDL_initFramerate(manager: *mut FPSmanager);
 }
 extern "C" {
-    pub fn SDL_setFramerate(manager: *mut FPSmanager, rate: Uint32) -> libc::c_int;
+    pub fn SDL_setFramerate(manager: *mut FPSmanager, rate: Uint32) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_getFramerate(manager: *mut FPSmanager) -> libc::c_int;
+    pub fn SDL_getFramerate(manager: *mut FPSmanager) -> core::ffi::c_int;
 }
 extern "C" {
-    pub fn SDL_getFramecount(manager: *mut FPSmanager) -> libc::c_int;
+    pub fn SDL_getFramecount(manager: *mut FPSmanager) -> core::ffi::c_int;
 }
 extern "C" {
     pub fn SDL_framerateDelay(manager: *mut FPSmanager) -> Uint32;
